@@ -1,4 +1,7 @@
 @extends('layouts.theme')
+
+{{--@section('title', '')--}}
+
 @section('content')
 
     <section id="hero">
@@ -7,3 +10,7 @@
     </section>
 
 @endsection
+
+{{--@section('scripts')--}}
+{{--    <script src="https://empire.duketech.kz/collection/1/?id=11"> </script>--}}
+{{--@endsection--}}
