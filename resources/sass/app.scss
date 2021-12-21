@@ -6,13 +6,14 @@
 @import "helpers/mixins";
 @import "helpers/fonts";
 @import "helpers/reset";
-@import "~remodal";
+@import "~remodal/dist/remodal.css";
+@import "~remodal/dist/remodal-default-theme.css";
 @import "helpers/globals";
 /*helpers*/
 
 
 /*blocks*/
-@import "blocks/auth";
+@import "blocks/hero";
 /*blocks*/
 
 /*modals*/

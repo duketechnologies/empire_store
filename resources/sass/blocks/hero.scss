@@ -1,0 +1,19 @@
+section#hero{
+    text-align: center;
+
+    h1{
+        font-size: 28px;
+    }
+    a{
+        color: blue;
+        text-decoration: underline;
+    }
+}
+
+
+
+
+
+@include responsive{
+
+}
