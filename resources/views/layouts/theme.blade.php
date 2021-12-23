@@ -9,13 +9,20 @@
     <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
     @yield('styles')
 
     <script src="{{ mix('js/app.js') }}"></script>
     @yield('scripts')
 </head>
 <body>
+@include('partials.header')
 @yield('content')
+@include('partials.footer')
 @include('partials.modals')
 </body>
 </html>

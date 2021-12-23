@@ -1,0 +1,86 @@
+header.header {
+    margin: 10px 0;
+    .wrapper {
+        padding:0 3.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .nav {
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                border-radius: 0.6rem;
+                transition: .2s ease-in-out;
+                li {
+                    padding: 1rem 2.3rem;
+                    margin: 5px 0;
+                    margin-left: 5px;
+                    border-radius: 8px;
+                    font-size: 0.85rem;
+                    transition: .2s ease-in-out;
+                    &:hover {
+                        background-color: #F5F4F1;
+                    }
+                }
+            }
+            input {
+                background-image: url("/i/icons/search_icon.png");
+                background-repeat: no-repeat;
+                background-position: left 15px center;
+                border-radius: 9.8rem;
+                outline: none;
+                border: 1px solid #DEDCD8;
+                background-color: inherit;
+                padding: 1rem 1rem 1rem 2.5rem;
+                width: 20rem;
+                transition: .2s ease-in-out;
+                &::placeholder {
+                    font-size: 0.9rem;
+                    color: #939393;
+                }
+                &:hover {
+                    background-color: white;
+                }
+                &:focus {
+                    width: 33rem;
+                    background-color: white;
+                }
+            }
+        }
+        .info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .phone {
+                font-size: 0.9rem;
+                font-weight: 700;
+                position: relative;
+                color: #939393;
+                cursor: pointer;
+                border-right: 1px solid #DEDCD8;
+                margin-right: 2rem;
+                padding-right: 2rem;
+                transition: .2s ease-in-out;
+                &:hover {
+                    color: black;
+                }
+            }
+            .profile {
+                display: flex;
+                align-items: center;
+                gap: 2.1rem;
+                text-transform: uppercase;
+                li {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+    }
+}
