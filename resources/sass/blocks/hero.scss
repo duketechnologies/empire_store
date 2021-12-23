@@ -1,12 +1,25 @@
 section#hero{
-    text-align: center;
-
-    h1{
-        font-size: 28px;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 3.2rem;
+    border-radius: 0.6rem;
+    h1 {
+        font-family: Spectral, italic;
+        font-size: 3.3rem;
+        font-style: italic;
     }
-    a{
-        color: blue;
-        text-decoration: underline;
+    img {
+        -webkit-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+        -moz-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+        box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+        border-radius: .5rem;
+    }
+
+    .wrapper {
+
     }
 }
 

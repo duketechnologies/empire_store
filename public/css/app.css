@@ -494,6 +494,19 @@ li {
   list-style: none;
 }
 
+.main-btn {
+  text-transform: uppercase;
+  background-color: #212123;
+  font-size: 0.95rem;
+  width: 16.8rem;
+  height: 3.3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
 @media only screen and (max-width: 1599px) {
   html {
     font-size: 9px;
@@ -518,16 +531,23 @@ li {
 /*helpers*/
 /*blocks*/
 section#hero {
-  text-align: center;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 3.2rem;
+  border-radius: 0.6rem;
 }
 section#hero h1 {
-  font-size: 28px;
+  font-family: Spectral, italic;
+  font-size: 3.3rem;
+  font-style: italic;
 }
-section#hero a {
-  color: blue;
-  text-decoration: underline;
+section#hero img {
+  box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+  border-radius: 0.5rem;
 }
-
 header.header {
   margin: 10px 0;
 }
@@ -614,11 +634,18 @@ header.header .wrapper .info .phone:hover {
 header.header .wrapper .info .profile {
   display: flex;
   align-items: center;
-  gap: 2.1rem;
+  gap: 0.2rem;
   text-transform: uppercase;
 }
 header.header .wrapper .info .profile li {
   font-size: 0.85rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+header.header .wrapper .info .profile li:hover {
+  background-color: white;
 }
 
 footer.footer {
