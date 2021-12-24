@@ -19,3 +19,5 @@ Auth::routes([['register' => false,'password.request' => false, 'password.reset'
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/faq', [HomeController::class, 'faq']);
+Route::get('/partnership', [HomeController::class, 'partnership']);

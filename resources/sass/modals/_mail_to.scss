@@ -1,0 +1,44 @@
+.remodal[data-remodal-id=mail_to] {
+    .content {
+        h1 {
+            text-align: center;
+            font-size: 1.6rem;
+            color: #505154;
+            font-weight: 300;
+        }
+        p {
+            font-size: .9rem;
+            color: #505154;
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap:2.3rem;
+            input {
+                border:none;
+                border-bottom: 1px solid #303133;
+                padding-bottom: 1rem;
+                text-align: center;
+                width: 17rem;
+            }
+            textarea {
+                width: 42rem;
+                min-height: 17rem;
+                background-color: #F5F4F1;
+                padding-top: 1.6rem;
+                padding-left: 2.2rem;
+                border:none;
+                border-radius: .5rem;
+                &::placeholder {
+                    font-size: .9rem;
+                    color: #939393;
+                    font-family: Inter, sans-serif;
+                }
+            }
+        }
+    }
+}

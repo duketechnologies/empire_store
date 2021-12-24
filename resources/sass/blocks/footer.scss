@@ -1,6 +1,6 @@
-footer.footer {
+.footer {
     border-top: 1px solid #E0E0E0;
-
+    width: 100%;
     .wrapper {
         padding: 0 3.2rem;
         display: flex;
@@ -27,7 +27,7 @@ footer.footer {
             align-items: flex-start;
             justify-content: space-around;
             flex: 1;
-            padding: 5.2rem 0rem 4rem 0;
+            padding: 5.2rem 0 4rem 0;
             .info {
                 p {
                     font-weight: 500;
@@ -56,26 +56,20 @@ footer.footer {
                 border-bottom: 1px solid #DEDCD8;
                 padding:1rem 0;
                 width: 100%;
+                &::placeholder {
+                    font-size: .9rem    ;
+                }
             }
             .media {
                 display: flex;
                 align-items: center;
-                margin-top: 4rem;
-                gap: 3rem;
-                li {
-                    &:nth-child(1) {
-                        margin-bottom: 1rem;
-                    }
-                    &:nth-child(2) {
-                        margin-top: 1rem;
-                    }
-                    &:nth-child(3) {
-                        margin-bottom: 1rem;
-                    }
-                    &:nth-child(4) {
-                        margin-top: 1rem;
-                    }
+                margin-top: 4.4rem;
+                gap: 2.5rem;
+                svg {
+                    width: 1.2rem;
+                    height: 1.22rem;
                 }
+
             }
         }
     }
@@ -100,20 +94,31 @@ footer.footer {
                 border: 1px solid black;
             }
             &:first-child {
-                background-image: url("/i/icons/map_icon.png");
-                background-repeat: no-repeat;
-                background-position: left 5% center;
-                padding-left: 2rem;
+                a {
+                    &::before {
+                        background-image: url("/i/icons/map_icon.png");
+                        background-repeat: no-repeat;
+                        background-position: left 5% center;
+                        padding-left: 2rem;
+                    }
+                }
             }
         }
         .contact {
-            border-bottom: 1px solid #DEDCD8;
             padding:1rem;
             font-size: .85rem;
             font-weight: 600;
-            transition: .2s ease-in-out;
+            a {
+                transition: .2s ease-in-out;
+                padding-bottom: .3rem;
+                text-transform: uppercase;
+                border-bottom: 1px solid #DEDCD8;
+                letter-spacing: 2px;
+            }
             &:hover {
-                border-bottom: 1px solid black;
+                a {
+                    border-bottom: 1px solid black;
+                }
             }
         }
         p {

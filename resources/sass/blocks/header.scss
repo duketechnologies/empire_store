@@ -1,5 +1,6 @@
 header.header {
     margin: 10px 0;
+    background-color: transparent;
     .wrapper {
         padding:0 3.2rem;
         display: flex;
@@ -19,9 +20,8 @@ header.header {
                 border-radius: 0.6rem;
                 transition: .2s ease-in-out;
                 li {
-                    padding: 1rem 2.3rem;
-                    margin: 5px 0;
-                    margin-left: 5px;
+                    padding: .8rem 2.3rem;
+                    margin: 5px;
                     border-radius: 8px;
                     font-size: 0.85rem;
                     transition: .2s ease-in-out;
@@ -31,9 +31,6 @@ header.header {
                 }
             }
             input {
-                background-image: url("/i/icons/search_icon.png");
-                background-repeat: no-repeat;
-                background-position: left 15px center;
                 border-radius: 9.8rem;
                 outline: none;
                 border: 1px solid #DEDCD8;
@@ -41,6 +38,16 @@ header.header {
                 padding: 1rem 1rem 1rem 2.5rem;
                 width: 20rem;
                 transition: .2s ease-in-out;
+                position: relative;
+                &::before {
+                    content: '';
+                    background-color: red;
+                    top:0;
+                    left: 0;
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                }
                 &::placeholder {
                     font-size: 0.9rem;
                     color: #939393;
@@ -49,7 +56,6 @@ header.header {
                     background-color: white;
                 }
                 &:focus {
-                    width: 33rem;
                     background-color: white;
                 }
             }
@@ -83,8 +89,22 @@ header.header {
                     border-radius: 0.5rem;
                     transition: .2s ease-in-out;
                     cursor:pointer;
+                    font-weight: 600;
+                    a {
+                        color: #939393;
+                    }
+                    svg>path {
+                        transition: .2s ease-in-out;
+                    }
                     &:hover {
+                        a {
+                            color: black;
+                        }
                         background-color: white;
+                        svg>path {
+                            fill: black;
+                        }
+
                     }
                 }
             }

@@ -1,0 +1,15 @@
+.remodal {
+    padding: 6.3rem !important;
+    border-radius: .5rem;
+}
+.remodal-close-btn {
+    background-image: url("/i/icons/close_icon.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border:none;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}

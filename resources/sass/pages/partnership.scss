@@ -1,0 +1,99 @@
+section#partnership {
+    .route {
+        margin-bottom: 1.2rem;
+        font-size: .73rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        &::after {
+            content: '';
+            background-image: url("/i/route_icon.png");
+            background-repeat: no-repeat;
+            background-position: top -20% right;
+            z-index: 10;
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+    h1 {
+        font-family: Spectral;
+        font-size: 2.6rem;
+        font-style: italic;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    p {
+        font-size: .9rem;
+        color: #505154;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        letter-spacing: .7px;
+        line-height: 1.3rem;
+    }
+    .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 4rem 7rem;
+        svg {
+            width: 3.4rem;
+        }
+    }
+    .details {
+        background-image: url("/i/partnership_img.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #EBEBEB;
+        padding: 8rem;
+        margin: 0 3.2rem;
+        border-radius: 1rem;
+    }
+    .cooperation {
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2.35rem;
+        padding: 10rem;
+        margin-top: 1rem;
+        h2 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: #505154;
+
+        }
+        .contacts {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+            a {
+                font-size: 0.9rem;
+                font-weight: 700;
+                border-bottom: 1px solid #DEDCD8;
+                transition: .2s ease-in-out;
+                padding-bottom: .3rem;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                &:hover {
+                    border-bottom: 1px solid black;
+                }
+            }
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:1rem;
+            justify-content: center;
+        }
+    }
+}
