@@ -31,7 +31,9 @@
                 background-color: #F5F4F1;
                 padding-top: 1.6rem;
                 padding-left: 2.2rem;
-                border:none;
+                border: none;
+                resize: none;
+                outline: none;
                 border-radius: .5rem;
                 &::placeholder {
                     font-size: .9rem;

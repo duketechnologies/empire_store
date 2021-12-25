@@ -478,6 +478,7 @@ a {
   position: absolute;
   right: 2rem;
   top: 2rem;
+  cursor: pointer;
 }
 
 html, body {
@@ -1017,7 +1018,7 @@ section#partnership .info svg {
 section#partnership .details {
   background-image: url("/i/partnership_img.png");
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left bottom;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1102,6 +1103,8 @@ section#partnership .cooperation .buttons {
   padding-top: 1.6rem;
   padding-left: 2.2rem;
   border: none;
+  resize: none;
+  outline: none;
   border-radius: 0.5rem;
 }
 .remodal[data-remodal-id=mail_to] .content form textarea::-moz-placeholder {
