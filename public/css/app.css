@@ -576,7 +576,7 @@ section#hero {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 3.2rem;
+  margin: 0 2.2rem;
   border-radius: 0.6rem;
 }
 section#hero h1 {
@@ -593,7 +593,7 @@ header.header {
   background-color: transparent;
 }
 header.header .wrapper {
-  padding: 0 3.2rem;
+  padding: 0 2.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -712,7 +712,7 @@ header.header .wrapper .info .profile li:hover svg > path {
   width: 100%;
 }
 .footer .wrapper {
-  padding: 0 3.2rem;
+  padding: 0 2.2rem;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -790,7 +790,7 @@ header.header .wrapper .info .profile li:hover svg > path {
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid #DEDCD8;
-  padding: 15px 3.2rem;
+  padding: 15px 2.2rem;
 }
 .footer .copyright ul {
   display: flex;
@@ -1025,7 +1025,7 @@ section#partnership .details {
   flex-direction: column;
   background-color: #EBEBEB;
   padding: 8rem;
-  margin: 0 3.2rem;
+  margin: 0 2.2rem;
   border-radius: 1rem;
 }
 section#partnership .cooperation {
@@ -1066,6 +1066,16 @@ section#partnership .cooperation .buttons {
   align-items: center;
   gap: 1rem;
   justify-content: center;
+}
+
+section#vacancies .main-img {
+  background-image: url("/i/vacancies_img.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 22rem;
+  padding: 0 2.2rem;
+  border: none;
 }
 
 /*pages*/

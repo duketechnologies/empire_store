@@ -24,4 +24,8 @@ class HomeController extends Controller
     {
         return view('pages.partnership');
     }
+    public function vacancies()
+    {
+        return view('pages.vacancies');
+    }
 }
