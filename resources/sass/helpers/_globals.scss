@@ -59,14 +59,15 @@ li {
     cursor: pointer;
     border-radius: 3px;
 }
+
 @media only screen and (max-width: 1599px) {
     html{
-        font-size: 9px;
+        font-size: 12px;
     }
 }
 @media only screen and (max-width: 1366px) {
     html{
-        font-size: 8px;
+        font-size: 11px;
     }
     body{
         //overflow-x: scroll;

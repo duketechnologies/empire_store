@@ -22,3 +22,6 @@ Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/faq', [HomeController::class, 'faq']);
 Route::get('/partnership', [HomeController::class, 'partnership']);
 Route::get('/vacancies', [HomeController::class, 'vacancies']);
+Route::get('/contacts', [HomeController::class, 'contacts']);
+Route::get('/about', [HomeController::class, 'about']);
+Route::get('/policy', [HomeController::class, 'policy']);
