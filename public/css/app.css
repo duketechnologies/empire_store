@@ -612,7 +612,7 @@ header.header .wrapper .links .nav {
   transition: 0.2s ease-in-out;
 }
 header.header .wrapper .links .nav li {
-  padding: 0.8rem 2.3rem;
+  padding: 0.8rem 2rem;
   margin: 5px;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -1192,6 +1192,70 @@ section#vacancies .consultaion .call form .main-btn {
   font-weight: 500;
 }
 
+section#contacts .contact-card_list {
+  color: #505154;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2.2rem 2.2rem 8rem 2.2rem;
+}
+section#contacts .contact-card_list-item {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 4.6rem 9.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#contacts .contact-card_list-info {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+section#contacts .contact-card_list-info h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 400;
+}
+section#contacts .contact-card_list-info p {
+  font-weight: 300;
+  margin-top: 2rem;
+}
+section#contacts .contact-card_list-contacts a {
+  display: inline-block;
+  color: #303133;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e0e0e0;
+  margin-right: 2.5rem;
+  padding: 0.5rem 0;
+  margin-top: 2rem;
+  font-weight: 500;
+  transition: 0.2s ease-in;
+}
+section#contacts .contact-card_list-contacts a:hover {
+  border-bottom-color: #303133;
+}
+section#contacts .contact-card_list-action {
+  text-transform: uppercase;
+  background-color: #F5F4F1;
+  display: inline-block;
+  text-decoration: none;
+  color: #303133;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+section#contacts .contact-card_list-image {
+  min-width: 200px;
+}
+section#contacts .contact-card_list-image img {
+  background-color: #F5F4F1;
+  aspect-ratio: 1/1;
+  border-radius: 999rem;
+  width: 100%;
+}
 section#contacts .consultaion {
   display: flex;
   justify-content: center;
@@ -1390,6 +1454,93 @@ section#about .partners :last-child {
 }
 section#about .partners :last-child:hover {
   box-shadow: 0px 5px 25px 0px rgba(34, 60, 80, 0.2);
+}
+
+section#policy h2 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  padding: 0 10.7rem;
+  margin-top: 3rem;
+}
+section#policy .content {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+  padding: 0 10.7rem;
+}
+section#policy .content ul {
+  width: 20%;
+}
+section#policy .content ul li {
+  color: #505154;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+section#policy .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+section#policy .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#policy .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#policy .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  text-align: center;
+  width: 35rem;
+}
+section#policy .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#policy .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 17rem;
+}
+section#policy .consultaion .call form input::-moz-placeholder {
+  color: #939393;
+}
+section#policy .consultaion .call form input:-ms-input-placeholder {
+  color: #939393;
+}
+section#policy .consultaion .call form input::placeholder {
+  color: #939393;
+}
+section#policy .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+section#franchise {
+  position: relative;
+}
+section#franchise .hero img {
+  position: absolute;
+  top: -5rem;
+  z-index: -1;
 }
 
 /*pages*/

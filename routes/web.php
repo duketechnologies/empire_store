@@ -25,3 +25,4 @@ Route::get('/vacancies', [HomeController::class, 'vacancies']);
 Route::get('/contacts', [HomeController::class, 'contacts']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/policy', [HomeController::class, 'policy']);
+Route::get('/franchise', [HomeController::class, 'franchise']);

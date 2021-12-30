@@ -40,4 +40,8 @@ class HomeController extends Controller
     {
         return view('pages.policy');
     }
+    public function franchise()
+    {
+        return view('pages.franchise');
+    }
 }

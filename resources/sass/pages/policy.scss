@@ -1,0 +1,74 @@
+section#policy {
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding: 0 10.7rem;
+    margin-top: 3rem;
+  }
+  .content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 2.5rem;
+    padding: 0 10.7rem;
+    ul {
+      width: 20%;
+      li {
+        color: #505154;
+        font-size: .9rem;
+        margin-bottom: 1rem;
+      }
+    }
+    
+  }
+  .consultaion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 8.5rem 0;
+    .call {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 21rem;
+        h1 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        p {
+            font-size: .9rem;
+            color: #505154;
+            margin-top: 1rem;
+            text-align: center;
+            width: 35rem;
+        }
+        form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 1.5rem;
+          width: 100%;
+          input {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #303133;
+            text-align: center;
+            padding:1rem;
+            outline: none;
+            width: 17rem;
+            &::placeholder {
+              color: #939393;
+            }
+          }
+          .main-btn {
+            margin-top: 2rem;
+            width: 100%;
+            font-weight: 500;
+          }
+        }
+    }
+  }
+}
