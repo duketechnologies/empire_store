@@ -44,4 +44,8 @@ class HomeController extends Controller
     {
         return view('pages.franchise');
     }
+    public function news()
+    {
+        return view('pages.news');
+    }
 }

@@ -59,7 +59,15 @@ list-style: none;
     cursor: pointer;
     border-radius: 3px;
 }
-
+.secondary-btn {
+    font-weight: 500;
+    font-size: .8rem;
+    text-transform:uppercase;
+    letter-spacing: .6px;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 8px;
+}
 @media only screen and (max-width: 1599px) {
     html{
         font-size: 12px;

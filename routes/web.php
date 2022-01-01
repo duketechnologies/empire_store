@@ -26,3 +26,4 @@ Route::get('/contacts', [HomeController::class, 'contacts']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/policy', [HomeController::class, 'policy']);
 Route::get('/franchise', [HomeController::class, 'franchise']);
+Route::get('/news', [HomeController::class, 'news']);

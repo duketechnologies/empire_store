@@ -396,6 +396,7 @@ html.remodal-is-locked {
   width: 700px;
 }
 
+@charset "UTF-8";
 /*vendor*/
 /*vendor*/
 /*helpers*/
@@ -545,6 +546,16 @@ li {
   outline: none;
   cursor: pointer;
   border-radius: 3px;
+}
+
+.secondary-btn {
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 1599px) {
@@ -1534,13 +1545,498 @@ section#policy .consultaion .call form .main-btn {
   font-weight: 500;
 }
 
-section#franchise {
-  position: relative;
+section#franchise .hero {
+  background-image: url("/i/franchise/franchise_img.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 95vh;
+}
+section#franchise .hero__title {
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+section#franchise .hero__title svg {
+  width: 100%;
+}
+section#franchise .hero__title p {
+  font-family: "Spectral";
+  font-size: 1.6rem;
+  font-style: italic;
+  color: white;
+  margin-bottom: 5rem;
+  align-self: flex-end;
+  margin-top: 0.5rem;
+}
+section#franchise .hero__title .request {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  background-color: white;
+  text-align: center;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+section#franchise .hero .links {
+  display: flex;
+  flex-direction: column;
+  font-family: "Spectral";
+  font-size: 1.2rem;
+  font-style: italic;
+  align-self: flex-start;
+  width: 100%;
+  gap: 2rem;
+  color: white;
+}
+section#franchise .hero .links a {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  padding-bottom: 0.5rem;
+  transition: 0.2 ease-in;
+  outline: transparent;
+}
+section#franchise .hero .links a:hover {
+  border-bottom: 2px solid #FFFFFF;
 }
 section#franchise .hero img {
   position: absolute;
   top: -5rem;
   z-index: -1;
+}
+section#franchise .team {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 9rem 0;
+}
+section#franchise .team__title h2 {
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 3.15rem;
+  margin-bottom: 3.5rem;
+}
+section#franchise .team__title a {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #505154;
+}
+section#franchise .team__title a::after {
+  content: ">";
+  padding-left: 1rem;
+  color: black;
+  font-weight: 500;
+}
+section#franchise .team__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+section#franchise .team__content div {
+  padding: 7rem 7.5rem 7rem 12rem;
+}
+section#franchise .team__content div:first-child {
+  background-color: #2A2019;
+}
+section#franchise .team__content div:first-child .workers {
+  color: #B98671;
+  position: relative;
+}
+section#franchise .team__content div:first-child .workers::before {
+  content: "12";
+  font-size: 4.4rem;
+  position: absolute;
+  left: -6rem;
+  top: -2.8rem;
+}
+section#franchise .team__content div:nth-child(2) {
+  background-color: #734436;
+}
+section#franchise .team__content div:nth-child(2) .workers {
+  color: #D6C0B6;
+  position: relative;
+}
+section#franchise .team__content div:nth-child(2) .workers::before {
+  content: "6";
+  font-size: 4.4rem;
+  position: absolute;
+  left: -4rem;
+  top: -2.8rem;
+}
+section#franchise .team__content div:nth-child(3) {
+  background-color: #51342A;
+}
+section#franchise .team__content div:nth-child(3) .workers {
+  color: #B98671;
+  position: relative;
+}
+section#franchise .team__content div:nth-child(3) .workers::before {
+  content: "30";
+  font-size: 4.4rem;
+  position: absolute;
+  left: -6rem;
+  top: -2.8rem;
+}
+section#franchise .team__content div:nth-child(4) {
+  background-color: #B98671;
+}
+section#franchise .team__content div:nth-child(4) .workers {
+  color: #FFFFFE;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+section#franchise .team__content div .workers {
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+section#franchise .team__content div .info {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+section#franchise .rules {
+  background-color: white;
+  margin: 0 2.2rem;
+  border-radius: 8px;
+  padding: 6.6rem 8.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+section#franchise .rules .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 5rem;
+  justify-content: center;
+  align-self: center;
+}
+section#franchise .rules .content p {
+  border-bottom: 1px solid #DEDCD8;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #303133;
+}
+section#franchise .rules .content ul li {
+  margin-top: 1rem;
+  color: #505154;
+  font-size: 0.9rem;
+}
+section#franchise .rules .content ul li::before {
+  content: "•";
+  padding-right: 1rem;
+}
+section#franchise .rules .main-btn {
+  align-self: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: 10rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  max-width: 13rem;
+}
+section#franchise .faq {
+  margin: 5rem 10.5rem;
+}
+section#franchise .faq .questions {
+  border-top: 1px solid #DEDCD8;
+  padding: 2.2rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#franchise .faq .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+}
+section#franchise .faq .questions svg {
+  width: 2rem;
+  height: 2rem;
+}
+section#franchise .faq .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+section#franchise .excursion {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin: 0 10.5rem;
+  padding: 6.6rem 5.3rem;
+  gap: 5.2rem;
+  background-color: white;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 13.5rem;
+}
+section#franchise .excursion svg {
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  right: -1rem;
+}
+section#franchise .excursion .description {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+  width: 100%;
+}
+section#franchise .excursion .description img {
+  width: 100%;
+}
+section#franchise .excursion .description p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+}
+section#franchise .excursion .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+section#franchise .excursion .info h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+section#franchise .excursion .info p {
+  font-size: 0.9rem;
+  color: #505154;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+section#franchise .excursion .info .cards {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 1rem;
+}
+section#franchise .excursion .info .cards svg {
+  position: initial;
+}
+section#franchise .excursion .info .cards p {
+  text-align: left;
+  border-radius: 8px;
+  border: 1px solid #DEDCD8;
+  padding: 1.5rem;
+}
+section#franchise .excursion .info .main-btn {
+  margin-top: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+section#franchise .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+section#franchise .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#franchise .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#franchise .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  width: 25rem;
+  text-align: center;
+  line-height: 1.2rem;
+}
+section#franchise .consultaion .call p span {
+  color: black;
+}
+section#franchise .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#franchise .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+}
+section#franchise .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+section#news .hero {
+  display: flex;
+  margin: 0 10.5rem;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5.5rem;
+}
+section#news .hero .title {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+section#news .hero .title p {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
+section#news .hero .title p:last-child {
+  font-size: 1.25rem;
+}
+section#news .hero img {
+  width: 100%;
+  max-height: 30rem;
+}
+section#news .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 8.7rem;
+  gap: 4.5rem 0rem;
+}
+section#news .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 1.7rem 1.7rem 3.3rem;
+  transition: 0.2s ease-in;
+}
+section#news .cards .card:hover {
+  background-color: white;
+}
+section#news .cards .card img {
+  width: 100%;
+}
+section#news .cards .card .title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+section#news .cards .card .info {
+  color: #505154;
+  font-size: 0.9rem;
+  margin: 2rem 0;
+}
+section#news .cards .card .action {
+  color: #505154;
+  font-size: 1.3rem;
+  position: relative;
+}
+section#news .cards .card .action:after {
+  content: "";
+}
+section#news .route {
+  display: flex;
+  margin: 8rem 10.5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+section#news .route .toStart {
+  margin-bottom: 1.2rem;
+  font-size: 0.73rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+section#news .route .pagination {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+section#news .route .pagination span {
+  font-size: 0.9rem;
+  color: #939393;
+}
+section#news .route .pagination span svg {
+  width: 2rem;
+  height: 1rem;
+}
+section#news .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+section#news .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#news .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#news .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  text-align: center;
+  width: 35rem;
+}
+section#news .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#news .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 17rem;
+}
+section#news .consultaion .call form input::-moz-placeholder {
+  color: #939393;
+}
+section#news .consultaion .call form input:-ms-input-placeholder {
+  color: #939393;
+}
+section#news .consultaion .call form input::placeholder {
+  color: #939393;
+}
+section#news .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
 }
 
 /*pages*/
