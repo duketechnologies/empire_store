@@ -581,24 +581,6 @@ li {
 
 /*helpers*/
 /*blocks*/
-section#hero {
-  height: 100vh;
-  background-color: white;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 0 2.2rem;
-  border-radius: 0.6rem;
-}
-section#hero h1 {
-  font-family: Spectral, italic;
-  font-size: 3.3rem;
-  font-style: italic;
-}
-section#hero img {
-  box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
-  border-radius: 0.5rem;
-}
 header.header {
   margin: 10px 0;
   background-color: transparent;
@@ -845,6 +827,151 @@ header.header .wrapper .info .profile li:hover svg > path {
 
 /*blocks*/
 /*pages*/
+.hero {
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 2.2rem;
+  border-radius: 0.6rem;
+}
+.hero h1 {
+  font-family: Spectral, italic;
+  font-size: 3.3rem;
+  font-style: italic;
+}
+.hero img {
+  box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+  border-radius: 0.5rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 10.5rem;
+  padding-left: 0;
+  background-color: white;
+}
+.item .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.item .title svg {
+  width: 5rem;
+  height: 1rem;
+  margin-bottom: 3rem;
+}
+.item .title h3 {
+  font-size: 1.3rem;
+  color: #505154;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1.4rem;
+}
+.item .title p {
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+  line-height: 1.4rem;
+  text-align: center;
+  color: #505154;
+  margin-bottom: 3rem;
+}
+.item .item_img {
+  width: 100%;
+}
+
+.consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+.consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+.consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+.consultaion .call p {
+  font-size: 0.98rem;
+  color: #505154;
+  margin-top: 1rem;
+  text-align: center;
+  width: 35rem;
+  letter-spacing: 0.7px;
+  line-height: 1.4rem;
+}
+.consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 17rem;
+}
+.consultaion .call form input::-moz-placeholder {
+  color: #939393;
+}
+.consultaion .call form input:-ms-input-placeholder {
+  color: #939393;
+}
+.consultaion .call form input::placeholder {
+  color: #939393;
+}
+.consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+.collab {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.collab .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.collab .title h3 {
+  font-style: italic;
+  font-family: "Spectral";
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.collab .title p {
+  letter-spacing: 0.7px;
+  margin-bottom: 5rem;
+}
+.collab .collab_img {
+  width: 100%;
+  padding: 10.5rem;
+}
+
 section#faq h1 {
   font-size: 1.6rem;
   font-weight: 300;
