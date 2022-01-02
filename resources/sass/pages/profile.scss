@@ -1,0 +1,190 @@
+section#profile {
+  margin: 0 10.5rem;
+  h1 {
+    font-family: 'Spectral';
+    font-size: 1.3rem;
+    color: #939393;
+    font-style: italic;
+    margin-top: 4rem;
+    margin-bottom: 2.5rem;
+    span {
+      font-family: 'Inter';
+      font-style: normal;
+      color:black;
+      font-style: 1.6rem;
+    }
+  }
+  .type {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    .links {
+      background-color: rgba(222, 220, 216, 0.3);;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 0.6rem;
+      transition: .2s ease-in-out;
+      li {
+        padding: 1rem 2.3rem;
+        margin: 4px;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        transition: .2s ease-in-out;
+        &:hover {
+            background-color: white;
+        }
+      }
+    }
+    .btn {
+      border: 1px solid #DEDCD8;
+      font-size: .8rem;
+      letter-spacing: .7px;
+      font-weight: 500;
+      padding: 1.1rem;
+      border-radius: 8px;
+      background: transparent;
+      transition: .2s ease-in;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        border:1px solid transparent;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    gap: 1.4rem;
+    .profile-info {
+      border-radius: 8px;
+      background-color: white;
+      .form {
+        .user {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          padding: 3.2rem;
+          gap: 2.5rem;
+        }
+        fieldset {
+          border: 1px solid #DEDCD8;
+          border-style: solid;
+          max-width: 20rem;
+          background: white;
+          border-radius: 8px;
+          legend {
+            padding-left: .5rem;
+            padding-right: .5rem;
+            margin-left: 1.5rem;
+            font-size: .9rem;
+            letter-spacing: .7px;
+            color: #505150;
+          }
+          input {
+            border:none;
+            padding:1rem;
+            min-width: 18rem;
+            outline: none;
+            border-radius: 8px;
+            padding-left: 1.5rem;
+            font-size: .9rem;
+            letter-spacing: .44px;
+          }
+        }
+        .buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3rem;
+          .main-btn {
+            max-width: 10rem;
+          }
+          a {
+            font-size: .9rem;
+            letter-spacing: 1px;
+            font-weight: 500;
+            border-bottom: 1px solid #D7D9E0;
+            padding-bottom: .5rem;
+            transition: .2s ease-in;
+            &:hover {
+              border-bottom: 1px solid black;
+            }
+          }
+        }
+      }
+    }
+    .profile-address {
+      border-radius: 8px;
+      background-color: white;
+      padding: 4rem;
+      h3 {
+        font-family: "Spectral";
+        font-style: italic;
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+      }
+      .address {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        div {
+          padding: 2.1rem;
+          border: 1px solid #DEDCD8;
+          transition: .2s ease-in;
+          border-radius: 8px;
+          max-width: 20rem;
+          min-height: 10rem;
+          .place {
+            font-weight: 600;
+            font-size: .85rem;
+            letter-spacing: .7px;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            &::before {
+              content: "";
+              background-image: url('/i/icons/location_icon.png');
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: contain;
+              width: .7rem;
+              height: .8rem;
+              position: absolute;
+              left: 0;
+            }
+          }
+          .location {
+            font-size: .85rem;
+            letter-spacing: .7px;
+            line-height: 1.4rem;
+          }
+          cursor: pointer;
+          &:hover {
+            border: 1px solid black;
+          }
+        }
+        .add {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #F5F4F1;
+          border:none;
+          max-width: 18rem;
+          height: 100%;
+          &:hover {
+            border:none;
+          }
+          .new-address {
+            margin-bottom: 0;
+            font-weight: 600;
+            font-size: .85rem;
+            letter-spacing: .44px;
+            color: #505154;
+          }
+        }
+      }
+    }
+  }
+}

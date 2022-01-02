@@ -48,4 +48,8 @@ class HomeController extends Controller
     {
         return view('pages.news');
     }
+    public function profile()
+    {
+        return view('pages.profile');
+    }
 }

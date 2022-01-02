@@ -885,6 +885,70 @@ header.header .wrapper .info .profile li:hover svg > path {
   width: 100%;
 }
 
+.compilation h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 6rem;
+}
+.compilation .product {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-left: 14rem;
+  margin-bottom: 14rem;
+}
+.compilation .product .content img {
+  box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+  width: 100%;
+}
+.compilation .product .content .name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+.compilation .product .content .price {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.compilation .product .content .count {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.compilation .product .content .count .quantity {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  min-width: 12rem;
+  justify-content: center;
+  justify-content: space-around;
+  border-radius: 3px;
+}
+.compilation .product .content .count .quantity p {
+  padding: 1.2rem 1rem;
+  cursor: pointer;
+}
+.compilation .product .info {
+  max-width: 13rem;
+  margin-left: 1.5rem;
+}
+.compilation .product .info p {
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
+  color: #505154;
+}
+.compilation .product .info p:last-child {
+  color: #303133;
+  line-height: 1.4rem;
+  letter-spacing: 0.44px;
+  margin-top: 2.3rem;
+}
+
 .consultaion {
   display: flex;
   justify-content: center;
@@ -993,7 +1057,7 @@ section#faq .type .links {
 section#faq .type .links li {
   padding: 0.8rem 2.3rem;
   margin: 5px;
-  border-radius: 8px;
+  border-radius: 5px;
   font-size: 0.85rem;
   transition: 0.2s ease-in-out;
 }
@@ -2164,6 +2228,194 @@ section#news .consultaion .call form .main-btn {
   margin-top: 2rem;
   width: 100%;
   font-weight: 500;
+}
+
+section#profile {
+  margin: 0 10.5rem;
+}
+section#profile h1 {
+  font-family: "Spectral";
+  font-size: 1.3rem;
+  color: #939393;
+  font-style: italic;
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+section#profile h1 span {
+  font-family: "Inter";
+  font-style: normal;
+  color: black;
+  font-style: 1.6rem;
+}
+section#profile .type {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+section#profile .type .links {
+  background-color: rgba(222, 220, 216, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.6rem;
+  transition: 0.2s ease-in-out;
+}
+section#profile .type .links li {
+  padding: 1rem 2.3rem;
+  margin: 4px;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  transition: 0.2s ease-in-out;
+}
+section#profile .type .links li:hover {
+  background-color: white;
+}
+section#profile .type .btn {
+  border: 1px solid #DEDCD8;
+  font-size: 0.8rem;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+  padding: 1.1rem;
+  border-radius: 8px;
+  background: transparent;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+section#profile .type .btn:hover {
+  background-color: white;
+  border: 1px solid transparent;
+}
+section#profile .content {
+  display: flex;
+  gap: 1.4rem;
+}
+section#profile .content .profile-info {
+  border-radius: 8px;
+  background-color: white;
+}
+section#profile .content .profile-info .form .user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3.2rem;
+  gap: 2.5rem;
+}
+section#profile .content .profile-info .form fieldset {
+  border: 1px solid #DEDCD8;
+  border-style: solid;
+  max-width: 20rem;
+  background: white;
+  border-radius: 8px;
+}
+section#profile .content .profile-info .form fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+}
+section#profile .content .profile-info .form fieldset input {
+  border: none;
+  padding: 1rem;
+  min-width: 18rem;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+section#profile .content .profile-info .form .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+section#profile .content .profile-info .form .buttons .main-btn {
+  max-width: 10rem;
+}
+section#profile .content .profile-info .form .buttons a {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-bottom: 1px solid #D7D9E0;
+  padding-bottom: 0.5rem;
+  transition: 0.2s ease-in;
+}
+section#profile .content .profile-info .form .buttons a:hover {
+  border-bottom: 1px solid black;
+}
+section#profile .content .profile-address {
+  border-radius: 8px;
+  background-color: white;
+  padding: 4rem;
+}
+section#profile .content .profile-address h3 {
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+section#profile .content .profile-address .address {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+section#profile .content .profile-address .address div {
+  padding: 2.1rem;
+  border: 1px solid #DEDCD8;
+  transition: 0.2s ease-in;
+  border-radius: 8px;
+  max-width: 20rem;
+  min-height: 10rem;
+  cursor: pointer;
+}
+section#profile .content .profile-address .address div .place {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.7px;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+section#profile .content .profile-address .address div .place::before {
+  content: "";
+  background-image: url("/i/icons/location_icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 0.7rem;
+  height: 0.8rem;
+  position: absolute;
+  left: 0;
+}
+section#profile .content .profile-address .address div .location {
+  font-size: 0.85rem;
+  letter-spacing: 0.7px;
+  line-height: 1.4rem;
+}
+section#profile .content .profile-address .address div:hover {
+  border: 1px solid black;
+}
+section#profile .content .profile-address .address .add {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F4F1;
+  border: none;
+  max-width: 18rem;
+  height: 100%;
+}
+section#profile .content .profile-address .address .add:hover {
+  border: none;
+}
+section#profile .content .profile-address .address .add .new-address {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.44px;
+  color: #505154;
 }
 
 /*pages*/
