@@ -465,7 +465,7 @@ a {
 }
 
 .remodal {
-  padding: 6.3rem !important;
+  padding: 4.5rem !important;
   border-radius: 0.5rem;
 }
 
@@ -2471,6 +2471,107 @@ section#profile .content .profile-address .address .add .new-address {
   font-size: 0.9rem;
   color: #939393;
   font-family: Inter, sans-serif;
+}
+
+.remodal[data-remodal-id=new_location] .new_location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.remodal[data-remodal-id=new_location] .new_location h3 {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+  color: black;
+  margin-bottom: 1rem;
+}
+.remodal[data-remodal-id=new_location] .new_location p {
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #505154;
+  margin-bottom: 4.5rem;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form {
+  width: 23rem;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form .place {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  outline: none;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form .place::-moz-placeholder {
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form .place:-ms-input-placeholder {
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form .place::placeholder {
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form fieldset {
+  border: 1px solid #DEDCD8;
+  border-style: solid;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 2.4rem;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+  text-align: left;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form fieldset select {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  outline: none;
+  position: relative;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form fieldset select option {
+  padding: 1rem 0;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form fieldset input {
+  border: none;
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form fieldset textarea {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  min-height: 6rem;
+  padding: 1rem;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form .main-btn {
+  width: 100%;
+}
+.remodal[data-remodal-id=new_location] .new_location .location-form .secondary-btn {
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
 }
 
 /*modals*/
