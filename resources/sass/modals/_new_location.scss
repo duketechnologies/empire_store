@@ -1,4 +1,4 @@
-.remodal[data-remodal-id=new_location] {
+.remodal[data-remodal-id=new_location]{
   .new_location {
       display: flex;
       flex-direction: column;
@@ -92,5 +92,106 @@
         font-size: .95rem;
       }
     }
+  }
+}
+.remodal[data-remodal-id=change_location] {
+  .new_location {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+    color: black;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: .9rem;
+    letter-spacing: .7px;
+    text-align: center;
+    color: #505154;
+    margin-bottom: 4.5rem;
+  }
+  .location-form {
+    width: 23rem;
+    .place {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid black;
+      padding: 1rem;
+      margin-bottom: 3rem;
+      outline: none;
+      &::placeholder {
+        font-size: .9rem;
+        letter-spacing: .44px;
+        
+      }
+    }
+    fieldset {
+      border: 1px solid #DEDCD8;
+      border-style: solid;
+      width: 100%;
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 2.4rem;
+      legend {
+        padding-left: .5rem;
+        padding-right: .5rem;
+        margin-left: 1.5rem;
+        font-size: .9rem;
+        letter-spacing: .7px;
+        color: #505150;
+        text-align: left;
+      }
+      select {
+        width: 100%;
+        border:none;
+        padding:1rem;
+        border-radius: 8px;
+        outline: none;
+        position: relative;
+        option {
+          padding:1rem 0;
+        }
+      }
+      input {
+        border:none;
+        padding:1rem;
+        width: 100%;
+        outline: none;
+        border-radius: 8px;
+        // padding-left: 1.5rem;
+        font-size: .9rem;
+        letter-spacing: .44px;
+      }
+      textarea {
+        width: 100%;
+        border:none;
+        border-radius: 8px;
+        resize: none;
+        outline: none;
+        min-height: 6rem;
+        padding:1rem;
+      }
+    }
+    .buttons {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+    .main-btn {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .secondary-btn {
+      border:none;
+      cursor: pointer;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: .95rem;
+      }
+    } 
   }
 }

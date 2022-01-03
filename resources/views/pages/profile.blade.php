@@ -43,11 +43,11 @@
         <div class="profile-address">
           <h3>Мои адреса</h3>
           <div class="address">
-            <div>
+            <div data-remodal-target="change_location">
               <p class="place">Работа</p>
-              <p class="location">Российская Федерация, Новосибирская область, Бердск, дом 17</p>
+              <p class="location" >Российская Федерация, Новосибирская область, Бердск, дом 17</p>
             </div>
-            <div>
+            <div data-remodal-target="change_location">
               <p class="place">Дом</p>
               <p class="location">Российская Федерация, Новосибирская область, Бердск, дом 17</p>
             </div>
