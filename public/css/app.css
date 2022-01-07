@@ -482,6 +482,11 @@ a {
   cursor: pointer;
 }
 
+@media only screen and (min-width: 641px) {
+  .franchise-remodal {
+    max-width: 1200px;
+  }
+}
 html, body {
   font-size: 1.56vmin;
   font-family: "Inter", sans-serif;
@@ -827,7 +832,7 @@ header.header .wrapper .info .profile li:hover svg > path {
 
 /*blocks*/
 /*pages*/
-.hero {
+section#home .hero {
   height: 100vh;
   background-color: white;
   display: flex;
@@ -836,17 +841,16 @@ header.header .wrapper .info .profile li:hover svg > path {
   margin: 0 2.2rem;
   border-radius: 0.6rem;
 }
-.hero h1 {
+section#home .hero h1 {
   font-family: Spectral, italic;
   font-size: 3.3rem;
   font-style: italic;
 }
-.hero img {
+section#home .hero img {
   box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
   border-radius: 0.5rem;
 }
-
-.item {
+section#home .item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -854,26 +858,26 @@ header.header .wrapper .info .profile li:hover svg > path {
   padding-left: 0;
   background-color: white;
 }
-.item .title {
+section#home .item .title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-.item .title svg {
+section#home .item .title svg {
   width: 5rem;
   height: 1rem;
   margin-bottom: 3rem;
 }
-.item .title h3 {
+section#home .item .title h3 {
   font-size: 1.3rem;
   color: #505154;
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 1.4rem;
 }
-.item .title p {
+section#home .item .title p {
   font-size: 0.9rem;
   letter-spacing: 0.44px;
   line-height: 1.4rem;
@@ -881,11 +885,10 @@ header.header .wrapper .info .profile li:hover svg > path {
   color: #505154;
   margin-bottom: 3rem;
 }
-.item .item_img {
+section#home .item .item_img {
   width: 100%;
 }
-
-.compilation h2 {
+section#home .compilation h2 {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 1.3rem;
@@ -893,33 +896,33 @@ header.header .wrapper .info .profile li:hover svg > path {
   margin-top: 10rem;
   margin-bottom: 6rem;
 }
-.compilation .product {
+section#home .compilation .product {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   margin-left: 14rem;
   margin-bottom: 14rem;
 }
-.compilation .product .content img {
+section#home .compilation .product .content img {
   box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
   width: 100%;
 }
-.compilation .product .content .name {
+section#home .compilation .product .content .name {
   font-size: 1.3rem;
   font-weight: 500;
   margin-top: 2rem;
 }
-.compilation .product .content .price {
+section#home .compilation .product .content .price {
   margin-top: 1rem;
   font-weight: 500;
 }
-.compilation .product .content .count {
+section#home .compilation .product .content .count {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-top: 2rem;
 }
-.compilation .product .content .count .quantity {
+section#home .compilation .product .content .count .quantity {
   display: flex;
   align-items: center;
   background-color: white;
@@ -928,47 +931,46 @@ header.header .wrapper .info .profile li:hover svg > path {
   justify-content: space-around;
   border-radius: 3px;
 }
-.compilation .product .content .count .quantity p {
+section#home .compilation .product .content .count .quantity p {
   padding: 1.2rem 1rem;
   cursor: pointer;
 }
-.compilation .product .info {
+section#home .compilation .product .info {
   max-width: 13rem;
   margin-left: 1.5rem;
 }
-.compilation .product .info p {
+section#home .compilation .product .info p {
   font-size: 0.9rem;
   line-height: 1.3rem;
   letter-spacing: 0.7px;
   color: #505154;
 }
-.compilation .product .info p:last-child {
+section#home .compilation .product .info p:last-child {
   color: #303133;
   line-height: 1.4rem;
   letter-spacing: 0.44px;
   margin-top: 2.3rem;
 }
-
-.consultaion {
+section#home .consultaion {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   padding: 8.5rem 0;
 }
-.consultaion .call {
+section#home .consultaion .call {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 21rem;
 }
-.consultaion .call h1 {
+section#home .consultaion .call h1 {
   font-size: 1.3rem;
   text-transform: uppercase;
   margin: 0;
 }
-.consultaion .call p {
+section#home .consultaion .call p {
   font-size: 0.98rem;
   color: #505154;
   margin-top: 1rem;
@@ -977,7 +979,7 @@ header.header .wrapper .info .profile li:hover svg > path {
   letter-spacing: 0.7px;
   line-height: 1.4rem;
 }
-.consultaion .call form {
+section#home .consultaion .call form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -985,7 +987,7 @@ header.header .wrapper .info .profile li:hover svg > path {
   margin-top: 1.5rem;
   width: 100%;
 }
-.consultaion .call form input {
+section#home .consultaion .call form input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #303133;
@@ -994,48 +996,46 @@ header.header .wrapper .info .profile li:hover svg > path {
   outline: none;
   width: 17rem;
 }
-.consultaion .call form input::-moz-placeholder {
+section#home .consultaion .call form input::-moz-placeholder {
   color: #939393;
 }
-.consultaion .call form input:-ms-input-placeholder {
+section#home .consultaion .call form input:-ms-input-placeholder {
   color: #939393;
 }
-.consultaion .call form input::placeholder {
+section#home .consultaion .call form input::placeholder {
   color: #939393;
 }
-.consultaion .call form .main-btn {
+section#home .consultaion .call form .main-btn {
   margin-top: 2rem;
   width: 100%;
   font-weight: 500;
 }
-
-.collab {
+section#home .collab {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.collab .title {
+section#home .collab .title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
 }
-.collab .title h3 {
+section#home .collab .title h3 {
   font-style: italic;
   font-family: "Spectral";
   font-size: 2.7rem;
   text-align: center;
   margin-bottom: 1.5rem;
 }
-.collab .title p {
+section#home .collab .title p {
   letter-spacing: 0.7px;
   margin-bottom: 5rem;
 }
-.collab .collab_img {
+section#home .collab .collab_img {
   width: 100%;
   padding: 10.5rem;
 }
-
 section#faq h1 {
   font-size: 1.6rem;
   font-weight: 300;
@@ -1274,20 +1274,25 @@ section#vacancies .main-img {
   background-image: url("/i/vacancies_img.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+  border-radius: 8px;
   width: 100%;
   height: 22rem;
+  margin: 0 2.2rem 0 2.2rem;
   border: none;
 }
 section#vacancies .description {
   display: flex;
   align-items: center;
+  gap: 1.2rem;
+  margin: 1.3rem 2rem;
 }
 section#vacancies .description .info {
   padding: 5.6rem 8.3rem;
   max-width: 33rem;
   background-color: white;
   border-radius: 8px;
-  margin: 1rem 2.2rem;
+  width: 100%;
 }
 section#vacancies .description .info h3 {
   font-family: "Spectral", italic;
@@ -1299,6 +1304,8 @@ section#vacancies .description .info p {
   font-size: 0.9rem;
   color: #505154;
   margin-bottom: 2.3rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.44px;
 }
 section#vacancies .description .info .main-btn {
   width: 100%;
@@ -1306,10 +1313,29 @@ section#vacancies .description .info .main-btn {
 section#vacancies .actual {
   background-color: white;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 4.9rem 8.3rem;
+}
+section#vacancies .actual p {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 section#vacancies .actual .list {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  gap: 20rem;
+  width: 100%;
+}
+section#vacancies .actual .list ul li {
+  margin-bottom: 1.8rem;
+  font-size: 1.2rem;
+  color: #303133;
 }
 section#vacancies .faq {
   margin-top: 5rem;
@@ -1746,6 +1772,7 @@ section#franchise .hero {
   flex-direction: column;
   justify-content: center;
   height: 95vh;
+  width: 100%;
 }
 section#franchise .hero__title {
   max-width: 15rem;
@@ -1913,7 +1940,7 @@ section#franchise .rules .content p {
 section#franchise .rules .content ul li {
   margin-top: 1rem;
   color: #505154;
-  font-size: 0.9rem;
+  font-size: 0.98rem;
 }
 section#franchise .rules .content ul li::before {
   content: "•";
@@ -2050,12 +2077,14 @@ section#franchise .consultaion .call p {
   font-size: 0.9rem;
   color: #505154;
   margin-top: 1rem;
-  width: 25rem;
+  width: 27rem;
   text-align: center;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
 }
 section#franchise .consultaion .call p span {
   color: black;
+  font-weight: 600;
 }
 section#franchise .consultaion .call form {
   display: flex;
@@ -2678,6 +2707,150 @@ section#profile .content .profile-address .address .add .new-address {
   font-weight: 500;
   letter-spacing: 1px;
   font-size: 0.95rem;
+}
+
+.remodal[data-remodal-id=franchise-modal] .franchise h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 2.6rem;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise .price {
+  display: flex;
+  gap: 0.9rem;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise .price .cost {
+  background: linear-gradient(0deg, #F8F8F6, #F8F8F6);
+  border-radius: 4px;
+  padding: 2rem 0;
+  width: 100%;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise .price .cost p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise .price .cost p span {
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 6rem;
+  gap: 4rem;
+  width: 100%;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper h4 {
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset {
+  border: 1px solid #DEDCD8;
+  border-style: solid;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 2.4rem;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+  text-align: left;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset select {
+  width: 100%;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  outline: none;
+  position: relative;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset select option {
+  padding: 1rem 0;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset input {
+  border: none;
+  padding: 1rem;
+  padding-left: 1.5rem;
+  width: 100%;
+  outline: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset textarea {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  min-height: 6rem;
+  padding: 1rem;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=checkbox] {
+  display: none;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes label {
+  outline: none;
+  font-weight: 700;
+  font-size: 0.7rem;
+  display: inline-block;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  padding-left: 1.8rem;
+  margin-right: 0;
+  line-height: 1.8rem;
+  letter-spacing: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-transform: uppercase;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes label::before {
+  content: "";
+  outline: none;
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  position: absolute;
+  left: 0;
+  top: 0.38rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: 1px solid #939393;
+  padding: 0.2rem;
+  transition: 0.2s ease-in;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=checkbox]:checked + label::before {
+  background-color: black;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=checkbox]:hover + label::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.remodal[data-remodal-id=franchise-modal] .franchise-form .main-btn {
+  margin-top: 5.2rem;
 }
 
 /*modals*/

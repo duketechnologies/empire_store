@@ -23,7 +23,7 @@
           <path d="M175.036 15.8867C177.436 11.2684 177.436 6.71456 174.738 2.21094C177.214 2.60536 179.551 5.81813 179.613 8.82294C179.683 12.2652 177.72 15.3345 175.036 15.8867Z" fill="white"/>
         </svg>
         <p>франшиза</p>
-        <a class="request" href="#">Подать заявку</a>
+        <a class="request" href="#" data-remodal-target="franchise-modal">Подать заявку</a>
       </div>
       {{-- <img src="/i/franchise/franchise_img.png" alt=""/> --}}
       <div class="links">

@@ -73,3 +73,62 @@
         </form>
     </div>
 </div>
+
+<div class="remodal franchise-modal" data-remodal-id="franchise-modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="franchise">
+        <h3>Заявка на франшизу Empire</h3>
+        <div class="price">
+          <div class="cost">
+            <p>от 2 млн. 	₸<br/><span>чистой прибыли в месяц</span></p>
+          </div>
+          <div class="cost">
+            <p>2 мес.<br/><span>срок для запуска бутика</span></p>
+          </div>
+          <div class="cost">
+            <p>50 м<sup>2</sup><br/><span>оптимальная площадь</span></p>
+          </div>
+        </div>
+        <form method="POST" action="#" class="franchise-form">
+          <div class="wrapper">
+            <div class="person">
+            <h4>Контактные данные </h4>
+            <fieldset>
+              <legend>Ваше имя</legend>
+              <input type="text" name="name"/>
+            </fieldset>
+              <fieldset>
+              <legend>Номер телефона</legend>
+              <input type="tel" name="phone"/>
+            </fieldset>
+          </div>
+          <div class="location">
+            <h4>Место открытия бутика</h4>
+            <fieldset>
+              <legend>Страна</legend>
+              <input type="text" name="country"/>
+            </fieldset>
+              <fieldset>
+              <legend>Город</legend>
+              <input type="text" name="city"/>
+            </fieldset>
+          </div>
+          <div class="place">
+            <h4>У вас имеется помещение?</h4>
+            <div class="checkboxes">
+            <div>
+              <input type="checkbox" id="1" />
+              <label for="1">Да</label>
+            </div>
+            <div>
+              <input type="checkbox" id="2" />
+              <label for="2">Нет</label>
+            </div>
+            </div>
+          </div>
+          </div>
+          
+          <button type="submit" class="main-btn">Отправить запрос</button>
+        </form>
+    </div>
+</div>
