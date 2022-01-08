@@ -1,190 +1,382 @@
 section#profile {
-  margin: 0 10.5rem;
-  h1 {
-    font-family: 'Spectral';
-    font-size: 1.3rem;
-    color: #939393;
-    font-style: italic;
-    margin-top: 4rem;
-    margin-bottom: 2.5rem;
-    span {
-      font-family: 'Inter';
-      font-style: normal;
-      color:black;
-      font-style: 1.6rem;
-    }
-  }
-  .type {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    .links {
-      background-color: rgba(222, 220, 216, 0.3);;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+  .switch {
+      margin: 0 10.5rem;
+      margin-bottom: 6rem;
+      h1 {
+          font-family: 'Spectral';
+          font-size: 1.3rem;
+          color: #939393;
+          font-style: italic;
+          margin-top: 4rem;
+          margin-bottom: 2.5rem;
+          span {
+              font-family: 'Inter';
+              font-style: normal;
+              color:black;
+              font-size: 1.6rem;
+          }
+      }
+      .type {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+          margin-bottom: 3rem;
+          .links {
+              background-color: rgba(222, 220, 216, 0.3);;
+              display: flex;
+              align-items: center;
+              justify-content: center;
 
-      border-radius: 0.6rem;
-      transition: .2s ease-in-out;
-      li {
-        padding: 1rem 2.3rem;
-        margin: 4px;
-        border-radius: 5px;
-        font-size: 0.85rem;
-        transition: .2s ease-in-out;
-        &:hover {
-            background-color: white;
-        }
-      }
-    }
-    .btn {
-      border: 1px solid #DEDCD8;
-      font-size: .8rem;
-      letter-spacing: .7px;
-      font-weight: 500;
-      padding: 1.1rem;
-      border-radius: 8px;
-      background: transparent;
-      transition: .2s ease-in;
-      cursor: pointer;
-      &:hover {
-        background-color: white;
-        border:1px solid transparent;
-      }
-    }
-  }
-  .content {
-    display: flex;
-    gap: 1.4rem;
-    .profile-info {
-      border-radius: 8px;
-      background-color: white;
-      .form {
-        .user {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          padding: 3.2rem;
-          gap: 2.5rem;
-        }
-        fieldset {
-          border: 1px solid #DEDCD8;
-          border-style: solid;
-          max-width: 20rem;
-          background: white;
-          border-radius: 8px;
-          legend {
-            padding-left: .5rem;
-            padding-right: .5rem;
-            margin-left: 1.5rem;
-            font-size: .9rem;
-            letter-spacing: .7px;
-            color: #505150;
+              border-radius: 0.6rem;
+              transition: .2s ease-in-out;
+              li {
+                  padding: 1rem 2.3rem;
+                  margin: 4px;
+                  border-radius: 5px;
+                  font-size: 0.85rem;
+                  transition: .2s ease-in-out;
+                  &:hover {
+                      background-color: white;
+                  }
+              }
+              .active {
+                  background-color: white;
+              }
           }
-          input {
-            border:none;
-            padding:1rem;
-            min-width: 18rem;
-            outline: none;
-            border-radius: 8px;
-            padding-left: 1.5rem;
-            font-size: .9rem;
-            letter-spacing: .44px;
+          .btn {
+              border: 1px solid #DEDCD8;
+              font-size: .8rem;
+              letter-spacing: .7px;
+              font-weight: 500;
+              padding: 1.1rem;
+              border-radius: 8px;
+              background: transparent;
+              transition: .2s ease-in;
+              cursor: pointer;
+              &:hover {
+                  background-color: white;
+                  border:1px solid transparent;
+              }
           }
-        }
-        .buttons {
+      }
+      .hide {
+          display: none;
+      }
+      .my-profile {
+          display: flex;
+          gap: 1.4rem;
+          .profile-info {
+              border-radius: 8px;
+              background-color: white;
+              .form {
+                  .user {
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      padding: 3.2rem;
+                      gap: 2.5rem;
+                  }
+                  fieldset {
+                      border: 1px solid #DEDCD8;
+                      border-style: solid;
+                      max-width: 20rem;
+                      background: white;
+                      border-radius: 8px;
+                      legend {
+                          padding-left: .5rem;
+                          padding-right: .5rem;
+                          margin-left: 1.5rem;
+                          font-size: .9rem;
+                          letter-spacing: .7px;
+                          color: #505150;
+                      }
+                      input {
+                          border:none;
+                          padding:1rem;
+                          min-width: 18rem;
+                          outline: none;
+                          border-radius: 8px;
+                          padding-left: 1.5rem;
+                          font-size: .9rem;
+                          letter-spacing: .44px;
+                      }
+                  }
+                  .buttons {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      gap: 3rem;
+                      .main-btn {
+                          max-width: 10rem;
+                      }
+                      a {
+                          font-size: .9rem;
+                          letter-spacing: 1px;
+                          font-weight: 500;
+                          border-bottom: 1px solid #D7D9E0;
+                          padding-bottom: .5rem;
+                          transition: .2s ease-in;
+                          &:hover {
+                              border-bottom: 1px solid black;
+                          }
+                      }
+                  }
+              }
+          }
+          .profile-address {
+              border-radius: 8px;
+              background-color: white;
+              padding: 4rem;
+              h3 {
+                  font-family: "Spectral";
+                  font-style: italic;
+                  font-size: 1.6rem;
+                  margin-bottom: 4rem;
+              }
+              .address {
+                  display: flex;
+                  align-items: center;
+                  gap: 1rem;
+                  div {
+                      padding: 2.1rem;
+                      border: 1px solid #DEDCD8;
+                      transition: .2s ease-in;
+                      border-radius: 8px;
+                      max-width: 20rem;
+                      min-height: 10rem;
+                      .place {
+                          font-weight: 600;
+                          font-size: .85rem;
+                          letter-spacing: .7px;
+                          margin-bottom: 1rem;
+                          padding-left: 1.5rem;
+                          position: relative;
+                          &::before {
+                              content: "";
+                              background-image: url('/i/icons/location_icon.png');
+                              background-repeat: no-repeat;
+                              background-position: center center;
+                              background-size: contain;
+                              width: .55rem;
+                              height: .74rem;
+                              position: absolute;
+                              left: 0;
+                          }
+                      }
+                      .location {
+                          font-size: .85rem;
+                          letter-spacing: .7px;
+                          line-height: 1.4rem;
+                      }
+                      cursor: pointer;
+                      &:hover {
+                          border: 1px solid black;
+                      }
+                  }
+                  .add {
+                      width: 100%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      background-color: #F5F4F1;
+                      border:none;
+                      max-width: 18rem;
+                      min-height: 10rem;
+                      &:hover {
+                          border:none;
+                      }
+                      .new-address {
+                          margin-bottom: 0;
+                          font-weight: 600;
+                          font-size: .85rem;
+                          letter-spacing: .44px;
+                          color: #505154;
+                      }
+                  }
+              }
+          }
+      }
+      .orders {
+          min-height: 23rem;
+          background-color: white;
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 3rem;
-          .main-btn {
-            max-width: 10rem;
+          flex-direction: column;
+          margin-top: 1rem;
+          border-radius: 8px;
+          h3 {
+              text-align: center;
+              color: #939393;
+              font-family: "Spectral";
+              font-style: italic;
+              font-size: 1.6rem;
           }
           a {
-            font-size: .9rem;
-            letter-spacing: 1px;
-            font-weight: 500;
-            border-bottom: 1px solid #D7D9E0;
-            padding-bottom: .5rem;
-            transition: .2s ease-in;
-            &:hover {
+              padding-bottom: .3rem;
               border-bottom: 1px solid black;
-            }
+              margin-top: 4.3rem;
+              font-weight: 500;
+              letter-spacing: 1px;
+              font-size: .95rem;
           }
-        }
+          .product {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 2.5fr 2fr 1.5fr 3fr 1fr;
+              align-items: center;
+              border-top: 1px solid #DEDCD8 ;
+              padding: 2.5rem 0;
+              &__date {
+                  display: flex;
+                  align-items: center;
+                  gap: 3rem;
+                  .mark {
+                      font-size: .95rem;
+                      color: #505154;
+                      font-weight: 500;
+                      margin-bottom: .5rem;
+                  }
+                  .date {
+                      color: #939393;
+                      font-size: .95rem;
+                      letter-spacing: .44px;
+                  }
+                  img {
+                      max-width: 5rem;
+                  }
+              }
+              &__quantity {
+                  p {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      color: #505154;
+                      font-weight: 300;
+                      font-size: 1.2rem;
+                      gap:.5rem;
+                      span {
+                          font-size: .95rem;
+                          font-weight: 400;
+                      }
+                  }
+              }
+              &__price {
+                  p {
+                      font-weight: 500;
+                      letter-spacing: .44px;
+                      color :#303133;
+                  }
+              }
+              &__place {
+                  p {
+                      font-size: .95rem;
+                      color: #939393;
+                      font-weight: 400;
+                      margin-bottom: .6rem;
+                      span {
+                          color: #303133;
+                          font-weight: 500;
+
+                      }
+                  }
+              }
+          }
       }
-    }
-    .profile-address {
-      border-radius: 8px;
-      background-color: white;
-      padding: 4rem;
-      h3 {
-        font-family: "Spectral";
-        font-style: italic;
-        font-size: 1.6rem;
-        margin-bottom: 4rem;
-      }
-      .address {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        div {
-          padding: 2.1rem;
-          border: 1px solid #DEDCD8;
-          transition: .2s ease-in;
-          border-radius: 8px;
-          max-width: 20rem;
-          min-height: 10rem;
-          .place {
-            font-weight: 600;
-            font-size: .85rem;
-            letter-spacing: .7px;
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
-            &::before {
-              content: "";
-              background-image: url('/i/icons/location_icon.png');
-              background-repeat: no-repeat;
-              background-position: center center;
-              background-size: contain;
-              width: .7rem;
-              height: .8rem;
-              position: absolute;
-              left: 0;
-            }
-          }
-          .location {
-            font-size: .85rem;
-            letter-spacing: .7px;
-            line-height: 1.4rem;
-          }
-          cursor: pointer;
-          &:hover {
-            border: 1px solid black;
-          }
-        }
-        .add {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: #F5F4F1;
-          border:none;
-          max-width: 18rem;
-          height: 100%;
-          &:hover {
-            border:none;
-          }
-          .new-address {
-            margin-bottom: 0;
-            font-weight: 600;
-            font-size: .85rem;
-            letter-spacing: .44px;
-            color: #505154;
-          }
-        }
-      }
-    }
   }
+
+    .faq {
+        margin-top: 5rem;
+        &:last-child {
+            border-bottom: 1px solid #505154;
+            margin-bottom: 4rem;
+        }
+        .questions {
+            border-top: 1px solid #505154;
+            padding: 2.2rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                border-bottom: 1px solid transparent;
+                padding-bottom: .3rem;
+                transition: .2s ease-in-out;
+                display: inline-block;
+                text-transform: uppercase;
+            }
+            svg {
+                width: 4rem;
+                height: 2rem;
+                >path {
+                    transition: .2s ease-in;
+                }
+
+            }
+            &:hover {
+                p {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 0.3rem;
+                }
+                svg>path {
+                    stroke: #505154;
+                }
+            }
+        }
+    }
+    .consultaion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 8.5rem 0;
+        .call {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 21rem;
+            h1 {
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                margin: 0;
+            }
+            p {
+                font-size: .9rem;
+                color: #505154;
+                margin-top: 1rem;
+                width: 30rem;
+                letter-spacing: .7px;
+                line-height: 1.3rem;
+                text-align: center;
+                a {
+                    background-color: rgba(193, 146, 69, 0.1);
+                    padding:.2rem;
+                }
+            }
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 1.5rem;
+                width: 100%;
+                input {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid #303133;
+                    text-align: center;
+                    padding:1rem;
+                    outline: none;
+                    width: 85%;
+
+                }
+                .main-btn {
+                    margin-top: 2rem;
+                    width: 100%;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }

@@ -7,7 +7,7 @@
                 <li><a href="#">Адреса Бутиков</a></li>
                 <li><a href="#">Корпоративным клиентам</a></li>
                 <li><a href="#">Франшиза</a></li>
-                <li><a href="#">О Empire</a></li>
+                <li><a href="#" data-remodal-target="payment">О Empire</a></li>
             </ul>
             <input type="text" name="search" placeholder="Поиск"/>
         </div>

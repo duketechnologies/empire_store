@@ -1,0 +1,42 @@
+.remodal[data-remodal-id=quiz] {
+  max-width: 106rem;
+  padding: 0 !important;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    img {
+      width: 100%;
+    }
+    .question {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      width: 100%;
+      min-height: 80%;
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #303133;
+      }
+      ul {
+        li {
+          font-size: 1.2rem;
+          font-weight: 300;
+          margin-bottom: 1.5rem;
+          cursor: pointer;
+          transition: .2s ease-in;
+          border-radius: 8px;
+          padding: .5rem;
+          &:hover {
+            background-color: #F5F4F1;
+          }
+        }
+      }
+      .main-btn {
+        max-width: 12rem;
+      }
+    }
+  }
+}

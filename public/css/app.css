@@ -482,8 +482,8 @@ a {
   cursor: pointer;
 }
 
-@media only screen and (min-width: 641px) {
-  .franchise-remodal {
+@media only screen and (min-width: 2560px) {
+  .remodal {
     max-width: 1200px;
   }
 }
@@ -2259,10 +2259,11 @@ section#news .consultaion .call form .main-btn {
   font-weight: 500;
 }
 
-section#profile {
+section#profile .switch {
   margin: 0 10.5rem;
+  margin-bottom: 6rem;
 }
-section#profile h1 {
+section#profile .switch h1 {
   font-family: "Spectral";
   font-size: 1.3rem;
   color: #939393;
@@ -2270,19 +2271,19 @@ section#profile h1 {
   margin-top: 4rem;
   margin-bottom: 2.5rem;
 }
-section#profile h1 span {
+section#profile .switch h1 span {
   font-family: "Inter";
   font-style: normal;
   color: black;
-  font-style: 1.6rem;
+  font-size: 1.6rem;
 }
-section#profile .type {
+section#profile .switch .type {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 3rem;
 }
-section#profile .type .links {
+section#profile .switch .type .links {
   background-color: rgba(222, 220, 216, 0.3);
   display: flex;
   align-items: center;
@@ -2290,17 +2291,20 @@ section#profile .type .links {
   border-radius: 0.6rem;
   transition: 0.2s ease-in-out;
 }
-section#profile .type .links li {
+section#profile .switch .type .links li {
   padding: 1rem 2.3rem;
   margin: 4px;
   border-radius: 5px;
   font-size: 0.85rem;
   transition: 0.2s ease-in-out;
 }
-section#profile .type .links li:hover {
+section#profile .switch .type .links li:hover {
   background-color: white;
 }
-section#profile .type .btn {
+section#profile .switch .type .links .active {
+  background-color: white;
+}
+section#profile .switch .type .btn {
   border: 1px solid #DEDCD8;
   font-size: 0.8rem;
   letter-spacing: 0.7px;
@@ -2311,32 +2315,35 @@ section#profile .type .btn {
   transition: 0.2s ease-in;
   cursor: pointer;
 }
-section#profile .type .btn:hover {
+section#profile .switch .type .btn:hover {
   background-color: white;
   border: 1px solid transparent;
 }
-section#profile .content {
+section#profile .switch .hide {
+  display: none;
+}
+section#profile .switch .my-profile {
   display: flex;
   gap: 1.4rem;
 }
-section#profile .content .profile-info {
+section#profile .switch .my-profile .profile-info {
   border-radius: 8px;
   background-color: white;
 }
-section#profile .content .profile-info .form .user {
+section#profile .switch .my-profile .profile-info .form .user {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 3.2rem;
   gap: 2.5rem;
 }
-section#profile .content .profile-info .form fieldset {
+section#profile .switch .my-profile .profile-info .form fieldset {
   border: 1px solid #DEDCD8;
   border-style: solid;
   max-width: 20rem;
   background: white;
   border-radius: 8px;
 }
-section#profile .content .profile-info .form fieldset legend {
+section#profile .switch .my-profile .profile-info .form fieldset legend {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin-left: 1.5rem;
@@ -2344,7 +2351,7 @@ section#profile .content .profile-info .form fieldset legend {
   letter-spacing: 0.7px;
   color: #505150;
 }
-section#profile .content .profile-info .form fieldset input {
+section#profile .switch .my-profile .profile-info .form fieldset input {
   border: none;
   padding: 1rem;
   min-width: 18rem;
@@ -2354,16 +2361,16 @@ section#profile .content .profile-info .form fieldset input {
   font-size: 0.9rem;
   letter-spacing: 0.44px;
 }
-section#profile .content .profile-info .form .buttons {
+section#profile .switch .my-profile .profile-info .form .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
 }
-section#profile .content .profile-info .form .buttons .main-btn {
+section#profile .switch .my-profile .profile-info .form .buttons .main-btn {
   max-width: 10rem;
 }
-section#profile .content .profile-info .form .buttons a {
+section#profile .switch .my-profile .profile-info .form .buttons a {
   font-size: 0.9rem;
   letter-spacing: 1px;
   font-weight: 500;
@@ -2371,26 +2378,26 @@ section#profile .content .profile-info .form .buttons a {
   padding-bottom: 0.5rem;
   transition: 0.2s ease-in;
 }
-section#profile .content .profile-info .form .buttons a:hover {
+section#profile .switch .my-profile .profile-info .form .buttons a:hover {
   border-bottom: 1px solid black;
 }
-section#profile .content .profile-address {
+section#profile .switch .my-profile .profile-address {
   border-radius: 8px;
   background-color: white;
   padding: 4rem;
 }
-section#profile .content .profile-address h3 {
+section#profile .switch .my-profile .profile-address h3 {
   font-family: "Spectral";
   font-style: italic;
   font-size: 1.6rem;
   margin-bottom: 4rem;
 }
-section#profile .content .profile-address .address {
+section#profile .switch .my-profile .profile-address .address {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-section#profile .content .profile-address .address div {
+section#profile .switch .my-profile .profile-address .address div {
   padding: 2.1rem;
   border: 1px solid #DEDCD8;
   transition: 0.2s ease-in;
@@ -2399,7 +2406,7 @@ section#profile .content .profile-address .address div {
   min-height: 10rem;
   cursor: pointer;
 }
-section#profile .content .profile-address .address div .place {
+section#profile .switch .my-profile .profile-address .address div .place {
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.7px;
@@ -2407,26 +2414,26 @@ section#profile .content .profile-address .address div .place {
   padding-left: 1.5rem;
   position: relative;
 }
-section#profile .content .profile-address .address div .place::before {
+section#profile .switch .my-profile .profile-address .address div .place::before {
   content: "";
   background-image: url("/i/icons/location_icon.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
-  width: 0.7rem;
-  height: 0.8rem;
+  width: 0.55rem;
+  height: 0.74rem;
   position: absolute;
   left: 0;
 }
-section#profile .content .profile-address .address div .location {
+section#profile .switch .my-profile .profile-address .address div .location {
   font-size: 0.85rem;
   letter-spacing: 0.7px;
   line-height: 1.4rem;
 }
-section#profile .content .profile-address .address div:hover {
+section#profile .switch .my-profile .profile-address .address div:hover {
   border: 1px solid black;
 }
-section#profile .content .profile-address .address .add {
+section#profile .switch .my-profile .profile-address .address .add {
   width: 100%;
   display: flex;
   align-items: center;
@@ -2434,17 +2441,187 @@ section#profile .content .profile-address .address .add {
   background-color: #F5F4F1;
   border: none;
   max-width: 18rem;
-  height: 100%;
+  min-height: 10rem;
 }
-section#profile .content .profile-address .address .add:hover {
+section#profile .switch .my-profile .profile-address .address .add:hover {
   border: none;
 }
-section#profile .content .profile-address .address .add .new-address {
+section#profile .switch .my-profile .profile-address .address .add .new-address {
   margin-bottom: 0;
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.44px;
   color: #505154;
+}
+section#profile .switch .orders {
+  min-height: 23rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+section#profile .switch .orders h3 {
+  text-align: center;
+  color: #939393;
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 1.6rem;
+}
+section#profile .switch .orders a {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid black;
+  margin-top: 4.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+section#profile .switch .orders .product {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.5fr 2fr 1.5fr 3fr 1fr;
+  align-items: center;
+  border-top: 1px solid #DEDCD8;
+  padding: 2.5rem 0;
+}
+section#profile .switch .orders .product__date {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+section#profile .switch .orders .product__date .mark {
+  font-size: 0.95rem;
+  color: #505154;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+section#profile .switch .orders .product__date .date {
+  color: #939393;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+section#profile .switch .orders .product__date img {
+  max-width: 5rem;
+}
+section#profile .switch .orders .product__quantity p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #505154;
+  font-weight: 300;
+  font-size: 1.2rem;
+  gap: 0.5rem;
+}
+section#profile .switch .orders .product__quantity p span {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+section#profile .switch .orders .product__price p {
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  color: #303133;
+}
+section#profile .switch .orders .product__place p {
+  font-size: 0.95rem;
+  color: #939393;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+section#profile .switch .orders .product__place p span {
+  color: #303133;
+  font-weight: 500;
+}
+section#profile .faq {
+  margin-top: 5rem;
+}
+section#profile .faq:last-child {
+  border-bottom: 1px solid #505154;
+  margin-bottom: 4rem;
+}
+section#profile .faq .questions {
+  border-top: 1px solid #505154;
+  padding: 2.2rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#profile .faq .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
+}
+section#profile .faq .questions svg {
+  width: 4rem;
+  height: 2rem;
+}
+section#profile .faq .questions svg > path {
+  transition: 0.2s ease-in;
+}
+section#profile .faq .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+section#profile .faq .questions:hover svg > path {
+  stroke: #505154;
+}
+section#profile .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+section#profile .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#profile .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#profile .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  width: 30rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
+  text-align: center;
+}
+section#profile .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+}
+section#profile .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#profile .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 85%;
+}
+section#profile .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
 }
 
 /*pages*/
@@ -2851,6 +3028,237 @@ section#profile .content .profile-address .address .add .new-address {
 }
 .remodal[data-remodal-id=franchise-modal] .franchise-form .main-btn {
   margin-top: 5.2rem;
+}
+
+.remodal[data-remodal-id=quiz] {
+  max-width: 106rem;
+  padding: 0 !important;
+}
+.remodal[data-remodal-id=quiz] .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.remodal[data-remodal-id=quiz] .content img {
+  width: 100%;
+}
+.remodal[data-remodal-id=quiz] .content .question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 80%;
+}
+.remodal[data-remodal-id=quiz] .content .question h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #303133;
+}
+.remodal[data-remodal-id=quiz] .content .question ul li {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+.remodal[data-remodal-id=quiz] .content .question ul li:hover {
+  background-color: #F5F4F1;
+}
+.remodal[data-remodal-id=quiz] .content .question .main-btn {
+  max-width: 12rem;
+}
+
+.remodal[data-remodal-id=feedback] {
+  padding: 0;
+  max-width: 105rem;
+}
+.remodal[data-remodal-id=feedback] .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.remodal[data-remodal-id=feedback] .content img {
+  width: 100%;
+}
+.remodal[data-remodal-id=feedback] .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  width: 30rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
+  margin-bottom: 4rem;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 85%;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call .whatsapp-btn {
+  background-color: #27AE60;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  width: 100%;
+  height: 3.3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.remodal[data-remodal-id=feedback] .consultaion .call .whatsapp-btn svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.remodal[data-remodal-id=comment] {
+  padding: 6rem !important;
+  max-width: 800px;
+}
+.remodal[data-remodal-id=comment] .content h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #505154;
+  font-weight: 300;
+}
+.remodal[data-remodal-id=comment] .content p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.remodal[data-remodal-id=comment] .content form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.3rem;
+}
+.remodal[data-remodal-id=comment] .content form input {
+  border: none;
+  border-bottom: 1px solid #303133;
+  padding-bottom: 1rem;
+  text-align: center;
+  width: 17rem;
+}
+.remodal[data-remodal-id=comment] .content form textarea {
+  width: 42rem;
+  min-height: 17rem;
+  background-color: #F5F4F1;
+  padding-top: 1.6rem;
+  padding-left: 2.2rem;
+  border: none;
+  resize: none;
+  outline: none;
+  border-radius: 0.5rem;
+}
+.remodal[data-remodal-id=comment] .content form textarea::-moz-placeholder {
+  font-size: 0.9rem;
+  color: #939393;
+  font-family: Inter, sans-serif;
+}
+.remodal[data-remodal-id=comment] .content form textarea:-ms-input-placeholder {
+  font-size: 0.9rem;
+  color: #939393;
+  font-family: Inter, sans-serif;
+}
+.remodal[data-remodal-id=comment] .content form textarea::placeholder {
+  font-size: 0.9rem;
+  color: #939393;
+  font-family: Inter, sans-serif;
+}
+
+.remodal[data-remodal-id=payment] {
+  background-color: #F5F4F1;
+  max-width: 40rem;
+}
+.remodal[data-remodal-id=payment] h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.remodal[data-remodal-id=payment] .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.remodal[data-remodal-id=payment] .content .info {
+  display: flex;
+  background-color: white;
+  padding: 2rem 4rem;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.remodal[data-remodal-id=payment] .content .info p {
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+.remodal[data-remodal-id=payment] .content .info p b {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.remodal[data-remodal-id=payment] .content .details {
+  margin-top: 4.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid black;
 }
 
 /*modals*/
