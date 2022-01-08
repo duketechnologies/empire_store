@@ -1010,6 +1010,42 @@ section#home .consultaion .call form .main-btn {
   width: 100%;
   font-weight: 500;
 }
+section#home .faq {
+  margin-top: 5rem;
+}
+section#home .faq:last-child {
+  border-bottom: 1px solid #505154;
+  margin-bottom: 4rem;
+}
+section#home .faq .questions {
+  border-top: 1px solid #505154;
+  padding: 2.2rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#home .faq .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
+}
+section#home .faq .questions svg {
+  width: 4rem;
+  height: 2rem;
+}
+section#home .faq .questions svg > path {
+  transition: 0.2s ease-in;
+}
+section#home .faq .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+section#home .faq .questions:hover svg > path {
+  stroke: #505154;
+}
 section#home .collab {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2462,6 +2498,7 @@ section#profile .switch .orders {
   flex-direction: column;
   margin-top: 1rem;
   border-radius: 8px;
+  padding: 2rem 2.35rem;
 }
 section#profile .switch .orders h3 {
   text-align: center;
@@ -2478,10 +2515,37 @@ section#profile .switch .orders a {
   letter-spacing: 1px;
   font-size: 0.95rem;
 }
+section#profile .switch .orders .title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.5fr 3fr 1fr;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+section#profile .switch .orders .title p {
+  font-size: 0.95rem;
+  color: #939393;
+  letter-spacing: 0.44px;
+}
+section#profile .switch .orders .title p:first-child {
+  color: black;
+}
+section#profile .switch .orders .title p:nth-child(2) {
+  text-align: center;
+}
+section#profile .switch .orders .title p:nth-child(3) {
+  text-align: center;
+}
+section#profile .switch .orders .title p:nth-child(4) {
+  margin-left: 5rem;
+}
+section#profile .switch .orders .title p:last-child {
+  text-align: center;
+}
 section#profile .switch .orders .product {
   width: 100%;
   display: grid;
-  grid-template-columns: 2.5fr 2fr 1.5fr 3fr 1fr;
+  grid-template-columns: 2fr 1.2fr 1.5fr 3fr 1fr;
   align-items: center;
   border-top: 1px solid #DEDCD8;
   padding: 2.5rem 0;
@@ -2522,16 +2586,46 @@ section#profile .switch .orders .product__price p {
   font-weight: 500;
   letter-spacing: 0.44px;
   color: #303133;
+  text-align: center;
 }
 section#profile .switch .orders .product__place p {
   font-size: 0.95rem;
   color: #939393;
   font-weight: 400;
   margin-bottom: 0.6rem;
+  margin-left: 5rem;
 }
 section#profile .switch .orders .product__place p span {
   color: #303133;
   font-weight: 500;
+}
+section#profile .switch .orders .product__status {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+section#profile .switch .orders .product__status .in-process {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+  border-radius: 999rem;
+  border: 1px solid black;
+}
+section#profile .switch .orders .product__status .delivered {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+  color: #27AE60;
+  border: 1px solid #27AE60;
+  border-radius: 999rem;
+}
+section#profile .switch .orders .product__status .delivered svg {
+  width: 0.67rem;
+  height: 0.53rem;
 }
 section#profile .faq {
   margin-top: 5rem;

@@ -204,6 +204,8 @@ section#profile {
           flex-direction: column;
           margin-top: 1rem;
           border-radius: 8px;
+          padding: 2rem 2.35rem;
+
           h3 {
               text-align: center;
               color: #939393;
@@ -219,13 +221,41 @@ section#profile {
               letter-spacing: 1px;
               font-size: .95rem;
           }
+          .title {
+              width: 100%;
+              display: grid;
+              grid-template-columns: 2fr 1.2fr 1.5fr 3fr 1fr;
+              align-items: center;
+              margin-bottom: 2rem;
+              p {
+                  font-size: .95rem;
+                  color: #939393;
+                  letter-spacing: .44px;
+                  &:first-child {
+                      color: black;
+                  }
+                  &:nth-child(2) {
+                      text-align: center;
+                  }
+                  &:nth-child(3) {
+                      text-align: center;
+                  }
+                  &:nth-child(4) {
+                      margin-left: 5rem;
+                  }
+                  &:last-child {
+                      text-align: center;
+                  }
+              }
+          }
           .product {
               width: 100%;
               display: grid;
-              grid-template-columns: 2.5fr 2fr 1.5fr 3fr 1fr;
+              grid-template-columns: 2fr 1.2fr 1.5fr 3fr 1fr;
               align-items: center;
               border-top: 1px solid #DEDCD8 ;
               padding: 2.5rem 0;
+
               &__date {
                   display: flex;
                   align-items: center;
@@ -265,6 +295,7 @@ section#profile {
                       font-weight: 500;
                       letter-spacing: .44px;
                       color :#303133;
+                      text-align: center;
                   }
               }
               &__place {
@@ -273,10 +304,39 @@ section#profile {
                       color: #939393;
                       font-weight: 400;
                       margin-bottom: .6rem;
+                      margin-left: 5rem;
                       span {
                           color: #303133;
                           font-weight: 500;
 
+                      }
+                  }
+              }
+              &__status {
+                  display: flex;
+                  align-self: center;
+                  justify-content: center;
+                  .in-process {
+                      padding: .5rem;
+                      text-transform: uppercase;
+                      font-size: .8rem;
+                      letter-spacing: .44px;
+                      font-weight: 500;
+                      border-radius: 999rem;
+                      border: 1px solid black;
+                  }
+                  .delivered {
+                      padding: .5rem;
+                      text-transform: uppercase;
+                      font-size: .8rem;
+                      letter-spacing: .44px;
+                      font-weight: 500;
+                      color: #27AE60;
+                      border: 1px solid #27AE60;
+                      border-radius: 999rem;
+                      svg {
+                          width: .67rem;
+                          height: .53rem;
                       }
                   }
               }

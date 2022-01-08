@@ -12,7 +12,7 @@ section#home {
         font-size: 3.3rem;
         font-style: italic;
     }
-  
+
     img {
         -webkit-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
         -moz-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
@@ -33,11 +33,11 @@ section#home {
       align-items: center;
       justify-content: center;
       width: 100%;
-      
+
       svg {
         width: 5rem;
         height: 1rem;
-        margin-bottom: 3rem;      
+        margin-bottom: 3rem;
       }
       h3 {
         font-size: 1.3rem;
@@ -128,8 +128,8 @@ section#home {
       }
     }
   }
-  
-  
+
+
   .consultaion {
     display: flex;
     justify-content: center;
@@ -183,6 +183,46 @@ section#home {
         }
     }
   }
+    .faq {
+        margin-top: 5rem;
+        &:last-child {
+            border-bottom: 1px solid #505154;
+            margin-bottom: 4rem;
+        }
+        .questions {
+            border-top: 1px solid #505154;
+            padding: 2.2rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                border-bottom: 1px solid transparent;
+                padding-bottom: .3rem;
+                transition: .2s ease-in-out;
+                display: inline-block;
+                text-transform: uppercase;
+            }
+            svg {
+                width: 4rem;
+                height: 2rem;
+                >path {
+                    transition: .2s ease-in;
+                }
+
+            }
+            &:hover {
+                p {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 0.3rem;
+                }
+                svg>path {
+                    stroke: #505154;
+                }
+            }
+        }
+    }
   .collab {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -196,7 +236,7 @@ section#home {
         font-style: italic;
         font-family: 'Spectral';
         font-size: 2.7rem;
-        text-align: center; 
+        text-align: center;
         margin-bottom: 1.5rem;
       }
       p {
@@ -209,10 +249,10 @@ section#home {
       padding: 10.5rem;
     }
   }
-  
-  
+
+
   @include responsive{
-  
+
   }
-  
+
 }

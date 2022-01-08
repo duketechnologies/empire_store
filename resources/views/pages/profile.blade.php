@@ -61,6 +61,13 @@
           <div class="orders">
 {{--              <h3>Вы еще не оформили ни одного заказа</h3>--}}
 {{--              <a href="#">Начать шопинг</a>--}}
+              <div class="title">
+                  <p>Мои заказы (2)</p>
+                  <p>Товаров в заказе</p>
+                  <p>Сумма</p>
+                  <p>Доставка</p>
+                  <p>Статус</p>
+              </div>
               <div class="product">
                   <div class="product__date">
                       <img src="/i/profile/product.png" alt=""/>
@@ -81,7 +88,33 @@
                       <p>Ожидается: <span> 4 октября 2021</span></p>
                   </div>
                   <div class="product__status">
-                      <p>В обработке</p>
+                      <p class="in-process">В обработке</p>
+                  </div>
+              </div>
+              <div class="product">
+                  <div class="product__date">
+                      <img src="/i/profile/product.png" alt=""/>
+                      <div>
+                          <p class="mark">№39210</p>
+                          <p class="date">24 сентября 2021</p>
+                      </div>
+                  </div>
+                  <div class="product__quantity">
+                      <p>16<span>товара</span></p>
+                  </div>
+                  <div class="product__price">
+                      <p>749 200 ₸</p>
+                  </div>
+                  <div class="product__place">
+                      <p>Стоимость доставки:<span> 6 000 ₸</span></p>
+                      <p>Адрес доставки: <span> “Дом” Алматы, Жарокова, 57</span></p>
+                      <p>Ожидается: <span> 4 октября 2021</span></p>
+                  </div>
+                  <div class="product__status">
+                      <p class="delivered"><svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1.125 5.75L2.85809 7.04982C3.28678 7.37134 3.89272 7.29779 4.23205 6.88305L9.25 0.75" stroke="#27AE60" stroke-linecap="round"/>
+                          </svg>
+                           Доставлено</p>
                   </div>
               </div>
           </div>

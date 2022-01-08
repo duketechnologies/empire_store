@@ -66,15 +66,46 @@
         </div>
 
         <div class="consultaion">
-        <div class="call">
-            <h1>Нужна помощь ?</h1>
-            <p>Оставьте свой номер для связи с консультантом.<br/>Или поищите ответ на свой вопрос в <a href="#">разделе FAQ.</a></p>
-            <form method="POST" action="#">
-            <input type="tel" name="phone" placeholder="Номер телефона"/>
-            <button type="submit" class="main-btn">Заказать консультацию</button>
-            </form>
+            <div class="call">
+                <h1>Нужна помощь ?</h1>
+                <p>Оставьте свой номер для связи с консультантом.<br/>Или поищите ответ на свой вопрос в <a href="#">разделе FAQ.</a></p>
+                <form method="POST" action="#">
+                <input type="tel" name="phone" placeholder="Номер телефона"/>
+                <button type="submit" class="main-btn">Заказать консультацию</button>
+                </form>
+            </div>
         </div>
+
+        <div class="faq">
+            <div class="questions">
+                <p>Faq</p>
+                <svg  viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 18L60 18" stroke="#D7D9E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M43 1L60 18L43 35" stroke="#D7D9E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="answers"></div>
+            <div class="questions">
+                <p>Оплата</p>
+                <svg viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 18L60 18" stroke="#D7D9E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M43 1L60 18L43 35" stroke="#D7D9E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="answers"></div>
+            <div class="questions">
+                <p>О доставке</p>
+                <svg viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 18L60 18" stroke="#D7D9E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M43 1L60 18L43 35" stroke="#D7D9E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+            </div>
+            <div class="answers"></div>
         </div>
+
         <div class="collab">
             <div class="title">
                 <h3>Мы открытые сотрудничеству <br/>с компаниями на взаимовыгодной основе</h3>
