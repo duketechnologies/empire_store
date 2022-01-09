@@ -720,7 +720,8 @@ header.header .wrapper .info .profile li:hover svg > path {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.1rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
 }
 .footer .wrapper .links {
   border-right: 1px solid #E0E0E0;
@@ -740,7 +741,8 @@ header.header .wrapper .info .profile li:hover svg > path {
 .footer .wrapper .offer .info p {
   font-weight: 500;
   color: #939393;
-  font-size: 0.85rem;
+  letter-spacing: 0.44px;
+  font-size: 0.95rem;
   margin-bottom: 1.4rem;
 }
 .footer .wrapper .subscribe {
@@ -1353,7 +1355,7 @@ section#vacancies .actual {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  padding: 4.9rem 8.3rem;
+  padding: 4.98rem 8.3rem;
 }
 section#vacancies .actual p {
   font-size: 0.95rem;
@@ -1727,18 +1729,37 @@ section#policy h2 {
   margin-top: 3rem;
 }
 section#policy .content {
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 80%;
   align-items: flex-start;
   margin-top: 2.5rem;
   padding: 0 10.7rem;
+  margin-bottom: 8rem;
 }
-section#policy .content ul {
-  width: 20%;
-}
-section#policy .content ul li {
+section#policy .content .links li {
   color: #505154;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-bottom: 1rem;
+}
+section#policy .content .rules p {
+  margin-bottom: 2rem;
+  color: #505154;
+}
+section#policy .content .rules__title {
+  background-color: white;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+section#policy .content .rules__info li {
+  font-size: 0.95rem;
+  color: #505154;
+  letter-spacing: 0.44px;
+  line-height: 1.3rem;
+  padding-left: 0.5rem;
 }
 section#policy .consultaion {
   display: flex;
@@ -1765,6 +1786,8 @@ section#policy .consultaion .call p {
   margin-top: 1rem;
   text-align: center;
   width: 35rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
 }
 section#policy .consultaion .call form {
   display: flex;
@@ -2290,6 +2313,176 @@ section#news .consultaion .call form input::placeholder {
   color: #939393;
 }
 section#news .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+section#single_news {
+  margin: 0 10.5rem;
+}
+section#single_news .secondary-btn {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 1rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  font-weight: 400;
+  padding: 1rem;
+  margin-top: 2.3rem;
+}
+section#single_news .main-img {
+  width: 100%;
+  margin-top: 2.3rem;
+}
+section#single_news .main-img img {
+  width: 100%;
+}
+section#single_news h1 {
+  font-size: 2.35rem;
+  font-family: "Spectral";
+  font-style: italic;
+  margin-top: 4rem;
+}
+section#single_news .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+section#single_news .content div {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: space-between;
+}
+section#single_news .content p {
+  font-size: 0.95rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
+  color: #505154;
+  margin-top: 2.4rem;
+  margin-bottom: 5.6rem;
+}
+section#single_news .content img {
+  width: 100%;
+}
+section#single_news h2 {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-family: "Spectral";
+  text-align: center;
+  margin: 4rem 0;
+}
+section#single_news .secondary-img {
+  width: 100%;
+}
+section#single_news .secondary-img img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+section#single_news .routes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #505154;
+  font-family: "Spectral";
+  margin-bottom: 8rem;
+  margin-top: 6rem;
+}
+section#single_news .routes .prev {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+section#single_news .routes .prev svg {
+  width: 5.2rem;
+  height: 5.2rem;
+}
+section#single_news .routes .next {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+section#single_news .routes .next div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+section#single_news .routes .next div .name {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #505154;
+  font-style: normal;
+  font-family: "Inter";
+  align-self: flex-end;
+}
+section#single_news .routes .next svg {
+  width: 5.2rem;
+  height: 5.2rem;
+  transform: rotate(180deg);
+}
+section#single_news .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+section#single_news .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#single_news .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#single_news .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  text-align: center;
+  width: 35rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
+}
+section#single_news .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#single_news .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 17rem;
+}
+section#single_news .consultaion .call form input::-moz-placeholder {
+  color: #939393;
+}
+section#single_news .consultaion .call form input:-ms-input-placeholder {
+  color: #939393;
+}
+section#single_news .consultaion .call form input::placeholder {
+  color: #939393;
+}
+section#single_news .consultaion .call form .main-btn {
   margin-top: 2rem;
   width: 100%;
   font-weight: 500;
@@ -3353,6 +3546,13 @@ section#profile .consultaion .call form .main-btn {
   font-size: 0.95rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid black;
+}
+
+.remodal[data-remodal-id=menu] {
+  border-radius: 0px;
+}
+.remodal[data-remodal-id=menu] .remodal-wrapper {
+  padding: 0;
 }
 
 /*modals*/

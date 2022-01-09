@@ -1,4 +1,5 @@
 section#policy {
+
   h2 {
     font-size: 1.6rem;
     font-weight: 300;
@@ -6,19 +7,43 @@ section#policy {
     margin-top: 3rem;
   }
   .content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 80%;
     align-items: flex-start;
     margin-top: 2.5rem;
     padding: 0 10.7rem;
-    ul {
-      width: 20%;
+    margin-bottom: 8rem;
+    .links {
+
       li {
         color: #505154;
-        font-size: .9rem;
+        font-size: .95rem;
         margin-bottom: 1rem;
       }
     }
-    
+    .rules {
+
+        p {
+            margin-bottom: 2rem;
+            color : #505154;
+        }
+        &__title {
+            background-color: white;
+            max-width: fit-content;
+            padding:.5rem;
+            font-size: .95rem;
+            margin-bottom: 1rem;
+        }
+        &__info {
+            li {
+                font-size: .95rem;
+                color: #505154;
+                letter-spacing: .44px;
+                line-height: 1.3rem;
+                padding-left: .5rem;
+            }
+        }
+    }
   }
   .consultaion {
     display: flex;
@@ -43,6 +68,9 @@ section#policy {
             margin-top: 1rem;
             text-align: center;
             width: 35rem;
+            line-height: 1.3rem;
+            letter-spacing: .7px;
+
         }
         form {
           display: flex;

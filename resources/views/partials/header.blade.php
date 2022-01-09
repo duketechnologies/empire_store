@@ -3,7 +3,7 @@
         <div class="links">
             <a href="/"><img src="/i/empire_logo.png" alt=""/></a>
             <ul class="nav">
-                <li><a href="#">Каталог</a></li>
+                <li><a href="#" data-remodal-target="menu">Каталог</a></li>
                 <li><a href="#">Адреса Бутиков</a></li>
                 <li><a href="#">Корпоративным клиентам</a></li>
                 <li><a href="#">Франшиза</a></li>

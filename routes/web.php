@@ -27,4 +27,5 @@ Route::get('/about', [HomeController::class, 'about']);
 Route::get('/policy', [HomeController::class, 'policy']);
 Route::get('/franchise', [HomeController::class, 'franchise']);
 Route::get('/news', [HomeController::class, 'news']);
+Route::get('/single_news', [HomeController::class, 'single_news']);
 Route::get('/profile', [HomeController::class, 'profile']);

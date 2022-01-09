@@ -48,6 +48,10 @@ class HomeController extends Controller
     {
         return view('pages.news');
     }
+    public function single_news()
+    {
+        return view('pages.single_news');
+    }
     public function profile()
     {
         return view('pages.profile');

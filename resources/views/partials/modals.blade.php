@@ -209,3 +209,8 @@
         <a href="#" class="details">Подробнее о рассрочке</a>
     </div>
 </div>
+
+<div class="remodal franchise-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div>ok</div>
+</div>
