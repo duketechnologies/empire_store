@@ -56,4 +56,8 @@ class HomeController extends Controller
     {
         return view('pages.profile');
     }
+    public function item()
+    {
+        return view('pages.item');
+    }
 }
