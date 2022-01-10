@@ -21,6 +21,17 @@ body {
     background-color: #F5F4F1;
     //overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+    width: 7px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: transparent;        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+    background-color: darkgray;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    //border: 3px solid orange;  /* padding вокруг плашки */
+}
 li {
 list-style: none;
 }

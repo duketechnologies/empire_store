@@ -513,6 +513,23 @@ body {
   background-color: #F5F4F1;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+  /* ширина scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgray;
+  /* цвет плашки */
+  border-radius: 20px;
+  /* закругления плашки */
+}
+
 li {
   list-style: none;
 }
@@ -751,9 +768,10 @@ header.header .wrapper .info .profile li:hover svg > path {
   width: 26rem;
 }
 .footer .wrapper .subscribe p {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   color: #303133;
   font-weight: 500;
+  line-height: 1.6rem;
 }
 .footer .wrapper .subscribe input {
   background-image: url("/i/icons/subscribe_icon.png");
@@ -767,19 +785,31 @@ header.header .wrapper .info .profile li:hover svg > path {
   width: 100%;
 }
 .footer .wrapper .subscribe input::-moz-placeholder {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #505154;
+  letter-spacing: 0.6px;
 }
 .footer .wrapper .subscribe input:-ms-input-placeholder {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #505154;
+  letter-spacing: 0.6px;
 }
 .footer .wrapper .subscribe input::placeholder {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #505154;
+  letter-spacing: 0.6px;
 }
 .footer .wrapper .subscribe .media {
   display: flex;
   align-items: center;
   margin-top: 4.4rem;
   gap: 2.5rem;
+}
+.footer .wrapper .subscribe .media a:hover svg > path {
+  fill: black;
 }
 .footer .wrapper .subscribe .media svg {
   width: 1.2rem;
@@ -928,14 +958,19 @@ section#home .compilation .product .content .count .quantity {
   display: flex;
   align-items: center;
   background-color: white;
-  min-width: 12rem;
-  justify-content: center;
-  justify-content: space-around;
+  min-width: 10rem;
+  justify-content: space-between;
   border-radius: 3px;
+  padding: 0.3rem;
 }
 section#home .compilation .product .content .count .quantity p {
-  padding: 1.2rem 1rem;
+  padding: 0.9rem 1.4rem;
   cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s ease-in;
+}
+section#home .compilation .product .content .count .quantity p:hover {
+  background-color: #F3F1EE;
 }
 section#home .compilation .product .info {
   max-width: 13rem;
@@ -3553,6 +3588,186 @@ section#profile .consultaion .call form .main-btn {
 }
 .remodal[data-remodal-id=menu] .remodal-wrapper {
   padding: 0;
+}
+
+.remodal[data-remodal-id=cookie-location] {
+  max-width: 40rem;
+}
+.remodal[data-remodal-id=cookie-location] .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.remodal[data-remodal-id=cookie-location] .wrapper h4 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+}
+.remodal[data-remodal-id=cookie-location] .wrapper p {
+  font-size: 1.23rem;
+  font-weight: 300;
+  color: #505154;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+}
+.remodal[data-remodal-id=cookie-location] .wrapper ul {
+  align-self: flex-start;
+}
+.remodal[data-remodal-id=cookie-location] .wrapper ul li {
+  list-style: initial;
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+.remodal[data-remodal-id=cookie-location] .wrapper .link-btn {
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #505154;
+  padding-bottom: 0.3rem;
+  text-transform: uppercase;
+  align-self: center;
+  margin-top: 4rem;
+  margin-bottom: 2.4rem;
+}
+.remodal[data-remodal-id=cookie-location] .wrapper .main-btn {
+  width: 100%;
+}
+
+.remodal[data-remodal-id=cookie-change-location] {
+  max-width: 40rem;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper h4 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .city-list {
+  align-self: flex-start;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .city-list li {
+  letter-spacing: 0.7px;
+  line-height: 3rem;
+  text-align: left;
+  color: #303133;
+  font-weight: 500;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .city-list .active {
+  border-bottom: 1px solid black;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .link-btn {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.97rem;
+  margin-top: 2.6rem;
+  margin-bottom: 2.5rem;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .main-btn {
+  width: 100%;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper p {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .select {
+  width: 100%;
+  text-align: center;
+  outline: none;
+  padding: 1rem 0;
+  background-color: #F5F4F1;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.74px;
+  border: none;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country {
+  margin-bottom: 3.5rem;
+  position: relative;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option {
+  position: absolute;
+  width: 100%;
+  background-color: #F5F4F1;
+  top: 5rem;
+  border-radius: 8px;
+  padding: 1rem;
+  max-height: 30rem;
+  overflow-y: scroll;
+  scrollbar-width: 5px;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option ul li img {
+  align-self: flex-start;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option .active {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.2rem;
+}
+.remodal[data-remodal-id=cookie-change-location] .wrapper .city {
+  margin-bottom: 4.4rem;
+}
+
+.remodal[data-remodal-id=cookie] {
+  max-width: 29rem;
+}
+.remodal[data-remodal-id=cookie] .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.remodal[data-remodal-id=cookie] .wrapper img {
+  max-width: 3.2rem;
+  margin-bottom: 2rem;
+}
+.remodal[data-remodal-id=cookie] .wrapper p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #505154;
+  line-height: 1.4rem;
+  margin-bottom: 2.4rem;
+}
+.remodal[data-remodal-id=cookie] .wrapper p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+}
+.remodal[data-remodal-id=cookie] .wrapper .link-btn {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: 500;
+  padding-bottom: 0.3rem;
 }
 
 /*modals*/

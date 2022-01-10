@@ -44,9 +44,10 @@
             padding: 5.2rem 0 4rem 4.8rem;
             width: 26rem;
             p {
-                font-size: 1.2rem;
+                font-size: 1.35rem;
                 color: #303133;
                 font-weight: 500;
+                line-height: 1.6rem;
             }
             input {
                 background-image: url("/i/icons/subscribe_icon.png");
@@ -59,7 +60,10 @@
                 padding:1rem 0;
                 width: 100%;
                 &::placeholder {
-                    font-size: .9rem    ;
+                    font-size: .85rem ;
+                    font-weight: 500;
+                    color: #505154;
+                    letter-spacing: .6px;
                 }
             }
             .media {
@@ -67,6 +71,13 @@
                 align-items: center;
                 margin-top: 4.4rem;
                 gap: 2.5rem;
+                a {
+                    &:hover {
+                        svg>path {
+                            fill: black;
+                        }
+                    }
+                }
                 svg {
                     width: 1.2rem;
                     height: 1.22rem;

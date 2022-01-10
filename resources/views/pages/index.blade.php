@@ -52,7 +52,7 @@
                     <div class="count">
                         <div class="quantity">
                             <p>-</p>
-                            <p>1</p>
+                            <span>1</span>
                             <p>+</p>
                         </div>
                         <a href="#" class="main-btn">В корзину</a>

@@ -214,3 +214,73 @@
     <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div>ok</div>
 </div>
+
+<div class="remodal" data-remodal-id="cookie-location" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="wrapper">
+        <h4>Мое местоположение</h4>
+        <p>Казахстан - Алматы</p>
+        <ul>
+            <li>Бесплатная доставка</li>
+            <li>4 пункта самовывоза</li>
+        </ul>
+        <a href="#" class="link-btn" data-remodal-target="cookie-change-location">Изменить Мое местоположение</a>
+        <a href="#" class="main-btn">Начать шоппинг</a>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="cookie-change-location" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="wrapper">
+        <h4>Мое местоположение</h4>
+{{--        <ul class="city-list">--}}
+{{--            <li class="active">Алматы</li>--}}
+{{--            <li>Нур-Султан</li>--}}
+{{--            <li>Атырау</li>--}}
+{{--            <li>Шымкент</li>--}}
+{{--            <li>Актобе</li>--}}
+{{--            <li>Караганда</li>--}}
+{{--            <li>Тараз</li>--}}
+{{--            <li>Павлодар</li>--}}
+{{--        </ul>--}}
+{{--        <a href="#" class="link-btn">Другая страна</a>--}}
+        <div class="country">
+            <p>Страна</p>
+            <div class="select" id="location-country">Казахстан</div>
+            <div class="option">
+                <ul>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p class="active">Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="city">
+            <p>Город / Населенный пункт</p>
+            <div class="select" id="location-city">Алматы</div>
+        </div>
+        <a href="#" class="main-btn">Сохранить местоположение</a>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="cookie" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <div class="wrapper">
+        <img src="/i/icons/cookie_icon.png" alt=""/>
+        <p>Мы используем файлы cookie.<br/>
+            Просматривая сайт, вы соглашаетесь<br/>
+            с <a href="/policy">Политикой нашего сайта.</a>
+        </p>
+        <a href="#" class="link-btn">Принять соглашение</a>
+    </div>
+</div>
+
