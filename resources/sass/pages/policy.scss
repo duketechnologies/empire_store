@@ -70,6 +70,10 @@ section#policy {
             width: 35rem;
             line-height: 1.3rem;
             letter-spacing: .7px;
+            a {
+                background-color: rgba(193, 146, 69, 0.1);
+                padding: .2rem;
+            }
 
         }
         form {

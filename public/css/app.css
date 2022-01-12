@@ -1458,8 +1458,14 @@ section#vacancies .consultaion .call p {
   font-size: 0.9rem;
   color: #505154;
   margin-top: 1rem;
+  width: 30rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
   text-align: center;
-  width: 35rem;
+}
+section#vacancies .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
 }
 section#vacancies .consultaion .call form {
   display: flex;
@@ -1476,16 +1482,7 @@ section#vacancies .consultaion .call form input {
   text-align: center;
   padding: 1rem;
   outline: none;
-  width: 17rem;
-}
-section#vacancies .consultaion .call form input::-moz-placeholder {
-  color: #939393;
-}
-section#vacancies .consultaion .call form input:-ms-input-placeholder {
-  color: #939393;
-}
-section#vacancies .consultaion .call form input::placeholder {
-  color: #939393;
+  width: 85%;
 }
 section#vacancies .consultaion .call form .main-btn {
   margin-top: 2rem;
@@ -1580,8 +1577,14 @@ section#contacts .consultaion .call p {
   font-size: 0.9rem;
   color: #505154;
   margin-top: 1rem;
+  width: 30rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
   text-align: center;
-  width: 35rem;
+}
+section#contacts .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
 }
 section#contacts .consultaion .call form {
   display: flex;
@@ -1598,16 +1601,7 @@ section#contacts .consultaion .call form input {
   text-align: center;
   padding: 1rem;
   outline: none;
-  width: 17rem;
-}
-section#contacts .consultaion .call form input::-moz-placeholder {
-  color: #939393;
-}
-section#contacts .consultaion .call form input:-ms-input-placeholder {
-  color: #939393;
-}
-section#contacts .consultaion .call form input::placeholder {
-  color: #939393;
+  width: 85%;
 }
 section#contacts .consultaion .call form .main-btn {
   margin-top: 2rem;
@@ -1823,6 +1817,10 @@ section#policy .consultaion .call p {
   width: 35rem;
   line-height: 1.3rem;
   letter-spacing: 0.7px;
+}
+section#policy .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
 }
 section#policy .consultaion .call form {
   display: flex;
@@ -2946,10 +2944,8 @@ section#profile .consultaion .call form .main-btn {
   font-weight: 500;
 }
 
-section#item {
-  margin: 0 10.5rem;
-}
 section#item .content {
+  margin: 0 10.5rem;
   display: flex;
   margin-top: 4rem;
 }
@@ -3098,6 +3094,712 @@ section#item .content .offer__delivery p {
 }
 section#item .content .offer__delivery p b {
   font-weight: 500;
+}
+section#item .content .offer .serial-number {
+  font-size: 0.95rem;
+  color: #939393;
+  letter-spacing: 0.44px;
+  text-align: right;
+  margin-top: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+section#item .info {
+  margin: 0 10.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid black;
+  padding-top: 2.1rem;
+  color: #505154;
+  margin-bottom: 6rem;
+}
+section#item .info .description {
+  max-width: 32rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
+}
+section#item .info .size p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+}
+section#item .info .size p:first-child {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+section#item .info .size p:first-child svg {
+  width: 0.62rem;
+  height: 0.62rem;
+  margin-bottom: 0.04rem;
+  margin-right: 0.35rem;
+}
+section#item .info .material {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+}
+section#item .info .material p {
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+section#item .info .material p svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+section#item .info .material ul {
+  padding-left: 1.3rem;
+}
+section#item .info .material ul li {
+  list-style: initial;
+  line-height: 1.3rem;
+}
+section#item .info .faq {
+  width: 20%;
+}
+section#item .info .faq .questions {
+  border-bottom: 1px solid #DEDCD8;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.2s ease-in;
+}
+section#item .info .faq .questions p {
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+}
+section#item .info .faq .questions svg {
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: 0.3rem;
+}
+section#item .info .faq .questions:hover {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.5rem;
+}
+section#item .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+}
+section#item .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#item .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#item .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  width: 30rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
+  text-align: center;
+}
+section#item .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+}
+section#item .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#item .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 85%;
+}
+section#item .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
+}
+section#item .faq {
+  margin: 7rem 10.5rem;
+}
+section#item .faq:last-child {
+  border-bottom: 1px solid #505154;
+  margin-bottom: 7rem;
+}
+section#item .faq .questions {
+  border-top: 1px solid #505154;
+  padding: 2.2rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#item .faq .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
+}
+section#item .faq .questions svg {
+  width: 4rem;
+  height: 2rem;
+}
+section#item .faq .questions svg > path {
+  transition: 0.2s ease-in;
+}
+section#item .faq .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+section#item .faq .questions:hover svg > path {
+  stroke: #505154;
+}
+
+section#address h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #303133;
+  text-align: center;
+  margin-top: 2.3rem;
+  margin-bottom: 2rem;
+}
+section#address .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  max-width: 29rem;
+  margin: 0 auto;
+  border-radius: 999rem;
+  gap: 1rem;
+}
+section#address .search svg {
+  width: 0.98rem;
+  height: 0.98rem;
+}
+section#address .search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+}
+section#address .search input::-moz-placeholder {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #939393;
+}
+section#address .search input:-ms-input-placeholder {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #939393;
+}
+section#address .search input::placeholder {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #939393;
+}
+section#address .city {
+  display: flex;
+  margin: 4rem 10.5rem 3.5rem;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+section#address .city div {
+  margin-right: 2.5rem;
+}
+section#address .city div p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.44px;
+  margin-bottom: 1.6rem;
+  padding-left: 0.2rem;
+}
+section#address .city div .address-list li {
+  font-size: 0.95rem;
+  color: #939393;
+  letter-spacing: 0.7px;
+  line-height: 1.35rem;
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem;
+}
+section#address .city div .address-list li:hover {
+  background-color: white;
+  padding: 0.2rem;
+  color: black;
+}
+section#address .city div .address-list a {
+  color: black;
+  border-bottom: 1px solid #DEDCD8;
+  padding-bottom: 0.2rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  padding-left: 0.2rem;
+}
+section#address .city div .address-list a:hover {
+  border-bottom: 1px solid black;
+}
+section#address .map {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  padding-right: 3.15rem;
+  padding-top: 3.15rem;
+  padding-left: 7rem;
+  max-height: 50rem;
+  overflow-y: hidden;
+}
+section#address .map .info {
+  overflow-y: scroll;
+}
+section#address .map .info .title {
+  font-size: 0.85rem;
+  color: #939393;
+  letter-spacing: 0.44px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+section#address .map .info .title span {
+  color: black;
+}
+section#address .map .info .boutique {
+  background-color: rgba(245, 244, 241, 0.5);
+  padding: 3.5rem 4.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+section#address .map .info .boutique__place {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+section#address .map .info .boutique__location {
+  font-size: 0.95rem;
+  color: #505154;
+  line-height: 1.3rem;
+  letter-spacing: 0.44px;
+  margin-bottom: 1rem;
+}
+section#address .map .info .boutique__contacts {
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: column;
+}
+section#address .map .info .boutique__contacts a {
+  border-bottom: 1px solid #DEDCD8;
+  padding-bottom: 0.1rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+section#address .map .info .boutique__contacts a:hover {
+  border-bottom: 1px solid black;
+}
+section#address .map ymaps {
+  border-radius: 16px;
+  max-width: 85rem;
+  max-height: 47rem;
+  flex: 1;
+  align-self: flex-end;
+}
+section#address .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+  padding-top: 11.5rem;
+}
+section#address .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#address .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#address .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  width: 30rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
+  text-align: center;
+}
+section#address .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+}
+section#address .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#address .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 85%;
+}
+section#address .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
+}
+
+section#basket .my-basket {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #505154;
+  margin: 4rem 10.5rem 2.28rem;
+}
+section#basket .orders {
+  min-height: 23rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  border-radius: 8px;
+  padding: 2rem 2.35rem;
+  margin: 0 10.5rem;
+}
+section#basket .orders h3 {
+  text-align: center;
+  color: #939393;
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 1.6rem;
+}
+section#basket .orders a {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid black;
+  margin-top: 4.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+section#basket .orders .title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.95fr 0.8fr 1.5fr 1.5fr 2fr 1fr;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+section#basket .orders .title p {
+  font-size: 0.95rem;
+  color: #939393;
+  letter-spacing: 0.44px;
+}
+section#basket .orders .title p:first-child {
+  color: black;
+}
+section#basket .orders .title p:nth-child(2) {
+  text-align: center;
+}
+section#basket .orders .title p:nth-child(3) {
+  text-align: center;
+}
+section#basket .orders .title p:nth-child(4) {
+  margin-left: 5rem;
+}
+section#basket .orders .title p:last-child {
+  text-align: right;
+}
+section#basket .orders .product {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.5fr 1.5fr 1.5fr 1fr 1fr;
+  align-items: center;
+  border-top: 1px solid #DEDCD8;
+  padding: 2.5rem 0;
+}
+section#basket .orders .product__date {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+section#basket .orders .product__date .type {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  color: #939393;
+  margin-bottom: 0.5rem;
+}
+section#basket .orders .product__date .name {
+  font-size: 0.95rem;
+  color: #505154;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+section#basket .orders .product__date .date {
+  color: #939393;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+section#basket .orders .product__date img {
+  max-width: 5rem;
+}
+section#basket .orders .product__color p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #505154;
+  text-align: center;
+}
+section#basket .orders .product__price p {
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  color: #303133;
+  text-align: center;
+}
+section#basket .orders .product__quantity {
+  justify-self: center;
+}
+section#basket .orders .product__quantity .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-width: 10rem;
+  justify-content: space-between;
+  border-radius: 3px;
+  padding: 0.3rem;
+  border: 1px solid #DEDCD8;
+  border-radius: 3px;
+}
+section#basket .orders .product__quantity .quantity p {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s ease-in;
+}
+section#basket .orders .product__quantity .quantity p:hover {
+  background-color: #F3F1EE;
+}
+section#basket .orders .product__package {
+  justify-self: center;
+  background-color: #F6F6F6;
+  border-radius: 4px;
+}
+section#basket .orders .product__package input[type=checkbox] {
+  display: none;
+}
+section#basket .orders .product__package label {
+  outline: none;
+  font-weight: 300;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 1rem 1.5rem 1rem 4rem;
+}
+section#basket .orders .product__package label::before {
+  content: "";
+  outline: none;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.1rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: 1px solid #939393;
+  padding: 0.2rem;
+  transition: 0.2s ease-in;
+}
+section#basket .orders .product__package input[type=checkbox]:checked + label::before {
+  background-color: black;
+}
+section#basket .orders .product__package input[type=checkbox]:hover + label::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+section#basket .orders .product__status {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+}
+section#basket .orders .product__status .in-process {
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  color: #303133;
+  text-align: center;
+}
+section#basket .orders .product__status .delivered {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+  color: #27AE60;
+  border: 1px solid #27AE60;
+  border-radius: 999rem;
+}
+section#basket .orders .product__status .delivered svg {
+  width: 0.67rem;
+  height: 0.53rem;
+}
+section#basket .orders .product__delete {
+  justify-self: flex-end;
+}
+section#basket .orders .checkout {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5rem;
+  border-top: 1px solid #DEDCD8;
+}
+section#basket .orders .checkout .consultaion h2 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #505154;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+section#basket .orders .checkout .consultaion p {
+  font-size: 0.95rem;
+  line-height: 1.35rem;
+  color: #505154;
+  letter-spacing: 0.7px;
+  margin-bottom: 1.6rem;
+}
+section#basket .orders .checkout .consultaion .move_to {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+  border-bottom: none;
+  font-weight: 400;
+}
+section#basket .orders .checkout .consultaion a {
+  text-transform: uppercase;
+}
+section#basket .orders .sum {
+  min-width: 28%;
+}
+section#basket .orders .sum span {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  color: #939393;
+}
+section#basket .orders .sum p {
+  font-size: 0.85rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+}
+section#basket .orders .sum div {
+  border-bottom: 1px solid #505154;
+  padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-bottom: 1.5rem;
+}
+section#basket .orders .sum .delivery p {
+  color: #27AE60;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+section#basket .orders .sum a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+section#basket .orders .sum a span {
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  width: 1.45rem;
+  height: 1.45rem;
+  overflow: hidden;
+}
+section#basket .orders .sum a span svg {
+  width: 1.37rem;
+  height: 0.61rem;
+  position: absolute;
+  top: 0.4rem;
+  left: -0.5rem;
+}
+section#basket .faq {
+  margin: 9rem 10.5rem;
+}
+section#basket .faq:last-child {
+  border-bottom: 1px solid #505154;
+  margin-bottom: 9rem;
+}
+section#basket .faq .questions {
+  border-top: 1px solid #505154;
+  padding: 2.2rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#basket .faq .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
+}
+section#basket .faq .questions svg {
+  width: 4rem;
+  height: 2rem;
+}
+section#basket .faq .questions svg > path {
+  transition: 0.2s ease-in;
+}
+section#basket .faq .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+section#basket .faq .questions:hover svg > path {
+  stroke: #505154;
 }
 
 /*pages*/

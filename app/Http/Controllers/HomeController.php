@@ -60,4 +60,12 @@ class HomeController extends Controller
     {
         return view('pages.item');
     }
+    public function address()
+    {
+        return view('pages.address');
+    }
+    public function basket()
+    {
+        return view('pages.basket');
+    }
 }

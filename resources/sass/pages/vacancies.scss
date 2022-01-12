@@ -96,57 +96,67 @@ section#vacancies  {
             }
         }
     }
-}
-.consultaion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 8.5rem 0;
-    .call {
+  }
+    .consultaion {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        max-width: 21rem;
-        h1 {
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            margin: 0;
-        }
-        p {
-            font-size: .9rem;
-            color: #505154;
-            margin-top: 1rem;
-            text-align: center;
-            width: 35rem;
-        }
-        form {
+        align-items: center;
+        background-color: white;
+        padding: 8.5rem 0;
+
+        .call {
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            margin-top: 1.5rem;
-            width: 100%;
-            input {
-                background-color: transparent;
-                border: none;
-                border-bottom: 1px solid #303133;
+            align-items: center;
+            justify-content: center;
+            max-width: 21rem;
+
+            h1 {
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            p {
+                font-size: .9rem;
+                color: #505154;
+                margin-top: 1rem;
+                width: 30rem;
+                letter-spacing: .7px;
+                line-height: 1.3rem;
                 text-align: center;
-                padding:1rem;
-                outline: none;
-                width: 17rem;
-                &::placeholder {
-                  color: #939393;
+
+                a {
+                    background-color: rgba(193, 146, 69, 0.1);
+                    padding: .2rem;
+                }
+            }
+
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 1.5rem;
+                width: 100%;
+
+                input {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid #303133;
+                    text-align: center;
+                    padding: 1rem;
+                    outline: none;
+                    width: 85%;
+
                 }
 
-            }
-            .main-btn {
-                margin-top: 2rem;
-                width: 100%;
-                font-weight: 500;
+                .main-btn {
+                    margin-top: 2rem;
+                    width: 100%;
+                    font-weight: 500;
+                }
             }
         }
     }
-  }
 }
