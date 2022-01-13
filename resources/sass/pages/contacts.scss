@@ -13,6 +13,12 @@ section#contacts {
     display: flex;
     align-items: center;
     justify-content: space-between;
+      transition: .2s ease-in;
+      &:hover {
+          -webkit-box-shadow: -1px 0px 29px 0px rgba(34, 60, 80, 0.2);
+          -moz-box-shadow: -1px 0px 29px 0px rgba(34, 60, 80, 0.2);
+          box-shadow: -1px 0px 29px 0px rgba(34, 60, 80, 0.2);
+      }
   }
   .contact-card_list-info {
     max-width: fit-content;
@@ -54,11 +60,15 @@ section#contacts {
     font-weight: 500;
     padding: 1rem 2rem;
     margin-top: 2rem;
+      transition: .2s ease-in;
+      &:hover {
+          background-color: #303133;
+          color: white;
+      }
   }
   .contact-card_list-image {
     min-width: 200px;
     img {
-      background-color: #F5F4F1;
       aspect-ratio: 1/1;
       border-radius: 999rem;
       width: 100%;

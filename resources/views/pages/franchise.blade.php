@@ -32,6 +32,27 @@
         <a href="#">Экскурсия в бутик</a>
       </div>
     </div>
+    <div class="gift">
+        <div>
+            <ul>
+                <li><div class="circle"><div></div></div>Создайте заявку</li>
+                <li><div class="circle"><div></div></div>Получите маркетинговую стратегию</li>
+                <li><div class="circle"><div></div></div>Сопровождение на этапе открытия</li>
+                <li><div class="circle"><div></div></div>Поддержка и обучение на всем пути </li>
+            </ul>
+        </div>
+        <div class="info">
+            <h2>Откроте свою<br/> Империю подарков</h2>
+            <p>Начни прибыльный бизнес по продаже<br/>
+                национальных сувениров и эксклюзивных<br/>
+                товаров бренда Empire.
+            </p>
+            <div >
+                <a href="#">Подать заявку</a>
+                <a href="#">Условия</a>
+            </div>
+        </div>
+    </div>
     <div class="team">
       <div class="team__title">
         <h2>Команда EMPIRE —<br/>помогаем друг-другу<br/>и развиваемся вместе</h2>

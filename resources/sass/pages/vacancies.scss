@@ -14,11 +14,11 @@ section#vacancies  {
   }
   .description {
     display: flex;
-    align-items: center;
+      align-items: stretch;
     gap: 1.2rem;
     margin: 1.3rem 2rem;
     .info {
-      padding: 5.6rem 8.3rem;
+      padding: 6rem 7.8rem;
       max-width: 33rem;
       background-color: white;
       border-radius: 8px;
@@ -30,7 +30,7 @@ section#vacancies  {
       }
       p {
         margin-top: 1rem;
-        font-size: .9rem;
+        font-size: .95rem;
         color: #505154;
         margin-bottom: 2.3rem;
         line-height: 1.3rem;
@@ -59,13 +59,26 @@ section#vacancies  {
     .list {
       display: flex;
       justify-content: flex-start;
-      gap: 20rem;
+      gap: 30rem;
       width: 100%;
       ul {
+          &:nth-child(2n) {
+              border-left: 1px solid #DEDCD8;
+              padding-left: 2rem;
+          }
         li {
-          margin-bottom: 1.8rem;
+            margin-top: 1.8rem;
           font-size: 1.2rem;
+          padding:.3rem;
           color: #303133;
+          cursor: pointer;
+            &:hover {
+                background-color: rgba(193, 146, 69, 0.1);
+                max-width:fit-content;
+            }
+            &:first-child {
+                margin-top: 0;
+            }
         }
       }
     }

@@ -3,6 +3,8 @@ window.$ = window.jQuery = require('jquery');
 
 require('bootstrap');
 require('remodal');
+require('./faq.js');
+
 
 $(document).ready(function (){
 

@@ -3179,6 +3179,22 @@ function withinMaxClamp(min, value, max) {
 
 /***/ }),
 
+/***/ "./resources/js/faq.js":
+/*!*****************************!*\
+  !*** ./resources/js/faq.js ***!
+  \*****************************/
+/***/ (() => {
+
+var faqs = document.querySelectorAll('.faq');
+faqs.forEach(function (faq) {
+  faq.addEventListener('click', function () {
+    faq.classList.toggle('active');
+  });
+});
+console.log(faqs);
+
+/***/ }),
+
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":
 /*!*********************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.esm.js ***!
@@ -37194,6 +37210,8 @@ window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jqu
 __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
 
 __webpack_require__(/*! remodal */ "./node_modules/remodal/dist/remodal.js");
+
+__webpack_require__(/*! ./faq.js */ "./resources/js/faq.js");
 
 $(document).ready(function () {
   console.log('ready...');

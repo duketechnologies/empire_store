@@ -9,8 +9,18 @@
             </svg>
             <h1>Партнерство</h1>
             <p>Компания Empire всегда открыта к партнерству и творческой <br/>коллаборации с художниками и дизайнерами</p>
-            <a href="#" class="route">Напишите нам</a>
-            <a href="#" class="route">вакансии EMPIRE</a>
+            <a href="#" class="route">Напишите нам
+                <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 6.83333L6.83333 1" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 1H6.83333V6.83333" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <a href="#" class="route">вакансии EMPIRE
+                <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 6.83333L6.83333 1" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 1H6.83333V6.83333" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
         <div class="details">
             <h1>Дизайнер интерьера</h1>
@@ -19,7 +29,12 @@
                 и создавать прекрасные интерьеры для любых помещений –<br/>
                 от квартиры и офиса, до отеля и ресторана.
             </p>
-            <a href="#" class="route">Узнать больше</a>
+            <a href="#" class="route">Узнать больше
+                <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 6.83333L6.83333 1" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 1H6.83333V6.83333" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
         </div>
         <div class="cooperation">
             <h2>Обсудить условия сотрудничества</h2>

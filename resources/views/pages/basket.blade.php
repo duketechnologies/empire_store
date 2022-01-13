@@ -39,8 +39,8 @@
                 </div>
                 <div class="product__package">
                     <form method="POST" action="#">
-                        <input type="checkbox" name="craft-package" id="craft"/>
-                        <label for="craft">Крафт-пакет</label>
+                        <input type="checkbox" name="craft-package" id="craft1"/>
+                        <label for="craft1">Крафт-пакет</label>
                     </form>
                 </div>
                 <div class="product__status">
@@ -78,8 +78,8 @@
                 </div>
                 <div class="product__package">
                     <form method="POST" action="#">
-                        <input type="checkbox" name="craft-package" id="craft"/>
-                        <label for="craft">Крафт-пакет</label>
+                        <input type="checkbox" name="craft-package" id="craft2"/>
+                        <label for="craft2">Крафт-пакет</label>
                     </form>
                 </div>
                 <div class="product__status">
@@ -117,8 +117,8 @@
                 </div>
                 <div class="product__package">
                     <form method="POST" action="#">
-                        <input type="checkbox" name="craft-package" id="craft"/>
-                        <label for="craft">Крафт-пакет</label>
+                        <input type="checkbox" name="craft-package" id="craft3"/>
+                        <label for="craft3">Крафт-пакет</label>
                     </form>
                 </div>
                 <div class="product__status">

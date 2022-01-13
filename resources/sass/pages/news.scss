@@ -19,7 +19,7 @@ section#news {
         font-size: 1.6rem;
         &:last-child {
           font-size: 1.25rem;
-          
+
         }
       }
     }
@@ -117,6 +117,12 @@ section#news {
           margin-top: 1rem;
           text-align: center;
           width: 35rem;
+          line-height: 1.3rem;
+          letter-spacing: .7px;
+          a {
+              background-color: rgba(193, 146, 69, 0.1);
+              padding: .2rem;
+          }
       }
       form {
         display: flex;
