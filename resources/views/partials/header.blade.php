@@ -3,7 +3,7 @@
         <div class="links">
             <a href="/"><img src="/i/empire_logo.png" alt=""/></a>
             <ul class="nav">
-                <li><a href="#" data-remodal-target="menu">Каталог</a></li>
+                <li><a href="#" id="catalog">Каталог</a></li>
                 <li><a href="/address">Адреса Бутиков</a></li>
                 <li><a href="#">Корпоративным клиентам</a></li>
                 <li><a href="/franchise">Франшиза</a></li>
@@ -34,4 +34,5 @@
             </div>
         </div>
     </div>
+    <script src="/js/app.js"></script>
 </header>

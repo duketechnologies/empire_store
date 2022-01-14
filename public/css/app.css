@@ -580,6 +580,19 @@ li {
   border-radius: 8px;
 }
 
+.link-btn {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #DEDCD8;
+  font-weight: 500;
+  padding-bottom: 0.2rem;
+  transition: 0.2s ease-in;
+}
+.link-btn:hover {
+  border-bottom: 1px solid black;
+}
+
 @media only screen and (max-width: 1599px) {
   html {
     font-size: 12px;
@@ -870,23 +883,227 @@ header.header .wrapper .info .profile li:hover svg > path {
 
 /*blocks*/
 /*pages*/
-section#home .hero {
+section#home {
+  position: relative;
+}
+section#home .menu {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: 100%;
+  width: 23.5rem;
+  padding-top: 2rem;
+  background-color: lavender;
+  flex-direction: column;
+  display: none;
+}
+section#home .menu::before {
+  content: "";
+  position: fixed;
+  width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: black;
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+section#home .menu #close-menu {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 0.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease-in;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.5rem;
+  margin-bottom: 2rem;
+}
+section#home .menu #close-menu:hover {
+  background-color: #F5F4F1;
+}
+section#home .menu #close-menu svg {
+  width: 0.9rem;
+  height: 0.85rem;
+}
+section#home .menu h2 {
+  font-size: 1.65rem;
+  font-family: "Spectral";
+  font-style: italic;
+  color: #303133;
+  margin-bottom: 2rem;
+  padding: 0 3.2rem;
+}
+section#home .menu li {
+  font-size: 0.97rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.44px;
+  color: #303133;
+}
+section#home .menu li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section#home .menu li a:hover svg {
+  opacity: 1;
+}
+section#home .menu li a svg {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+section#home .menu__links {
+  padding: 0 3.2rem;
+  border-bottom: 2px solid #EEEDE8;
+  padding-bottom: 2rem;
+}
+section#home .menu__discount {
+  padding: 0 3.2rem;
+  padding-top: 2rem;
+}
+section#home .menu__contacts {
+  background-color: #F5F4F1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 5.5rem;
+  gap: 2rem;
+  margin-top: auto;
+}
+section#home .menu.active {
+  display: flex;
+  opacity: 1;
+}
+section#home .hero {
+  height: 93vh;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   margin: 0 2.2rem;
   border-radius: 0.6rem;
+  position: relative;
 }
 section#home .hero h1 {
   font-family: Spectral, italic;
-  font-size: 3.3rem;
+  font-size: 3.9rem;
   font-style: italic;
+  position: relative;
+  line-height: 5rem;
+  justify-self: center;
 }
-section#home .hero img {
+section#home .hero h1::before {
+  content: "";
+  background: black;
+  position: absolute;
+  top: 4.9rem;
+  width: 15rem;
+  height: 0.1rem;
+}
+section#home .hero a {
+  align-self: flex-end;
+  margin-bottom: 8rem;
+  justify-self: center;
+}
+section#home .hero .rabbit {
+  justify-self: center;
+}
+section#home .hero .rabbit img {
   box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
   border-radius: 0.5rem;
+  width: 100%;
+}
+section#home .sell {
+  margin: 8rem 10.5rem;
+}
+section#home .sell .list {
+  font-family: "Spectral";
+  font-size: 2.6rem;
+  font-style: italic;
+  text-align: center;
+  color: #505154;
+  padding: 3rem;
+  border-top: 1px solid #DEDCD8;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease-in;
+  position: relative;
+  padding-right: 5rem;
+}
+section#home .sell .list:last-child {
+  border-bottom: 1px solid #DEDCD8;
+  transition: 0.2s ease-in;
+}
+section#home .sell .list:last-child:hover {
+  border-bottom: 1px solid black;
+}
+section#home .sell .list:hover {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+section#home .sell .list:hover .slots {
+  opacity: 1;
+}
+section#home .sell .list .slots {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+section#home .sell .list .slots a {
+  font-style: normal;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.6px;
+  background-color: rgba(222, 220, 216, 0.5);
+  border-radius: 999rem;
+  padding: 0.8rem 1.2rem;
+  transition: 0.2s ease-in;
+  position: relative;
+  overflow: visible;
+}
+section#home .sell .list .slots a::after {
+  content: "";
+  background-image: url("/i/home/rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 20rem;
+  min-height: 20rem;
+  position: absolute;
+  bottom: -22.6rem;
+  left: -4rem;
+  opacity: 0;
+  z-index: 2;
+  transition: 0.2s ease-in;
+}
+section#home .sell .list .slots a svg {
+  width: 0.8rem;
+  height: 0.75rem;
+  margin-left: 0.4rem;
+}
+section#home .sell .list .slots a svg > path {
+  stroke: black;
+  transition: 0.2s ease-in;
+}
+section#home .sell .list .slots a:hover {
+  background-color: black;
+  color: white;
+}
+section#home .sell .list .slots a:hover svg > path {
+  stroke: white;
+}
+section#home .sell .list .slots a:hover::after {
+  opacity: 1;
 }
 section#home .item {
   display: grid;
@@ -904,8 +1121,8 @@ section#home .item .title {
   width: 100%;
 }
 section#home .item .title svg {
-  width: 5rem;
-  height: 1rem;
+  width: 14rem;
+  height: 4.4rem;
   margin-bottom: 3rem;
 }
 section#home .item .title h3 {
@@ -926,12 +1143,190 @@ section#home .item .title p {
 section#home .item .item_img {
   width: 100%;
 }
+section#home .preorder {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 25% 73.5%;
+  gap: 2rem;
+  align-items: stretch;
+  padding: 2rem 2.2rem;
+}
+section#home .preorder .discount {
+  padding: 5.3rem;
+  background: linear-gradient(0deg, #F5F4F1, #F5F4F1), linear-gradient(0deg, #FAECDD, #FAECDD);
+  border-radius: 8px;
+  width: 100%;
+}
+section#home .preorder .discount h2 {
+  font-size: 2.8rem;
+  color: #303133;
+  font-family: "Spectral";
+  font-style: italic;
+  line-height: 3.2rem;
+  margin-bottom: 3rem;
+}
+section#home .preorder .discount p {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  line-height: 1.3rem;
+  color: #505154;
+  margin-bottom: 20rem;
+}
+section#home .preorder .collections {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+section#home .preorder .collections__item {
+  background-image: url("/i/home/preorder bg.png");
+  background-repeat: no-repeat;
+  background-position: center top 20%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+section#home .preorder .collections__item:hover .name span {
+  border-bottom: 1px solid black;
+}
+section#home .preorder .collections__item .product {
+  background-image: url("i/home/pre.png");
+  background-repeat: no-repeat;
+  width: 100%;
+}
+section#home .preorder .collections__item img {
+  position: absolute;
+  max-width: 29rem;
+  left: auto;
+  top: 5rem;
+}
+section#home .preorder .collections__item:first-child {
+  background-color: #F9F9FA;
+  border-radius: 8px 0 0 8px;
+}
+section#home .preorder .collections__item:nth-child(2) {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)), linear-gradient(0deg, #FAECDD, #FAECDD);
+}
+section#home .preorder .collections__item:last-child {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.24)), #EFE1DE;
+  border-radius: 0 8px 8px 0;
+}
+section#home .preorder .collections__item .name {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  line-height: 2rem;
+  text-align: center;
+}
+section#home .preorder .collections__item .name span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: 0.2s ease-in;
+  border-bottom: 1px solid transparent;
+}
+section#home .preorder .collections__item .debuff {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.7px;
+  text-align: center;
+  background-color: #ECECF5;
+  padding: 0.7rem 1rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  text-transform: uppercase;
+  border-radius: 999rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5.5rem;
+}
+section#home .tired {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+section#home .tired .leftDesk {
+  background-image: url("/i/home/bottle.png");
+  background-repeat: no-repeat;
+  background-position: center top 50%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+section#home .tired .leftDesk p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  line-height: 2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+section#home .tired .leftDesk p span {
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: 0.2s ease-in;
+  border-bottom: 1px solid transparent;
+}
+section#home .tired .rightDesk {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 8rem 0;
+  position: relative;
+}
+section#home .tired .rightDesk::before {
+  content: "";
+  background-image: url("/i/home/rightdesk.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  left: -10rem;
+  width: 100%;
+}
+section#home .tired .rightDesk p:first-child {
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.44px;
+  text-transform: uppercase;
+  color: white;
+  border-radius: 999rem;
+  background-color: black;
+  padding: 0.5rem 1rem;
+  margin-bottom: 2.4rem;
+}
+section#home .tired .rightDesk .count {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  text-align: center;
+  color: #505154;
+}
+section#home .tired .rightDesk h3 {
+  font-size: 2.4rem;
+  font-family: "Spectral";
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+section#home .tired .rightDesk .link-btn {
+  margin-top: 5.5rem;
+}
+section#home .compilation {
+  background-color: white;
+  padding: 15rem 0;
+}
 section#home .compilation h2 {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 1.3rem;
   text-align: center;
-  margin-top: 10rem;
   margin-bottom: 6rem;
 }
 section#home .compilation .product {
@@ -939,7 +1334,6 @@ section#home .compilation .product {
   align-items: flex-start;
   justify-content: center;
   margin-left: 14rem;
-  margin-bottom: 14rem;
 }
 section#home .compilation .product .content img {
   box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
@@ -1022,6 +1416,10 @@ section#home .consultaion .call p {
   letter-spacing: 0.7px;
   line-height: 1.4rem;
 }
+section#home .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+}
 section#home .consultaion .call form {
   display: flex;
   justify-content: center;
@@ -1053,14 +1451,14 @@ section#home .consultaion .call form .main-btn {
   width: 100%;
   font-weight: 500;
 }
-section#home .faq {
-  margin-top: 5rem;
+section#home .faqs {
+  margin: 5rem 10.5rem 0rem;
 }
-section#home .faq:last-child {
+section#home .faqs:last-child {
   border-bottom: 1px solid #505154;
   margin-bottom: 4rem;
 }
-section#home .faq .questions {
+section#home .faqs a {
   border-top: 1px solid #505154;
   padding: 2.2rem 0;
   cursor: pointer;
@@ -1068,25 +1466,25 @@ section#home .faq .questions {
   align-items: center;
   justify-content: space-between;
 }
-section#home .faq .questions p {
+section#home .faqs a p {
   border-bottom: 1px solid transparent;
   padding-bottom: 0.3rem;
   transition: 0.2s ease-in-out;
   display: inline-block;
   text-transform: uppercase;
 }
-section#home .faq .questions svg {
+section#home .faqs a svg {
   width: 4rem;
   height: 2rem;
 }
-section#home .faq .questions svg > path {
+section#home .faqs a svg > path {
   transition: 0.2s ease-in;
 }
-section#home .faq .questions:hover p {
+section#home .faqs a:hover p {
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
 }
-section#home .faq .questions:hover svg > path {
+section#home .faqs a:hover svg > path {
   stroke: #505154;
 }
 section#home .collab {
@@ -2477,7 +2875,7 @@ section#franchise .consultaion .call p {
   font-size: 0.9rem;
   color: #505154;
   margin-top: 1rem;
-  width: 27rem;
+  width: 28rem;
   text-align: center;
   line-height: 1.3rem;
   letter-spacing: 0.7px;
@@ -3168,7 +3566,7 @@ section#profile .switch .orders .product__status .delivered svg {
   height: 0.53rem;
 }
 section#profile .faq {
-  margin-top: 5rem;
+  margin: 5rem 10.5rem 0;
 }
 section#profile .faq:last-child {
   border-bottom: 1px solid #505154;

@@ -3186,12 +3186,20 @@ function withinMaxClamp(min, value, max) {
 /***/ (() => {
 
 var faqs = document.querySelectorAll('.faq');
+var menu = document.querySelector('.menu');
+var catalog = document.querySelector('#catalog');
+var close_btn = document.querySelector('#close-menu');
+catalog.addEventListener('click', function () {
+  menu.classList.add("active");
+});
+close_btn.addEventListener('click', function (e) {
+  menu.classList.remove("active");
+});
 faqs.forEach(function (faq) {
   faq.addEventListener('click', function () {
     faq.classList.toggle('active');
   });
 });
-console.log(faqs);
 
 /***/ }),
 
