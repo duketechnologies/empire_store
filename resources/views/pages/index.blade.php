@@ -348,19 +348,16 @@
             </div>
         </div>
         <div class="tired">
-            <div class="leftDesk">
-{{--                <img src="/i/home/bottle.png" alt=""/>--}}
-                <p>
-
-                    Набор для напитков<br/>
-                    <span>Жерұйық</span>
-                </p>
+            <div class="left_side">
+                <img src="/i/home/bottle.png" alt=""/>
             </div>
-            <div class="rightDesk">
-                <p>Новинка</p>
-                <h3>Жерұйық</h3>
-                <p class="count">5 предметов в коллекции</p>
-                <a href="#" class="link-btn">Смотреть всю коллекцию</a>
+            <div class="right_side">
+                <div class="content">
+                    <p>Новинка</p>
+                    <h3>Жерұйық</h3>
+                    <p class="count">5 предметов в коллекции</p>
+                    <a href="#" class="link-btn">Смотреть всю коллекцию</a>
+                </div>
             </div>
         </div>
 
@@ -432,7 +429,7 @@
         </div>
 
     </section>
-    <script src="/js/app.js"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 @endsection
 
 {{--@section('scripts')--}}

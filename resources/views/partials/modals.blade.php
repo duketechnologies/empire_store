@@ -74,7 +74,7 @@
     </div>
 </div>
 
-<div class="remodal franchise-modal" data-remodal-id="franchise-modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+<div class="remodal" data-remodal-id="franchise-modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="franchise">
         <h3>Заявка на франшизу Empire</h3>
@@ -133,7 +133,7 @@
     </div>
 </div>
 
-<div class="remodal franchise-modal" data-remodal-id="quiz" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+<div class="remodal" data-remodal-id="quiz" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
   <button data-remodal-action="close" class="remodal-close-btn"></button>
   <div class="content">
     <img src="/i/quiz/quiz 1.png"/>
@@ -152,7 +152,7 @@
   </div>
 </div>
 
-<div class="remodal franchise-modal" data-remodal-id="feedback" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+<div class="remodal" data-remodal-id="feedback" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
   <button data-remodal-action="close" class="remodal-close-btn"></button>
   <div class="content">
       <img src="/i/popup/feedback.png" alt=""/>
@@ -177,7 +177,7 @@
   </div>
 </div>
 
-<div class="remodal franchise-modal" data-remodal-id="comment" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+<div class="remodal" data-remodal-id="comment" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="content">
         <h1>Оставьте отзыв о Empire</h1>
@@ -190,7 +190,7 @@
     </div>
 </div>
 
-<div class="remodal franchise-modal" data-remodal-id="payment" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+<div class="remodal" data-remodal-id="payment" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="content">
         <h3>Купить товар в рассрочку</h3>
@@ -210,7 +210,7 @@
     </div>
 </div>
 
-<div class="remodal franchise-modal" data-remodal-id="menu" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+<div class="remodal" data-remodal-id="menu" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div>ok</div>
 </div>
@@ -284,3 +284,111 @@
     </div>
 </div>
 
+<div class="remodal" data-remodal-id="login" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <div class="wrapper">
+        <h3>Для входа в аккаунт<br/>введите номер телефона или Email</h3>
+        <form method="POST" action="#">
+            <fieldset>
+                <legend>Телефон или Email</legend>
+                <input type="tel" name="login_phone" />
+                <button type="submit">
+                    <svg width="20" height="8" viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 4.06641L18 4.06641" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15.5781 1L18.6455 4.0674L15.5781 7.13479" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="login-email" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+{{--    <div class="wrapper">--}}
+{{--        <h3>Введите пароль</h3>--}}
+{{--        <p>Введите пароль от аккаунта<span>Mail@mail.kz</span></p>--}}
+{{--        <form method="POST" action="#">--}}
+{{--            <fieldset>--}}
+{{--                <legend>Телефон или Email</legend>--}}
+{{--                <input type="text" name="login-email" autocomplete="off"/>--}}
+{{--            </fieldset>--}}
+{{--            <fieldset>--}}
+{{--                <input type="password" name="register_password" placeholder="Повторите пароль" autocomplete="off"/>--}}
+{{--            </fieldset>--}}
+{{--            <button type="submit" class="main-btn">Войти</button>--}}
+{{--            <button type="submit" class="link-btn">Забыл пароль</button>--}}
+{{--        </form>--}}
+{{--    </div>--}}
+
+{{--    <div class="forget-password">--}}
+{{--        <svg viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--            <path d="M22.2167 10.3837L27.4846 5.04861M30.4949 2L27.4846 5.04861L30.4949 2ZM16.0306 16.6486C16.8078 17.4252 17.4256 18.3498 17.8485 19.3691C18.2713 20.3885 18.4909 21.4826 18.4946 22.5882C18.4982 23.6939 18.2859 24.7894 17.8698 25.8116C17.4537 26.8339 16.842 27.7626 16.07 28.5445C15.298 29.3263 14.3809 29.9458 13.3715 30.3672C12.3622 30.7886 11.2805 31.0037 10.1887 31C9.09693 30.9962 8.01667 30.7739 7.01011 30.3456C6.00356 29.9174 5.09059 29.2917 4.32378 28.5046C2.81585 26.9234 1.98145 24.8057 2.00031 22.6075C2.01917 20.4094 2.88978 18.3066 4.42462 16.7522C5.95947 15.1978 8.03574 14.3161 10.2062 14.297C12.3768 14.2779 14.4678 15.1229 16.0291 16.6501L16.0306 16.6486ZM16.0306 16.6486L22.2167 10.3837L16.0306 16.6486ZM22.2167 10.3837L26.7321 14.9566L32 9.62153L27.4846 5.04861L22.2167 10.3837Z" stroke="#505154" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--        </svg>--}}
+{{--        <h3>Восстановление пароля</h3>--}}
+{{--        <p>--}}
+{{--            Мы отправили ссылку для восстановления--}}
+{{--            доступа на почту, указанную при регистрации--}}
+{{--            <br/>--}}
+{{--            <span>Mail@mail.kz</span>--}}
+{{--        </p>--}}
+{{--        <button class="link-btn">Мне не пришло письмо</button>--}}
+{{--    </div>--}}
+
+    <div class="recovery">
+        <h3>Создайте новый пароль</h3>
+        <p>Введите пароль от аккаунта<span>Mail@mail.kz</span></p>
+        <form method="POST" action="#">
+            <fieldset>
+                <legend>Новый пароль</legend>
+                <input type="password" name="password-recovery" autocomplete="off"/>
+            </fieldset>
+            <fieldset>
+                <input type="password" name="confirm-password-recovery" placeholder="Повторите пароль" autocomplete="off"/>
+            </fieldset>
+            <button type="submit" class="main-btn">Сохранить пароль и войти</button>
+        </form>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="register-email" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <div class="wrapper">
+        <h3>Создайте пароль</h3>
+        <p>Создание пароля для нового аккаунта <span>Mail@mail.kz</span></p>
+        <form method="POST" action="#">
+            <fieldset>
+                <legend>Пароль</legend>
+                <input type="password" name="register_password"/>
+            </fieldset>
+            <fieldset>
+                <input type="password" name="register_password" placeholder="Повторите пароль"/>
+            </fieldset>
+            <div>
+                <input type="checkbox" name="personal_info" id="personal_info"/>
+                <label for="personal_info">
+                    Соглашаюсь на обработку персональной информации в соответствии с
+                    <span>Политикой конфиденциальности</span>
+                </label>
+            </div>
+            <button type="submit" class="main-btn">Сохранить</button>
+            <button type="submit" class="link-btn">У меня уже есть аккаунт</button>
+        </form>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="login-phone" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <div class="wrapper">
+        <h3>Введите пароль из смс</h3>
+        <form method="POST" action="#">
+            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <button type="submit" disabled>
+                <svg viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 4.06641L18 4.06641" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.5781 1L18.6455 4.0674L15.5781 7.13479" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </form>
+        <button class="link-btn">Не пришло смс?</button>
+    </div>
+</div>

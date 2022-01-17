@@ -584,10 +584,15 @@ li {
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: none;
   border-bottom: 1px solid #DEDCD8;
-  font-weight: 500;
+  font-weight: 600;
   padding-bottom: 0.2rem;
   transition: 0.2s ease-in;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #303133;
 }
 .link-btn:hover {
   border-bottom: 1px solid black;
@@ -601,6 +606,11 @@ li {
 @media only screen and (max-width: 1366px) {
   html {
     font-size: 11px;
+  }
+}
+@media only screen and (width: 2560px) {
+  html, body {
+    font-size: 1.4vmin;
   }
 }
 .container {
@@ -621,6 +631,7 @@ header.header {
   background-color: transparent;
   z-index: 10;
   position: relative;
+  height: 5vh;
 }
 header.header .wrapper {
   padding: 0 2.2rem;
@@ -630,8 +641,14 @@ header.header .wrapper {
 }
 header.header .wrapper .links {
   display: flex;
-  align-items: center;
   gap: 2rem;
+}
+header.header .wrapper .links .logo {
+  align-self: center;
+}
+header.header .wrapper .links .logo svg {
+  width: 8.4rem;
+  height: 1.1rem;
 }
 header.header .wrapper .links .nav {
   background-color: white;
@@ -642,13 +659,15 @@ header.header .wrapper .links .nav {
   transition: 0.2s ease-in-out;
 }
 header.header .wrapper .links .nav li {
-  padding: 0.8rem 2rem;
   margin: 5px;
+}
+header.header .wrapper .links .nav li a {
+  padding: 0.8rem 2rem;
+  transition: 0.2s ease-in-out;
   border-radius: 8px;
   font-size: 0.85rem;
-  transition: 0.2s ease-in-out;
 }
-header.header .wrapper .links .nav li:hover {
+header.header .wrapper .links .nav li a:hover {
   background-color: #F5F4F1;
 }
 header.header .wrapper .links input {
@@ -690,7 +709,6 @@ header.header .wrapper .links input:focus {
 }
 header.header .wrapper .info {
   display: flex;
-  align-items: center;
   gap: 1rem;
 }
 header.header .wrapper .info .phone {
@@ -700,45 +718,151 @@ header.header .wrapper .info .phone {
   color: #939393;
   cursor: pointer;
   border-right: 1px solid #DEDCD8;
-  margin-right: 2rem;
   padding-right: 2rem;
   transition: 0.2s ease-in-out;
+  align-self: center;
 }
 header.header .wrapper .info .phone:hover {
   color: black;
 }
 header.header .wrapper .info .profile {
   display: flex;
-  align-items: center;
   gap: 0.2rem;
   text-transform: uppercase;
+  text-align: center;
+  align-items: center;
 }
 header.header .wrapper .info .profile li {
   font-size: 0.85rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: 0.2s ease-in-out;
-  cursor: pointer;
   font-weight: 600;
 }
 header.header .wrapper .info .profile li a {
   color: #939393;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
-header.header .wrapper .info .profile li svg {
+header.header .wrapper .info .profile li a svg {
   width: 1rem;
   height: 1rem;
 }
-header.header .wrapper .info .profile li svg > path {
-  transition: 0.2s ease-in-out;
+header.header .wrapper .info .profile li a svg > g > path {
+  transition: 0.2s ease-in;
 }
-header.header .wrapper .info .profile li:hover {
+header.header .wrapper .info .profile li a svg > path {
+  transition: 0.2s ease-in;
+}
+header.header .wrapper .info .profile li a:hover {
+  color: black;
   background-color: white;
 }
-header.header .wrapper .info .profile li:hover a {
-  color: black;
-}
-header.header .wrapper .info .profile li:hover svg > path {
+header.header .wrapper .info .profile li a:hover svg > path {
   fill: black;
+}
+header.header .wrapper .info .profile li a:hover svg > g > path {
+  stroke: black;
+}
+header.header .search-block {
+  margin-top: 0.4rem;
+  background-color: lavender;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem 2.3rem;
+  transform: translateY(-34rem);
+}
+header.header .search-block .left_side {
+  width: 100%;
+  padding-left: 15rem;
+}
+header.header .search-block .left_side .row {
+  margin-top: 2.8rem;
+}
+header.header .search-block .left_side .row p {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  color: #303133;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+header.header .search-block .left_side .row ul {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+header.header .search-block .left_side .row ul li {
+  font-size: 0.95rem;
+  text-align: center;
+  color: #303133;
+  border: 1px solid #939393;
+  border-radius: 999rem;
+  padding: 0.4rem 0.6rem;
+  letter-spacing: 0.7px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+header.header .search-block .left_side .row ul li:hover {
+  border: 1px solid black;
+}
+header.header .search-block .right_side {
+  padding: 1.6rem 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+}
+header.header .search-block .right_side .collection .title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 0.97rem;
+  margin-bottom: 1rem;
+}
+header.header .search-block .right_side .collection .link {
+  cursor: pointer;
+}
+header.header .search-block .right_side .collection .link img {
+  width: 100%;
+  min-height: 11rem;
+  margin-bottom: 1rem;
+}
+header.header .search-block .right_side .collection .link p {
+  font-size: 0.99rem;
+  letter-spacing: 0.44px;
+  color: #303133;
+  font-weight: 500;
+}
+header.header .search-block .right_side .collection .link p span {
+  margin-left: 0.5rem;
+  color: #939393;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+header.header .search-block .right_side .product {
+  background-color: #F5F4F1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 19rem;
+  border-radius: 8px;
+}
+header.header .search-block .right_side .product img {
+  max-width: 10rem;
+}
+header.header .search-block .right_side .product p {
+  font-size: 0.85rem;
+  letter-spacing: 0.6px;
+  color: #505154;
+  background-color: white;
+  border-radius: 999rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
 }
 
 .footer {
@@ -1247,52 +1371,50 @@ section#home .tired {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-section#home .tired .leftDesk {
-  background-image: url("/i/home/bottle.png");
-  background-repeat: no-repeat;
-  background-position: center top 50%;
-  height: 40rem;
+section#home .tired .left_side {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  width: 100%;
+  overflow: hidden;
 }
-section#home .tired .leftDesk p {
+section#home .tired .left_side p {
   font-size: 0.95rem;
   letter-spacing: 0.7px;
   line-height: 2rem;
   text-align: center;
   margin-bottom: 4rem;
 }
-section#home .tired .leftDesk p span {
+section#home .tired .left_side p span {
   font-size: 1.4rem;
   font-weight: 500;
   transition: 0.2s ease-in;
   border-bottom: 1px solid transparent;
 }
-section#home .tired .rightDesk {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+section#home .tired .right_side {
   background-color: white;
   border-radius: 8px;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
   padding: 8rem 0;
   position: relative;
 }
-section#home .tired .rightDesk::before {
+section#home .tired .right_side::before {
   content: "";
   background-image: url("/i/home/rightdesk.png");
   background-repeat: no-repeat;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: -10rem;
   width: 100%;
 }
-section#home .tired .rightDesk p:first-child {
+section#home .tired .right_side .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#home .tired .right_side .content p:first-child {
   font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.44px;
@@ -1303,19 +1425,19 @@ section#home .tired .rightDesk p:first-child {
   padding: 0.5rem 1rem;
   margin-bottom: 2.4rem;
 }
-section#home .tired .rightDesk .count {
+section#home .tired .right_side .content .count {
   font-size: 0.95rem;
   letter-spacing: 0.7px;
   text-align: center;
   color: #505154;
 }
-section#home .tired .rightDesk h3 {
+section#home .tired .right_side .content h3 {
   font-size: 2.4rem;
   font-family: "Spectral";
   font-style: italic;
   margin-bottom: 1rem;
 }
-section#home .tired .rightDesk .link-btn {
+section#home .tired .right_side .content .link-btn {
   margin-top: 5.5rem;
 }
 section#home .compilation {
@@ -1338,6 +1460,12 @@ section#home .compilation .product {
 section#home .compilation .product .content img {
   box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
   width: 100%;
+  border-radius: 8px;
+  transition: 0.2s ease-in;
+}
+section#home .compilation .product .content img:hover {
+  cursor: url("/i/cursor.png"), auto;
+  box-shadow: -13px 15px 2px 0px rgba(216, 214, 208, 0.3);
 }
 section#home .compilation .product .content .name {
   font-size: 1.3rem;
@@ -2312,9 +2440,6 @@ section#about .partners .card-1 {
   background-image: url("/i/about/partnership/partners1.png");
   background-size: cover;
   background-position: center center;
-  width: 30rem;
-  border-radius: 8px;
-  height: 50rem;
 }
 section#about .partners .card-1 .content {
   margin-top: 10rem;
@@ -2324,53 +2449,101 @@ section#about .partners .card-2 {
   background-image: url("/i/about/partnership/partners3.png");
   background-size: cover;
   background-position: center center;
-  width: 30rem;
-  border-radius: 8px;
-  height: 50rem;
 }
 section#about .partners .card-2 .content {
   margin-top: 4rem;
   margin-left: 3rem;
-  border-bottom: 1px solid #303133;
   max-width: 24rem;
 }
 section#about .partners .card-2 .content .links {
-  position: absolute;
+  border-top: 1px solid rgba(92, 128, 99, 0.7);
+  color: white;
+}
+section#about .partners .card-2 .content .links a {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: relative;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid transparent;
+  transition: 0.2s ease-in;
+}
+section#about .partners .card-2 .content .links a svg > path {
+  transition: 0.2s ease-in;
+}
+section#about .partners .card-2 .content .links a:hover {
+  border-bottom: 1px solid white;
+}
+section#about .partners .card-2 .content .links a:hover svg > path {
+  stroke: #90DD9F;
 }
 section#about .partners .card-3 {
   background-image: url("/i/about/partnership/partners2.png");
   background-size: cover;
   background-position: center center;
-  width: 30rem;
-  border-radius: 8px;
-  height: 50rem;
 }
 section#about .partners .card-3 .content {
   margin-top: 4rem;
   margin-left: 3rem;
-  border-bottom: 1px solid #303133;
   max-width: 24rem;
 }
 section#about .partners .card-3 .content h3 {
   color: black;
 }
-section#about .partners :first-child {
+section#about .partners .card-3 .content a {
+  border-bottom: 1px solid transparent;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  position: relative;
+  padding-bottom: 0.3rem;
   transition: 0.2s ease-in;
 }
-section#about .partners :first-child:hover {
+section#about .partners .card-3 .content a svg {
+  transition: 0.2s ease-in;
+}
+section#about .partners .card-3 .content a svg > path {
+  transition: 0.2s ease-in;
+  stroke: #CCA6A6;
+}
+section#about .partners .card-3 .content a:hover {
+  border-bottom: 1px solid black;
+}
+section#about .partners .card-3 .content a:hover svg > path {
+  stroke: #AB6363;
+}
+section#about .partners .card-3 .content .links {
+  border-top: 1px solid rgba(204, 166, 166, 0.7);
+  color: black;
+}
+section#about .partners .card {
+  transition: 0.2s linear;
+  width: 30rem;
+  border-radius: 8px;
+  height: 50rem;
+}
+section#about .partners .card .content .links {
+  padding-top: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  font-size: 0.99rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+section#about .partners .card .content .links svg {
+  width: 0.6rem;
+  height: 0.6rem;
+  margin-bottom: 0.7rem;
+  margin-left: 0.3rem;
+  transition: 0.2s ease-in;
+  position: absolute;
+  right: -1rem;
+  top: -0.3rem;
+}
+section#about .partners .card:hover {
   box-shadow: 0px 5px 17px 11px rgba(34, 60, 80, 0.2);
-}
-section#about .partners :nth-child(2) {
-  transition: 0.2s ease-in;
-}
-section#about .partners :nth-child(2):hover {
-  box-shadow: 0px 5px 17px 11px rgba(34, 60, 80, 0.2);
-}
-section#about .partners :last-child {
-  transition: 0.2s ease-in;
-}
-section#about .partners :last-child:hover {
-  box-shadow: 0px 5px 25px 0px rgba(34, 60, 80, 0.2);
+  transform: translateY(-4px);
 }
 
 section#policy h2 {
@@ -2414,6 +2587,7 @@ section#policy .content .rules__title {
   padding: 0.5rem;
   font-size: 0.95rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 section#policy .content .rules__info li {
   font-size: 0.95rem;
@@ -2721,6 +2895,7 @@ section#franchise .rules {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 13.5rem;
 }
 section#franchise .rules .content {
   display: grid;
@@ -2754,7 +2929,7 @@ section#franchise .rules .main-btn {
   max-width: 13rem;
 }
 section#franchise .faq {
-  margin: 5rem 10.5rem;
+  margin: 0 10.5rem;
 }
 section#franchise .faq .questions {
   border-top: 1px solid #DEDCD8;
@@ -2769,6 +2944,7 @@ section#franchise .faq .questions p {
   padding-bottom: 0.3rem;
   transition: 0.2s ease-in-out;
   display: inline-block;
+  font-size: 1.2rem;
 }
 section#franchise .faq .questions svg {
   width: 2rem;
@@ -2778,18 +2954,45 @@ section#franchise .faq .questions:hover p {
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
 }
+section#franchise .faq .answers {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  line-height: 1.3rem;
+  transition: 0.6s linear;
+  max-width: 53.5rem;
+  padding-left: 2rem;
+  max-height: 0;
+  overflow: hidden;
+}
+section#franchise .faq #vertical {
+  transition: 0.2s linear;
+  -webkit-animation: rotate 0.2s linear;
+          animation: rotate 0.2s linear;
+}
+section#franchise .faq.active .questions p {
+  border-bottom: 1px solid black;
+}
+section#franchise .faq.active .answers {
+  margin-bottom: 5.35rem;
+  max-height: 30rem;
+  -webkit-animation: fade 0.5s ease-in-out;
+          animation: fade 0.5s ease-in-out;
+}
+section#franchise .faq.active #vertical {
+  transition: 0.2s linear;
+  opacity: 0;
+}
 section#franchise .excursion {
   display: flex;
   justify-content: space-between;
   align-self: center;
-  margin: 0 10.5rem;
+  margin: 13.5rem 10.5rem;
   padding: 6.6rem 5.3rem;
   gap: 5.2rem;
   background-color: white;
   border-radius: 8px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 13.5rem;
 }
 section#franchise .excursion svg {
   position: absolute;
@@ -3367,8 +3570,9 @@ section#profile .switch .my-profile .profile-address h3 {
   margin-bottom: 4rem;
 }
 section#profile .switch .my-profile .profile-address .address {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
   gap: 1rem;
 }
 section#profile .switch .my-profile .profile-address .address div {
@@ -3414,11 +3618,9 @@ section#profile .switch .my-profile .profile-address .address .add {
   justify-content: center;
   background-color: #F5F4F1;
   border: none;
-  max-width: 18rem;
+  max-width: 20rem;
   min-height: 10rem;
-}
-section#profile .switch .my-profile .profile-address .address .add:hover {
-  border: none;
+  transition: 0.2s ease-in;
 }
 section#profile .switch .my-profile .profile-address .address .add .new-address {
   margin-bottom: 0;
@@ -5336,6 +5538,261 @@ section#basket .faq .questions:hover svg > path {
   border-bottom: 1px solid black;
   font-weight: 500;
   padding-bottom: 0.3rem;
+}
+
+.remodal[data-remodal-id=login] h3 {
+  font-size: 1.35rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.remodal[data-remodal-id=login] form fieldset {
+  border: 1px solid #505154;
+  border-style: solid;
+  max-width: 20rem;
+  background: white;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.remodal[data-remodal-id=login] form fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+  text-align: left;
+}
+.remodal[data-remodal-id=login] form fieldset input {
+  border: none;
+  padding: 1rem;
+  min-width: 18rem;
+  outline: none;
+  border-radius: 8px;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=login] form fieldset button {
+  background-color: #303133;
+  padding: 1.5rem 1rem;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+  margin-top: -0.1rem;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.remodal[data-remodal-id=login] form fieldset button svg {
+  width: 1.4rem;
+  height: 0.6rem;
+}
+
+.remodal[data-remodal-id=register-email] {
+  background-color: #F5F4F1;
+}
+.remodal[data-remodal-id=register-email] h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.remodal[data-remodal-id=register-email] p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #939393;
+  margin-bottom: 3rem;
+}
+.remodal[data-remodal-id=register-email] p span {
+  color: #303133;
+}
+.remodal[data-remodal-id=register-email] form {
+  max-width: 23rem;
+  margin: 0 auto;
+}
+.remodal[data-remodal-id=register-email] form fieldset {
+  border: 1px solid #505154;
+  background: transparent;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.8rem;
+  height: 3.6rem;
+}
+.remodal[data-remodal-id=register-email] form fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 0.9rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+  text-align: left;
+}
+.remodal[data-remodal-id=register-email] form fieldset input {
+  border: none;
+  min-width: 18rem;
+  outline: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+  width: 100%;
+  background-color: transparent;
+}
+.remodal[data-remodal-id=register-email] form fieldset input[type=password] {
+  letter-spacing: 4px;
+}
+.remodal[data-remodal-id=register-email] form fieldset input[type=password]::-moz-placeholder {
+  letter-spacing: 0;
+}
+.remodal[data-remodal-id=register-email] form fieldset input[type=password]:-ms-input-placeholder {
+  letter-spacing: 0;
+}
+.remodal[data-remodal-id=register-email] form fieldset input[type=password]::placeholder {
+  letter-spacing: 0;
+}
+.remodal[data-remodal-id=register-email] form .main-btn {
+  margin-top: 2.1rem;
+  margin-bottom: 2.7rem;
+  width: 100%;
+}
+.remodal[data-remodal-id=register-email] form div {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.remodal[data-remodal-id=register-email] form div label {
+  font-size: 0.95rem;
+  color: #505154;
+  letter-spacing: 0.7px;
+  line-height: 1.7rem;
+  text-align: left;
+}
+.remodal[data-remodal-id=register-email] form div label span {
+  background-color: white;
+  padding: 0.3rem 0.2rem;
+}
+
+.remodal[data-remodal-id=login-email] h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.remodal[data-remodal-id=login-email] p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #939393;
+  margin-bottom: 3rem;
+}
+.remodal[data-remodal-id=login-email] p span {
+  color: #303133;
+}
+.remodal[data-remodal-id=login-email] form {
+  max-width: 23rem;
+  margin: 0 auto;
+}
+.remodal[data-remodal-id=login-email] form fieldset {
+  border: 1px solid #505154;
+  background: transparent;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.8rem;
+  height: 3.6rem;
+}
+.remodal[data-remodal-id=login-email] form fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 0.9rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+  text-align: left;
+}
+.remodal[data-remodal-id=login-email] form fieldset input {
+  border: none;
+  min-width: 18rem;
+  outline: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+  width: 100%;
+  background-color: transparent;
+}
+.remodal[data-remodal-id=login-email] form fieldset input[type=password] {
+  letter-spacing: 4px;
+}
+.remodal[data-remodal-id=login-email] form fieldset input[type=password]::-moz-placeholder {
+  letter-spacing: 0;
+}
+.remodal[data-remodal-id=login-email] form fieldset input[type=password]:-ms-input-placeholder {
+  letter-spacing: 0;
+}
+.remodal[data-remodal-id=login-email] form fieldset input[type=password]::placeholder {
+  letter-spacing: 0;
+}
+.remodal[data-remodal-id=login-email] form .main-btn {
+  width: 100%;
+  margin-bottom: 2.8rem;
+}
+.remodal[data-remodal-id=login-email] .forget-password p {
+  margin: 0 auto;
+  max-width: 25rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5rem;
+}
+.remodal[data-remodal-id=login-email] .forget-password svg {
+  width: 2.5rem;
+  height: 2.45rem;
+  margin-bottom: 2.7rem;
+}
+
+.remodal[data-remodal-id=login-phone] {
+  background-color: #F5F4F1;
+}
+.remodal[data-remodal-id=login-phone] h3 {
+  font-size: 1.25rem;
+  margin-bottom: 4rem;
+}
+.remodal[data-remodal-id=login-phone] form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 4rem;
+}
+.remodal[data-remodal-id=login-phone] form input[type=tel] {
+  width: 2.6rem;
+  height: 3rem;
+  text-align: center;
+  background-color: white;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  background-color: white;
+}
+.remodal[data-remodal-id=login-phone] form button {
+  background-color: black;
+  border-radius: 4px;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  outline: none;
+  margin-left: 0.5rem;
+}
+.remodal[data-remodal-id=login-phone] form button svg {
+  width: 1.3rem;
+  height: 0.65rem;
+}
+.remodal[data-remodal-id=login-phone] form button:disabled {
+  background-color: transparent;
+  border: 1px solid #DEDCD8;
+}
+.remodal[data-remodal-id=login-phone] form button:disabled svg > path {
+  stroke: #DEDCD8;
 }
 
 /*modals*/

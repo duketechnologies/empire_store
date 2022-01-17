@@ -133,8 +133,9 @@ section#profile {
                   margin-bottom: 4rem;
               }
               .address {
-                  display: flex;
-                  align-items: center;
+                  display: grid;
+                  grid-template-columns: 1fr 1fr 1fr;
+                  align-items: stretch;
                   gap: 1rem;
                   div {
                       padding: 2.1rem;
@@ -179,10 +180,10 @@ section#profile {
                       justify-content: center;
                       background-color: #F5F4F1;
                       border:none;
-                      max-width: 18rem;
+                      max-width: 20rem;
                       min-height: 10rem;
+                      transition: .2s ease-in;
                       &:hover {
-                          border:none;
                       }
                       .new-address {
                           margin-bottom: 0;

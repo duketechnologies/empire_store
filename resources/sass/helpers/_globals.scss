@@ -83,10 +83,15 @@ list-style: none;
     font-size: .85rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border:none;
     border-bottom: 1px solid #DEDCD8;
-    font-weight: 500;
+    font-weight: 600;
     padding-bottom: .2rem;
     transition: .2s ease-in;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    color: #303133;
     &:hover {
         border-bottom: 1px solid black;
     }
@@ -102,6 +107,11 @@ list-style: none;
     }
     body{
         //overflow-x: scroll;
+    }
+}
+@media only screen and (width: 2560px) {
+    html, body {
+        font-size: 1.4vmin;
     }
 }
 @mixin responsive {

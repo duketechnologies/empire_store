@@ -3185,21 +3185,29 @@ function withinMaxClamp(min, value, max) {
   \*****************************/
 /***/ (() => {
 
-var faqs = document.querySelectorAll('.faq');
-var menu = document.querySelector('.menu');
-var catalog = document.querySelector('#catalog');
-var close_btn = document.querySelector('#close-menu');
-catalog.addEventListener('click', function () {
-  menu.classList.add("active");
-});
-close_btn.addEventListener('click', function (e) {
-  menu.classList.remove("active");
-});
-faqs.forEach(function (faq) {
-  faq.addEventListener('click', function () {
-    faq.classList.toggle('active');
-  });
-});
+// const faqs = document.querySelectorAll('.faq')
+// const menu = document.querySelector('.menu')
+// const catalog = document.querySelector('#catalog')
+// const close_btn = document.querySelector('#close-menu')
+// const get = document.querySelector('#vertical')
+// console.log(faqs)
+//
+// if (faqs.length > 0)
+// {
+//     faqs.forEach(faq => {
+//         faq.addEventListener('click', (e) => {
+//             faq.classList.toggle('active');
+//         });
+//     });
+// }
+// catalog.addEventListener ('click', (e) => {
+//     e.preventDefault()
+//     menu.classList.add("active")
+// })
+// close_btn.addEventListener('click', (e) => {
+//     e.preventDefault()
+//     menu.classList.remove("active")
+// })
 
 /***/ }),
 
@@ -37224,6 +37232,29 @@ __webpack_require__(/*! ./faq.js */ "./resources/js/faq.js");
 $(document).ready(function () {
   console.log('ready...');
 });
+var faqs = document.querySelectorAll('.faq');
+var menu = document.querySelector('.menu');
+var catalog = document.querySelector('#catalog');
+var close_btn = document.querySelector('#close-menu');
+var get = document.querySelector('#vertical');
+console.log(window.location.href);
+
+if (window.location.href.includes('faq')) {
+  faqs.forEach(function (faq) {
+    faq.addEventListener('click', function (e) {
+      faq.classList.toggle('active');
+    });
+  });
+}
+
+catalog ? catalog.addEventListener('click', function (e) {
+  e.preventDefault();
+  menu.classList.add("active");
+}) : null;
+close_btn ? close_btn.addEventListener('click', function (e) {
+  e.preventDefault();
+  menu.classList.remove("active");
+}) : null;
 })();
 
 /******/ })()

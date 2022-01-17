@@ -383,16 +383,12 @@ section#home {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
-      .leftDesk {
-          background-image: url("/i/home/bottle.png");
-          background-repeat: no-repeat;
-          background-position: center top 50%;
-          height: 40rem;
+      .left_side {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: flex-end;
-          width: 100%;
+          overflow: hidden;
           p {
               font-size: .95rem;
               letter-spacing: .7px;
@@ -407,54 +403,56 @@ section#home {
               }
           }
       }
-      .rightDesk {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
+      .right_side {
+
           background-color: white;
           border-radius: 8px;
-          width: 85%;
+          width: 100%;
           margin:0 auto;
           padding: 8rem 0;
           position: relative;
-
           &::before {
               content: "";
               background-image: url("/i/home/rightdesk.png");
               background-repeat: no-repeat;
               position: absolute;
-              z-index: -1;
+              z-index: 1;
               left: -10rem;
               width: 100%;
           }
-          p {
-              &:first-child {
-                  font-weight: 600;
-                  font-size: .78rem;
-                  letter-spacing: .44px;
-                  text-transform: uppercase;
-                  color: white;
-                  border-radius: 999rem;
-                  background-color: black;
-                  padding: .5rem 1rem;
-                  margin-bottom: 2.4rem;
+          .content {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              p {
+                  &:first-child {
+                      font-weight: 600;
+                      font-size: .78rem;
+                      letter-spacing: .44px;
+                      text-transform: uppercase;
+                      color: white;
+                      border-radius: 999rem;
+                      background-color: black;
+                      padding: .5rem 1rem;
+                      margin-bottom: 2.4rem;
+                  }
               }
-          }
-          .count {
-              font-size: .95rem;
-              letter-spacing: .7px;
-              text-align: center;
-              color: #505154;
-          }
-          h3 {
-              font-size: 2.4rem;
-              font-family: "Spectral";
-              font-style: italic;
-              margin-bottom: 1rem;
-          }
-          .link-btn {
-              margin-top: 5.5rem;
+              .count {
+                  font-size: .95rem;
+                  letter-spacing: .7px;
+                  text-align: center;
+                  color: #505154;
+              }
+              h3 {
+                  font-size: 2.4rem;
+                  font-family: "Spectral";
+                  font-style: italic;
+                  margin-bottom: 1rem;
+              }
+              .link-btn {
+                  margin-top: 5.5rem;
+              }
           }
       }
   }
@@ -479,6 +477,14 @@ section#home {
         -moz-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
         box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
         width: 100%;
+        border-radius: 8px;
+        transition: .2s ease-in;
+            &:hover {
+                cursor: url("/i/cursor.png"), auto;
+                -webkit-box-shadow: -13px 15px 5px 0px rgba(216, 214, 208, 0.3);
+                -moz-box-shadow: -13px 15px 5px 0px rgba(216, 214, 208, 0.3);
+                box-shadow: -13px 15px 2px 0px rgba(216, 214, 208, 0.3);
+            }
         }
         .name {
           font-size: 1.3rem;

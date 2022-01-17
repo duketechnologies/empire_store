@@ -1,0 +1,78 @@
+.remodal[data-remodal-id=register-email] {
+    background-color: #F5F4F1;
+    h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+    p {
+        font-size: .95rem;
+        letter-spacing: .7px;
+        color: #939393;
+        margin-bottom: 3rem;
+        span {
+            color: #303133;
+        }
+    }
+    form {
+        max-width: 23rem;
+        margin:0 auto;
+        fieldset {
+            border: 1px solid #505154;
+            background: transparent;
+            border-radius: 8px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.8rem;
+            height: 3.6rem;
+            legend {
+                padding-left: .5rem;
+                padding-right: .5rem;
+                margin-left: .9rem;
+                font-size: .9rem;
+                letter-spacing: .7px;
+                color: #505150;
+                text-align: left;
+            }
+
+            input {
+                border: none;
+                min-width: 18rem;
+                outline: none;
+                border-radius: 8px;
+                padding:0 1.5rem;
+                font-size: .9rem;
+                letter-spacing: .44px;
+                width: 100%;
+                background-color: transparent;
+            }
+            input[type=password] {
+                letter-spacing: 4px;
+                &::placeholder {
+                    letter-spacing: 0;
+                }
+            }
+        }
+        .main-btn {
+            margin-top: 2.1rem;
+            margin-bottom: 2.7rem;
+            width: 100%;
+        }
+        div {
+            display: flex;
+            align-items: flex-start;
+            gap:1rem;
+            label {
+                font-size: .95rem;
+                color: #505154;
+                letter-spacing: .7px;
+                line-height: 1.7rem;
+                text-align: left;
+                span {
+                    background-color: white;
+                    padding: .3rem .2rem;
+                }
+            }
+        }
+    }
+}

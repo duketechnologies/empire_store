@@ -246,6 +246,7 @@ section#franchise {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-bottom: 13.5rem;
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -281,45 +282,77 @@ section#franchise {
       max-width: 13rem;
     }
   }
-  .faq {
-    margin: 5rem 10.5rem;
-    .questions {
-      border-top: 1px solid #DEDCD8;
-      padding: 2.2rem 0;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      p {
-          border-bottom: 1px solid transparent;
-          padding-bottom: .3rem;
-          transition: .2s ease-in-out;
-          display: inline-block;
-      }
-      svg {
-          width: 2rem;
-          height: 2rem;
-      }
-      &:hover {
-        p {
-            border-bottom: 1px solid black;
-            padding-bottom: 0.3rem;
+    .faq {
+        margin: 0 10.5rem;
+        .questions {
+            border-top: 1px solid #DEDCD8;
+            padding: 2.2rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                border-bottom: 1px solid transparent;
+                padding-bottom: .3rem;
+                transition: .2s ease-in-out;
+                display: inline-block;
+                font-size: 1.2rem;
+            }
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+            &:hover {
+                p {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 0.3rem;
+                }
+            }
         }
-      }
+        .answers {
+            font-size: .95rem;
+            letter-spacing: .44px;
+            line-height: 1.3rem;
+            transition:  0.6s linear;
+            max-width: 53.5rem;
+            padding-left: 2rem;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #vertical {
+            transition: .2s linear ;
+            animation: rotate .2s linear;
+        }
     }
-  }
+    .faq.active {
+        .questions {
+            p {
+                border-bottom: 1px solid black;
+            }
+        }
+        .answers {
+            margin-bottom: 5.35rem;
+            max-height: 30rem;
+            animation: fade 0.5s ease-in-out;
+        }
+
+        #vertical {
+            transition: .2s linear ;
+            opacity: 0;
+        }
+    }
   .excursion {
     display: flex;
     justify-content: space-between;
     align-self: center;
-    margin:0 10.5rem;
+    margin:13.5rem 10.5rem;
     padding:6.6rem 5.3rem;
     gap: 5.2rem;
     background-color: white;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    margin-bottom: 13.5rem;
+
     svg {
       position: absolute;
       top: 0;

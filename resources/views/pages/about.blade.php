@@ -103,31 +103,52 @@
     </div>
 
     <div class="partners">
-      <a href="#" class="card-1">
+      <a href="/partnership" class="card card-1">
         <div class="content">
           <h3>Партнерство</h3>
           <p>Узнайте больше об особых условиях<br/> для корпоративных клиентов</p>
         </div>
       </a>
-      <div href="#" class="card-2">
+      <div class="card card-2">
         <div class="content">
           <h3>Посетите один из наших <br/>фирменных магазинов</h3>
             <div class="links">
-               <a href="#">Адреса бутиков</a>
-               <a href="#">Контакты</a>
+               <a href="/address">Адреса бутиков
+                   <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M1 6.83333L6.83333 1" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                       <path d="M1 1H6.83333V6.83333" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                   </svg>
+               </a>
+               <a href="/contacts">Контакты
+                    <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                       <path d="M1 6.83333L6.83333 1" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                       <path d="M1 1H6.83333V6.83333" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                   </svg>
+               </a>
             </div>
         </div>
       </div>
-      <a href="#" class="card-3">
+      <div class="card card-3">
         <div class="content">
            <h3>Мы открыты <br/>к сотрудничеству</h3>
-{{--            <div class="links">--}}
-{{--                <a href="#">Партнерство</a>--}}
-{{--                <a href="#">Вакансии</a>--}}
-{{--            </div>--}}
+            <div class="links">
+                <a href="/partnership">Партнерство
+                    <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6.83333L6.83333 1" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1H6.83333V6.83333" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="/vacancies">Вакансии
+                    <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 6.83333L6.83333 1" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M1 1H6.83333V6.83333" stroke="#5C8063" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
         </div>
-      </a>
+      </div>
     </div>
+
   </section>
 
 @endsection
