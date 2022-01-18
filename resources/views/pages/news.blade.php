@@ -50,20 +50,24 @@
       </a>
     </div>
     <div class="route">
-      <a href="#" class="toStart">Вернуться в начало</a>
+      <a href="#" class="toStart">
+          <svg viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M8.81171 4.81694C8.56066 5.06102 8.15363 5.06102 7.90257 4.81694L4.5 1.50888L1.09743 4.81694C0.846375 5.06102 0.43934 5.06102 0.188289 4.81694C-0.0627632 4.57286 -0.0627631 4.17714 0.188289 3.93306L4.04543 0.183059C4.29648 -0.0610189 4.70352 -0.0610188 4.95457 0.183059L8.81171 3.93306C9.06276 4.17714 9.06276 4.57286 8.81171 4.81694Z" fill="#939393"/>
+          </svg>
+          Вернуться в начало</a>
       <a href="#" class="secondary-btn">Показать больше</a>
       <div class="pagination">
-        <span>1</span>
-        <span>2</span>
-        <span>3</span>
-        <span>4</span>
-        <span>5</span>
-        <span>
+        <a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">
           <svg viewBox="0 0 31 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 9.35547L30 9.35547" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M21.6445 17.7109L30.0005 9.35501L21.6445 0.999073" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </span>
+        </a>
       </div>
     </div>
     <div class="consultaion">

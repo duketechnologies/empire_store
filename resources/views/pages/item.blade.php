@@ -90,15 +90,25 @@
                     <li>Хрустальное стекло</li>
                 </ul>
             </div>
-            <div class="faq">
+            <div class="existence active">
                 <div class="questions">
-                    <p>Наличие по городам</p>
+                    <p>
+                        <svg viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.0215 0C1.80403 0 0 1.83644 0 4.09375C0 5.35639 0.638603 6.88894 1.89813 8.64881C2.81985 9.93676 3.72813 10.8553 3.76635 10.8938C3.8366 10.9645 3.92903 11 4.02156 11C4.11141 11 4.20132 10.9665 4.27102 10.8994C4.30932 10.8625 5.2199 9.98114 6.14336 8.71099C7.4039 6.97717 8.04304 5.42372 8.04304 4.09373C8.04299 1.83645 6.23893 0 4.0215 0ZM4.0215 5.86108C2.93739 5.86108 2.05544 4.9791 2.05544 3.89502C2.05544 2.81094 2.93741 1.92896 4.0215 1.92896C5.10558 1.92896 5.98756 2.81094 5.98756 3.89502C5.98756 4.9791 5.10556 5.86108 4.0215 5.86108Z" fill="#505154"/>
+                        </svg>
+                        Наличие по городам</p>
                     <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
                 <div class="answers">
+                    <ul id="item-location">
+                        <li>Алматы<span>Нет в наличии</span></li>
+                        <li>Атырау<span>Нет в наличии</span></li>
+                        <li>Нур-Султан<span>Доставка 7 000 ₸</span></li>
+                        <li>Актау<span>Нет в наличии</span></li>
+                    </ul>
                 </div>
             </div>
         </div>

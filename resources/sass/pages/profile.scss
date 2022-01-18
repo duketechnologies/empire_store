@@ -343,6 +343,169 @@ section#profile {
               }
           }
       }
+      .favorites {
+          display: flex;
+          margin-top: 3rem;
+          gap: 3.1rem;
+          &__menu {
+              align-self: flex-start;
+              width: 100%;
+              max-width: 17rem;
+              background-color: white;
+              padding: .3rem;
+              border-radius: 8px;
+              .title {
+                  font-size: .95rem;
+                  color: #939393;
+                  letter-spacing: .44px;
+                  padding: 1.75rem 1.35rem;
+              }
+              div {
+                  background-color: #F5F4F1;
+                  border-radius: 8px;
+                  padding: 2.75rem 1.35rem 2rem;
+                  p {
+                      font-size: .95rem;
+                      letter-spacing: .44px;
+                      color: #939393;
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                  }
+                  ul {
+                      margin-top: 1.5rem;
+                      li {
+                          font-size: .85rem;
+                          letter-spacing: .44px;
+                          color: #505154;
+                          font-weight: 500;
+                          line-height: 2.5rem;
+                          span {
+                              margin-left: .5rem;
+                              color: #DEDCD8;
+                              font-weight: 500;
+                          }
+                          a {
+                              color: #303133;
+                              border-bottom: 1px solid black;
+                              max-width: fit-content;
+                          }
+                      }
+                  }
+              }
+          }
+          &__products {
+              flex: 1;
+              h3 {
+                  font-size: 1.6rem;
+                  font-family: "Spectral";
+                  font-style: italic;
+                  color: #303133;
+                  margin-bottom: 4rem;
+                  sup {
+                      vertical-align: super;
+                      font-size: .95rem;
+                      font-style: normal;
+                      letter-spacing: .44px;
+                  }
+              }
+              .grid {
+                  display: grid;
+                  grid-template-columns: repeat(3,1fr);
+                  gap: 1rem;
+                  &__blocks {
+                      background-color: white;
+                      border-radius: 8px;
+                      max-width: 33rem;
+                      padding: 2rem;
+                      .info {
+                          .name {
+                              display: flex;
+                              justify-content: space-between;
+                              font-size: 1.1rem;
+                              letter-spacing: .44px;
+                              font-weight: 500;
+                              margin-bottom: 1rem;
+                              svg {
+                                  width: 1.15rem;
+                                  height: 1.1rem;
+                              }
+                          }
+                          .price {
+                              font-size: 1rem;
+                              letter-spacing: .44px;
+                              font-weight: 500;
+                          }
+                      }
+                      .grid-img {
+                          width: 100%;
+                          img {
+                              width: 100%;
+                              object-fit: none;
+                          }
+                      }
+                      .buttons {
+                          display: flex;
+                          gap: 1rem;
+                          .main-btn {
+                              width: 100%;
+                          }
+                          .primary-btn {
+                              width: 100%;
+                          }
+                      }
+                  }
+              }
+          }
+      }
+      .route {
+          display: flex;
+          margin: 6rem 0;
+          justify-content: space-between;
+          align-items: center;
+
+          .toStart {
+              margin-bottom: 1.2rem;
+              font-size: .73rem;
+              font-weight: 700;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              position: relative;
+              svg {
+                  width: .75rem;
+                  height: .45rem;
+                  margin-right: .5rem;
+                  transition: .2s ease-in;
+              }
+              &:hover {
+                  svg {
+                      transition: .2s ease-in;
+                      >path {
+                          fill: black;
+                      }
+                  }
+              }
+          }
+          .pagination {
+              display: flex;
+              align-items: center;
+              gap: 2rem;
+              a {
+                  font-size: .9rem;
+                  color: #939393;
+                  padding-bottom: .3rem;
+                  svg {
+                      width: 2rem;
+                      height: 1rem;
+                  }
+              }
+              .active {
+                  border-bottom: 1px solid black;
+                  padding-bottom: .3rem;
+                  color: black;
+              }
+          }
+      }
   }
 
     .faq {

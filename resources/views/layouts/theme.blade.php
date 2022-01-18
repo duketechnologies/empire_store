@@ -9,6 +9,10 @@
     <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
 
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -16,6 +20,7 @@
     </style>
     @yield('styles')
     <script src="{{ mix('js/app.js') }}"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     @yield('scripts')
 </head>
 <body>

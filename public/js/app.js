@@ -37237,7 +37237,8 @@ var menu = document.querySelector('.menu');
 var catalog = document.querySelector('#catalog');
 var close_btn = document.querySelector('#close-menu');
 var get = document.querySelector('#vertical');
-console.log(window.location.href);
+var increment = document.querySelector("#increment");
+var decrement = document.querySelector("#decrement");
 
 if (window.location.href.includes('faq')) {
   faqs.forEach(function (faq) {
@@ -37255,6 +37256,9 @@ close_btn ? close_btn.addEventListener('click', function (e) {
   e.preventDefault();
   menu.classList.remove("active");
 }) : null;
+var countt = 1;
+console.log(increment);
+console.log(decrement);
 })();
 
 /******/ })()

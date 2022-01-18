@@ -24,16 +24,16 @@
                     </div>
                 </div>
                 <div class="product__color">
-                    <p>Золотой</p>
+                    <p><span></span>Золотой</p>
                 </div>
                 <div class="product__price">
                     <p>5 000 000	₸</p>
                 </div>
                 <div class="product__quantity">
                     <div class="quantity">
-                        <p>-</p>
+                        <p id="increment">-</p>
                         <span>1</span>
-                        <p>+</p>
+                        <p id="decrement">+</p>
                     </div>
 
                 </div>
@@ -192,5 +192,6 @@
             </div>
             <div class="answers"></div>
         </div>
+        <script src="{{ mix('js/app.js') }}"></script>
     </section>
 @endsection

@@ -1,3 +1,4 @@
+
 window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 
@@ -17,7 +18,9 @@ const menu = document.querySelector('.menu')
 const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
 const get = document.querySelector('#vertical')
-console.log(window.location.href)
+const increment = document.querySelector("#increment")
+const decrement = document.querySelector("#decrement")
+
 
 if (window.location.href.includes('faq'))
 {
@@ -36,3 +39,8 @@ close_btn ? close_btn.addEventListener('click', (e) => {
     e.preventDefault()
     menu.classList.remove("active")
 }) : null
+
+
+let countt = 1
+console.log(increment)
+console.log(decrement)

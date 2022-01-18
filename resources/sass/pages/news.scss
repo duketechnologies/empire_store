@@ -79,19 +79,39 @@ section#news {
       text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
+        svg {
+            width: .75rem;
+            height: .45rem;
+            margin-right: .5rem;
+            transition: .2s ease-in;
+        }
+        &:hover {
+            svg {
+                transition: .2s ease-in;
+                >path {
+                    fill: black;
+                }
+            }
+        }
     }
     .pagination {
       display: flex;
       align-items: center;
       gap: 2rem;
-      span {
-        font-size: .9rem;
-        color: #939393;
-        svg {
-          width: 2rem;
-          height: 1rem;
+        a {
+            font-size: .9rem;
+            color: #939393;
+            padding-bottom: .3rem;
+            svg {
+                width: 2rem;
+                height: 1rem;
+            }
         }
-      }
+        .active {
+            border-bottom: 1px solid black;
+            padding-bottom: .3rem;
+            color: black;
+        }
     }
   }
   .consultaion {

@@ -68,4 +68,8 @@ class HomeController extends Controller
     {
         return view('pages.basket');
     }
+    public function filters()
+    {
+        return view('pages.filters');
+    }
 }

@@ -319,8 +319,8 @@
             </div>
             <div class="collections">
                 <div class="collections__item">
-{{--                    <img src="/i/home/preorder bg.png" alt=""/>--}}
-                    <img src="/i/home/preorder_1.png" alt=""/>
+                    <img class="preorder-bg" src="/i/home/preorder bg.png" alt=""/>
+                    <img class="preorder-img" src="/i/home/preorder_1.png" alt=""/>
                     <p class="name">
                         Коллекция<br/>
                         <span>Арабеска</span>
@@ -328,8 +328,8 @@
                     <p class="debuff">-30% по предзаказу</p>
                 </div>
                 <div class="collections__item">
-{{--                    <img src="/i/home/preorder bg.png" alt=""/>--}}
-                    <img src="/i/home/preorder_1.png" alt=""/>
+                    <img class="preorder-bg" src="/i/home/preorder bg_2.png" alt=""/>
+                    <img class="preorder-img" src="/i/home/preorder_1.png" alt=""/>
                     <p class="name">
                         Коллекция<br/>
                         <span>Арабеска</span>
@@ -337,8 +337,8 @@
                     <p class="debuff">-30% по предзаказу</p>
                 </div>
                 <div class="collections__item">
-{{--                    <img src="/i/home/preorder bg.png" alt=""/>--}}
-                    <img src="/i/home/preorder_1.png" alt=""/>
+                    <img class="preorder-bg" src="/i/home/preorder bg_3.png" alt=""/>
+                    <img class="preorder-img" src="/i/home/preorder_1.png" alt=""/>
                     <p class="name">
                         Коллекция<br/>
                         <span>Арабеска</span>
@@ -363,6 +363,10 @@
 
         <div class="compilation">
             <h2>Мы подготовили для вас интересную подборку, посмотрите поближе</h2>
+            <svg class="swiper-prev-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <div class="product">
                 <div class="content">
                     <img src="/i/home/swiper_img.png" alt=""/>
@@ -382,6 +386,10 @@
                     <p>Полистоун • Ручная роспись</p>
                 </div>
             </div>
+            <svg class="swiper-next-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </div>
 
         <div class="collab">

@@ -3,7 +3,7 @@ section#basket {
         font-size: 1.6rem;
         font-weight: 300;
         color: #505154;
-        margin: 4rem 10.5rem 2.28rem;
+        margin: 1rem 10.5rem 2.28rem;
     }
     .orders {
         min-height: 23rem;
@@ -92,11 +92,25 @@ section#basket {
                 }
             }
             &__color {
+                justify-self: center;
                 p {
                     font-size: .95rem;
                     font-weight: 500;
                     color: #505154;
                     text-align: center;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    span {
+                        background-color: #D1B538;
+                        width: .6rem;
+                        height: .6rem;
+                        display: block;
+                        border-radius: 100%;
+                        border: 1px solid black;
+                        padding: .3rem;
+
+                    }
                 }
             }
             &__price {
