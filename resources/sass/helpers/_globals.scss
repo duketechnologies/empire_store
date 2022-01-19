@@ -96,6 +96,16 @@ list-style: none;
         border-bottom: 1px solid black;
     }
 }
+.swiper-button-next {
+    &::after {
+        display: none;
+    }
+}
+.swiper-button-prev {
+    &::after {
+        display: none;
+    }
+}
 @media only screen and (max-width: 1599px) {
     html{
         font-size: 12px;

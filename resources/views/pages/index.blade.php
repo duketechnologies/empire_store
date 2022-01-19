@@ -363,33 +363,139 @@
 
         <div class="compilation">
             <h2>Мы подготовили для вас интересную подборку, посмотрите поближе</h2>
-            <svg class="swiper-prev-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div class="product">
-                <div class="content">
-                    <img src="/i/home/swiper_img.png" alt=""/>
-                    <p class="name">Картина «Сакские предания»</p>
-                    <p class="price">4 350 ₸</p>
-                    <div class="count">
-                        <div class="quantity">
-                            <p>-</p>
-                            <span>1</span>
-                            <p>+</p>
+{{--            <svg class="swiper-prev-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--            </svg>--}}
+
+            <div class="wrapper">
+                <div class="swiper-box">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="content">
+                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <p class="name">Картина «Сакские предания»</p>
+                                    <p class="price">4 350 ₸</p>
+                                    <div class="count">
+                                        <div class="quantity">
+                                            <p>-</p>
+                                            <span>1</span>
+                                            <p>+</p>
+                                        </div>
+                                        <a href="#" class="main-btn">В корзину</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <p>Основой создания коллекции послужили уникальные археологические находки скифо-сакской культуры, представляющие собой квинтэссенцию.</p>
+                                    <p>Полистоун • Ручная роспись</p>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="main-btn">В корзину</a>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="content">
+                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <p class="name">Картина «Сакские предания»</p>
+                                    <p class="price">4 350 ₸</p>
+                                    <div class="count">
+                                        <div class="quantity">
+                                            <p>-</p>
+                                            <span>1</span>
+                                            <p>+</p>
+                                        </div>
+                                        <a href="#" class="main-btn">В корзину</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <p>Основой создания коллекции послужили уникальные археологические находки скифо-сакской культуры, представляющие собой квинтэссенцию.</p>
+                                    <p>Полистоун • Ручная роспись</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="content">
+                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <p class="name">Картина «Сакские предания»</p>
+                                    <p class="price">4 350 ₸</p>
+                                    <div class="count">
+                                        <div class="quantity">
+                                            <p>-</p>
+                                            <span>1</span>
+                                            <p>+</p>
+                                        </div>
+                                        <a href="#" class="main-btn">В корзину</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <p>Основой создания коллекции послужили уникальные археологические находки скифо-сакской культуры, представляющие собой квинтэссенцию.</p>
+                                    <p>Полистоун • Ручная роспись</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="product">
+                                <div class="content">
+                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <p class="name">Картина «Сакские предания»</p>
+                                    <p class="price">4 350 ₸</p>
+                                    <div class="count">
+                                        <div class="quantity">
+                                            <p>-</p>
+                                            <span>1</span>
+                                            <p>+</p>
+                                        </div>
+                                        <a href="#" class="main-btn">В корзину</a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <p>Основой создания коллекции послужили уникальные археологические находки скифо-сакской культуры, представляющие собой квинтэссенцию.</p>
+                                    <p>Полистоун • Ручная роспись</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="info">
-                    <p>Основой создания коллекции послужили уникальные археологические находки скифо-сакской культуры, представляющие собой квинтэссенцию.</p>
-                    <p>Полистоун • Ручная роспись</p>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <svg class="swiper-prev-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg class="swiper-next-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                 </div>
             </div>
-            <svg class="swiper-next-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+
+{{--            <div class="product">--}}
+{{--                <div class="content">--}}
+{{--                    <img src="/i/home/swiper_img.png" alt=""/>--}}
+{{--                    <p class="name">Картина «Сакские предания»</p>--}}
+{{--                    <p class="price">4 350 ₸</p>--}}
+{{--                    <div class="count">--}}
+{{--                        <div class="quantity">--}}
+{{--                            <p>-</p>--}}
+{{--                            <span>1</span>--}}
+{{--                            <p>+</p>--}}
+{{--                        </div>--}}
+{{--                        <a href="#" class="main-btn">В корзину</a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="info">--}}
+{{--                    <p>Основой создания коллекции послужили уникальные археологические находки скифо-сакской культуры, представляющие собой квинтэссенцию.</p>--}}
+{{--                    <p>Полистоун • Ручная роспись</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <svg class="swiper-next-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--            </svg>--}}
         </div>
 
         <div class="collab">

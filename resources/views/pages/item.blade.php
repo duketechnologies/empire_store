@@ -10,7 +10,7 @@
                 <img src="/i/item/item-3.png" alt=""/>
             </div>
             <div class="large-img">
-                <img src="/i/item/item-large.png"/>
+{{--                <img src="/i/item/item-large.png"/>--}}
             </div>
             <div class="offer">
                 <div class="offer__description">
@@ -90,7 +90,7 @@
                     <li>Хрустальное стекло</li>
                 </ul>
             </div>
-            <div class="existence active">
+            <div class="existence">
                 <div class="questions">
                     <p>
                         <svg viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,6 +112,140 @@
                 </div>
             </div>
         </div>
+
+        <div class="similar">
+
+            <h3>Похожие товары</h3>
+
+            <div class="wrapper">
+                <div class="swiper-item">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-1.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-2.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-3.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-4.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-1.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-1.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-1.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="single">
+                                <div class="single-image">
+                                    <img src="/i/item/single-1.png" alt=""/>
+                                </div>
+                                <p>Картина «Сакские предания»</p>
+                                <div class="single-breadcrumbs">
+                                    <a href="#">Полистоун</a>
+                                    <a href="#">Ручная роспись</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <svg class="similar-prev-btn" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8135 1L0.999917 12.8136L12.8135 24.6271" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg class="similar-next-btn" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8135 1L0.999917 12.8136L12.8135 24.6271" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+{{--            <div class="single">--}}
+{{--                <div class="single-image">--}}
+{{--                    <img src="/i/item/single-1.png" alt=""/>--}}
+{{--                </div>--}}
+{{--                <p>Картина «Сакские предания»</p>--}}
+{{--                <div class="single-breadcrumbs">--}}
+{{--                    <a href="#">Полистоун</a>--}}
+{{--                    <a href="#">Ручная роспись</a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+        </div>
+
         <div class="consultaion">
             <div class="call">
                 <h1>Нужна помощь?</h1>
@@ -153,5 +287,6 @@
             </div>
             <div class="answers"></div>
         </div>
+        <script src="{{ mix('js/app.js') }}"></script>
     </section>
 @endsection

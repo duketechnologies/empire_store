@@ -2,7 +2,7 @@ section#item {
     .content {
         margin: 0 10.5rem;
         display: flex;
-        margin-top: 4rem;
+        margin-top: 2rem;
         .thumbnails {
             display: flex;
             flex-direction: column;
@@ -12,8 +12,10 @@ section#item {
         .large-img {
             width: 100%;
             display: flex;
-            justify-content: center;
-            align-self: center;
+            background-image: url("/i/item/item-large.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
             img {
             }
         }
@@ -22,7 +24,7 @@ section#item {
                 background-color: white;
                 border-radius: 8px;
                 min-width: 27rem;
-                padding: 2.6rem 0;
+                padding: 1.6rem 0;
                 .event {
                     font-weight: 600;
                     color: white;
@@ -45,7 +47,7 @@ section#item {
                     font-size: .85rem;
                     font-weight: 600;
                     letter-spacing: .44px;
-                    margin:1rem 2.6rem 1.8rem;
+                    margin:1rem 2.6rem 1.3rem;
 
                 }
                 ul {
@@ -203,6 +205,7 @@ section#item {
                 svg {
                     width: .75rem;
                     height: .75rem;
+                    margin-right: .2rem;
                 }
             }
             ul {
@@ -215,9 +218,6 @@ section#item {
         }
         .existence {
             width: 20%;
-
-
-
             .questions {
                 padding-bottom: 0.5rem;
                 cursor: pointer;
@@ -251,7 +251,6 @@ section#item {
                     padding-bottom: 0.5rem;
                 }
             }
-
             .answers {
                 max-height: 0;
                 overflow: hidden;
@@ -282,6 +281,79 @@ section#item {
                 max-height: 20rem;
                 border-bottom: 1px solid black;
                 padding-bottom: .5rem;
+                animation: fade 0.5s ease-in-out;
+            }
+        }
+    }
+    .similar {
+        padding: 10.5rem 0;
+        background: linear-gradient(180deg, rgba(211, 208, 196, 0.1) 0%, rgba(245, 244, 241, 0.1) 100%), #F5F4F1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        svg {
+            width: 0.97rem;
+            height: 1.7rem;
+        }
+        .similar-prev-btn {
+            position: absolute;
+            left:10rem;
+            top: 50%;
+        }
+        .similar-next-btn {
+            position: absolute;
+            right: 10rem;
+            top: 50%;
+            transform: rotate(180deg);
+        }
+        h3 {
+            font-size: 1.3rem;
+            color: #303133;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-bottom: 4rem;
+        }
+        .swiper-item {
+            max-width: 80rem;
+            overflow: hidden;
+        }
+        .single {
+            .single-image {
+                background-color: white;
+                max-width: 19rem;
+                height: 29rem;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                img {
+                    width: 100%;
+                }
+            }
+            p {
+                margin: 1.5rem 0 1rem;
+                font-size: 1rem;
+                color: #303133;
+                font-weight: 500;
+            }
+            .single-breadcrumbs {
+                font-size: .95rem;
+                color: #505154;
+                letter-spacing: .7px;
+                a {
+                    &:first-child {
+                        &::before {
+                            content: "";
+                            margin-right: 0;
+                        }
+                    }
+                    &::before {
+                        content: "•";
+                        margin-right: .5rem;
+                    }
+                }
             }
         }
     }
@@ -386,5 +458,15 @@ section#item {
                 }
             }
         }
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
     }
 }

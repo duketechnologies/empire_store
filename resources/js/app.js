@@ -17,10 +17,40 @@ const faqs = document.querySelectorAll('.faq')
 const menu = document.querySelector('.menu')
 const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
-const get = document.querySelector('#vertical')
-const increment = document.querySelector("#increment")
-const decrement = document.querySelector("#decrement")
+const in_stock = document.querySelector('.existence')
 
+import Swiper, {Navigation, Autoplay} from 'swiper';
+
+Swiper.use([Navigation, Autoplay]);
+
+const swiper = new Swiper('.swiper-box', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 3000,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+})
+const swiperItem = new Swiper('.swiper-item', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 16,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+})
 
 if (window.location.href.includes('faq'))
 {
@@ -30,6 +60,14 @@ if (window.location.href.includes('faq'))
         });
     });
 }
+
+if (window.location.href.includes('item'))
+{
+    in_stock.addEventListener('click', () => {
+        in_stock.classList.toggle('active')
+    })
+}
+
 catalog ? catalog.addEventListener ('click', (e) => {
     e.preventDefault()
     menu.classList.add("active")
@@ -39,8 +77,3 @@ close_btn ? close_btn.addEventListener('click', (e) => {
     e.preventDefault()
     menu.classList.remove("active")
 }) : null
-
-
-let countt = 1
-console.log(increment)
-console.log(decrement)
