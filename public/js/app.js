@@ -49830,11 +49830,27 @@ var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-box', {
     prevEl: '.swiper-button-prev'
   }
 });
+var swiperProduct = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-product', {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 1,
+  autoplay: {
+    delay: 3000
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
 var swiperItem = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-item', {
   // Optional parameters
   loop: true,
   slidesPerView: 4,
   spaceBetween: 16,
+  autoplay: {
+    delay: 3000
+  },
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',

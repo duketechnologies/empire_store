@@ -38,12 +38,30 @@ const swiper = new Swiper('.swiper-box', {
     },
 
 })
+const swiperProduct = new Swiper('.swiper-product', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 3000,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+})
+
 const swiperItem = new Swiper('.swiper-item', {
     // Optional parameters
     loop: true,
     slidesPerView: 4,
     spaceBetween: 16,
-
+    autoplay: {
+        delay: 3000,
+    },
     // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',

@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="product__color">
-                    <p><span></span>Золотой</p>
+                    <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
                 </div>
                 <div class="product__price">
                     <p>5 000 000	₸</p>
@@ -55,7 +55,7 @@
             </div>
             <div class="product">
                 <div class="product__date">
-                    <img src="/i/profile/product.png" alt=""/>
+                    <img src="/i/profile/product-2.png" alt=""/>
                     <div>
                         <p class="type">Статуэтка</p>
                         <p class="name">Сакские предания</p>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="product__color">
-                    <p>Золотой</p>
+                    <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
                 </div>
                 <div class="product__price">
                     <p>5 000 000	₸</p>
@@ -94,7 +94,7 @@
             </div>
             <div class="product">
                 <div class="product__date">
-                    <img src="/i/profile/product.png" alt=""/>
+                    <img src="/i/profile/product-3.png" alt=""/>
                     <div>
                         <p class="type">Статуэтка</p>
                         <p class="name">Сакские предания</p>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="product__color">
-                    <p>Золотой</p>
+                    <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
                 </div>
                 <div class="product__price">
                     <p>5 000 000	₸</p>

@@ -3791,7 +3791,7 @@ section#profile .switch .orders .product__status {
   justify-content: center;
 }
 section#profile .switch .orders .product__status .in-process {
-  padding: 0.5rem;
+  padding: 0.65rem 1rem 0.55rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.44px;
@@ -3800,7 +3800,7 @@ section#profile .switch .orders .product__status .in-process {
   border: 1px solid black;
 }
 section#profile .switch .orders .product__status .delivered {
-  padding: 0.5rem;
+  padding: 0.6rem 1rem 0.55rem;
   text-transform: uppercase;
   font-size: 0.8rem;
   letter-spacing: 0.44px;
@@ -4066,9 +4066,21 @@ section#profile .consultaion .call form .main-btn {
 }
 
 section#item .content {
-  margin: 0 10.5rem;
-  display: flex;
-  margin-top: 2rem;
+  margin: 2rem 10.5rem 0;
+  display: grid;
+  grid-template-columns: 5% 69% 26%;
+  position: relative;
+}
+section#item .content .large-prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 8rem;
+}
+section#item .content .large-next-btn {
+  position: absolute;
+  top: 50%;
+  right: 30rem;
+  transform: rotate(180deg);
 }
 section#item .content .thumbnails {
   display: flex;
@@ -4076,10 +4088,14 @@ section#item .content .thumbnails {
   gap: 0.5rem;
   align-items: flex-start;
 }
+section#item .content .swiper-product {
+  width: 100%;
+  overflow: hidden;
+}
 section#item .content .large-img {
   width: 100%;
   display: flex;
-  background-image: url("/i/item/item-large.png");
+  height: 40rem;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -4828,14 +4844,23 @@ section#basket .orders .product__color p {
   align-items: center;
   gap: 1rem;
 }
-section#basket .orders .product__color p span {
+section#basket .orders .product__color p .span-1 {
+  border: 1px solid #303133;
+  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section#basket .orders .product__color p .span-2 {
   background-color: #D1B538;
-  width: 0.6rem;
-  height: 0.6rem;
+  margin: 0.2rem;
+  width: 0.65rem;
+  height: 0.65rem;
   display: block;
   border-radius: 100%;
-  border: 1px solid black;
   padding: 0.3rem;
+  text-align: center;
 }
 section#basket .orders .product__price p {
   font-weight: 500;
@@ -6365,6 +6390,10 @@ section#filters .favorites__products .route .pagination .active {
 }
 .remodal[data-remodal-id=login-phone] form button:disabled svg > path {
   stroke: #DEDCD8;
+}
+
+.remodal[data-remodal-id=profile-order] {
+  max-width: 85%;
 }
 
 /*modals*/

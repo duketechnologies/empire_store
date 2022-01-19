@@ -9,9 +9,45 @@
                 <img src="/i/item/item-1.png" alt=""/>
                 <img src="/i/item/item-3.png" alt=""/>
             </div>
-            <div class="large-img">
-{{--                <img src="/i/item/item-large.png"/>--}}
+
+
+            <div class="wrapper">
+                <div class="swiper-product">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <svg class="large-prev-btn" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8135 1L0.999917 12.8136L12.8135 24.6271" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg class="large-next-btn" width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8135 1L0.999917 12.8136L12.8135 24.6271" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </div>
+
+
+{{--            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>--}}
+
+
+
             <div class="offer">
                 <div class="offer__description">
                     <p class="event">Новинка</p>

@@ -392,3 +392,10 @@
         <button class="link-btn">Не пришло смс?</button>
     </div>
 </div>
+
+<div class="remodal" data-remodal-id="profile-order" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="wrapper">
+
+    </div>
+</div>

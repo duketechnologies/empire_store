@@ -318,7 +318,7 @@ section#profile {
                   align-self: center;
                   justify-content: center;
                   .in-process {
-                      padding: .5rem;
+                      padding: .65rem 1rem .55rem;
                       text-transform: uppercase;
                       font-size: .8rem;
                       letter-spacing: .44px;
@@ -327,7 +327,7 @@ section#profile {
                       border: 1px solid black;
                   }
                   .delivered {
-                      padding: .5rem;
+                      padding: .6rem 1rem .55rem;
                       text-transform: uppercase;
                       font-size: .8rem;
                       letter-spacing: .44px;
