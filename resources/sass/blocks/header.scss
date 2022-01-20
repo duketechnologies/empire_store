@@ -16,7 +16,7 @@ header.header {
             .logo {
                 align-self: center;
                 svg {
-                    width: 8.4rem;
+                    width: 6.5rem;
                     height: 1.1rem;
                 }
             }
@@ -126,6 +126,11 @@ header.header {
                     }
                 }
             }
+        }
+    }
+    .active {
+        .phone {
+            color: white;
         }
     }
     .search-block {

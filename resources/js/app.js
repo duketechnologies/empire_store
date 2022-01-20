@@ -18,7 +18,7 @@ const menu = document.querySelector('.menu')
 const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
 const in_stock = document.querySelector('.existence')
-
+console.log(faqs)
 import Swiper, {Navigation, Autoplay} from 'swiper';
 
 Swiper.use([Navigation, Autoplay]);
@@ -69,8 +69,9 @@ const swiperItem = new Swiper('.swiper-item', {
     },
 
 })
+const href = window.location.href;
 
-if (window.location.href.includes('faq'))
+if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies'))
 {
     faqs.forEach(faq => {
         faq.addEventListener('click', (e) => {

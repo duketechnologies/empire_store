@@ -49815,6 +49815,7 @@ var menu = document.querySelector('.menu');
 var catalog = document.querySelector('#catalog');
 var close_btn = document.querySelector('#close-menu');
 var in_stock = document.querySelector('.existence');
+console.log(faqs);
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay]);
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-box', {
@@ -49857,8 +49858,9 @@ var swiperItem = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-ite
     prevEl: '.swiper-button-prev'
   }
 });
+var href = window.location.href;
 
-if (window.location.href.includes('faq')) {
+if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies')) {
   faqs.forEach(function (faq) {
     faq.addEventListener('click', function (e) {
       faq.classList.toggle('active');

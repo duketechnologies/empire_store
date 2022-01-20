@@ -7,7 +7,11 @@
     <div class="hero">
       <a href="#" class="title">
         <p>Главная новость</p>
-        <p>Читать</p>
+        <p>Читать
+            <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6.5L1 12" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </p>
       </a>
       <img src="/i/news/news_img.png" alt=""/>
     </div>
@@ -16,37 +20,61 @@
         <img src="/i/news/card_img.png"/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
-        <p class="action">Читать</p>
+        <p class="action">Читать
+            <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6.5L1 12" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </p>
       </a>
       <a href="/single_news" class="card">
         <img src="/i/news/card_img.png"/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
-        <p class="action">Читать</p>
+        <p class="action">Читать
+            <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6.5L1 12" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </p>
       </a>
       <a href="/single_news" class="card">
         <img src="/i/news/card_img.png"/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
-        <p class="action">Читать</p>
+        <p class="action">Читать
+            <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6.5L1 12" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </p>
       </a>
       <a href="/single_news" class="card">
         <img src="/i/news/card_img.png"/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
-        <p class="action">Читать</p>
+        <p class="action">Читать
+            <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6.5L1 12" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </p>
       </a>
       <a href="/single_news" class="card">
         <img src="/i/news/card_img.png"/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
-        <p class="action">Читать</p>
+        <p class="action">Читать
+            <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6.5L1 12" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </p>
       </a>
       <a href="/single_news" class="card">
         <img src="/i/news/card_img.png"/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
-        <p class="action">Читать</p>
+        <p class="action">Читать
+            <svg viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L7 6.5L1 12" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </p>
       </a>
     </div>
     <div class="route">

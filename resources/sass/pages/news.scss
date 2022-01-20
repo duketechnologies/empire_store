@@ -9,7 +9,7 @@ section#news {
       background-color: white;
       display: flex;
       flex-direction: column;
-      // align-self: center;
+      align-items: center;
       justify-content: center;
       width: 100%;
       border-radius: 8px;
@@ -17,9 +17,20 @@ section#news {
       p {
         font-weight: 300;
         font-size: 1.6rem;
+        &:first-child {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
         &:last-child {
           font-size: 1.25rem;
-
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 4.5rem;
+          svg {
+              width: .6rem;
+              height: .9rem;
+          }
         }
       }
     }
@@ -61,6 +72,13 @@ section#news {
         color: #505154;
         font-size: 1.3rem;
         position: relative;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        svg {
+            width: .6rem;
+            height: .95rem;
+        }
         &:after {
           content: "";
         }

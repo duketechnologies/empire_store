@@ -1,5 +1,6 @@
 section#home {
     position: relative;
+    margin-top: 2rem;
     .menu {
         position: fixed;
         top: 0;
@@ -139,6 +140,7 @@ section#home {
     }
     .rabbit {
         justify-self: center;
+        max-width: 30rem;
         img {
             -webkit-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
             -moz-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);

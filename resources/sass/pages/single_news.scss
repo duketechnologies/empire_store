@@ -1,5 +1,7 @@
 section#single_news {
-    margin: 0 10.5rem;
+    .wrapper {
+        margin: 0 10.5rem;
+    }
     .secondary-btn {
         display: flex;
         align-self: center;
@@ -122,6 +124,9 @@ section#single_news {
                 font-size: 1.3rem;
                 text-transform: uppercase;
                 margin: 0;
+                font-weight: 500;
+                font-style: normal;
+                font-family: "Inter";
             }
             p {
                 font-size: .9rem;
@@ -131,6 +136,10 @@ section#single_news {
                 width: 35rem;
                 line-height: 1.3rem;
                 letter-spacing: .7px;
+                a {
+                    background-color: rgba(193, 146, 69, 0.1);
+                    padding: 0.2rem;
+                }
 
             }
             form {

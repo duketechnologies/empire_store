@@ -1,5 +1,5 @@
 section#vacancies  {
-
+    margin-top: 1.5rem;
   .main-img {
     background-image: url('/i/vacancies_img.png');
     background-repeat: no-repeat;
@@ -57,14 +57,17 @@ section#vacancies  {
       margin-bottom: 1.5rem;
     }
     .list {
-      display: flex;
+      display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
       justify-content: flex-start;
-      gap: 30rem;
       width: 100%;
+        row-gap: 3rem;
       ul {
-          &:nth-child(2n) {
-              border-left: 1px solid #DEDCD8;
-              padding-left: 2rem;
+          border-left: 1px solid #DEDCD8;
+          padding-left: 2rem;
+          &:nth-child(3n-2) {
+              border-left: none;
+              padding-left: 0;
           }
         li {
             margin-top: 1.8rem;
@@ -83,40 +86,79 @@ section#vacancies  {
       }
     }
   }
-  .faq {
-    margin-top: 5rem;
-    .questions {
-        border-top: 1px solid #DEDCD8;
-        padding: 2.2rem 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        p {
-            border-bottom: 1px solid transparent;
-            padding-bottom: .3rem;
-            transition: .2s ease-in-out;
-            display: inline-block;
-        }
-        svg {
-            width: 2rem;
-            height: 2rem;
-        }
-        &:hover {
+    .title {
+        font-weight: 300;
+        font-size: 1.6rem;
+        margin: 3rem 10.5rem;
+    }
+    .faq {
+        margin: 0 10.5rem;
+        .questions {
+            border-top: 1px solid #DEDCD8;
+            padding: 2.2rem 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             p {
-                border-bottom: 1px solid black;
-                padding-bottom: 0.3rem;
+                border-bottom: 1px solid transparent;
+                padding-bottom: .3rem;
+                transition: .2s ease-in-out;
+                display: inline-block;
+                font-size: 1.2rem;
+            }
+            svg {
+                width: 2rem;
+                height: 2rem;
+            }
+            &:hover {
+                p {
+                    border-bottom: 1px solid black;
+                    padding-bottom: 0.3rem;
+                }
             }
         }
+        .answers {
+            font-size: .95rem;
+            letter-spacing: .44px;
+            line-height: 1.3rem;
+            max-width: 53.5rem;
+            padding-left: 2rem;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #vertical {
+            transition: .2s linear ;
+
+        }
     }
-  }
+    .faq.active {
+        .questions {
+            p {
+                border-bottom: 1px solid black;
+            }
+            svg {
+                animation: rotate .2s ease-in;
+            }
+        }
+        .answers {
+            margin-bottom: 5.35rem;
+            max-height: 30rem;
+            animation: fade 0.5s ease-in-out;
+        }
+
+        #vertical {
+            transition: .2s linear ;
+            opacity: 0;
+        }
+    }
     .consultaion {
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: white;
         padding: 8.5rem 0;
-
+        margin-top: 5rem;
         .call {
             display: flex;
             flex-direction: column;
@@ -171,5 +213,23 @@ section#vacancies  {
                 }
             }
         }
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(-1rem);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(200deg);
     }
 }

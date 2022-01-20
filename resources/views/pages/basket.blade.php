@@ -35,7 +35,6 @@
                         <span>1</span>
                         <p id="decrement">+</p>
                     </div>
-
                 </div>
                 <div class="product__package">
                     <form method="POST" action="#">

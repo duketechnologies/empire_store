@@ -396,6 +396,217 @@
 <div class="remodal" data-remodal-id="profile-order" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="wrapper">
+        <div class="order-header">
+            <h3>Заказ #46271</h3>
+            <p>В обработке</p>
+        </div>
 
+        <div class="order-product">
+            <div class="title">
+                <p>Продукт</p>
+                <p>Цвет</p>
+                <p>Цена х 1</p>
+                <p>Количество</p>
+                <p>Сумма</p>
+            </div>
+            <div class="product">
+                <div class="product__date">
+                    <img src="/i/profile/product.png" alt=""/>
+                    <div>
+                        <p class="type">Статуэтка</p>
+                        <p class="name">Сакские предания</p>
+                        <p class="date">HRS01502S</p>
+                    </div>
+                </div>
+                <div class="product__color">
+                    <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
+                </div>
+                <div class="product__price">
+                    <p>5 000 000	₸</p>
+                </div>
+                <div class="product__quantity">
+                    <div class="quantity">
+                        <p id="increment">-</p>
+                        <span>1</span>
+                        <p id="decrement">+</p>
+                    </div>
+
+                </div>
+                <div class="product__package">
+                    <p>
+                        <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.125 5.75L2.85809 7.04982C3.28678 7.37134 3.89272 7.29779 4.23205 6.88305L9.25 0.75" stroke="#939393" stroke-linecap="round"/>
+                        </svg>
+                        Крафт пакет
+                    </p>
+                </div>
+                <div class="product__status">
+                    <p class="in-process">10 000 000	₸</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__date">
+                    <img src="/i/profile/product.png" alt=""/>
+                    <div>
+                        <p class="type">Статуэтка</p>
+                        <p class="name">Сакские предания</p>
+                        <p class="date">HRS01502S</p>
+                    </div>
+                </div>
+                <div class="product__color">
+                    <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
+                </div>
+                <div class="product__price">
+                    <p>5 000 000	₸</p>
+                </div>
+                <div class="product__quantity">
+                    <div class="quantity">
+                        <p id="increment">-</p>
+                        <span>1</span>
+                        <p id="decrement">+</p>
+                    </div>
+
+                </div>
+                <div class="product__package">
+                    <p>
+                        <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.125 5.75L2.85809 7.04982C3.28678 7.37134 3.89272 7.29779 4.23205 6.88305L9.25 0.75" stroke="#939393" stroke-linecap="round"/>
+                        </svg>
+                        Крафт пакет
+                    </p>
+                </div>
+                <div class="product__status">
+                    <p class="in-process">10 000 000	₸</p>
+                </div>
+            </div>
+            <div class="product">
+                <div class="product__date">
+                    <img src="/i/profile/product.png" alt=""/>
+                    <div>
+                        <p class="type">Статуэтка</p>
+                        <p class="name">Сакские предания</p>
+                        <p class="date">HRS01502S</p>
+                    </div>
+                </div>
+                <div class="product__color">
+                    <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
+                </div>
+                <div class="product__price">
+                    <p>5 000 000	₸</p>
+                </div>
+                <div class="product__quantity">
+                    <div class="quantity">
+                        <p id="increment">-</p>
+                        <span>1</span>
+                        <p id="decrement">+</p>
+                    </div>
+
+                </div>
+                <div class="product__package">
+                    <p>
+                        <svg viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.125 5.75L2.85809 7.04982C3.28678 7.37134 3.89272 7.29779 4.23205 6.88305L9.25 0.75" stroke="#939393" stroke-linecap="round"/>
+                        </svg>
+                        Крафт пакет
+                    </p>
+                </div>
+                <div class="product__status">
+                    <p class="in-process">10 000 000	₸</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="order-footer">
+            <div class="date">
+                <p class="title">О заказе</p>
+                <p class="info">Дата создания <span></span> 20 июня 2021</p>
+                <p class="info">Дата создания <span></span> 30 июня 2021</p>
+                <p class="info">Скидка <span class="large"></span> 10%</p>
+            </div>
+            <div class="payment">
+                <p class="title">Оплата</p>
+                <p class="info">Наличными курьеру</p>
+            </div>
+            <div class="delivery">
+                <p class="title">Доставка</p>
+                <p class="info">Адрес: “Дом” Алматы, Жарокова, 57<br/>
+                    +7 (777) 674-22-11</p>
+            </div>
+            <div class="cost">
+                <div>
+                    <p class="info">13 товаров<span>150 000 000 ₸</span></p>
+                    <p class="info">Доставка: 4 октября 2021<span class="green">6 000 ₸</span></p>
+                    <p class="info">Итого<span>150 000 000 ₸</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <a href="#" class="link-btn">Получить консультацию</a>
+            <a href="#" class="link-btn">Оставить отзыв</a>
+        </div>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="Added-to-basket" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="wrapper">
+        <div class="head">
+            <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#303133" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Добавлено в корзину
+        </div>
+        <div class="product">
+            <img src="/i/modals/modal.png" alt=""/>
+            <div class="product__info">
+                <p class="type">Статуэтка</p>
+                <p class="name">Сакские предания</p>
+                <p class="price">30 000 т</p>
+                <div class="quantity">
+                    <div>
+                        <p id="increment">-</p>
+                        <span>1</span>
+                        <p id="decrement">+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="count">
+            <p>1 товар</p>
+            <p>Итого: 30 000 т</p>
+        </div>
+        <div class="buttons">
+            <a href="#" class="primary-btn">Продожить шоппинг</a>
+            <a href="#" class="main-btn">Оформить заказ</a>
+        </div>
+    </div>
+
+</div>
+
+<div class="remodal" data-remodal-id="Added-to-favorites" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="wrapper">
+        <div class="head">
+            <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#303133" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Добавлено в избранное
+        </div>
+        <div class="product">
+            <img src="/i/modals/modal.png" alt=""/>
+            <div class="product__info">
+                <p class="type">Статуэтка</p>
+                <p class="name">Сакские предания</p>
+                <p class="price">30 000 т</p>
+            </div>
+            <svg viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3291 4.82274C13.287 4.7008 13.2104 4.59369 13.1086 4.51441C13.0069 4.43512 12.8843 4.38707 12.7558 4.37607L8.96242 3.82274L7.26242 0.376073C7.20783 0.263359 7.12259 0.168301 7.01648 0.101789C6.91036 0.0352766 6.78766 0 6.66242 0C6.53718 0 6.41448 0.0352766 6.30836 0.101789C6.20224 0.168301 6.11701 0.263359 6.06242 0.376073L4.36242 3.81607L0.569086 4.37607C0.445701 4.39361 0.329703 4.44538 0.234253 4.52551C0.138804 4.60564 0.0677265 4.71092 0.0290865 4.82941C-0.0062835 4.94519 -0.00945754 5.06842 0.019905 5.18587C0.0492676 5.30332 0.110058 5.41056 0.195753 5.49607L2.94909 8.16274L2.28242 11.9494C2.25862 12.0744 2.27108 12.2036 2.31833 12.3217C2.36559 12.4398 2.44566 12.542 2.54909 12.6161C2.6499 12.6881 2.7688 12.7307 2.89245 12.7389C3.0161 12.7472 3.1396 12.7208 3.24909 12.6627L6.66242 10.8827L10.0624 12.6694C10.156 12.7222 10.2617 12.7498 10.3691 12.7494C10.5103 12.7499 10.648 12.7056 10.7624 12.6227C10.8658 12.5486 10.9459 12.4465 10.9932 12.3284C11.0404 12.2102 11.0529 12.0811 11.0291 11.9561L10.3624 8.16941L13.1158 5.50274C13.212 5.42119 13.2831 5.31401 13.3209 5.19364C13.3587 5.07327 13.3615 4.94466 13.3291 4.82274ZM9.22909 7.48941C9.1509 7.56503 9.09241 7.65863 9.05871 7.76206C9.02501 7.86548 9.01713 7.97557 9.03575 8.08274L9.51575 10.8761L7.00909 9.54274C6.91263 9.49138 6.80503 9.46452 6.69575 9.46452C6.58648 9.46452 6.47887 9.49138 6.38242 9.54274L3.87575 10.8761L4.35575 8.08274C4.37438 7.97557 4.3665 7.86548 4.3328 7.76206C4.2991 7.65863 4.2406 7.56503 4.16242 7.48941L2.16242 5.48941L4.96909 5.08274C5.07709 5.06772 5.17975 5.02643 5.26809 4.96251C5.35642 4.89858 5.42773 4.81397 5.47575 4.71607L6.66242 2.17607L7.91575 4.72274C7.96378 4.82063 8.03509 4.90525 8.12342 4.96917C8.21175 5.0331 8.31442 5.07438 8.42242 5.08941L11.2291 5.49607L9.22909 7.48941Z" fill="#303133"/>
+                <path d="M5 4L1.5 5.5L3.73425 8L3 12L6.5 10L10.5 12L9.5 8L12.5 5L9 4.5L6.5 1.5L5 4Z" fill="#303133"/>
+            </svg>
+        </div>
+        <div class="buttons">
+            <a href="#" class="main-btn">Избранные товары</a>
+        </div>
     </div>
 </div>

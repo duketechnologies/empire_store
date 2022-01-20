@@ -73,7 +73,11 @@
         </div>
         <div>
           <p class="workers">Остались вопросы?</p>
-          <p class="info">Маркетинговая поддержка<br/>на всех этапах</p>
+          <div class="questions">
+              <a href="#">+7 778 605 08 07</a>
+              <a href="#">mail@mail.kz</a>
+              <a href="#">Позвоните мне</a>
+          </div>
         </div>
       </div>
     </div>
@@ -185,15 +189,6 @@
           </div>
       </div>
     <div class="excursion">
-      <svg width="835" height="382" viewBox="0 0 835 382" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0.5 1C50.1667 18 135.661 88.4194 147 241.5C158.339 394.581 303.218 412.967 412 337C533 252.5 699.5 237 834.5 283.5" stroke="url(#paint0_linear_598_10276)"/>
-        <defs>
-        <linearGradient id="paint0_linear_598_10276" x1="406.959" y1="-6.86261" x2="406.959" y2="371.365" gradientUnits="userSpaceOnUse">
-        <stop stop-color="#FFE7B8"/>
-        <stop offset="1" stop-color="#FFD29C"/>
-        </linearGradient>
-        </defs>
-      </svg>
       <div class="description">
         <img src="/i/franchise/excursion_img.png" alt=""/>
         <p>Проведете личную встречу с основателем бренда Вольдемаром Айфельд в Алматы</p>

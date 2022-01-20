@@ -11,7 +11,7 @@ section#franchise {
     height: 102vh;
     width: 100%;
     position: relative;
-    top:-8vh;
+    top:-9vh;
     &__title {
       max-width: 15rem;
       display: flex;
@@ -161,13 +161,20 @@ section#franchise {
       a {
         font-size: 1.2rem;
         font-weight: 300;
+
         color: #505154;
         &::after {
           content: '>';
           padding-left: 1rem;
           color: black;
           font-weight: 500;
+            transition: .2s ease-in;
         }
+          &:hover {
+              &::after {
+                  padding-left: 1.5rem;
+              }
+          }
       }
     }
     &__content {
@@ -186,6 +193,7 @@ section#franchise {
               position: absolute;
               left:-6rem;
               top: -2.8rem;
+                font-weight: 300;
             }
           }
         }
@@ -200,6 +208,7 @@ section#franchise {
               position: absolute;
               left: -4rem;
               top: -2.8rem;
+                font-weight: 300;
             }
           }
         }
@@ -214,15 +223,34 @@ section#franchise {
               position: absolute;
               left:-6rem;
               top: -2.8rem;
+                font-weight: 300;
             }
           }
         }
         &:nth-child(4) {
           background-color: #B98671;
+            padding: 6rem 6rem 4rem;
+            text-align: center;
           .workers {
             color: #FFFFFE;
             font-size: 1.6rem;
             font-weight: 300;
+          }
+          .questions {
+              padding: 0 ;
+              background-color: transparent;
+              display: flex;
+              margin-top: 2rem;
+              gap: 1.5rem;
+              align-items: center;
+              a {
+                  display: inline-block;
+                  font-weight: 600;
+                  font-size: 1rem;
+                  color: white;
+                  padding-bottom: .3rem;
+                  border-bottom: 1px solid white;
+              }
           }
         }
         .workers {
@@ -352,7 +380,9 @@ section#franchise {
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-
+    background-image: url("/i/franchise/bg-line.png");
+    background-repeat: no-repeat;
+    background-position: top right -10%;
     svg {
       position: absolute;
       top: 0;
@@ -392,6 +422,7 @@ section#franchise {
         color: #505154;
         text-align: center;
         margin-bottom: 5rem;
+        background-color: white;
       }
       .cards {
         display: flex;

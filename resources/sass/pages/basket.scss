@@ -3,7 +3,13 @@ section#basket {
         font-size: 1.6rem;
         font-weight: 300;
         color: #505154;
-        margin: 1rem 10.5rem 2.28rem;
+        margin: 3rem 10.5rem 2.28rem;
+        sup {
+            vertical-align: super;
+            font-size: smaller;
+            padding-left: .5rem;
+            font-size: .8rem;
+        }
     }
     .orders {
         min-height: 23rem;
