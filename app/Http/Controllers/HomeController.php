@@ -72,4 +72,8 @@ class HomeController extends Controller
     {
         return view('pages.filters');
     }
+    public function test()
+    {
+        return view('pages.test');
+    }
 }

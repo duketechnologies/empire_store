@@ -5449,6 +5449,38 @@ section#filters .favorites__products .route .pagination .active {
   color: black;
 }
 
+section#test {
+  margin: 3rem 10.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-start;
+  gap: 2rem;
+}
+section#test .title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  margin-bottom: 2rem;
+}
+section#test .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+section#test .links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+section#test .links a span {
+  font-size: 0.8rem;
+  text-transform: initial;
+  color: #505154;
+}
+
 /*pages*/
 /*modals*/
 .remodal[data-remodal-id=mail_to] .content h1 {
@@ -5735,6 +5767,11 @@ section#filters .favorites__products .route .pagination .active {
 .remodal[data-remodal-id=franchise-modal] .franchise .price .cost p span {
   font-size: 0.85rem;
   font-weight: 400;
+}
+.remodal[data-remodal-id=franchise-modal] .franchise .price .cost p sup {
+  vertical-align: super;
+  font-size: smaller;
+  font-size: 0.8rem;
 }
 .remodal[data-remodal-id=franchise-modal] .franchise-form {
   display: flex;
@@ -6971,6 +7008,38 @@ section#filters .favorites__products .route .pagination .active {
 }
 .remodal[data-remodal-id=Added-to-favorites] .wrapper .buttons .main-btn {
   width: 100%;
+}
+
+.remodal[data-remodal-id=Zoom-popup] {
+  max-width: 98%;
+  height: 98.6%;
+  margin: auto auto;
+  display: flex;
+  position: relative;
+}
+.remodal[data-remodal-id=Zoom-popup] svg {
+  width: 0.96rem;
+  height: 1.7rem;
+}
+.remodal[data-remodal-id=Zoom-popup] .zoom-prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 25rem;
+}
+.remodal[data-remodal-id=Zoom-popup] .zoom-next-btn {
+  position: absolute;
+  transform: rotate(180deg);
+  top: 50%;
+  right: 25rem;
+}
+.remodal[data-remodal-id=Zoom-popup] .wrapper {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 40rem;
+  width: 100%;
+  align-self: center;
+  overflow: hidden;
 }
 
 /*modals*/

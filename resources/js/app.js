@@ -1,4 +1,3 @@
-
 window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 
@@ -12,16 +11,15 @@ $(document).ready(function (){
     console.log('ready...');
 
 });
+import Swiper, {Scrollbar, Navigation, Autoplay} from 'swiper';
+Swiper.use([Scrollbar, Navigation, Autoplay]);
 
 const faqs = document.querySelectorAll('.faq')
 const menu = document.querySelector('.menu')
 const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
 const in_stock = document.querySelector('.existence')
-console.log(faqs)
-import Swiper, {Navigation, Autoplay} from 'swiper';
-
-Swiper.use([Navigation, Autoplay]);
+console.log(document.querySelector("#zoom-popup"))
 
 const swiper = new Swiper('.swiper-box', {
     // Optional parameters
@@ -38,6 +36,7 @@ const swiper = new Swiper('.swiper-box', {
     },
 
 })
+
 const swiperProduct = new Swiper('.swiper-product', {
     // Optional parameters
     loop: true,
@@ -69,12 +68,30 @@ const swiperItem = new Swiper('.swiper-item', {
     },
 
 })
-const href = window.location.href;
+const swiperZoom = new Swiper('.swiper-zoom', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
 
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+})
+const href = window.location.href;
 if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies'))
 {
     faqs.forEach(faq => {
-        faq.addEventListener('click', (e) => {
+        faq.addEventListener('click', () => {
             faq.classList.toggle('active');
         });
     });
@@ -96,3 +113,13 @@ close_btn ? close_btn.addEventListener('click', (e) => {
     e.preventDefault()
     menu.classList.remove("active")
 }) : null
+
+let options = {
+    width: 400, // required
+    height: 500,
+    zoomWidth: 500,
+    offset: {vertical:0 , horizontal: 10},
+    scale: 1.5,
+    // more options here
+};
+new ImageZoom(document.getElementById("img-container"), options);

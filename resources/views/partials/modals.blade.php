@@ -190,6 +190,7 @@
     </div>
 </div>
 
+{{-- Вход по EMIAL - пароль --}}
 <div class="remodal" data-remodal-id="payment" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="content">
@@ -209,6 +210,7 @@
         <a href="#" class="details">Подробнее о рассрочке</a>
     </div>
 </div>
+{{-- Вход по EMIAL - пароль --}}
 
 <div class="remodal" data-remodal-id="menu" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
@@ -335,7 +337,7 @@
 
     <div class="recovery">
         <h3>Создайте новый пароль</h3>
-        <p>Введите пароль от аккаунта<span>Mail@mail.kz</span></p>
+        <p>Введите пароль от аккаунта<span> Mail@mail.kz</span></p>
         <form method="POST" action="#">
             <fieldset>
                 <legend>Новый пароль</legend>
@@ -610,3 +612,40 @@
         </div>
     </div>
 </div>
+
+<div class="remodal" data-remodal-id="Zoom-popup" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+
+    <div class="wrapper">
+        <div class="swiper-zoom">
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
+                </div>
+            </div>
+
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev">
+            <svg class="zoom-prev-btn" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1.18644 12.8136L13 24.6271" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="swiper-button-next">
+            <svg class="zoom-next-btn" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 1L1.18644 12.8136L13 24.6271" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+    </div>
+</div>
+<script src="{{ mix('js/app.js') }}"></script>

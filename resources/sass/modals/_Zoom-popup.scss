@@ -1,0 +1,31 @@
+.remodal[data-remodal-id=Zoom-popup] {
+    max-width: 98%;
+    height: 98.6%;
+    margin:auto auto;
+    display: flex;
+    position: relative;
+    svg {
+        width: .96rem;
+        height: 1.7rem;
+    }
+    .zoom-prev-btn {
+        position: absolute;
+        top: 50%;
+        left: 25rem;
+    }
+    .zoom-next-btn {
+        position: absolute;
+        transform: rotate(180deg);
+        top: 50%;
+        right: 25rem;
+    }
+    .wrapper {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        height: 40rem;
+        width: 100%;
+        align-self: center;
+        overflow: hidden;
+    }
+}

@@ -49810,14 +49810,14 @@ __webpack_require__(/*! ./faq.js */ "./resources/js/faq.js");
 $(document).ready(function () {
   console.log('ready...');
 });
+
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay]);
 var faqs = document.querySelectorAll('.faq');
 var menu = document.querySelector('.menu');
 var catalog = document.querySelector('#catalog');
 var close_btn = document.querySelector('#close-menu');
 var in_stock = document.querySelector('.existence');
-console.log(faqs);
-
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay]);
+console.log(document.querySelector("#zoom-popup"));
 var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-box', {
   // Optional parameters
   loop: true,
@@ -49858,11 +49858,28 @@ var swiperItem = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-ite
     prevEl: '.swiper-button-prev'
   }
 });
+var swiperZoom = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-zoom', {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 1,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true
+  },
+  autoplay: {
+    delay: 3000
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});
 var href = window.location.href;
 
 if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies')) {
   faqs.forEach(function (faq) {
-    faq.addEventListener('click', function (e) {
+    faq.addEventListener('click', function () {
       faq.classList.toggle('active');
     });
   });
@@ -49882,6 +49899,19 @@ close_btn ? close_btn.addEventListener('click', function (e) {
   e.preventDefault();
   menu.classList.remove("active");
 }) : null;
+var options = {
+  width: 400,
+  // required
+  height: 500,
+  zoomWidth: 500,
+  offset: {
+    vertical: 0,
+    horizontal: 10
+  },
+  scale: 1.5 // more options here
+
+};
+new ImageZoom(document.getElementById("img-container"), options);
 })();
 
 /******/ })()

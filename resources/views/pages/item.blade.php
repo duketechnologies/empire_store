@@ -16,16 +16,24 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                            <div id="img-container">
+                                <div class="large-img" data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                            <div id="img-container">
+                                <div class="large-img" data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                            <div id="img-container">
+                                <div class="large-img" data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
+                            </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="large-img" style="background-image: url('/i/item/item-large.png')"></div>
+                            <div id="img-container">
+                                <div class="large-img" data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
+                            </div>
                         </div>
                     </div>
 

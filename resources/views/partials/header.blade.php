@@ -23,7 +23,7 @@
             <ul class="nav">
                 <li><a href="#" id="catalog">Каталог</a></li>
                 <li><a href="/address">Адреса Бутиков</a></li>
-                <li><a href="#" data-remodal-target="Added-to-favorites">Корпоративным клиентам</a></li>
+                <li><a href="#">Корпоративным клиентам</a></li>
                 <li><a href="/franchise">Франшиза</a></li>
                 <li><a href="/about">О Empire</a></li>
             </ul>

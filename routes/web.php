@@ -33,3 +33,4 @@ Route::get('/item', [HomeController::class, 'item']);
 Route::get('/address', [HomeController::class, 'address']);
 Route::get('/basket', [HomeController::class, 'basket']);
 Route::get('/filters', [HomeController::class, 'filters']);
+Route::get('/test', [HomeController::class, 'test']);
