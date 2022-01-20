@@ -1,25 +1,21 @@
 window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 
-require('bootstrap');
 require('remodal');
-require('./faq.js');
-
+import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
+import 'swiper/css/bundle';
 
 $(document).ready(function (){
 
     console.log('ready...');
 
-});
-import Swiper, {Scrollbar, Navigation, Autoplay} from 'swiper';
-Swiper.use([Scrollbar, Navigation, Autoplay]);
 
 const faqs = document.querySelectorAll('.faq')
 const menu = document.querySelector('.menu')
 const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
 const in_stock = document.querySelector('.existence')
-console.log(document.querySelector("#zoom-popup"))
 
 const swiper = new Swiper('.swiper-box', {
     // Optional parameters
@@ -35,7 +31,7 @@ const swiper = new Swiper('.swiper-box', {
         prevEl: '.swiper-button-prev',
     },
 
-})
+});
 
 const swiperProduct = new Swiper('.swiper-product', {
     // Optional parameters
@@ -51,7 +47,9 @@ const swiperProduct = new Swiper('.swiper-product', {
         prevEl: '.swiper-button-prev',
     },
 
-})
+});
+
+    console.log(swiperProduct);
 
 const swiperItem = new Swiper('.swiper-item', {
     // Optional parameters
@@ -114,12 +112,13 @@ close_btn ? close_btn.addEventListener('click', (e) => {
     menu.classList.remove("active")
 }) : null
 
-let options = {
-    width: 400, // required
-    height: 500,
-    zoomWidth: 500,
-    offset: {vertical:0 , horizontal: 10},
-    scale: 1.5,
-    // more options here
-};
-new ImageZoom(document.getElementById("img-container"), options);
+// let options = {
+//     width: 400, // required
+//     height: 500,
+//     zoomWidth: 500,
+//     offset: {vertical:0 , horizontal: 10},
+//     scale: 1.5,
+//     // more options here
+// };
+// new ImageZoom(document.getElementById("img-container"), options);
+});

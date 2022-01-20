@@ -36,7 +36,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev">
@@ -327,6 +326,5 @@
                 </svg>
             </a>
         </div>
-        <script src="{{ mix('js/app.js') }}"></script>
     </section>
 @endsection
