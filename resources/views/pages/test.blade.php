@@ -7,24 +7,24 @@
         <div class="links">
             <h2 class="title">Статичные страницы</h2>
             <a href="/faq" target="_blank">FAQ</a>
-            <a href="/partnership">ПАРТНЕРСТВО</a>
-            <a href="/vacancies">ВАКАНСИИ</a>
-            <a href="/address">АДРЕСА БУТИКОВ</a>
-            <a href="/contacts">КОНТАКТЫ</a>
-            <a href="/about">О КОМПАНИИ</a>
-            <a href="/policy">Политика сайта</a>
-            <a href="/franchise">ФРАНШИЗА</a>
-            <a href="/news">НОВОСТИ</a>
-            <a href="/single_news">НОВОСТИ (СТРАНИЦА НОВОСТИ)</a>
+            <a href="/partnership" target="_blank">ПАРТНЕРСТВО</a>
+            <a href="/vacancies" target="_blank">ВАКАНСИИ</a>
+            <a href="/address" target="_blank">АДРЕСА БУТИКОВ</a>
+            <a href="/contacts" target="_blank">КОНТАКТЫ</a>
+            <a href="/about" target="_blank">О КОМПАНИИ</a>
+            <a href="/policy" target="_blank">Политика сайта</a>
+            <a href="/franchise" target="_blank">ФРАНШИЗА</a>
+            <a href="/news" target="_blank">НОВОСТИ</a>
+            <a href="/single_news" target="_blank">НОВОСТИ (СТРАНИЦА НОВОСТИ)</a>
         </div>
 
         <div class="links">
-            <h2 class="title">Остальные страницы</h2>
-            <a href="/">Главная</a>
-            <a href="/filters">КАТАЛОГ И ФИЛЬТРЫ</a>
-            <a href="/item">КАРТОЧКА ТОВАРА</a>
-            <a href="/basket">КОРЗИНА</a>
-            <a href="/profile">ЛИЧНЫЙ КАБИНЕТ</a>
+            <h2 class="title" >Остальные страницы</h2>
+            <a href="/" target="_blank">Главная</a>
+            <a href="/filters" target="_blank">КАТАЛОГ И ФИЛЬТРЫ</a>
+            <a href="/item" target="_blank">КАРТОЧКА ТОВАРА</a>
+            <a href="/basket" target="_blank">КОРЗИНА</a>
+            <a href="/profile" target="_blank">ЛИЧНЫЙ КАБИНЕТ</a>
         </div>
 
         <div class="links">
