@@ -8,13 +8,13 @@
           <h1>Здравствуйте, <span>Айжан Сулейманова</span></h1>
           <div class="type">
               <ul class="links">
-                  <li ><a href="#">Мой аккаунт</a></li>
-                  <li ><a href="#">Заказы</a></li>
-                  <li ><a href="#" data-remodal-target="profile-order">Избранное</a></li>
+                  <li ><a href="#" class="active" data-nav="first" data-open-block="my-account">Мой аккаунт</a></li>
+                  <li ><a href="#" data-nav="second" data-open-block="my-orders">Заказы</a></li>
+                  <li ><a href="#" data-nav="third"data-open-block="wishlist" >Избранное</a></li>
               </ul>
               <button class="btn">Выйти</button>
           </div>
-          <div class="my-profile">
+          <div class="my-profile is-active" data-content="my-account">
               <div class="profile-info">
                   <form class="form">
                       <div class="user">
@@ -58,7 +58,7 @@
                   </div>
               </div>
           </div>
-          <div class="orders">
+          <div class="orders" data-content="my-orders">
 {{--              <h3>Вы еще не оформили ни одного заказа</h3>--}}
 {{--              <a href="#">Начать шопинг</a>--}}
               <div class="title">
@@ -144,7 +144,7 @@
                   </div>
               </div>
           </div>
-          <div class="favorites">
+          <div class="favorites" data-content="wishlist">
 
               <div class="favorites__menu">
                   <div>
@@ -335,7 +335,3 @@
       </div>
   </section>
 @endsection
-
-<script>
-
-</script>

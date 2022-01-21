@@ -3,7 +3,7 @@
     <div class="content">
         <h1>Напишите нам</h1>
         <p>Обсудить условия сотрудничества</p>
-        <form method="POST" action="#" id="mail">
+        <form method="POST" action="#"">
             <textarea name="textarea" form="mail" placeholder="Текст вашего письма"></textarea>
             <input type="email" name="email" placeholder="Email"/>
             <button class="main-btn">Отправить сообщение</button>
@@ -19,8 +19,11 @@
         <form method="POST" action="#" class="location-form">
             <input type="text" name="place" placeholder="Введите название адреса ( Дом, Работа... )" class="place"/>
             <fieldset>
-              <select>
-                <option selected>Республика Казахстан</option>
+              <select id="select-country" name="country">
+                <option value="kz">Республика Казахстан</option>
+                <option value="l1">Lorem ipsum.</option>
+                <option value="2r">Lorem.</option>
+                <option value="5f">Lorem ipsum dolor.</option>
               </select>
             </fieldset>
             <fieldset>
@@ -182,7 +185,7 @@
     <div class="content">
         <h1>Оставьте отзыв о Empire</h1>
         <p>Обсудить условия сотрудничества</p>
-        <form method="POST" action="#" id="mail">
+        <form method="POST" action="#">
             <textarea name="textarea" form="mail" placeholder="Текст вашего письма"></textarea>
             <input type="email" name="email" placeholder="Ваш Email или номер телефона"/>
             <button class="main-btn">Отправить</button>
@@ -211,11 +214,6 @@
     </div>
 </div>
 {{-- Вход по EMIAL - пароль --}}
-
-<div class="remodal" data-remodal-id="menu" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
-    <button data-remodal-action="close" class="remodal-close-btn"></button>
-    <div>ok</div>
-</div>
 
 <div class="remodal" data-remodal-id="cookie-location" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
@@ -282,7 +280,7 @@
             Просматривая сайт, вы соглашаетесь<br/>
             с <a href="/policy">Политикой нашего сайта.</a>
         </p>
-        <a href="#" class="link-btn">Принять соглашение</a>
+        <a href="#" class="link-btn" data-remodal-action="close" >Принять соглашение</a>
     </div>
 </div>
 
@@ -648,4 +646,5 @@
         </div>
     </div>
 </div>
-{{--<script src="{{ mix('js/app.js') }}"></script>--}}
+
+

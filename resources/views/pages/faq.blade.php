@@ -143,9 +143,7 @@
             </form>
         </div>
     </section>
-    <script src="/js/app.js">
 
-    </script>
 @endsection
 
 

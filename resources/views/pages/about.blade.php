@@ -74,7 +74,11 @@
       <div class="description">
         <h2>Внимание <br/>к деталям</h2>
         <p><span>Каждая коллекция </span>- это плод <br/>совместной работы <br/>талантливых дизайнеров и <br/>целой группы исследователей, <br/>историков и художников.</p>
-        <a href="#">Новые коллекции</a>
+        <a href="#">Новые коллекции
+            <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6.83333L6.83333 1" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 1H6.83333V6.83333" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></a>
       </div>
       <div class="horses">
         <img src="/i/horses.png" alt=""/>

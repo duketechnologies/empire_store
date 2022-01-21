@@ -30,7 +30,7 @@
         &::placeholder {
           font-size: .9rem;
           letter-spacing: .44px;
-          
+
         }
       }
       fieldset {
@@ -60,6 +60,9 @@
             padding:1rem 0;
           }
         }
+          .select2 {
+              width: 100%;
+          }
         input {
           border:none;
           padding:1rem;
@@ -126,7 +129,7 @@
       &::placeholder {
         font-size: .9rem;
         letter-spacing: .44px;
-        
+
       }
     }
     fieldset {
@@ -192,6 +195,6 @@
       letter-spacing: 1px;
       font-size: .95rem;
       }
-    } 
+    }
   }
 }

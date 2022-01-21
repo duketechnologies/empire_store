@@ -49,6 +49,7 @@ header.header {
                 width: 20rem;
                 transition: .2s ease-in-out;
                 position: relative;
+
                 &::before {
                     content: '';
                     background-color: red;
@@ -83,6 +84,7 @@ header.header {
                 padding-right: 2rem;
                 transition: .2s ease-in-out;
                 align-self: center;
+                letter-spacing: 2px;
                 &:hover {
                     color: black;
                 }
@@ -128,14 +130,32 @@ header.header {
             }
         }
     }
-    .active {
+    .wrapper.active {
+        .logo {
+            svg>path {
+                fill: white;
+            }
+        }
         .phone {
             color: white;
+        }
+        .profile {
+            li {
+                a {
+                    color: white;
+                }
+            }
+            svg>path {
+                fill: white;
+            }
+            svg>g>path {
+                stroke: white;
+            }
         }
     }
     .search-block {
         margin-top: .4rem;
-        background-color: lavender;
+        background-color: white;
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -238,4 +258,122 @@ header.header {
             }
         }
     }
+    .menu {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        height: 100%;
+        width: 23.5rem;
+        padding-top: 2rem;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-30rem);
+        transition: transform .3s ease-in;
+        &::before {
+            display: block;
+            content: "";
+            position: fixed;
+            width: calc(100% - 23.5rem);
+            height: 100vh;
+            background-color: black;
+            opacity: .1;
+            top:0;
+            right: 0;
+            z-index: -1;
+        }
+        #close-menu {
+            max-width: fit-content;
+            padding: .7rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .2s ease-in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin:0 2.5rem 2rem;
+            &:hover {
+                background-color: #F5F4F1;
+            }
+            svg {
+                width: .9rem;
+                height: .85rem;
+            }
+        }
+
+        h2 {
+            font-size: 1.65rem;
+            font-family: "Spectral";
+            font-style: italic;
+            color: #303133;
+            margin-bottom: 2rem;
+            padding:0 3.2rem;
+        }
+        li {
+            font-size: 0.97rem;
+            line-height: 2.5rem;
+            letter-spacing: .44px;
+            color: #303133;
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &:hover {
+                    svg {
+                        opacity: 1;
+                    }
+                }
+                svg {
+                    width: 1rem;
+                    height: 1rem;
+                    opacity: 0;
+                    transition: .2s ease-in;
+                }
+            }
+        }
+        &__links {
+            padding:0 3.2rem;
+            border-bottom: 2px solid #EEEDE8;
+            padding-bottom: 2rem;
+        }
+        &__discount {
+            padding: 0 3.2rem;
+            padding-top: 2rem;
+        }
+        &__contacts {
+            background-color: #F5F4F1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 3.2rem;
+            gap: 2rem;
+            margin-top: auto;
+            .menu-btn {
+                border: 1px solid #DEDCD8;
+                padding:1rem 0;
+                width: 100%;
+                border-radius: 8px;
+                letter-spacing: .6px;
+                text-align: center;
+                transition: .2s ease-in;
+                &:hover {
+                    background-color: white;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+    }
+    .menu.active {
+        transform: translateX(0rem);
+    }
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
 }

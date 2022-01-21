@@ -72,7 +72,9 @@ section#about {
               left: -1.45rem;
               width: 2.8rem;
               height: 3.3rem;
-              transition: .2s ease-in;
+              >path {
+                transition: .2s ease-in;
+              }
           }
           .image {
               min-height: 0;
@@ -123,16 +125,18 @@ section#about {
         text-transform: uppercase;
         letter-spacing: 2px;
         position: relative;
-        &::after {
-            content: '';
-            background-image: url("/i/route_icon.png");
-            background-repeat: no-repeat;
-            background-position: top -20% right;
-            z-index: 10;
-            position: absolute;
-            width: 1rem;
-            height: 1rem;
-        }
+          &:hover {
+              svg {
+                  transform: translateX(.3rem) translateY(-.3rem);
+              }
+          }
+          svg {
+              width: .6rem !important;
+              height: .6rem;
+              margin-bottom: .7rem;
+              transition: .2s ease-in;
+          }
+
       }
     }
     .horses {

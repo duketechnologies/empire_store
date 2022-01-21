@@ -1,6 +1,6 @@
 @extends('layouts.theme')
 @section('title', 'Франшиза')
-
+@section('class-name', 'active')
 @section('content')
   <section id="franchise">
     <div class="hero">
@@ -27,9 +27,9 @@
       </div>
       {{-- <img src="/i/franchise/franchise_img.png" alt=""/> --}}
       <div class="links">
-        <a href="#">Условия франшизы</a>
-        <a href="#">Об открытии</a>
-        <a href="#">Экскурсия в бутик</a>
+        <a href="#">Условия франшизы <span>Рассчитаем бизнес модель и погрузим в внутренние процессы бизнеса</span></a>
+        <a href="#">Об открытии <span>Рассчитаем бизнес модель и погрузим в внутренние процессы бизнеса</span></a>
+        <a href="#">Экскурсия в бутик <span>Рассчитаем бизнес модель и погрузим в внутренние процессы бизнеса</span></a>
       </div>
     </div>
     <div class="gift">
@@ -118,7 +118,7 @@
           </ul>
         </div>
       </div>
-      <a href="#" class="main-btn">ПОДАТЬ ЗАЯВКУ</a>
+      <a href="#" class="main-btn" data-remodal-target="franchise-modal">ПОДАТЬ ЗАЯВКУ</a>
     </div>
       <div class="faq">
           <div class="questions">
@@ -214,6 +214,5 @@
         </form>
       </div>
     </div>
-    <script src="/js/app.js"></script>
   </section>
 @endsection

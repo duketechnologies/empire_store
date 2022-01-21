@@ -2,6 +2,7 @@ window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 
 require('remodal');
+require('select2')
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 import 'swiper/css/bundle';
@@ -16,6 +17,25 @@ const menu = document.querySelector('.menu')
 const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
 const in_stock = document.querySelector('.existence')
+
+$('[data-open-block]').on('click', function() {
+    const activeCls = 'is-active';
+
+    $('[data-content]').removeClass(activeCls);
+    $('[data-nav]').removeClass(activeCls)
+    $(`[data-content="${$(this).data('open-block')}"`).addClass(activeCls);
+
+});
+
+
+    $('#select-country').select2({
+        maximumSelectionSize: 1
+    }).on('select2-opening', function(e) {
+        if ($(this).select2('val').length > 0) {
+            e.preventDefault();
+        }
+    });
+
 
 const swiper = new Swiper('.swiper-box', {
     // Optional parameters
@@ -49,7 +69,6 @@ const swiperProduct = new Swiper('.swiper-product', {
 
 });
 
-    console.log(swiperProduct);
 
 const swiperItem = new Swiper('.swiper-item', {
     // Optional parameters
@@ -111,6 +130,16 @@ close_btn ? close_btn.addEventListener('click', (e) => {
     e.preventDefault()
     menu.classList.remove("active")
 }) : null
+
+// const open = menu.classList.contains('active')
+//
+// if ( open ) {
+// document.addEventListener('click', () => {
+//         // menu.style.transform = 'translateX(-29rem)'
+//     alert()
+// })
+//
+// }
 
 // let options = {
 //     width: 400, // required

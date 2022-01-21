@@ -170,6 +170,27 @@ section#filters {
                         position: relative;
                         cursor: pointer;
                         transition: .2s ease-in;
+                        .something {
+                            position: absolute;
+                            top: 2rem;
+                            left: 2rem;
+                            display: flex;
+                            align-items: center;
+                            gap:.5rem;
+                            p {
+                                background-color: #EB5757;
+                                font-size: .75rem;
+                                letter-spacing: .44px;
+                                font-weight: 600;
+                                text-transform: uppercase;
+                                padding: .35rem .7rem;
+                                border-radius: 999rem;
+                                color: #Fff;
+                            }
+                            .new {
+                                background-color: #2F80ED;
+                            }
+                        }
                         svg {
                             width: 1.35rem;
                             height: 1.35rem;
@@ -206,6 +227,20 @@ section#filters {
                         .price {
                             font-size: 1rem;
                             margin-top: 1rem;
+                            display: flex;
+                            align-items: center;
+                            gap: 1rem;
+                            justify-content: center;
+                            .old {
+                                text-decoration: line-through;
+                                color: #505154;
+                            }
+                            .new {
+                                color: white;
+                                background-color: black;
+                                border-radius: 999rem;
+                                padding: .3rem .8rem;
+                            }
                         }
                     }
                 }

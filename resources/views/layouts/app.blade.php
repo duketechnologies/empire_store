@@ -11,7 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/admin.js') }}" defer></script>
-
+{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>--}}
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">

@@ -191,6 +191,5 @@
             </div>
             <div class="answers"></div>
         </div>
-        <script src="{{ mix('js/app.js') }}"></script>
     </section>
 @endsection
