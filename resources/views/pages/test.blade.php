@@ -6,7 +6,7 @@
     <section id="test">
         <div class="links">
             <h2 class="title">Статичные страницы</h2>
-            <a href="/faq">FAQ</a>
+            <a href="/faq" target="_blank">FAQ</a>
             <a href="/partnership">ПАРТНЕРСТВО</a>
             <a href="/vacancies">ВАКАНСИИ</a>
             <a href="/address">АДРЕСА БУТИКОВ</a>
@@ -19,7 +19,7 @@
         </div>
 
         <div class="links">
-            <h2 class="title">Отсальные страницы</h2>
+            <h2 class="title">Остальные страницы</h2>
             <a href="/">Главная</a>
             <a href="/filters">КАТАЛОГ И ФИЛЬТРЫ</a>
             <a href="/item">КАРТОЧКА ТОВАРА</a>

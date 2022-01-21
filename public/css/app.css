@@ -1696,7 +1696,33 @@ section#home {
   position: relative;
   margin-top: 2rem;
 }
-section#home .hero {
+section#home svg {
+  width: 1.35rem;
+  height: 1.2rem;
+}
+section#home .hero-prev-btn {
+  position: absolute;
+  background-color: #F5F4F1;
+  border-radius: 100%;
+  padding: 1rem;
+  top: 45%;
+  left: -1.5rem;
+  z-index: 1;
+}
+section#home .hero-next-btn {
+  position: absolute;
+  background-color: #F5F4F1;
+  border-radius: 100%;
+  transform: rotate(180deg);
+  padding: 1rem;
+  top: 45%;
+  right: -1.5rem;
+  z-index: 1;
+}
+section#home .hero-main {
+  position: relative;
+}
+section#home .hero-main .hero {
   height: 93vh;
   background-color: white;
   display: grid;
@@ -1706,7 +1732,7 @@ section#home .hero {
   border-radius: 0.6rem;
   position: relative;
 }
-section#home .hero h1 {
+section#home .hero-main .hero h1 {
   font-family: Spectral, italic;
   font-size: 3.9rem;
   font-style: italic;
@@ -1714,7 +1740,7 @@ section#home .hero h1 {
   line-height: 5rem;
   justify-self: center;
 }
-section#home .hero h1::before {
+section#home .hero-main .hero h1::before {
   content: "";
   background: black;
   position: absolute;
@@ -1722,16 +1748,16 @@ section#home .hero h1::before {
   width: 15rem;
   height: 0.1rem;
 }
-section#home .hero a {
+section#home .hero-main .hero a {
   align-self: flex-end;
   margin-bottom: 8rem;
   justify-self: center;
 }
-section#home .hero .rabbit {
+section#home .hero-main .hero .rabbit {
   justify-self: center;
   max-width: 30rem;
 }
-section#home .hero .rabbit img {
+section#home .hero-main .hero .rabbit img {
   box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
   border-radius: 0.5rem;
   width: 100%;

@@ -18,34 +18,43 @@ const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
 const in_stock = document.querySelector('.existence')
 
+    console.log('ok')
 $('[data-open-block]').on('click', function() {
     const activeCls = 'is-active';
 
     $('[data-content]').removeClass(activeCls);
-    $('[data-nav]').removeClass(activeCls)
+    $('[data-nav]').removeClass('active')
     $(`[data-content="${$(this).data('open-block')}"`).addClass(activeCls);
-
 });
 
 
-    $('#select-country').select2({
-        maximumSelectionSize: 1
-    }).on('select2-opening', function(e) {
-        if ($(this).select2('val').length > 0) {
-            e.preventDefault();
-        }
-    });
-
+$('#select-country').select2({
+    maximumSelectionSize: 1
+}).on('select2-opening', function(e) {
+    if ($(this).select2('val').length > 0) {
+        e.preventDefault();
+    }
+});
 
 const swiper = new Swiper('.swiper-box', {
-    // Optional parameters
     loop: true,
     slidesPerView: 1,
     autoplay: {
         delay: 3000,
     },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
-    // Navigation arrows
+});
+
+const swiperHero = new Swiper('.swiper-hero', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+        delay: 3000,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -54,14 +63,11 @@ const swiper = new Swiper('.swiper-box', {
 });
 
 const swiperProduct = new Swiper('.swiper-product', {
-    // Optional parameters
     loop: true,
     slidesPerView: 1,
     autoplay: {
         delay: 3000,
     },
-
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -69,16 +75,13 @@ const swiperProduct = new Swiper('.swiper-product', {
 
 });
 
-
 const swiperItem = new Swiper('.swiper-item', {
-    // Optional parameters
     loop: true,
     slidesPerView: 4,
     spaceBetween: 16,
     autoplay: {
         delay: 3000,
     },
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -86,7 +89,6 @@ const swiperItem = new Swiper('.swiper-item', {
 
 })
 const swiperZoom = new Swiper('.swiper-zoom', {
-    // Optional parameters
     loop: true,
     slidesPerView: 1,
     scrollbar: {
@@ -97,7 +99,6 @@ const swiperZoom = new Swiper('.swiper-zoom', {
     autoplay: {
         delay: 3000,
     },
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

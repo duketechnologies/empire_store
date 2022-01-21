@@ -4,14 +4,93 @@
 
 @section('content')
     <section id="home">
+        <div class="hero-main">
+            <div class="wrapper">
+                <div class="swiper-hero">
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="hero">
+                                <div class="hero-prev-btn">
+                                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
 
-        <div class="hero">
-            <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>
-            <a href="#" class="main-btn">Перейти в каталог</a>
-            <div class="rabbit">
-                <img src="/i/hero_rabbit.png" alt="" />
+                                <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>
+                                <a href="#" class="main-btn">Перейти в каталог</a>
+                                <div class="rabbit">
+                                    <img src="/i/hero_rabbit.png" alt="" />
+                                </div>
+
+                                <div class="hero-next-btn">
+                                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="hero">
+                                <div class="hero-prev-btn">
+                                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+
+                                <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>
+                                <a href="#" class="main-btn">Перейти в каталог</a>
+                                <div class="rabbit">
+                                    <img src="/i/hero_rabbit.png" alt="" />
+                                </div>
+
+                                <div class="hero-next-btn">
+                                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <img class="nav-arrow" src="{{ url('/i/nav.svg') }}" alt="">
+                </div>
+                <div class="swiper-button-next">
+                    <img class="nav-arrow" src="{{ url('/i/nav.svg') }}" alt="">
+                </div>
             </div>
         </div>
+
+{{--            <div class="hero">--}}
+{{--                <div class="hero-prev-btn">--}}
+{{--                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                    </svg>--}}
+{{--                </div>--}}
+
+{{--                <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>--}}
+{{--                <a href="#" class="main-btn">Перейти в каталог</a>--}}
+{{--                <div class="rabbit">--}}
+{{--                    <img src="/i/hero_rabbit.png" alt="" />--}}
+{{--                </div>--}}
+
+{{--                <div class="hero-next-btn">--}}
+{{--                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
+{{--                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
+{{--                    </svg>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+
+
         <div class="sell">
             <div class="list">Эксклюзивные подарки
                 <div class="slots">

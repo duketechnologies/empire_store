@@ -377,7 +377,7 @@
 <div class="remodal" data-remodal-id="login-phone" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <div class="wrapper">
         <h3>Введите пароль из смс</h3>
-        <form method="POST" action="#">
+        <form method="POST" action="#" id="form-wrap">
             <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
             <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
             <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>

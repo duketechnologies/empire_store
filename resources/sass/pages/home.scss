@@ -1,61 +1,78 @@
 section#home {
     position: relative;
     margin-top: 2rem;
-
-  .hero {
-    height: 93vh;
-    background-color: white;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    margin: 0 2.2rem;
-    border-radius: 0.6rem;
-    position: relative;
-    h1 {
-        font-family: Spectral, italic;
-        font-size: 3.9rem;
-        font-style: italic;
+    svg {
+        width: 1.35rem;
+        height: 1.2rem;
+    }
+    .hero-prev-btn {
+        position: absolute;
+        background-color: #F5F4F1;
+        border-radius: 100%;
+        padding: 1rem;
+        top: 45%;
+        left: -1.5rem;
+        z-index: 1;
+    }
+    .hero-next-btn {
+        position: absolute;
+        background-color: #F5F4F1;
+        border-radius: 100%;
+        transform: rotate(180deg);
+        padding: 1rem;
+        top: 45%;
+        right: -1.5rem;
+        z-index: 1;
+    }
+    .hero-main {
         position: relative;
-        line-height: 5rem;
-        justify-self: center;
-        &::before {
-            content: "";
-            background: black;
-            position: absolute;
-            top: 4.9rem;
-            width: 15rem;
-            height: .1rem;
-        }
-        //&::after {
-        //    content: "";
-        //    background-image: url("/i/home/target.png");
-        //    background-repeat: no-repeat;
-        //    position: absolute;
-        //
-        //    width: 50rem;
-        //    height: 25rem;
-        //    right: -35rem;
-        //    top:0;
-        //}
-    }
-    a {
-        align-self: flex-end;
-        margin-bottom: 8rem;
-        justify-self: center;
-    }
-    .rabbit {
-        justify-self: center;
-        max-width: 30rem;
-        img {
-            -webkit-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
-            -moz-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
-            box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
-            border-radius: .5rem;
-            width: 100%;
+        .hero {
+            height: 93vh;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            margin: 0 2.2rem;
+            border-radius: 0.6rem;
+            position: relative;
+
+
+            h1 {
+                font-family: Spectral, italic;
+                font-size: 3.9rem;
+                font-style: italic;
+                position: relative;
+                line-height: 5rem;
+                justify-self: center;
+                &::before {
+                    content: "";
+                    background: black;
+                    position: absolute;
+                    top: 4.9rem;
+                    width: 15rem;
+                    height: .1rem;
+                }
+            }
+            a {
+                align-self: flex-end;
+                margin-bottom: 8rem;
+                justify-self: center;
+            }
+            .rabbit {
+                justify-self: center;
+                max-width: 30rem;
+                img {
+                    -webkit-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+                    -moz-box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+                    box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
+                    border-radius: .5rem;
+                    width: 100%;
+                }
+            }
+
         }
     }
 
-  }
   .sell {
       margin: 8rem 10.5rem;
       .list {

@@ -48201,10 +48201,11 @@ $(document).ready(function () {
   var catalog = document.querySelector('#catalog');
   var close_btn = document.querySelector('#close-menu');
   var in_stock = document.querySelector('.existence');
+  console.log('ok');
   $('[data-open-block]').on('click', function () {
     var activeCls = 'is-active';
     $('[data-content]').removeClass(activeCls);
-    $('[data-nav]').removeClass(activeCls);
+    $('[data-nav]').removeClass('active');
     $("[data-content=\"".concat($(this).data('open-block'), "\"")).addClass(activeCls);
   });
   $('#select-country').select2({
@@ -48215,47 +48216,51 @@ $(document).ready(function () {
     }
   });
   var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-box', {
-    // Optional parameters
     loop: true,
     slidesPerView: 1,
     autoplay: {
       delay: 3000
     },
-    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    }
+  });
+  var swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-hero', {
+    loop: true,
+    slidesPerView: 1,
+    autoplay: {
+      delay: 3000
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
   });
   var swiperProduct = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-product', {
-    // Optional parameters
     loop: true,
     slidesPerView: 1,
     autoplay: {
       delay: 3000
     },
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
   });
   var swiperItem = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-item', {
-    // Optional parameters
     loop: true,
     slidesPerView: 4,
     spaceBetween: 16,
     autoplay: {
       delay: 3000
     },
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
   });
   var swiperZoom = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-zoom', {
-    // Optional parameters
     loop: true,
     slidesPerView: 1,
     scrollbar: {
@@ -48265,7 +48270,6 @@ $(document).ready(function () {
     autoplay: {
       delay: 3000
     },
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
