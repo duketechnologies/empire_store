@@ -6,6 +6,8 @@ require('select2')
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 import 'swiper/css/bundle';
+import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+import 'simplebar/dist/simplebar.css';
 
 $(document).ready(function (){
 

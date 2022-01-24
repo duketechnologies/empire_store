@@ -26,6 +26,7 @@
         "popper.js": "^1.16.1",
         "remodal": "^1.1.1",
         "select2": "^4.1.0-rc.0",
+        "simplebar": "^5.3.6",
         "swiper": "^7.4.1"
     }
 }

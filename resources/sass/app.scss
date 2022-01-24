@@ -34,6 +34,7 @@
 @import "pages/address.scss";
 @import "pages/basket.scss";
 @import "pages/filters.scss";
+@import "pages/ordering.scss";
 @import "pages/test.scss";
 /*pages*/
 
@@ -59,4 +60,7 @@
 @import "modals/_Added-to-basket";
 @import "modals/_Added-to-favorites";
 @import "modals/_Zoom-popup";
+@import "modals/_edit-order";
+@import "modals/_access-order";
+@import "modals/_failed-order";
 /*modals*/

@@ -1027,6 +1027,7 @@ html, body {
   font-size: 1.56vmin;
   font-family: "Inter", sans-serif;
   letter-spacing: -0.1px;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -4358,33 +4359,12 @@ section#profile .switch .my-profile .profile-info .form fieldset legend {
 }
 section#profile .switch .my-profile .profile-info .form fieldset input {
   border: none;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 1.5rem;
   min-width: 18rem;
   outline: none;
   border-radius: 8px;
-  padding-left: 1.5rem;
   font-size: 0.9rem;
   letter-spacing: 0.44px;
-}
-section#profile .switch .my-profile .profile-info .form .buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
-section#profile .switch .my-profile .profile-info .form .buttons .main-btn {
-  max-width: 10rem;
-}
-section#profile .switch .my-profile .profile-info .form .buttons a {
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  font-weight: 500;
-  border-bottom: 1px solid #D7D9E0;
-  padding-bottom: 0.5rem;
-  transition: 0.2s ease-in;
-}
-section#profile .switch .my-profile .profile-info .form .buttons a:hover {
-  border-bottom: 1px solid black;
 }
 section#profile .switch .my-profile .profile-address {
   border-radius: 8px;
@@ -5437,7 +5417,13 @@ section#address .map {
   overflow-y: hidden;
 }
 section#address .map .info {
-  overflow-y: scroll;
+  width: 31rem;
+  padding-right: 1rem;
+}
+section#address .map .info .simplebar-scrollbar::before {
+  background-color: #DEDCD8;
+  height: 7rem;
+  width: 4px;
 }
 section#address .map .info .title {
   font-size: 0.85rem;
@@ -6164,6 +6150,626 @@ section#filters .favorites__products .route .pagination .active {
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
   color: black;
+}
+
+section#ordering {
+  margin: 3rem 0;
+}
+section#ordering h3 {
+  font-size: 1.6rem;
+  color: #505154;
+  font-weight: 300;
+  margin: 0 10.5rem 2.4rem;
+}
+section#ordering .title {
+  font-size: 1.2rem;
+  color: #505154;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+section#ordering .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  margin: 0 10.5rem 8rem;
+}
+section#ordering .content input[type=checkbox] {
+  display: none;
+}
+section#ordering .content label {
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 1rem 1.5rem 1rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #505154;
+  text-transform: initial;
+}
+section#ordering .content label span {
+  font-weight: 600;
+}
+section#ordering .content label::before {
+  content: "";
+  outline: none;
+  display: inline-block;
+  width: 0.2rem;
+  height: 0.2rem;
+  position: absolute;
+  left: 0rem;
+  top: 1.25rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: 1px solid #939393;
+  padding: 0.2rem;
+  transition: 0.2s ease-in;
+}
+section#ordering .content input[type=checkbox] + label::before {
+  background-color: #D7D9E0;
+}
+section#ordering .content input[type=checkbox]:checked + label::before {
+  background-color: #27AE60;
+}
+section#ordering .content input[type=checkbox]:hover + label::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+section#ordering .content .left_side {
+  flex: 1;
+}
+section#ordering .content .left_side fieldset {
+  border: 1px solid #DEDCD8;
+  max-width: 20rem;
+  background: white;
+  border-radius: 8px;
+}
+section#ordering .content .left_side fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+}
+section#ordering .content .left_side fieldset input {
+  border: none;
+  padding: 1rem 1rem 1rem 1.5rem;
+  min-width: 18rem;
+  outline: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.44px;
+}
+section#ordering .content .left_side .email {
+  background-color: white;
+  border-radius: 8px;
+  padding: 3rem 3rem 2.8rem;
+  margin-bottom: 1rem;
+}
+section#ordering .content .left_side .email div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section#ordering .content .left_side .email div .description {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  color: #505154;
+}
+section#ordering .content .left_side .email div .description span {
+  font-weight: 600;
+  color: #303133;
+}
+section#ordering .content .left_side .email div .link-btn {
+  text-transform: initial;
+  color: #939393;
+}
+section#ordering .content .left_side .email div .link-btn:hover {
+  color: black;
+}
+section#ordering .content .left_side .profile-info {
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 1rem;
+  display: flex;
+}
+section#ordering .content .left_side .profile-info .title {
+  padding: 3rem 3rem 1rem;
+}
+section#ordering .content .left_side .profile-info .form {
+  display: flex;
+}
+section#ordering .content .left_side .profile-info .form .user {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 3.2rem 3.2rem;
+  gap: 2.5rem;
+}
+section#ordering .content .left_side .profile-info .form .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+section#ordering .content .left_side .profile-info .form .buttons .main-btn {
+  max-width: 10rem;
+}
+section#ordering .content .left_side .profile-info .form .buttons a {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-bottom: 1px solid #D7D9E0;
+  padding-bottom: 0.5rem;
+  transition: 0.2s ease-in;
+}
+section#ordering .content .left_side .profile-info .form .buttons a:hover {
+  border-bottom: 1px solid black;
+}
+section#ordering .content .left_side .profile-info .another {
+  background-color: #F5F4F1;
+  flex: 1;
+  border-radius: 8px;
+  margin: 0.5rem;
+  position: relative;
+}
+section#ordering .content .left_side .profile-info .another svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  border-radius: 100%;
+}
+section#ordering .content .left_side .profile-info .another svg:hover {
+  background-color: white;
+}
+section#ordering .content .left_side .profile-info .another .title {
+  padding: 3rem 3rem 0;
+}
+section#ordering .content .left_side .profile-info .another fieldset {
+  margin: 1.9rem 3rem;
+}
+section#ordering .content .left_side .profile-info .another .last {
+  margin-top: 2.4rem;
+}
+section#ordering .content .left_side .profile-info button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin: 2rem 3rem 3rem 1rem;
+  background-color: #F5F4F1;
+  color: #505154;
+  text-transform: initial;
+  height: 4rem;
+  border-radius: 8px;
+  align-self: flex-end;
+}
+section#ordering .content .left_side .profile-info button:hover {
+  color: black;
+}
+section#ordering .content .left_side .profile-info button:hover span {
+  background-color: black;
+}
+section#ordering .content .left_side .profile-info button span {
+  position: relative;
+  background-color: #DEDCD8;
+  border-radius: 50%;
+  width: 1.45rem;
+  height: 1.45rem;
+  overflow: hidden;
+  transition: 0.2s ease-in;
+}
+section#ordering .content .left_side .profile-info button span svg {
+  width: 1.37rem;
+  height: 0.61rem;
+  position: absolute;
+  top: 0.45rem;
+  left: -0.5rem;
+}
+section#ordering .content .left_side .delivery {
+  background-color: white;
+  padding: 0 0 4.5rem;
+  border-radius: 8px;
+}
+section#ordering .content .left_side .delivery .title {
+  padding: 2rem 3rem 1rem;
+}
+section#ordering .content .left_side .delivery .blocks {
+  display: flex;
+}
+section#ordering .content .left_side .delivery .blocks div {
+  border-right: 1px solid #DEDCD8;
+  padding: 1rem 3rem 0.5rem;
+}
+section#ordering .content .left_side .delivery .blocks div:last-child {
+  border-right: none;
+}
+section#ordering .content .left_side .delivery .blocks div .info {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #505154;
+  line-height: 1.45rem;
+}
+section#ordering .content .left_side .pickup {
+  background-color: white;
+  margin-top: 0.4rem;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 3rem 1rem;
+}
+section#ordering .content .left_side .pickup div {
+  margin-bottom: 1.5rem;
+}
+section#ordering .content .left_side .pickup div .name {
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #303133;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  margin-top: 2.5rem;
+}
+section#ordering .content .left_side .pickup div .info {
+  font-size: 0.95rem;
+  color: #505154;
+  letter-spacing: 0.44px;
+  padding-left: 1.8rem;
+}
+section#ordering .content .left_side .pickup .link-btn {
+  text-transform: initial;
+  margin: 2.2rem auto;
+}
+section#ordering .content .left_side .order_adress {
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+section#ordering .content .left_side .order_adress .title {
+  padding: 2rem 3rem 1rem;
+  margin-bottom: 0;
+}
+section#ordering .content .left_side .order_adress .profile-address {
+  border-radius: 8px;
+  background-color: white;
+  padding: 3rem;
+}
+section#ordering .content .left_side .order_adress .profile-address h3 {
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+section#ordering .content .left_side .order_adress .profile-address .address {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: stretch;
+  gap: 1rem;
+}
+section#ordering .content .left_side .order_adress .profile-address .address div {
+  padding: 2.1rem;
+  border: 1px solid #DEDCD8;
+  transition: 0.2s ease-in;
+  border-radius: 8px;
+  max-width: 20rem;
+  min-height: 10rem;
+  cursor: pointer;
+}
+section#ordering .content .left_side .order_adress .profile-address .address div .place {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.7px;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+section#ordering .content .left_side .order_adress .profile-address .address div .place::before {
+  content: "";
+  background-image: url("/i/icons/location_icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 0.55rem;
+  height: 0.74rem;
+  position: absolute;
+  left: 0;
+}
+section#ordering .content .left_side .order_adress .profile-address .address div .location {
+  font-size: 0.85rem;
+  letter-spacing: 0.7px;
+  line-height: 1.4rem;
+}
+section#ordering .content .left_side .order_adress .profile-address .address div:hover {
+  border: 1px solid black;
+}
+section#ordering .content .left_side .order_adress .profile-address .address .add {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F4F1;
+  border: none;
+  max-width: 20rem;
+  min-height: 10rem;
+  transition: 0.2s ease-in;
+}
+section#ordering .content .left_side .order_adress .profile-address .address .add:hover {
+  background: rgba(245, 244, 241, 0.5);
+  border: none;
+}
+section#ordering .content .left_side .order_adress .profile-address .address .add:hover .new-address {
+  color: #303133;
+}
+section#ordering .content .left_side .order_adress .profile-address .address .add:hover .new-address svg > path {
+  stroke: black;
+}
+section#ordering .content .left_side .order_adress .profile-address .address .add .new-address {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.44px;
+  color: #505154;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+section#ordering .content .left_side .order_adress .profile-address .address .add .new-address svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+section#ordering .content .left_side .order_adress .profile-address .address .add .new-address svg > path {
+  transition: 0.2s ease-in;
+}
+section#ordering .content .left_side .payment_title {
+  font-size: 1.2rem;
+  color: #505154;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 4rem 0 3rem;
+}
+section#ordering .content .left_side .payment {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: stretch;
+}
+section#ordering .content .left_side .payment__method {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.8rem 2.8rem 2.8rem;
+}
+section#ordering .content .left_side .payment__method .cards {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+section#ordering .content .left_side .payment__method .cards img {
+  max-width: 2.5rem;
+}
+section#ordering .content .left_side .payment__method .link-btn {
+  display: block;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  text-transform: initial;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-top: 3.5rem;
+}
+section#ordering .content .left_side .payment__method p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #505154;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+section#ordering .content .left_side .requisites {
+  margin-top: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  padding: 3rem;
+}
+section#ordering .content .left_side .requisites .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+section#ordering .content .right_side {
+  background-color: white;
+  border-radius: 8px;
+  width: 34rem;
+}
+section#ordering .content .right_side .head {
+  border-bottom: 5px solid #F5F4F1;
+  padding: 2.5rem 0 2.5rem;
+  width: 100%;
+}
+section#ordering .content .right_side .head .inside {
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.7px;
+  display: block;
+  margin-bottom: 0.8rem;
+  padding: 0 2.5rem;
+}
+section#ordering .content .right_side .head .inside span {
+  color: #939393;
+  margin-left: 0.3rem;
+}
+section#ordering .content .right_side .head .link-btn {
+  text-transform: initial;
+  margin-left: 2.5rem;
+}
+section#ordering .content .right_side .sum {
+  width: 100%;
+  padding: 2.5rem;
+}
+section#ordering .content .right_side .sum span {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  color: #939393;
+}
+section#ordering .content .right_side .sum p {
+  font-size: 0.85rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+}
+section#ordering .content .right_side .sum__title {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+section#ordering .content .right_side .sum div {
+  border-bottom: 1px solid #DEDCD8;
+  padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-bottom: 1.5rem;
+}
+section#ordering .content .right_side .sum .delivery_cost p {
+  color: #27AE60;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+section#ordering .content .right_side .sum button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+section#ordering .content .right_side .sum button span {
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  width: 1.45rem;
+  height: 1.45rem;
+  overflow: hidden;
+}
+section#ordering .content .right_side .sum button span svg {
+  width: 1.37rem;
+  height: 0.61rem;
+  position: absolute;
+  top: 0.4rem;
+  left: -0.5rem;
+}
+section#ordering .content .right_side .sum .total {
+  margin-bottom: 3rem;
+}
+section#ordering .faq {
+  margin: 5rem 10.5rem 0;
+}
+section#ordering .faq:last-child {
+  border-bottom: 1px solid #505154;
+  margin-bottom: 8rem;
+}
+section#ordering .faq .questions {
+  border-top: 1px solid #505154;
+  padding: 2.2rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section#ordering .faq .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
+}
+section#ordering .faq .questions svg {
+  width: 4rem;
+  height: 2rem;
+}
+section#ordering .faq .questions svg > path {
+  transition: 0.2s ease-in;
+}
+section#ordering .faq .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+section#ordering .faq .questions:hover svg > path {
+  stroke: #505154;
+}
+section#ordering .consultaion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 8.5rem 0;
+  margin-top: 5rem;
+}
+section#ordering .consultaion .call {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 21rem;
+}
+section#ordering .consultaion .call h1 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+section#ordering .consultaion .call p {
+  font-size: 0.9rem;
+  color: #505154;
+  margin-top: 1rem;
+  width: 30rem;
+  letter-spacing: 0.7px;
+  line-height: 1.3rem;
+  text-align: center;
+}
+section#ordering .consultaion .call p a {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+}
+section#ordering .consultaion .call form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+section#ordering .consultaion .call form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #303133;
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+  width: 85%;
+}
+section#ordering .consultaion .call form .main-btn {
+  margin-top: 2rem;
+  width: 100%;
+  font-weight: 500;
 }
 
 section#test {
@@ -7761,6 +8367,418 @@ section#test .links a span {
   width: 100%;
   align-self: center;
   overflow: hidden;
+}
+
+.remodal[data-remodal-id=edit-order] {
+  max-width: 85%;
+  height: 90vh;
+  padding: 1rem 3rem !important;
+}
+.remodal[data-remodal-id=edit-order] h3 {
+  text-align: left;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin: 2rem 0;
+}
+.remodal[data-remodal-id=edit-order] .orders {
+  min-height: 23rem;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+.remodal[data-remodal-id=edit-order] .orders h3 {
+  text-align: center;
+  color: #939393;
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 1.6rem;
+}
+.remodal[data-remodal-id=edit-order] .orders a {
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid black;
+  margin-top: 4.3rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .title {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.95fr 0.8fr 1.5fr 1.5fr 2fr 1fr;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .title p {
+  font-size: 0.95rem;
+  color: #939393;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=edit-order] .orders .title p:first-child {
+  text-align: left;
+}
+.remodal[data-remodal-id=edit-order] .orders .title p:nth-child(2) {
+  text-align: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .title p:nth-child(3) {
+  text-align: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .title p:nth-child(4) {
+  margin-left: -2rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .title p:last-child {
+  text-align: right;
+}
+.remodal[data-remodal-id=edit-order] .orders .product {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1.5fr 1.5fr 1.5fr 1fr 1fr;
+  align-items: center;
+  border-top: 1px solid #DEDCD8;
+  padding: 2.5rem 0;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__date {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__date .type {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  color: #939393;
+  margin-bottom: 0.5rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__date .name {
+  font-size: 0.95rem;
+  color: #505154;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__date .date {
+  color: #939393;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__date img {
+  max-width: 5rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__color {
+  justify-self: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__color p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #505154;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__color p .span-1 {
+  border: 1px solid #303133;
+  text-align: center;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__color p .span-2 {
+  background-color: #D1B538;
+  margin: 0.2rem;
+  width: 0.65rem;
+  height: 0.65rem;
+  display: block;
+  border-radius: 100%;
+  padding: 0.3rem;
+  text-align: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__price p {
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  color: #303133;
+  text-align: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__quantity {
+  justify-self: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__quantity .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  min-width: 10rem;
+  justify-content: space-between;
+  border-radius: 3px;
+  padding: 0.3rem;
+  border: 1px solid #DEDCD8;
+  border-radius: 3px;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__quantity .quantity p {
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: 0.2s ease-in;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__quantity .quantity p:hover {
+  background-color: #F3F1EE;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__package {
+  justify-self: center;
+  background-color: #F6F6F6;
+  border-radius: 4px;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__package input[type=checkbox] {
+  display: none;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__package label {
+  outline: none;
+  font-weight: 300;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  line-height: 1.3rem;
+  letter-spacing: 0.7px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 1rem 1.5rem 1rem 4rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__package label::before {
+  content: "";
+  outline: none;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.1rem;
+  background-color: white;
+  border-radius: 50%;
+  border: 2px solid white;
+  outline: 1px solid #939393;
+  padding: 0.2rem;
+  transition: 0.2s ease-in;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__package input[type=checkbox]:checked + label::before {
+  background-color: black;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__package input[type=checkbox]:hover + label::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.remodal[data-remodal-id=edit-order] .orders .product__status {
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__status .in-process {
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  color: #303133;
+  text-align: center;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__status .delivered {
+  padding: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+  color: #27AE60;
+  border: 1px solid #27AE60;
+  border-radius: 999rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__status .delivered svg {
+  width: 0.67rem;
+  height: 0.53rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .product__delete {
+  justify-self: flex-end;
+}
+.remodal[data-remodal-id=edit-order] .orders .checkout {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5rem;
+  border-top: 1px solid #DEDCD8;
+}
+.remodal[data-remodal-id=edit-order] .orders .checkout .consultaion {
+  text-align: left;
+}
+.remodal[data-remodal-id=edit-order] .orders .checkout .consultaion h2 {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #505154;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .checkout .consultaion p {
+  font-size: 0.95rem;
+  line-height: 1.35rem;
+  color: #505154;
+  letter-spacing: 0.7px;
+  margin-bottom: 1.6rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .checkout .consultaion .move_to {
+  background-color: rgba(193, 146, 69, 0.1);
+  padding: 0.2rem;
+  border-bottom: none;
+  font-weight: 400;
+}
+.remodal[data-remodal-id=edit-order] .orders .checkout .consultaion a {
+  text-transform: uppercase;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum {
+  min-width: 28%;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum span {
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+  color: #939393;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum p {
+  font-size: 0.85rem;
+  letter-spacing: 0.44px;
+  font-weight: 500;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum div {
+  border-bottom: 1px solid #505154;
+  padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin-bottom: 1.5rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum .delivery p {
+  color: #27AE60;
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum a {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  margin-top: 2rem;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum a span {
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  width: 1.45rem;
+  height: 1.45rem;
+  overflow: hidden;
+}
+.remodal[data-remodal-id=edit-order] .orders .sum a span svg {
+  width: 1.37rem;
+  height: 0.61rem;
+  position: absolute;
+  top: 0.4rem;
+  left: -0.5rem;
+}
+
+.remodal[data-remodal-id=access-order] {
+  max-width: 106rem;
+  padding: 0 !important;
+}
+.remodal[data-remodal-id=access-order] .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.remodal[data-remodal-id=access-order] .content img {
+  width: 100%;
+}
+.remodal[data-remodal-id=access-order] .content .question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 22.5rem;
+  min-height: 80%;
+  margin: 0 auto;
+}
+.remodal[data-remodal-id=access-order] .content .question svg {
+  width: 1rem;
+  height: 0.95rem;
+}
+.remodal[data-remodal-id=access-order] .content .question h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #303133;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2.3rem;
+}
+.remodal[data-remodal-id=access-order] .content .question p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  line-height: 1.5rem;
+  color: #505154;
+  margin-bottom: 5rem;
+}
+.remodal[data-remodal-id=access-order] .content .question p a {
+  padding: 0.3rem;
+  background-color: rgba(193, 146, 69, 0.1);
+}
+.remodal[data-remodal-id=access-order] .content .question .main-btn {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.remodal[data-remodal-id=failed-order] {
+  max-width: 106rem;
+  padding: 0 !important;
+}
+.remodal[data-remodal-id=failed-order] .content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.remodal[data-remodal-id=failed-order] .content img {
+  width: 100%;
+}
+.remodal[data-remodal-id=failed-order] .content .question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 22.5rem;
+  min-height: 80%;
+  margin: 0 auto;
+}
+.remodal[data-remodal-id=failed-order] .content .question svg {
+  height: 1.6rem;
+  width: 1.6rem;
+  display: block;
+}
+.remodal[data-remodal-id=failed-order] .content .question h3 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #303133;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.remodal[data-remodal-id=failed-order] .content .question p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  line-height: 1.5rem;
+  color: #505154;
+  margin-bottom: 3rem;
+}
+.remodal[data-remodal-id=failed-order] .content .question p a {
+  padding: 0.3rem;
+  background-color: rgba(193, 146, 69, 0.1);
+}
+.remodal[data-remodal-id=failed-order] .content .question .main-btn {
+  width: 100%;
 }
 
 /*modals*/

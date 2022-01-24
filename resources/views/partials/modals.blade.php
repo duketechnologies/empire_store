@@ -647,4 +647,196 @@
     </div>
 </div>
 
+<div class="remodal" data-remodal-id="edit-order" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <h3>Ваш текущий заказ</h3>
+    <div class="orders">
+        {{--              <h3>Вы еще не оформили ни одного заказа</h3>--}}
+        {{--              <a href="#">Начать шопинг</a>--}}
+        <div class="title">
+            <p>Продукт</p>
+            <p>Цвет</p>
+            <p>Цена х 1</p>
+            <p>Количество</p>
+            <p>Сумма</p>
+        </div>
+        <div class="product">
+            <div class="product__date">
+                <img src="/i/profile/product.png" alt=""/>
+                <div>
+                    <p class="type">Статуэтка</p>
+                    <p class="name">Сакские предания</p>
+                    <p class="date">HRS01502S</p>
+                </div>
+            </div>
+            <div class="product__color">
+                <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
+            </div>
+            <div class="product__price">
+                <p>5 000 000	₸</p>
+            </div>
+            <div class="product__quantity">
+                <div class="quantity">
+                    <p id="increment">-</p>
+                    <span>1</span>
+                    <p id="decrement">+</p>
+                </div>
+            </div>
+            <div class="product__package">
+                <form method="POST" action="#">
+                    <input type="checkbox" name="craft-package" id="craft1"/>
+                    <label for="craft1">Крафт-пакет</label>
+                </form>
+            </div>
+            <div class="product__status">
+                <p class="in-process">10 000 000	₸</p>
+            </div>
+            <div class="product__delete">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 8L8 24" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 8L24 24" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product__date">
+                <img src="/i/profile/product-2.png" alt=""/>
+                <div>
+                    <p class="type">Статуэтка</p>
+                    <p class="name">Сакские предания</p>
+                    <p class="date">HRS01502S</p>
+                </div>
+            </div>
+            <div class="product__color">
+                <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
+            </div>
+            <div class="product__price">
+                <p>5 000 000	₸</p>
+            </div>
+            <div class="product__quantity">
+                <div class="quantity">
+                    <p>-</p>
+                    <span>1</span>
+                    <p>+</p>
+                </div>
 
+            </div>
+            <div class="product__package">
+                <form method="POST" action="#">
+                    <input type="checkbox" name="craft-package" id="craft2"/>
+                    <label for="craft2">Крафт-пакет</label>
+                </form>
+            </div>
+            <div class="product__status">
+                <p class="in-process">10 000 000	₸</p>
+            </div>
+            <div class="product__delete">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 8L8 24" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 8L24 24" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product__date">
+                <img src="/i/profile/product-3.png" alt=""/>
+                <div>
+                    <p class="type">Статуэтка</p>
+                    <p class="name">Сакские предания</p>
+                    <p class="date">HRS01502S</p>
+                </div>
+            </div>
+            <div class="product__color">
+                <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
+            </div>
+            <div class="product__price">
+                <p>5 000 000	₸</p>
+            </div>
+            <div class="product__quantity">
+                <div class="quantity">
+                    <p>-</p>
+                    <span>1</span>
+                    <p>+</p>
+                </div>
+
+            </div>
+            <div class="product__package">
+                <form method="POST" action="#">
+                    <input type="checkbox" name="craft-package" id="craft3"/>
+                    <label for="craft3">Крафт-пакет</label>
+                </form>
+            </div>
+            <div class="product__status">
+                <p class="in-process">10 000 000	₸</p>
+            </div>
+            <div class="product__delete">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 8L8 24" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 8L24 24" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+        <div class="checkout">
+            <div class="consultaion">
+                <h2>Нужна помощь с заказом?</h2>
+                <p>Оставьте свой номер для связи с консультантом.<br/>
+                    Или поищите ответ на свой вопрос в <a href="/faq" class="move_to">разделе FAQ.</a></p>
+                <a href="#">Заказать консультацию</a>
+            </div>
+            <div class="sum">
+                <div class="count">
+                    <span>13 товаров</span>
+                    <p>150 000 000	₸</p>
+                </div>
+                <div class="delivery">
+                    <span>Доставка</span>
+                    <p>Бесплатно по Алматы</p>
+                </div>
+                <div class="total">
+                    <span>Итого</span>
+                    <p>150 000 000	₸</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="access-order" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="content">
+        <img src="/i/modals/access.png"/>
+        <div class="question">
+            <h3>
+                <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Ваш заказ оформлен
+            </h3>
+            <p>Мы скоро свяжемся с вами,<br/>
+                вы всегда можете проверить статус<br/>
+                заказа в <a href="/profle">личном кабинете</a></p>
+            <a href="#" class="link-btn">Проверить статус заказа</a>
+            <a href="# "class="main-btn">Вернуться к шоппингу</a>
+        </div>
+    </div>
+</div>
+
+<div class="remodal" data-remodal-id="failed-order" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="content">
+        <img src="/i/modals/failed.png"/>
+        <div class="question">
+            <h3>
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="#EB5757"/>
+                    <path d="M18 18L6 6" stroke="#EB5757"/>
+                </svg>
+                Что-то пошло не так...
+            </h3>
+            <p>Мы скоро свяжемся с вами,<br/>
+                вы всегда можете проверить статус заказа<br/>
+                в личном кабинете</p>
+            <a href="# "class="main-btn">Оформить заново</a>
+        </div>
+    </div>
+</div>

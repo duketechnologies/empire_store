@@ -157,7 +157,7 @@
             </div>
         </div>
         <div class="map">
-            <div class="info">
+            <div class="info" data-simplebar>
                 <p class="title"><span>Алматы</span> 18 бутиков</p>
                 <div class="boutique">
                     <p class="boutique__place">БЦ «Нурлы Тау»</p>

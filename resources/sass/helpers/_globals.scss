@@ -2,6 +2,7 @@ html, body{
     font-size: $font-size;
     font-family: 'Inter', sans-serif;
     letter-spacing: -.1px;
+    scroll-behavior: smooth;
 }
 html {
     overflow-x: hidden;
@@ -22,8 +23,9 @@ body {
     //overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-    width: 7px;               /* ширина scrollbar */
+    width: 7px; /* ширина scrollbar */
 }
+
 body::-webkit-scrollbar-track {
     background: transparent;        /* цвет дорожки */
 }
