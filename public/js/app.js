@@ -56430,9 +56430,8 @@ __webpack_require__(/*! remodal */ "./node_modules/remodal/dist/remodal.js");
 __webpack_require__(/*! select2 */ "./node_modules/select2/dist/js/select2.js");
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination]);
 
- // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar]);
 
 
 $(document).ready(function () {
@@ -56442,7 +56441,8 @@ $(document).ready(function () {
   var catalog = document.querySelector('#catalog');
   var close_btn = document.querySelector('#close-menu');
   var in_stock = document.querySelector('.existence');
-  console.log('ok');
+  var search = document.querySelector('#search');
+  var search_block = document.querySelector('.search-block');
   $('[data-open-block]').on('click', function () {
     var activeCls = 'is-active';
     $('[data-content]').removeClass(activeCls);
@@ -56456,6 +56456,15 @@ $(document).ready(function () {
       e.preventDefault();
     }
   });
+
+  search.onfocus = function () {
+    search_block.style.transform = "translateY(0)";
+  };
+
+  search.onblur = function () {
+    search_block.style.transform = "translateY(-34rem)";
+  };
+
   var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-box', {
     loop: true,
     slidesPerView: 1,
@@ -56502,7 +56511,7 @@ $(document).ready(function () {
     }
   });
   var swiperZoom = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-zoom', {
-    loop: true,
+    // loop: true,
     slidesPerView: 1,
     scrollbar: {
       el: '.swiper-scrollbar',

@@ -631,7 +631,6 @@
                     <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
                 </div>
             </div>
-
         </div>
         <!-- If we need navigation buttons -->
         <div class="swiper-button-prev">
@@ -644,7 +643,22 @@
                 <path d="M13 1L1.18644 12.8136L13 24.6271" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
+        <div class="swiper-scrollbar"></div>
     </div>
+    <form method="POST" action="#">
+        <div>
+            <input type="checkbox" name="color-gold" id="color-gold"/>
+            <label id="color-gold"></label>
+        </div>
+        <div>
+            <input type="checkbox" name="color-black" id="color-black"/>
+            <label id="color-black"></label>
+        </div>
+        <div>
+            <input type="checkbox" name="color-grey" id="color-grey"/>
+            <label id="color-grey"></label>
+        </div>
+    </form>
 </div>
 
 <div class="remodal" data-remodal-id="edit-order" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">

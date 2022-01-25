@@ -58,7 +58,7 @@ section#vacancies  {
     }
     .list {
       display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       justify-content: flex-start;
       width: 100%;
         row-gap: 3rem;
@@ -70,11 +70,13 @@ section#vacancies  {
               padding-left: 0;
           }
         li {
-            margin-top: 1.8rem;
+          margin-top: 1.8rem;
           font-size: 1.2rem;
           padding:.3rem;
           color: #303133;
           cursor: pointer;
+            max-width: fit-content;
+            transition: .2s ease-in;
             &:hover {
                 background-color: rgba(193, 146, 69, 0.1);
                 max-width:fit-content;
@@ -89,7 +91,7 @@ section#vacancies  {
     .title {
         font-weight: 300;
         font-size: 1.6rem;
-        margin: 3rem 10.5rem;
+        margin: 5rem 10.5rem;
     }
     .faq {
         margin: 0 10.5rem;

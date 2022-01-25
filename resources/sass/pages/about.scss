@@ -38,6 +38,7 @@ section#about {
               line-height: 1.6rem;
               letter-spacing: .44px;
               color: #303133;
+
           }
       }
       .content {
@@ -65,6 +66,7 @@ section#about {
               line-height: 1.6rem;
               letter-spacing: .44px;
               color: #303133;
+              padding-right: 7rem;
           }
           svg {
               position: absolute;
@@ -305,7 +307,7 @@ section#about {
         &:hover {
             -webkit-box-shadow: 0px 5px 17px 11px rgba(34, 60, 80, 0.2);
             -moz-box-shadow: 0px 5px 17px 11px rgba(34, 60, 80, 0.2);
-            box-shadow: 0px 5px 17px 11px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 2px 40px 11px rgba(34, 60, 80, 0.2);
             transform: translateY(-4px);
         }
     }

@@ -288,16 +288,27 @@ section#item {
                     }
                 }
             }
+            #vertical {
+                transition: .2s linear ;
+
+            }
         }
         .existence.active {
             .questions {
                 border-bottom: none;
+            }
+            svg {
+                animation: rotate .2s ease-in;
             }
             .answers {
                 max-height: 20rem;
                 border-bottom: 1px solid black;
                 padding-bottom: .5rem;
                 animation: fade 0.5s ease-in-out;
+            }
+            #vertical {
+                transition: .2s linear ;
+                opacity: 0;
             }
         }
     }
@@ -438,7 +449,6 @@ section#item {
     .faq {
         margin: 7rem 10.5rem;
         &:last-child {
-
             border-bottom: 1px solid #505154;
             margin-bottom: 7rem;
 
@@ -475,7 +485,9 @@ section#item {
                     stroke: #505154;
                 }
             }
+
         }
+
     }
 }
 @keyframes fade {
@@ -486,5 +498,13 @@ section#item {
     to {
         opacity: 1;
         transform: translateY(0rem);
+    }
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(200deg);
     }
 }

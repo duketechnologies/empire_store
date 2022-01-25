@@ -102,6 +102,16 @@ section#profile {
                           letter-spacing: .44px;
                       }
                   }
+                  .buttons {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      gap: 3rem;
+                      margin-right: .5rem;
+                      .main-btn {
+                          width: 10.7rem;
+                      }
+                  }
               }
           }
           .profile-address {
@@ -445,9 +455,6 @@ section#profile {
                           display: flex;
                           gap: 1rem;
                           .main-btn {
-                              width: 100%;
-                          }
-                          .primary-btn {
                               width: 100%;
                           }
                       }

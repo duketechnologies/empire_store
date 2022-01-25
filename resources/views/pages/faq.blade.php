@@ -6,7 +6,7 @@
         <h1>FAQ</h1>
         <div class="type">
             <ul class="links">
-                <li><a href="#">Все вопросы </a></li>
+                <li><a href="#" class="active">Все вопросы </a></li>
                 <li><a href="#">Изделия</a></li>
                 <li><a href="#">Заказы</a></li>
                 <li><a href="#">Юридическим лицам</a></li>

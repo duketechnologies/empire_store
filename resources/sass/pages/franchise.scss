@@ -314,12 +314,12 @@ section#franchise {
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2rem 5rem;
+      gap: 3.5rem 5rem;
       justify-content: center;
       align-self: center;
       p {
         border-bottom:  1px solid #DEDCD8;
-        padding-bottom: .5rem;
+        padding-bottom: .7rem;
         margin-bottom: 1rem;
         color: #303133;
       }
@@ -328,6 +328,7 @@ section#franchise {
           margin-top: 1rem;
           color: #505154;
           font-size: .98rem;
+            font-weight: 300;
           &::before {
             content: "•";
             padding-right: 1rem;

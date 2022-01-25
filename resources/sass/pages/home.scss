@@ -250,6 +250,9 @@ section#home {
                           border-bottom: 1px solid black;
                       }
                   }
+                  img {
+                      width: 18rem;
+                  }
               }
               .product {
                   width: 100%;
@@ -259,11 +262,12 @@ section#home {
                   max-width: 29rem;
                   left: auto;
                   top: 10rem;
-                  width: 50%;
+                  width:20rem;
+                  transition: .2s ease-in;
               }
               .preorder-bg {
                   width: 70%;
-                  top: 4rem;
+                  top: 3rem;
               }
               &:nth-child(2) {
                   .preorder-bg {
@@ -299,13 +303,13 @@ section#home {
                   font-size: .85rem;
                   letter-spacing: .7px;
                   text-align: center;
-                  background-color: #ECECF5;
+                  background-color: white;
                   padding: .7rem 1rem;
                   max-width: fit-content;
                   text-transform: uppercase;
                   border-radius: 999rem;
                   margin-top: 2.5rem;
-                  margin-bottom: 5.5rem;
+                  margin-bottom: 3.5rem;
               }
           }
       }
@@ -314,12 +318,16 @@ section#home {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
+      padding: 0 2.2rem;
       .left_side {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: flex-end;
           overflow: hidden;
+          img {
+              width: 100%;
+          }
           p {
               font-size: .95rem;
               letter-spacing: .7px;

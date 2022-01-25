@@ -8,7 +8,7 @@
             <div class="left_side">
                 <div class="email">
                     <p class="title">
-                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2"
                                   stroke-linecap="round"/>
                         </svg>
@@ -22,7 +22,7 @@
                 <div class="profile-info">
                     <div>
                         <p class="title">
-                            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2"
                                       stroke-linecap="round"/>
                             </svg>
@@ -49,23 +49,23 @@
                             </div>
                         </div>
                     </div>
-{{--                    <div class="another">--}}
-{{--                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--                            <path d="M18 6L6 18" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                            <path d="M6 6L18 18" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                        </svg>--}}
+                    <div class="another">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 6L18 18" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
 
-{{--                        <p class="title">Получатель заказа</p>--}}
-{{--                        <fieldset>--}}
-{{--                            <legend>Имя получателя</legend>--}}
-{{--                            <input type="text" name="name" value="Айжан"/>--}}
-{{--                        </fieldset>--}}
-{{--                        <fieldset class="last">--}}
-{{--                            <legend>Телефон получателя</legend>--}}
-{{--                            <input type="tel" name="phone" value="+7 (718) 878 38 28"/>--}}
-{{--                        </fieldset>--}}
-{{--                    </div>--}}
-                    <button class="main-btn">
+                        <p class="title">Получатель заказа</p>
+                        <fieldset>
+                            <legend>Имя получателя</legend>
+                            <input type="text" name="name" value="Айжан"/>
+                        </fieldset>
+                        <fieldset class="last">
+                            <legend>Телефон получателя</legend>
+                            <input type="tel" name="phone" value="+7 (718) 878 38 28"/>
+                        </fieldset>
+                    </div>
+                    <button id="another-btn" class="main-btn">
                         Получатель другой человек
                         <span>
                         <svg viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="delivery">
                     <p class="title">
-                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         Способ доставки</p>
@@ -101,14 +101,14 @@
                 </div>
                 <div class="pickup">
                     <p class="title">
-                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         Информация о самовывозе
                     </p>
                     <div>
                         <p class="name">
-                            <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg  viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.49997 0C2.46726 0 0 2.50424 0 5.58238C0 7.30416 0.87338 9.394 2.59596 11.7938C3.85655 13.5501 5.09875 14.8027 5.15102 14.8552C5.2471 14.95165.37351 15 5.50006 15C5.62294 15 5.74591 14.9544 5.84122 14.8628C5.89361 14.8125 7.13895 13.6107 8.40192 11.8786C10.1259 9.51433 11 7.39598 11 5.58236C10.9999 2.50424 8.53262 0 5.49997 0ZM5.49997 7.99238C4.0173 7.99238 2.8111 6.78968 2.8111 5.31139C2.8111 3.83309 4.01733 2.6304 5.49997 2.6304C6.98261 2.6304 8.18884 3.83309 8.18884 5.31139C8.18884 6.78968 6.98258 7.99238 5.49997 7.99238Z" fill="#212123"/>
                             </svg>
                             ТРЦ «Dostyk Plaza»
@@ -117,7 +117,7 @@
                     </div>
                     <div>
                         <p class="name">
-                            <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg  viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.66797C0 3.35426 2.68629 0.667969 6 0.667969C7.5913 0.667969 9.11742 1.30011 10.2426 2.42533C11.3679 3.55055 12 5.07667 12 6.66797C12 9.98168 9.31371 12.668 6 12.668C2.68629 12.668 0 9.98168 0 6.66797ZM7.7999 7.87422C8.0688 7.88825 8.31411 7.72144 8.3999 7.46622C8.45005 7.31107 8.4349 7.1422 8.35794 6.99846C8.28098 6.85472 8.14883 6.74849 7.9919 6.70422L6.5999 6.24222V3.67422C6.5999 3.34285 6.33128 3.07422 5.9999 3.07422C5.66853 3.07422 5.3999 3.34285 5.3999 3.67422V6.67422C5.39924 6.93217 5.56352 7.16168 5.8079 7.24422L7.6079 7.84422C7.67033 7.8625 7.73487 7.87259 7.7999 7.87422Z" fill="#212123"/>
                             </svg>
                             С 23 января
@@ -128,7 +128,7 @@
                 </div>
                 <div class="order_adress">
                     <p class="title">
-                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         Адрес доставки
@@ -156,7 +156,7 @@
                     </div>
                 </div>
                 <p class="payment_title">
-                    <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg  viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                     Выберете способ оплаты
@@ -188,7 +188,7 @@
                 </div>
                 <div class="requisites">
                     <p class="title">
-                        <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
                         </svg>
                         Реквизиты компании

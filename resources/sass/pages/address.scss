@@ -38,9 +38,9 @@ section#address {
     }
     .city {
         display: flex;
-        margin: 4rem 10.5rem 3.5rem;
+        margin: 6rem 10.5rem;
         flex-wrap: wrap;
-        gap: 8rem;
+        gap: 6rem;
         div {
             margin-right: 2.5rem;
             p {
@@ -62,10 +62,13 @@ section#address {
                     cursor: pointer;
                     margin-bottom: .6rem;
                     padding: .2rem;
+                    transition: .2s ease-in;
+                    max-width: max-content;
                     &:hover {
                         background-color: white;
                         padding: .2rem;
                         color: black;
+                        max-width: fit-content;
                     }
                 }
                 a {

@@ -68,29 +68,6 @@
             </div>
         </div>
 
-{{--            <div class="hero">--}}
-{{--                <div class="hero-prev-btn">--}}
-{{--                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                    </svg>--}}
-{{--                </div>--}}
-
-{{--                <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>--}}
-{{--                <a href="#" class="main-btn">Перейти в каталог</a>--}}
-{{--                <div class="rabbit">--}}
-{{--                    <img src="/i/hero_rabbit.png" alt="" />--}}
-{{--                </div>--}}
-
-{{--                <div class="hero-next-btn">--}}
-{{--                    <svg viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--                        <path d="M19.002 9.2207H1.44336" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                        <path d="M7.71094 15.4883L1.44221 9.21955L7.71094 2.95083" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                    </svg>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-
         <div class="sell">
             <div class="list">Эксклюзивные подарки
                 <div class="slots">
@@ -129,7 +106,8 @@
                         <svg viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M1 9.83333L9.83333 1" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M1 1L9.83333 1V9.83333" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div class="list">Декор
@@ -338,11 +316,6 @@
 
         <div class="compilation">
             <h2>Мы подготовили для вас интересную подборку, посмотрите поближе</h2>
-{{--            <svg class="swiper-prev-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--            </svg>--}}
-
             <div class="wrapper">
                 <div class="swiper-box">
                     <div class="swiper-wrapper">
@@ -447,30 +420,6 @@
                     </svg>
                 </div>
             </div>
-
-{{--            <div class="product">--}}
-{{--                <div class="content">--}}
-{{--                    <img src="/i/home/swiper_img.png" alt=""/>--}}
-{{--                    <p class="name">Картина «Сакские предания»</p>--}}
-{{--                    <p class="price">4 350 ₸</p>--}}
-{{--                    <div class="count">--}}
-{{--                        <div class="quantity">--}}
-{{--                            <p>-</p>--}}
-{{--                            <span>1</span>--}}
-{{--                            <p>+</p>--}}
-{{--                        </div>--}}
-{{--                        <a href="#" class="main-btn">В корзину</a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--                <div class="info">--}}
-{{--                    <p>Основой создания коллекции послужили уникальные археологические находки скифо-сакской культуры, представляющие собой квинтэссенцию.</p>--}}
-{{--                    <p>Полистоун • Ручная роспись</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <svg class="swiper-next-btn" viewBox="0 0 61 36" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--                <path d="M1 18L60 18" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--                <path d="M43 1L60 18L43 35" stroke="#939393" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--            </svg>--}}
         </div>
 
         <div class="collab">
@@ -519,7 +468,3 @@
 
     </section>
 @endsection
-
-{{--@section('scripts')--}}
-{{--    <script src="https://empire.duketech.kz/collection/1/?id=11"> </script>--}}
-{{--@endsection--}}

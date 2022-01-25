@@ -27,7 +27,7 @@
                 <li><a href="/franchise">Франшиза</a></li>
                 <li><a href="/about">О Empire</a></li>
             </ul>
-            <input type="text" name="search" placeholder="Поиск"/>
+            <input id="search" type="text" name="search" placeholder="Поиск"/>
         </div>
         <div class="info">
             <a class="phone" href="#">+7 777 218 92 91</a>

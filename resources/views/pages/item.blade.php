@@ -69,15 +69,15 @@
                         <div class="checkboxes">
                             <div>
                                 <input type="checkbox" name="gold" id="gold">
-                                <label>Золотой</label>
+                                <label for="gold">Золотой</label>
                             </div>
                             <div>
                                 <input type="checkbox" name="black" id="black">
-                                <label>Черный</label>
+                                <label for="black">Черный</label>
                             </div>
                             <div>
                                 <input type="checkbox" name="grey" id="grey">
-                                <label>Серый</label>
+                                <label for="grey">Серый</label>
                             </div>
                         </div>
 
@@ -142,7 +142,7 @@
                         Наличие по городам</p>
                     <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path id="vertical" d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
                 <div class="answers">

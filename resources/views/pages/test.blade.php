@@ -25,6 +25,7 @@
             <a href="/item" target="_blank">КАРТОЧКА ТОВАРА</a>
             <a href="/basket" target="_blank">КОРЗИНА</a>
             <a href="/profile" target="_blank">ЛИЧНЫЙ КАБИНЕТ</a>
+            <a href="/ordering" target="_blank">ОФОРМЛЕНИЕ ЗАКАЗА</a>
         </div>
 
         <div class="links">

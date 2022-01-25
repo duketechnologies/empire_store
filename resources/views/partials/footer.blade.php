@@ -67,7 +67,7 @@
         <ul>
             <li class="info"><a href="#">Моё местоположение</a></li>
             <li class="info"><a href="#">Оставить отзыв</a></li>
-            <li class="contact"><a href="#">+7 777 218 92 91</a></li>
+            <li class="contact first"><a href="#">+7 777 218 92 91</a></li>
             <li class="contact"><a href="#">Email@empire.kz</a></li>
         </ul>
         <p>Copyrights 2020. All Rights Reserved by Empire of Gifts</p>

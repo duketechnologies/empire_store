@@ -6,6 +6,13 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        li {
+            padding: .3rem .7rem;
+            transition: .2s ease-in;
+            &:hover {
+                background-color: white;
+            }
+        }
         .nav {
             display: flex;
             flex-direction: column;
@@ -95,7 +102,12 @@
 
         ul {
             display: flex;
-            gap: 4.15rem;
+            li {
+                margin-right: 2.5rem;
+            }
+            li.first {
+                margin-left: 1.5rem;
+            }
         }
         .info {
             border: 1px solid #DEDCD8;
@@ -118,7 +130,7 @@
             }
         }
         .contact {
-            padding:1rem;
+            padding:1rem 1rem 1rem 0;
             font-size: .85rem;
             font-weight: 600;
             a {

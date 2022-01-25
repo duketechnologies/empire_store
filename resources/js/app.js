@@ -3,10 +3,11 @@ window.$ = window.jQuery = require('jquery');
 
 require('remodal');
 require('select2')
-import Swiper, { Navigation, Pagination } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+import Swiper, {Navigation, Pagination, Scrollbar} from 'swiper';
 import 'swiper/css/bundle';
-import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+Swiper.use([Navigation, Pagination, Scrollbar]);
+
+import 'simplebar';
 import 'simplebar/dist/simplebar.css';
 
 $(document).ready(function (){
@@ -19,8 +20,9 @@ const menu = document.querySelector('.menu')
 const catalog = document.querySelector('#catalog')
 const close_btn = document.querySelector('#close-menu')
 const in_stock = document.querySelector('.existence')
+const search = document.querySelector('#search')
+const search_block = document.querySelector('.search-block')
 
-    console.log('ok')
 $('[data-open-block]').on('click', function() {
     const activeCls = 'is-active';
 
@@ -38,6 +40,12 @@ $('#select-country').select2({
     }
 });
 
+search.onfocus = function() {
+    search_block.style.transform = "translateY(0)"
+}
+search.onblur = function() {
+    search_block.style.transform = "translateY(-34rem)"
+}
 const swiper = new Swiper('.swiper-box', {
     loop: true,
     slidesPerView: 1,
@@ -91,12 +99,11 @@ const swiperItem = new Swiper('.swiper-item', {
 
 })
 const swiperZoom = new Swiper('.swiper-zoom', {
-    loop: true,
+    // loop: true,
     slidesPerView: 1,
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
-
     },
     autoplay: {
         delay: 3000,

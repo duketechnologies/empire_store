@@ -52,12 +52,13 @@ header.header {
 
                 &::before {
                     content: '';
-                    background-color: red;
+                    background-image: url("/i/icons/search_icon.png");
+                    background-repeat: no-repeat;
                     top:0;
                     left: 0;
                     position: absolute;
-                    width: 10px;
-                    height: 10px;
+                    width: 1rem;
+                    height: 1rem;
                 }
                 &::placeholder {
                     font-size: 0.9rem;
@@ -104,6 +105,7 @@ header.header {
                         border-radius: 0.5rem;
                         transition: .2s ease-in-out;
                         cursor:pointer;
+                        display: flex;
                         svg {
                             >g>path {
                                 transition: .2s ease-in;
@@ -152,6 +154,9 @@ header.header {
                 stroke: white;
             }
         }
+        input {
+            background-color: white;
+        }
     }
     .search-block {
         margin-top: .4rem;
@@ -163,6 +168,7 @@ header.header {
         justify-content: center;
         padding: 1.6rem 2.3rem;
         transform: translateY(-34rem);
+        transition: transform .3s ease-in;
         .left_side {
             width: 100%;
             padding-left: 15rem;
@@ -235,8 +241,8 @@ header.header {
             }
             .product {
                 background-color: #F5F4F1;
-                display: flex;
-                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr;
                 align-items: center;
                 justify-content: center;
                 width: 16rem;
@@ -244,6 +250,8 @@ header.header {
                 border-radius: 8px;
                 img {
                     max-width: 10rem;
+                    justify-self: center;
+                    margin-top: 3rem;
                 }
                 p {
                     font-size: .85rem;
@@ -253,6 +261,9 @@ header.header {
                     border-radius: 999rem;
                     padding: .5rem 1rem;
                     font-weight: 500;
+                    justify-self: center;
+                    align-self: flex-end;
+                    margin-bottom: 2rem;
 
                 }
             }

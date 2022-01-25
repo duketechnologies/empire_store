@@ -37,7 +37,7 @@
                       </div>
                       <div class="buttons">
                           <button type="submit" class="main-btn">Сохранить</button>
-                          <a href="#">Изменить пароль</a>
+                          <a href="#" class="link-btn">Изменить пароль</a>
                       </div>
                   </form>
               </div>

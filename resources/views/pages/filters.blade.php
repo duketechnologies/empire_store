@@ -5,7 +5,7 @@
     <section id="filters">
         <div class="type">
             <ul class="links">
-                <li ><a href="#">Декор</a></li>
+                <li ><a href="#" class="active">Декор</a></li>
                 <li ><a href="#">Посуда</a></li>
                 <li ><a href="#">Книги</a></li>
                 <li ><a href="#">Шахматы и нарды</a></li>
