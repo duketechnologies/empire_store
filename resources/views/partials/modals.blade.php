@@ -70,7 +70,6 @@
             </fieldset>
             <button type="submit" class="main-btn">Сохранить адрес</button>
             <div class="buttons">
-              <button data-remodal-action="cancel" class="secondary-btn">Отменить</button>
               <button class="primary-btn">Удалить адрес</button>
             </div>
         </form>
@@ -144,7 +143,7 @@
       <h3>Вам нужен один уникальный подарок <br/>или же несколько одного типа?</h3>
       <ul>
         <li>Один подарок</li>
-        <li>Несколько</li>
+        <li>Несколько Несколько</li>
         <li>Несколько</li>
         <li>Несколько</li>
         <li>Несколько</li>
@@ -285,6 +284,7 @@
 </div>
 
 <div class="remodal" data-remodal-id="login" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="wrapper">
         <h3>Для входа в аккаунт<br/>введите номер телефона или Email</h3>
         <form method="POST" action="#">
@@ -303,6 +303,7 @@
 </div>
 
 <div class="remodal" data-remodal-id="login-email" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
 {{--    <div class="wrapper">--}}
 {{--        <h3>Введите пароль</h3>--}}
 {{--        <p>Введите пароль от аккаунта<span>Mail@mail.kz</span></p>--}}
@@ -350,6 +351,7 @@
 </div>
 
 <div class="remodal" data-remodal-id="register-email" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="wrapper">
         <h3>Создайте пароль</h3>
         <p>Создание пароля для нового аккаунта <span>Mail@mail.kz</span></p>
@@ -375,6 +377,7 @@
 </div>
 
 <div class="remodal" data-remodal-id="login-phone" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
     <div class="wrapper">
         <h3>Введите пароль из смс</h3>
         <form method="POST" action="#" id="form-wrap">
@@ -698,8 +701,8 @@
             </div>
             <div class="product__package">
                 <form method="POST" action="#">
-                    <input type="checkbox" name="craft-package" id="craft1"/>
-                    <label for="craft1">Крафт-пакет</label>
+                    <input type="checkbox" name="craft-package" id="edit-craft1"/>
+                    <label for="edit-craft1">Крафт-пакет</label>
                 </form>
             </div>
             <div class="product__status">
@@ -737,8 +740,8 @@
             </div>
             <div class="product__package">
                 <form method="POST" action="#">
-                    <input type="checkbox" name="craft-package" id="craft2"/>
-                    <label for="craft2">Крафт-пакет</label>
+                    <input type="checkbox" name="craft-package" id="edit-craft2"/>
+                    <label for="edit-craft2">Крафт-пакет</label>
                 </form>
             </div>
             <div class="product__status">
@@ -776,8 +779,8 @@
             </div>
             <div class="product__package">
                 <form method="POST" action="#">
-                    <input type="checkbox" name="craft-package" id="craft3"/>
-                    <label for="craft3">Крафт-пакет</label>
+                    <input type="checkbox" name="craft-package" id="edit-craft3"/>
+                    <label for="edit-craft3">Крафт-пакет</label>
                 </form>
             </div>
             <div class="product__status">

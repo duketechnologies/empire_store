@@ -1,4 +1,5 @@
 .remodal[data-remodal-id=login] {
+    background-color: #F5F4F1;
     h3 {
         font-size: 1.35rem;
         text-align: center;
@@ -14,10 +15,11 @@
             margin: 0 auto;
             display: flex;
             align-items: center;
+            background-color: transparent;
             legend {
                 padding-left: .5rem;
                 padding-right: .5rem;
-                margin-left: 1.5rem;
+                margin-left: 1rem;
                 font-size: .9rem;
                 letter-spacing: .7px;
                 color: #505150;
@@ -32,6 +34,7 @@
                 padding-left: 1.5rem;
                 font-size: .9rem;
                 letter-spacing: .44px;
+                background-color: transparent;
             }
             button {
                 background-color: #303133;

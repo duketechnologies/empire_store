@@ -298,6 +298,14 @@ section#filters {
                         svg {
                             width: 2rem;
                             height: 1rem;
+                            >path {
+                                transition: .2s ease-in;
+                            }
+                            &:hover {
+                                >path {
+                                    stroke: black;
+                                }
+                            }
                         }
                     }
                     .active {

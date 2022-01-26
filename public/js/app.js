@@ -56443,6 +56443,15 @@ $(document).ready(function () {
   var in_stock = document.querySelector('.existence');
   var search = document.querySelector('#search');
   var search_block = document.querySelector('.search-block');
+  var craft = document.querySelectorAll('.product__package');
+  var craftInput = document.querySelectorAll('.product__package input');
+  var craftLabel = document.querySelectorAll('.product__package label');
+  craftLabel.forEach(function (item, index) {
+    item.addEventListener('click', function (e) {
+      craft[index].classList.toggle('active');
+    });
+  });
+  console.log(craft);
   $('[data-open-block]').on('click', function () {
     var activeCls = 'is-active';
     $('[data-content]').removeClass(activeCls);

@@ -19,6 +19,13 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            transition: .2s ease-in;
+            cursor: pointer;
+            &:hover {
+                -moz-box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+                -webkit-box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+                box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+            }
             p {
                 font-weight: 300;
                 font-size: .85rem;

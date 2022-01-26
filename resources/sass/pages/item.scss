@@ -51,7 +51,7 @@ section#item {
                     border-radius: 16px;
                     max-width: fit-content;
                     padding: .5rem .8rem;
-                    margin: 0 2.6rem 2.1rem;
+                    margin: 0 2.6rem 1.6rem;
                 }
                 .name {
                     font-size: 1.6rem;
@@ -181,6 +181,28 @@ section#item {
                 margin-bottom: 2.25rem;
             }
         }
+        .item-breadcrumbs {
+            display: flex;
+            position: absolute;
+            bottom: .8rem;
+            gap: .5rem;
+            a {
+                display: inline-block;
+                font-size: .95rem;
+                letter-spacing: .7px;
+                color: #939393;
+                &::before {
+                    content: "•";
+                    margin-right: .5rem;
+                }
+                &:first-child {
+                    &::before {
+                        content: "";
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
     }
     .info {
         margin: 0 10.5rem;
@@ -297,7 +319,7 @@ section#item {
             .questions {
                 border-bottom: none;
             }
-            svg {
+            .rotate {
                 animation: rotate .2s ease-in;
             }
             .answers {
@@ -345,6 +367,7 @@ section#item {
         }
         .swiper-item {
             max-width: 80rem;
+            height: 34rem;
             overflow: hidden;
         }
         .single {

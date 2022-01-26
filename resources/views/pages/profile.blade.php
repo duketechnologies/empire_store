@@ -53,7 +53,13 @@
                           <p class="location">Российская Федерация, Новосибирская область, Бердск, дом 17</p>
                       </div>
                       <div class="add" data-remodal-target="new_location">
-                          <p class="new-address">+ Добавить адрес</p>
+                          <p class="new-address" data-remodal-target="new_location">Другой адрес
+                              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <circle cx="12.25" cy="12.25" r="11.25" stroke="#DEDCD8"/>
+                                  <path d="M12.25 7.25L12.25 17.25" stroke="#939393" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                                  <path d="M17.25 12.25L7.25 12.25" stroke="#939393" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                          </p>
                       </div>
                   </div>
               </div>

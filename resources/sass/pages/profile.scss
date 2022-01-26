@@ -4,7 +4,7 @@ section#profile {
       margin-bottom: 6rem;
       h1 {
           font-family: 'Spectral';
-          font-size: 1.3rem;
+          font-size: 1.6rem;
           color: #939393;
           font-style: italic;
           margin-top: 4rem;
@@ -13,7 +13,7 @@ section#profile {
               font-family: 'Inter';
               font-style: normal;
               color:black;
-              font-size: 1.6rem;
+              font-size: 1.3rem;
           }
       }
       .type {
@@ -87,7 +87,7 @@ section#profile {
                       legend {
                           padding-left: .5rem;
                           padding-right: .5rem;
-                          margin-left: 1.5rem;
+                          margin-left: 1rem;
                           font-size: .9rem;
                           letter-spacing: .7px;
                           color: #505150;
@@ -176,6 +176,16 @@ section#profile {
                       min-height: 10rem;
                       transition: .2s ease-in;
                       &:hover {
+                          background: rgba(245, 244, 241, 0.5);
+                          border: none;
+                          .new-address {
+                              color: #303133;
+                              svg {
+                                  >path {
+                                      stroke: black;
+                                  }
+                              }
+                          }
                       }
                       .new-address {
                           margin-bottom: 0;
@@ -183,6 +193,17 @@ section#profile {
                           font-size: .85rem;
                           letter-spacing: .44px;
                           color: #505154;
+                          display: flex;
+                          align-items: center;
+                          gap: 1rem;
+                          svg {
+                              width: 1.3rem;
+                              height: 1.3rem;
+                              >path {
+                                  transition: .2s ease-in;
+                              }
+                          }
+
                       }
                   }
               }
@@ -455,6 +476,9 @@ section#profile {
                           display: flex;
                           gap: 1rem;
                           .main-btn {
+                              width: 60%;
+                          }
+                          .primary-btn {
                               width: 100%;
                           }
                       }
@@ -516,10 +540,10 @@ section#profile {
   }
 
     .faq {
-        margin: 5rem 10.5rem 0;
+        margin: 8rem 10.5rem 0rem;
         &:last-child {
             border-bottom: 1px solid #505154;
-            margin-bottom: 4rem;
+            margin-bottom: 8rem;
         }
         .questions {
             border-top: 1px solid #505154;

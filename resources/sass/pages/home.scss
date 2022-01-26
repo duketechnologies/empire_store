@@ -26,6 +26,18 @@ section#home {
     }
     .hero-main {
         position: relative;
+        .swiper-button-next {
+            position: absolute;
+            top:45%;
+            right: 2rem;
+            opacity: 0;
+        }
+        .swiper-button-prev {
+            position: absolute;
+            top:45%;
+            left: 2rem;
+            opacity: 0;
+        }
         .hero {
             height: 93vh;
             background-color: white;
@@ -35,8 +47,6 @@ section#home {
             margin: 0 2.2rem;
             border-radius: 0.6rem;
             position: relative;
-
-
             h1 {
                 font-family: Spectral, italic;
                 font-size: 3.9rem;
@@ -143,6 +153,7 @@ section#home {
 
                       >path {
                           stroke: black;
+                          opacity: 1;
                           transition: .2s ease-in;
                       }
                   }
@@ -445,10 +456,12 @@ section#home {
           font-size: 1.3rem;
           font-weight: 500;
           margin-top: 2rem;
+            text-align: center;
         }
         .price {
           margin-top: 1rem;
           font-weight: 500;
+            text-align: center;
         }
         .count {
           display: flex;
@@ -480,19 +493,14 @@ section#home {
         }
       }
       .info {
-        max-width: 13rem;
         margin-left: 1.5rem;
+          display: flex;
+          flex-direction: column;
         p {
-          font-size: .9rem;
-          line-height: 1.3rem;
-          letter-spacing: .7px;
-          color: #505154;
-          &:last-child {
-            color : #303133;
+            color : #505154;
+            font-size: .95rem;
             line-height: 1.4rem;
             letter-spacing: .44px;
-            margin-top: 2.3rem;
-          }
         }
       }
     }

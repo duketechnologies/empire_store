@@ -281,18 +281,7 @@ header.header {
         flex-direction: column;
         transform: translateX(-30rem);
         transition: transform .3s ease-in;
-        &::before {
-            display: block;
-            content: "";
-            position: fixed;
-            width: calc(100% - 23.5rem);
-            height: 100vh;
-            background-color: black;
-            opacity: .1;
-            top:0;
-            right: 0;
-            z-index: -1;
-        }
+
         #close-menu {
             max-width: fit-content;
             padding: .7rem;
@@ -377,6 +366,18 @@ header.header {
     }
     .menu.active {
         transform: translateX(0rem);
+        &::before {
+            display: block;
+            content: "";
+            position: fixed;
+            width: calc(100% - 23.5rem);
+            height: 100vh;
+            background-color: red;
+            opacity: .1;
+            top:0;
+            right: 0;
+            z-index: -1;
+        }
     }
 }
 @keyframes opacity {

@@ -62,16 +62,48 @@
             display: flex;
             align-items: flex-start;
             gap:1rem;
+            input[type=checkbox] {
+                display: none;
+                margin-top: .3rem;
+            }
             label {
                 font-size: .95rem;
                 color: #505154;
                 letter-spacing: .7px;
                 line-height: 1.7rem;
                 text-align: left;
+
+                cursor: pointer;
+                position: relative;
+                padding-left: 1.8rem;
+                &::before {
+                    content: "";
+                    outline: none;
+                    display: inline-block;
+                    width: .3rem;
+                    height: .3rem;
+                    position: absolute;
+                    left: 0;
+                    top:.38rem;
+                    background-color: white;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                    outline: 1px solid #939393;
+                    padding: 0.2rem;
+                    transition: .2s ease-in;
+                }
                 span {
                     background-color: white;
                     padding: .3rem .2rem;
                 }
+            }
+            input[type=checkbox]:checked + label::before {
+                background-color: black;
+
+            }
+            input[type=checkbox]:hover + label::before {
+                background-color: rgba(0,0,0, .2);
+
             }
         }
     }
