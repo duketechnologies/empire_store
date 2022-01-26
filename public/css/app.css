@@ -681,42 +681,51 @@ header.header .wrapper .links .nav li a {
 header.header .wrapper .links .nav li a:hover {
   background-color: #F5F4F1;
 }
-header.header .wrapper .links input {
+header.header .wrapper .links form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  max-width: 29rem;
+  margin: 0 auto;
+  border-radius: 999rem;
+  gap: 1rem;
+  border: 1px solid #DEDCD8;
+  position: relative;
+}
+header.header .wrapper .links form svg {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 1rem;
+  z-index: 1;
+}
+header.header .wrapper .links form input {
   border-radius: 9.8rem;
   outline: none;
-  border: 1px solid #DEDCD8;
+  border: none;
   background-color: inherit;
-  padding: 1rem 1rem 1rem 2.5rem;
   width: 20rem;
   transition: 0.2s ease-in-out;
   position: relative;
+  padding: 1rem 1rem 1rem 2.5rem;
 }
-header.header .wrapper .links input::before {
-  content: "";
-  background-image: url("/i/icons/search_icon.png");
-  background-repeat: no-repeat;
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 1rem;
-  height: 1rem;
-}
-header.header .wrapper .links input::-moz-placeholder {
+header.header .wrapper .links form input::-moz-placeholder {
   font-size: 0.9rem;
   color: #939393;
 }
-header.header .wrapper .links input:-ms-input-placeholder {
+header.header .wrapper .links form input:-ms-input-placeholder {
   font-size: 0.9rem;
   color: #939393;
 }
-header.header .wrapper .links input::placeholder {
+header.header .wrapper .links form input::placeholder {
   font-size: 0.9rem;
   color: #939393;
 }
-header.header .wrapper .links input:hover {
+header.header .wrapper .links form input:hover {
   background-color: white;
 }
-header.header .wrapper .links input:focus {
+header.header .wrapper .links form input:focus {
   background-color: white;
 }
 header.header .wrapper .info {
@@ -806,6 +815,8 @@ header.header .search-block {
   padding: 1.6rem 2.3rem;
   transform: translateY(-34rem);
   transition: transform 0.3s ease-in;
+  position: relative;
+  z-index: 3;
 }
 header.header .search-block .left_side {
   width: 100%;
@@ -1824,43 +1835,50 @@ section#faq .type .links li a:hover {
 section#faq .type .links li a.active {
   background-color: #F5F4F1;
 }
-section#faq .type input {
+section#faq .type form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  max-width: 29rem;
+  border-radius: 999rem;
+  gap: 1rem;
+  position: relative;
+}
+section#faq .type form svg {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  left: 1rem;
+  z-index: 1;
+}
+section#faq .type form input {
   border-radius: 9.8rem;
   outline: none;
-  border: transparent;
+  border: none;
   background-color: white;
-  padding: 1rem 1rem 1rem 2.5rem;
   width: 20rem;
   transition: 0.2s ease-in-out;
   position: relative;
+  padding: 1rem 1rem 1rem 2.5rem;
 }
-section#faq .type input::before {
-  content: "";
-  background-image: url("/i/icons/search_icon.png");
-  background-repeat: no-repeat;
-  left: 0;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-}
-section#faq .type input::-moz-placeholder {
+section#faq .type form input::-moz-placeholder {
   font-size: 0.9rem;
   color: #939393;
 }
-section#faq .type input:-ms-input-placeholder {
+section#faq .type form input:-ms-input-placeholder {
   font-size: 0.9rem;
   color: #939393;
 }
-section#faq .type input::placeholder {
+section#faq .type form input::placeholder {
   font-size: 0.9rem;
   color: #939393;
 }
-section#faq .type input:hover {
+section#faq .type form input:hover {
   background-color: white;
 }
-section#faq .type input:focus-visible {
-  border: none;
-  outline: none;
+section#faq .type form input:focus {
+  background-color: white;
 }
 section#faq .faq {
   margin: 0 10.5rem;
@@ -4495,7 +4513,7 @@ section#item .content .offer__description form .checkboxes div {
   flex-direction: column;
   align-items: center;
 }
-section#item .content .offer__description form .checkboxes input[type=checkbox] {
+section#item .content .offer__description form .checkboxes input[type=radio] {
   display: none;
 }
 section#item .content .offer__description form .checkboxes label {
@@ -4528,11 +4546,17 @@ section#item .content .offer__description form .checkboxes label::before {
   padding: 0.2rem;
   transition: 0.2s ease-in;
 }
-section#item .content .offer__description form .checkboxes input[type=checkbox]:checked + label::before {
+section#item .content .offer__description form .checkboxes input[type=radio] + label::before {
   background-color: black;
 }
-section#item .content .offer__description form .checkboxes input[type=checkbox]:hover + label::before {
-  background-color: rgba(0, 0, 0, 0.2);
+section#item .content .offer__description form .checkboxes input[type=radio]:checked + label::before {
+  outline: 1px solid black;
+}
+section#item .content .offer__description form .checkboxes .gold input[type=radio] + label::before {
+  background-color: #D1B538;
+}
+section#item .content .offer__description form .checkboxes .grey input[type=radio] + label::before {
+  background-color: #D7D9E0;
 }
 section#item .content .offer__description form .buttons {
   width: 100%;
@@ -5804,7 +5828,7 @@ section#ordering .content {
   gap: 4rem;
   margin: 0 10.5rem 8rem;
 }
-section#ordering .content input[type=checkbox] {
+section#ordering .content input[type=radio] {
   display: none;
 }
 section#ordering .content label {
@@ -5843,13 +5867,13 @@ section#ordering .content label::before {
   padding: 0.2rem;
   transition: 0.2s ease-in;
 }
-section#ordering .content input[type=checkbox] + label::before {
+section#ordering .content input[type=radio] + label::before {
   background-color: #D7D9E0;
 }
-section#ordering .content input[type=checkbox]:checked + label::before {
+section#ordering .content input[type=radio]:checked + label::before {
   background-color: #27AE60;
 }
-section#ordering .content input[type=checkbox]:hover + label::before {
+section#ordering .content input[type=radio]:hover + label::before {
   background-color: rgba(0, 0, 0, 0.2);
 }
 section#ordering .content .left_side {
@@ -5949,6 +5973,12 @@ section#ordering .content .left_side .profile-info .another {
   border-radius: 8px;
   margin: 0.5rem;
   position: relative;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  display: none;
+}
+section#ordering .content .left_side .profile-info .another.hidden {
+  opacity: 0;
 }
 section#ordering .content .left_side .profile-info .another svg {
   width: 1.5rem;
@@ -5974,7 +6004,6 @@ section#ordering .content .left_side .profile-info .another .last {
 }
 section#ordering .content .left_side .profile-info button {
   width: 100%;
-  display: flex;
   justify-content: space-between;
   padding: 0 2rem;
   margin: 2rem 3rem 3rem 1rem;
@@ -5987,7 +6016,12 @@ section#ordering .content .left_side .profile-info button {
   position: relative;
   white-space: nowrap;
   gap: 1rem;
-  display: none;
+  display: flex;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+section#ordering .content .left_side .profile-info button.hidden {
+  opacity: 0;
 }
 section#ordering .content .left_side .profile-info button:hover {
   color: black;

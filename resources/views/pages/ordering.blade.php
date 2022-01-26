@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="another">
+                    <div class="another ">
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 6L6 18" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M6 6L18 18" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,17 +83,17 @@
                         Способ доставки</p>
                     <div class="blocks">
                         <div>
-                            <input type="checkbox" name="craft-package" id="20$"/>
+                            <input type="radio" name="craft-package" id="20$"/>
                             <label for="20$"><span>CDEK - 20$</span> <br/> 5 дней</label>
                             <p class="info">Мы работаем с понедельника по пятницу, исключая выходные</p>
                         </div>
                         <div>
-                            <input type="checkbox" name="craft-package" id="10$"/>
+                            <input type="radio" name="craft-package" id="10$"/>
                             <label for="10$"><span>ПОЧТА EMS - 10$</span> <br/> 5 дней</label>
                             <p class="info">Мы работаем с понедельника по пятницу, исключая выходные</p>
                         </div>
                         <div>
-                            <input type="checkbox" name="craft-package" id="free"/>
+                            <input type="radio" name="craft-package" id="free"/>
                             <label for="free"><span>Самовывоз</span> <br/> с 23 января</label>
                             <p class="info">Мы работаем с понедельника по пятницу, исключая выходные</p>
                         </div>
@@ -163,7 +163,7 @@
                 </p>
                 <div class="payment">
                     <div class="payment__method">
-                        <input type="checkbox" name="craft-package" id="online"/>
+                        <input type="radio" name="craft-package2" id="online"/>
                         <label for="online"><span>Оплата онлайн</span></label>
                         <div class="cards">
                             <img src="/i/ordering/visa.png" alt=""/>
@@ -176,12 +176,12 @@
                         <a href="#" class="link-btn">О безопасной оплате</a>
                     </div>
                     <div class="payment__method">
-                        <input type="checkbox" name="craft-package" id="upon"/>
+                        <input type="radio" name="craft-package2" id="upon"/>
                         <label for="upon"><span>Оплата при получении</span></label>
                         <p>Оплата при получении заказа (копирайт изменим в процессе)</p>
                     </div>
                     <div class="payment__method">
-                        <input type="checkbox" name="craft-package" id="check"/>
+                        <input type="radio" name="craft-package2" id="check"/>
                         <label for="check"><span>Счет на оплату</span></label>
                         <p>Для юридический лиц копирайт Инфо о том в какой срок предположительно будет выставлен счет для оплаты</p>
                     </div>

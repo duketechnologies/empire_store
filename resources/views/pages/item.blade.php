@@ -66,16 +66,16 @@
                     </ul>
                     <form method="POST" action="#">
                         <div class="checkboxes">
-                            <div>
-                                <input type="checkbox" name="gold" id="gold">
+                            <div class="gold">
+                                <input type="radio" name="group1" id="gold">
                                 <label for="gold">Золотой</label>
                             </div>
                             <div>
-                                <input type="checkbox" name="black" id="black">
+                                <input type="radio" name="group1" id="black">
                                 <label for="black">Черный</label>
                             </div>
-                            <div>
-                                <input type="checkbox" name="grey" id="grey">
+                            <div class="grey">
+                                <input type="radio" name="group1" id="grey">
                                 <label for="grey">Серый</label>
                             </div>
                         </div>
@@ -106,11 +106,6 @@
             </div>
         </div>
         <div class="info">
-{{--            <div class="links">--}}
-{{--                <a href="/">Главная </a> •--}}
-{{--                <a href="/">Декор</a> •--}}
-{{--                <a href="/">Ваза Тұлпар</a>--}}
-{{--            </div>--}}
             <p class="description">Изящная и грациозная статуэтка девушки в национальном костюме отличается стилем,
                 в котором традиции и классика сочетаются с современным дизайном, искусно сливаясь в единое целое.
                 Плавность линий, формы непревзойденной красоты и тончайшая проработка каждого элемента позволят

@@ -56446,12 +56446,14 @@ $(document).ready(function () {
   var craft = document.querySelectorAll('.product__package');
   var craftInput = document.querySelectorAll('.product__package input');
   var craftLabel = document.querySelectorAll('.product__package label');
+  var another_svg = document.querySelector('.another svg');
+  var another_block = document.querySelector('.another');
+  var another_btn = document.querySelector('#another-btn');
   craftLabel.forEach(function (item, index) {
     item.addEventListener('click', function (e) {
       craft[index].classList.toggle('active');
     });
   });
-  console.log(craft);
   $('[data-open-block]').on('click', function () {
     var activeCls = 'is-active';
     $('[data-content]').removeClass(activeCls);
@@ -56557,7 +56559,26 @@ $(document).ready(function () {
   close_btn ? close_btn.addEventListener('click', function (e) {
     e.preventDefault();
     menu.classList.remove("active");
-  }) : null; // const open = menu.classList.contains('active')
+  }) : null;
+  console.log(document.querySelector('#another-btn'));
+  another_svg.addEventListener('click', function (e) {
+    e.preventDefault();
+    another_block.classList.add('hidden');
+    another_btn.classList.remove('hidden');
+    setTimeout(function () {
+      another_block.style.display = "none";
+      another_btn.style.display = 'flex';
+    }, 350);
+  });
+  another_btn.addEventListener('click', function (e) {
+    e.preventDefault();
+    another_btn.classList.add('hidden');
+    another_block.classList.remove('hidden');
+    setTimeout(function () {
+      another_btn.style.display = 'none';
+      another_block.style.display = 'block';
+    }, 350);
+  }); // const open = menu.classList.contains('active')
   //
   // if ( open ) {
   // document.addEventListener('click', () => {

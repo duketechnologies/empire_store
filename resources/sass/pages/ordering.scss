@@ -26,7 +26,7 @@ section#ordering {
         justify-content: space-between;
         gap: 4rem;
         margin:0 10.5rem 8rem;
-        input[type=checkbox] {
+        input[type=radio] {
             display: none;
         }
         label {
@@ -62,14 +62,14 @@ section#ordering {
                 transition: .2s ease-in;
             }
         }
-        input[type=checkbox]+label::before {
+        input[type=radio]+label::before {
             background-color: #D7D9E0;
         }
-        input[type=checkbox]:checked+label::before {
+        input[type=radio]:checked+label::before {
             background-color: #27AE60;
 
         }
-        input[type=checkbox]:hover+label::before {
+        input[type=radio]:hover+label::before {
             background-color: rgba(0,0,0, .2);
 
         }
@@ -169,6 +169,13 @@ section#ordering {
                     border-radius: 8px;
                     margin: .5rem;
                     position: relative;
+                    opacity: 1;
+                    transition: .3s ease-in-out;
+                    display: none;
+                    &.hidden {
+                        opacity: 0;
+                    }
+
                     svg {
                         width: 1.5rem;
                         height: 1.5rem;
@@ -195,7 +202,6 @@ section#ordering {
                 }
                 button {
                     width: 100%;
-                    display: flex;
                     justify-content: space-between;
                     padding: 0 2rem;
                     margin:2rem 3rem 3rem 1rem;
@@ -208,13 +214,20 @@ section#ordering {
                     position: relative;
                     white-space: nowrap;
                     gap: 1rem;
-                    display: none;
+                    display: flex;
+                    opacity: 1;
+                    transition: .3s ease-in-out;
+
+                    &.hidden {
+                        opacity: 0;
+                    }
                     &:hover {
                         color: black;
                         span {
                             background-color: black;
                         }
                     }
+
                     span {
                         position: relative;
                         //right: 1rem;
@@ -257,52 +270,6 @@ section#ordering {
                             line-height: 1.45rem;
                         }
                     }
-                    //input[type=checkbox] {
-                    //    display: none;
-                    //}
-                    //label {
-                    //    outline: none;
-                    //    display: inline-block;
-                    //    cursor: pointer;
-                    //    position: relative;
-                    //    line-height: 1.3rem;
-                    //    letter-spacing: .7px;
-                    //    user-select: none;
-                    //    padding: 1rem 1.5rem 1rem 2rem;
-                    //    font-size: .85rem;
-                    //    font-weight: 400;
-                    //    color: #505154;
-                    //    span {
-                    //        font-weight: 600;
-                    //    }
-                    //    &::before {
-                    //        content: "";
-                    //        outline: none;
-                    //        display: inline-block;
-                    //        width: .2rem;
-                    //        height: .2rem;
-                    //        position: absolute;
-                    //        left: 0rem;
-                    //        top: 1.25rem;
-                    //        background-color: white;
-                    //        border-radius: 50%;
-                    //        border: 2px solid white;
-                    //        outline: 1px solid #939393;
-                    //        padding: 0.2rem;
-                    //        transition: .2s ease-in;
-                    //    }
-                    //}
-                    //input[type=checkbox]+label::before {
-                    //    background-color: #D7D9E0;
-                    //}
-                    //input[type=checkbox]:checked+label::before {
-                    //    background-color: #27AE60;
-                    //
-                    //}
-                    //input[type=checkbox]:hover+label::before {
-                    //    background-color: rgba(0,0,0, .2);
-                    //
-                    //}
                 }
             }
             .pickup {
