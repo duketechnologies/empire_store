@@ -138,6 +138,30 @@ header.header {
                         }
                     }
                 }
+                .language {
+                    position: relative;
+                    &:hover {
+                        div {
+                            display: flex;
+                        }
+                    }
+                    div {
+                        position: absolute;
+                        background-color: white;
+                        right: 2.9rem;
+                        bottom: 0;
+                        border-radius: 8px 0 0 8px;
+                        display: none;
+                        animation: opacity .2s ease-in;
+                        border-right: 1px solid #F5F4F1;
+                        a {
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                }
             }
         }
     }
@@ -283,7 +307,7 @@ header.header {
     .menu {
         position: fixed;
         top: 0;
-        z-index: 10;
+        z-index: 1000;
         height: 100%;
         width: 23.5rem;
         padding-top: 2rem;
@@ -397,6 +421,15 @@ header.header {
     }
     to {
         opacity: 1;
+    }
+
+}
+@keyframes zero {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 
 }

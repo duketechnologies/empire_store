@@ -29,6 +29,12 @@ $(document).ready(function () {
     const another_svg = document.querySelector('.another svg')
     const another_block = document.querySelector('.another')
     const another_btn = document.querySelector('#another-btn')
+    const btn = document.querySelector('#form-wrap button');
+    const inputs = document.querySelectorAll('#form-wrap input');
+    const href = window.location.href
+
+
+
 
     craftLabel.forEach((item, index) => {
         item.addEventListener('click', function (e) {
@@ -127,7 +133,7 @@ $(document).ready(function () {
         },
 
     })
-    const href = window.location.href;
+
     if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies')) {
         faqs.forEach(faq => {
             faq.addEventListener('click', () => {
@@ -152,9 +158,9 @@ $(document).ready(function () {
         menu.classList.remove("active")
     }) : null
 
-    console.log(document.querySelector('#another-btn'))
 
-    another_svg.addEventListener('click', function (e) {
+
+    another_svg ? another_svg.addEventListener('click', function (e) {
         e.preventDefault()
         another_block.classList.add('hidden')
         another_btn.classList.remove('hidden')
@@ -163,8 +169,8 @@ $(document).ready(function () {
             another_btn.style.display = 'flex'
         }, 350)
 
-    })
-    another_btn.addEventListener('click', function (e) {
+    }) : null
+    another_btn ? another_btn.addEventListener('click', function (e) {
         e.preventDefault()
         another_btn.classList.add('hidden')
         another_block.classList.remove('hidden')
@@ -173,19 +179,53 @@ $(document).ready(function () {
             another_block.style.display = 'block'
         }, 350)
 
+    }) : null
+
+
+    document.querySelectorAll('.blocks input').forEach(item => {
+        item.addEventListener('click', e => {
+            if (item.id === 'free') {
+                document.querySelector('.pickup').style.display = 'flex'
+            } else {
+                document.querySelector('.pickup').style.display = 'none'
+            }
+        })
     })
 
+    document.querySelectorAll('.payment input').forEach(item => {
+        item.addEventListener('click', e => {
+            if (item.id === 'check') {
+                document.querySelector('.requisites').style.display = 'block'
+            } else {
+                document.querySelector('.requisites').style.display = 'none'
+            }
+        })
+    })
+    console.log(document.getElementById("form-wrap"))
+    // if (input4.value !== '') {
+    //     document.querySelector('#form-wrap button').disabled = false
+    // }
 
 
-// const open = menu.classList.contains('active')
-//
-// if ( open ) {
-// document.addEventListener('click', () => {
-//         // menu.style.transform = 'translateX(-29rem)'
-//     alert()
-// })
-//
-// }
+    document.addEventListener("DOMContentLoaded", () => {
+        all[0].focus()
+    });
+
+    all.forEach((input, index) => {
+        input.addEventListener("input", e => {
+            // фокус на след input
+            if ((index+1) < all.length) {
+                all[index+1].focus();
+            }
+            // все инпуты заполнены?
+            const isValid = all.every(el => el.value.trim());
+            // отключить кнопку и фокус на кнопку
+            btn.disabled = !isValid;
+            if (isValid) {
+                btn.focus()
+            }
+        })
+    })
 
 // let options = {
 //     width: 400, // required
@@ -196,4 +236,4 @@ $(document).ready(function () {
 //     // more options here
 // };
 // new ImageZoom(document.getElementById("img-container"), options);
-    });
+});

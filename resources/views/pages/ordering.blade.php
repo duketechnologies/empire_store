@@ -246,7 +246,7 @@
                     </div>
                     <div class="delivery_сost">
                         <span>Доставка</span>
-                        <p>Бесплатно по Алматы</p>
+                        <p class="green" >Бесплатно по Алматы</p>
                     </div>
                     <div class="total">
                         <span>Итого</span>

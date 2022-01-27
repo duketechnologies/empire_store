@@ -381,10 +381,10 @@
     <div class="wrapper">
         <h3>Введите пароль из смс</h3>
         <form method="POST" action="#" id="form-wrap">
-            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
-            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
-            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
-            <input type="tel" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <input type="tel" id="input1" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <input type="tel" id="input2" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <input type="tel" id="input3" name="login-phone-sms" placeholder="-" maxlength="1"/>
+            <input type="tel" id="input4" name="login-phone-sms" placeholder="-" maxlength="1"/>
             <button type="submit" disabled>
                 <svg viewBox="0 0 20 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 4.06641L18 4.06641" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -649,17 +649,19 @@
         <div class="swiper-scrollbar"></div>
     </div>
     <form method="POST" action="#">
-        <div>
-            <input type="checkbox" name="color-gold" id="color-gold"/>
-            <label id="color-gold"></label>
-        </div>
-        <div>
-            <input type="checkbox" name="color-black" id="color-black"/>
-            <label id="color-black"></label>
-        </div>
-        <div>
-            <input type="checkbox" name="color-grey" id="color-grey"/>
-            <label id="color-grey"></label>
+        <div class="checkboxes">
+            <div class="gold">
+                <input type="radio" name="group2" id="color-gold">
+                <label for="color-gold">Золотой</label>
+            </div>
+            <div>
+                <input type="radio" name="group2" id="color-black">
+                <label for="color-black">Черный</label>
+            </div>
+            <div class="grey">
+                <input type="radio" name="group2" id="color-grey">
+                <label for="color-grey">Серый</label>
+            </div>
         </div>
     </form>
 </div>

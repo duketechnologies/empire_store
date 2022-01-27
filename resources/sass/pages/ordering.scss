@@ -276,9 +276,10 @@ section#ordering {
                 background-color: white;
                 margin-top: .4rem;
                 border-radius: 0 0 8px 8px;
-                display: flex;
+                display: none;
                 flex-direction: column;
                 padding: 3rem 3rem 1rem;
+                animation: opacity .3s linear;
                 div {
                     margin-bottom: 1.5rem;
                     .name {
@@ -465,6 +466,8 @@ section#ordering {
                 background-color: white;
                 border-radius: 8px;
                 padding: 3rem;
+                display: none;
+                animation: opacity .3s ease-in;
                 .title {
                 }
                 .grid {
@@ -532,13 +535,6 @@ section#ordering {
                     margin-bottom: 1.5rem;
                 }
 
-                .delivery_cost {
-                    p {
-                        color: #27AE60;
-                        font-size: .95rem;
-                        font-weight: 400;
-                    }
-                }
                 button {
                     width: 100%;
                     display: flex;
@@ -565,6 +561,11 @@ section#ordering {
                 }
                 .total {
                     margin-bottom: 3rem;
+                }
+                .green {
+                    color: #27AE60;
+                    font-size: .95rem;
+                    font-weight: 400;
                 }
             }
         }
@@ -667,4 +668,13 @@ section#ordering {
             }
         }
     }
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
 }

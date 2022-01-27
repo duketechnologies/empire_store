@@ -56449,6 +56449,9 @@ $(document).ready(function () {
   var another_svg = document.querySelector('.another svg');
   var another_block = document.querySelector('.another');
   var another_btn = document.querySelector('#another-btn');
+  var btn = document.querySelector('#form-wrap button');
+  var inputs = document.querySelectorAll('#form-wrap input');
+  var href = window.location.href;
   craftLabel.forEach(function (item, index) {
     item.addEventListener('click', function (e) {
       craft[index].classList.toggle('active');
@@ -56536,7 +56539,6 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev'
     }
   });
-  var href = window.location.href;
 
   if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies')) {
     faqs.forEach(function (faq) {
@@ -56560,8 +56562,7 @@ $(document).ready(function () {
     e.preventDefault();
     menu.classList.remove("active");
   }) : null;
-  console.log(document.querySelector('#another-btn'));
-  another_svg.addEventListener('click', function (e) {
+  another_svg ? another_svg.addEventListener('click', function (e) {
     e.preventDefault();
     another_block.classList.add('hidden');
     another_btn.classList.remove('hidden');
@@ -56569,8 +56570,8 @@ $(document).ready(function () {
       another_block.style.display = "none";
       another_btn.style.display = 'flex';
     }, 350);
-  });
-  another_btn.addEventListener('click', function (e) {
+  }) : null;
+  another_btn ? another_btn.addEventListener('click', function (e) {
     e.preventDefault();
     another_btn.classList.add('hidden');
     another_block.classList.remove('hidden');
@@ -56578,16 +56579,51 @@ $(document).ready(function () {
       another_btn.style.display = 'none';
       another_block.style.display = 'block';
     }, 350);
-  }); // const open = menu.classList.contains('active')
-  //
-  // if ( open ) {
-  // document.addEventListener('click', () => {
-  //         // menu.style.transform = 'translateX(-29rem)'
-  //     alert()
-  // })
-  //
+  }) : null;
+  document.querySelectorAll('.blocks input').forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      if (item.id === 'free') {
+        document.querySelector('.pickup').style.display = 'flex';
+      } else {
+        document.querySelector('.pickup').style.display = 'none';
+      }
+    });
+  });
+  document.querySelectorAll('.payment input').forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      if (item.id === 'check') {
+        document.querySelector('.requisites').style.display = 'block';
+      } else {
+        document.querySelector('.requisites').style.display = 'none';
+      }
+    });
+  });
+  console.log(document.getElementById("form-wrap")); // if (input4.value !== '') {
+  //     document.querySelector('#form-wrap button').disabled = false
   // }
-  // let options = {
+
+  document.addEventListener("DOMContentLoaded", function () {
+    all[0].focus();
+  });
+  all.forEach(function (input, index) {
+    input.addEventListener("input", function (e) {
+      // фокус на след input
+      if (index + 1 < all.length) {
+        all[index + 1].focus();
+      } // все инпуты заполнены?
+
+
+      var isValid = all.every(function (el) {
+        return el.value.trim();
+      }); // отключить кнопку и фокус на кнопку
+
+      btn.disabled = !isValid;
+
+      if (isValid) {
+        btn.focus();
+      }
+    });
+  }); // let options = {
   //     width: 400, // required
   //     height: 500,
   //     zoomWidth: 500,

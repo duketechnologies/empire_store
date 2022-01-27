@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="product__color">
-                    <p><span class="span-1"><span class="span-2"></span></span>Золотой</p>
+                    <p>-</p>
                 </div>
                 <div class="product__price">
                     <p>5 000 000	₸</p>

@@ -578,7 +578,7 @@ li {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 0.9rem;
   background-color: white;
   border-radius: 8px;
 }
@@ -786,6 +786,26 @@ header.header .wrapper .info .profile li a:hover svg > path {
 header.header .wrapper .info .profile li a:hover svg > g > path {
   stroke: black;
 }
+header.header .wrapper .info .profile .language {
+  position: relative;
+}
+header.header .wrapper .info .profile .language:hover div {
+  display: flex;
+}
+header.header .wrapper .info .profile .language div {
+  position: absolute;
+  background-color: white;
+  right: 2.9rem;
+  bottom: 0;
+  border-radius: 8px 0 0 8px;
+  display: none;
+  -webkit-animation: opacity 0.2s ease-in;
+          animation: opacity 0.2s ease-in;
+  border-right: 1px solid #F5F4F1;
+}
+header.header .wrapper .info .profile .language div a:hover {
+  text-decoration: underline;
+}
 header.header .wrapper.active .logo svg > path {
   fill: white;
 }
@@ -916,7 +936,7 @@ header.header .search-block .right_side .product p {
 header.header .menu {
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
   height: 100%;
   width: 23.5rem;
   padding-top: 2rem;
@@ -1039,6 +1059,22 @@ header.header .menu.active::before {
     opacity: 1;
   }
 }
+@-webkit-keyframes zero {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes zero {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .footer {
   border-top: 1px solid #E0E0E0;
   width: 100%;
@@ -1068,9 +1104,11 @@ header.header .menu.active::before {
   border-right: 1px solid #E0E0E0;
   padding: 5.2rem 4.8rem 4rem 0;
 }
-.footer .wrapper .links img {
-  max-width: 4.2rem;
-  margin-bottom: 1.4rem;
+.footer .wrapper .links svg {
+  width: 5.2rem;
+  height: 0.8rem;
+  margin-bottom: 1rem;
+  margin-left: 0.55rem;
 }
 .footer .wrapper .offer {
   display: flex;
@@ -1085,6 +1123,7 @@ header.header .menu.active::before {
   letter-spacing: 0.44px;
   font-size: 0.95rem;
   margin-bottom: 1.4rem;
+  margin-left: 0.6rem;
 }
 .footer .wrapper .subscribe {
   border-left: 1px solid #E0E0E0;
@@ -1130,14 +1169,35 @@ header.header .menu.active::before {
   display: flex;
   align-items: center;
   margin-top: 4.4rem;
-  gap: 2.5rem;
+  gap: 1.5rem;
+}
+.footer .wrapper .subscribe .media li:hover {
+  background-color: transparent;
 }
 .footer .wrapper .subscribe .media a:hover svg > path {
+  fill: black;
+}
+.footer .wrapper .subscribe .media .insta svg > rect {
+  transition: 0.2s ease-in;
+}
+.footer .wrapper .subscribe .media .insta svg > path {
+  transition: 0.2s ease-in;
+}
+.footer .wrapper .subscribe .media .insta:hover svg > rect {
+  fill: black;
+}
+.footer .wrapper .subscribe .media .insta:hover svg > path {
+  fill: white;
+}
+.footer .wrapper .subscribe .media .insta:hover svg > path:first-child {
   fill: black;
 }
 .footer .wrapper .subscribe .media svg {
   width: 1.2rem;
   height: 1.22rem;
+}
+.footer .wrapper .subscribe .media svg > path {
+  transition: 0.2s ease-in;
 }
 .footer .copyright {
   display: flex;
@@ -4449,6 +4509,16 @@ section#item .content .swiper-product {
   width: 100%;
   overflow: hidden;
 }
+section#item .content #img-container {
+  position: relative;
+}
+section#item .content #img-container svg {
+  width: 1.1rem;
+  height: 1.2rem;
+  position: absolute;
+  right: 2.5rem;
+  top: 2rem;
+}
 section#item .content .large-img {
   width: 100%;
   display: flex;
@@ -4529,6 +4599,8 @@ section#item .content .offer__description form .checkboxes label {
       -ms-user-select: none;
           user-select: none;
   margin-top: 2rem;
+  color: white;
+  transition: color 0.2s ease-in;
 }
 section#item .content .offer__description form .checkboxes label::before {
   content: "";
@@ -4551,6 +4623,9 @@ section#item .content .offer__description form .checkboxes input[type=radio] + l
 }
 section#item .content .offer__description form .checkboxes input[type=radio]:checked + label::before {
   outline: 1px solid black;
+}
+section#item .content .offer__description form .checkboxes input[type=radio]:checked + label {
+  color: black;
 }
 section#item .content .offer__description form .checkboxes .gold input[type=radio] + label::before {
   background-color: #D1B538;
@@ -4616,6 +4691,10 @@ section#item .content .item-breadcrumbs a {
   font-size: 0.95rem;
   letter-spacing: 0.7px;
   color: #939393;
+  transition: 0.2s ease-in;
+}
+section#item .content .item-breadcrumbs a:hover {
+  color: black;
 }
 section#item .content .item-breadcrumbs a::before {
   content: "•";
@@ -5095,7 +5174,7 @@ section#address .map .info .boutique__contacts a {
 section#address .map .info .boutique__contacts a:hover {
   border-bottom: 1px solid black;
 }
-section#address .map ymaps {
+section#address .map .ymaps {
   border-radius: 16px;
   max-width: 85rem;
   max-height: 47rem;
@@ -6073,9 +6152,11 @@ section#ordering .content .left_side .pickup {
   background-color: white;
   margin-top: 0.4rem;
   border-radius: 0 0 8px 8px;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 3rem 3rem 1rem;
+  -webkit-animation: opacity 0.3s linear;
+          animation: opacity 0.3s linear;
 }
 section#ordering .content .left_side .pickup div {
   margin-bottom: 1.5rem;
@@ -6261,6 +6342,9 @@ section#ordering .content .left_side .requisites {
   background-color: white;
   border-radius: 8px;
   padding: 3rem;
+  display: none;
+  -webkit-animation: opacity 0.3s ease-in;
+          animation: opacity 0.3s ease-in;
 }
 section#ordering .content .left_side .requisites .grid {
   display: grid;
@@ -6323,11 +6407,6 @@ section#ordering .content .right_side .sum div {
   align-self: center;
   margin-bottom: 1.5rem;
 }
-section#ordering .content .right_side .sum .delivery_cost p {
-  color: #27AE60;
-  font-size: 0.95rem;
-  font-weight: 400;
-}
 section#ordering .content .right_side .sum button {
   width: 100%;
   display: flex;
@@ -6352,6 +6431,11 @@ section#ordering .content .right_side .sum button span svg {
 }
 section#ordering .content .right_side .sum .total {
   margin-bottom: 3rem;
+}
+section#ordering .content .right_side .sum .green {
+  color: #27AE60;
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 section#ordering .faq {
   margin: 5rem 10.5rem 0;
@@ -6445,6 +6529,14 @@ section#ordering .consultaion .call form .main-btn {
   font-weight: 500;
 }
 
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 section#test {
   margin: 3rem 10.5rem;
   display: flex;
@@ -8098,17 +8190,29 @@ section#test .links a span {
 .remodal[data-remodal-id=Zoom-popup] form {
   display: flex;
   align-items: center;
-  gap: 5rem;
+  gap: 4rem;
   position: absolute;
-  bottom: 5rem;
-  right: 8rem;
+  bottom: 2rem;
+  right: 4rem;
 }
-.remodal[data-remodal-id=Zoom-popup] form input[type=checkbox] {
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes input[type=radio] {
   display: none;
 }
-.remodal[data-remodal-id=Zoom-popup] form label {
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes label {
   outline: none;
-  font-weight: 300;
+  font-size: 0.95rem;
   display: inline-block;
   cursor: pointer;
   position: relative;
@@ -8118,16 +8222,19 @@ section#test .links a span {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin-top: 2rem;
+  color: white;
+  transition: color 0.2s ease-in;
 }
-.remodal[data-remodal-id=Zoom-popup] form label::before {
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes label::before {
   content: "";
   outline: none;
   display: inline-block;
-  width: 0.4rem;
-  height: 0.4rem;
+  width: 0.5rem;
+  height: 0.5rem;
   position: absolute;
-  left: 1.5rem;
-  top: 1.1rem;
+  top: -1.5rem;
+  left: 1.2rem;
   background-color: white;
   border-radius: 50%;
   border: 2px solid white;
@@ -8135,11 +8242,17 @@ section#test .links a span {
   padding: 0.2rem;
   transition: 0.2s ease-in;
 }
-.remodal[data-remodal-id=Zoom-popup] form input[type=checkbox]:checked + label::before {
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes input[type=radio] + label::before {
   background-color: black;
 }
-.remodal[data-remodal-id=Zoom-popup] form input[type=checkbox]:hover + label::before {
-  background-color: rgba(0, 0, 0, 0.2);
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes input[type=radio]:checked + label::before {
+  outline: 1px solid black;
+}
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes .gold input[type=radio] + label::before {
+  background-color: #D1B538;
+}
+.remodal[data-remodal-id=Zoom-popup] form .checkboxes .grey input[type=radio] + label::before {
+  background-color: #D7D9E0;
 }
 
 .remodal[data-remodal-id=edit-order] {
