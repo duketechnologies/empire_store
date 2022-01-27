@@ -822,7 +822,7 @@ header.header .wrapper.active .profile svg > g > path {
   stroke: white;
 }
 header.header .wrapper.active input {
-  background-color: white;
+  background-color: white !important;
 }
 header.header .search-block {
   margin-top: 0.4rem;
