@@ -7,7 +7,7 @@ section#item {
         .large-prev-btn {
             position: absolute;
             top: 50%;
-            left: 8rem;
+            left: 4rem;
         }
         .large-next-btn {
             position: absolute;
@@ -50,6 +50,10 @@ section#item {
         .swiper-product {
             width: 100%;
             overflow: hidden;
+        }
+        #img-container2 {
+            img {
+            }
         }
         .large-img {
             width: 100%;

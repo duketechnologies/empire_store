@@ -28,13 +28,13 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <div id="img-container">
-                                <div class="large-img" id="img-container" style="width: 400px" data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
+                            <div id="img-container2">
+                                <div class="large-img"  data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div id="img-container">
-                                <div class="large-img" id="img-container"  data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
+                                <div class="large-img" data-remodal-target="Zoom-popup" style="background-image: url('/i/item/item-large.png')"></div>
                             </div>
                         </div>
                         <div class="swiper-slide">

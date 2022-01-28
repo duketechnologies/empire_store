@@ -35,3 +35,4 @@ Route::get('/basket', [HomeController::class, 'basket']);
 Route::get('/filters', [HomeController::class, 'filters']);
 Route::get('/ordering', [HomeController::class, 'ordering']);
 Route::get('/test', [HomeController::class, 'test']);
+Route::get('/image-test', [HomeController::class, 'imageTest']);

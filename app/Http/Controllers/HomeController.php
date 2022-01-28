@@ -80,4 +80,8 @@ class HomeController extends Controller
     {
         return view('pages.test');
     }
+    public function imageTest()
+    {
+        return view('pages.image-test');
+    }
 }

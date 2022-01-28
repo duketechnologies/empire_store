@@ -11,6 +11,7 @@ Swiper.use([Navigation, Pagination, Scrollbar]);
 import 'simplebar';
 import 'simplebar/dist/simplebar.css';
 // require('js-image-zoom')
+
 import ImageZoom from 'js-image-zoom'
 $(document).ready(function () {
 
@@ -65,6 +66,7 @@ $(document).ready(function () {
     search.onblur = function () {
         search_block.style.transform = "translateY(-34rem)"
     }
+
     const swiper = new Swiper('.swiper-box', {
         loop: true,
         slidesPerView: 1,
@@ -77,7 +79,6 @@ $(document).ready(function () {
         },
 
     });
-
     const swiperHero = new Swiper('.swiper-hero', {
         loop: true,
         slidesPerView: 1,
@@ -90,7 +91,6 @@ $(document).ready(function () {
         },
 
     });
-
     const swiperProduct = new Swiper('.swiper-product', {
         loop: true,
         slidesPerView: 1,
@@ -103,7 +103,6 @@ $(document).ready(function () {
         },
 
     });
-
     const swiperItem = new Swiper('.swiper-item', {
         loop: true,
         slidesPerView: 4,
@@ -148,9 +147,17 @@ $(document).ready(function () {
         })
     }
 
+    const close_menu = () => {
+        if(menu.classList.contains('active')){
+            document.addEventListener('click', () => {
+                menu.classList.remove('active')
+            })
+        }
+    }
     catalog.addEventListener('click', (e) => {
         e.preventDefault()
         menu.classList.add("active")
+        close_menu()
     })
 
     close_btn ? close_btn.addEventListener('click', (e) => {
@@ -158,12 +165,10 @@ $(document).ready(function () {
         menu.classList.remove("active")
     }) : null
 
+
     const openMenu = function() {
         menu.classList.add('active');
     }
-
-
-
 
     another_svg ? another_svg.addEventListener('click', function (e) {
         e.preventDefault()
@@ -185,7 +190,6 @@ $(document).ready(function () {
         }, 350)
 
     }) : null
-
 
     document.querySelectorAll('.blocks input').forEach(item => {
         item.addEventListener('click', e => {
@@ -224,16 +228,9 @@ $(document).ready(function () {
         })
     })
 
-    // document.querySelector('.sort').addEventListener('click', () => {
-    //     document.querySelector('.filter').classList.toggle('active')
-    // })
-    let options = {
-        width: 400, // required
-        height: 500,
-        zoomWidth: 500,
-        offset: {vertical:0 , horizontal: 10},
-        scale: 1.5,
-        // more options here
-    };
-    new ImageZoom(document.getElementById("img-container"), options);
+    if (href.includes('filter')) {
+        document.querySelector('.sort').addEventListener('click', () => {
+            document.querySelector('.filter').classList.toggle('active')
+        })
+    }
 });

@@ -56919,9 +56919,18 @@ $(document).ready(function () {
     });
   }
 
+  var close_menu = function close_menu() {
+    if (menu.classList.contains('active')) {
+      document.addEventListener('click', function () {
+        menu.classList.remove('active');
+      });
+    }
+  };
+
   catalog.addEventListener('click', function (e) {
     e.preventDefault();
     menu.classList.add("active");
+    close_menu();
   });
   close_btn ? close_btn.addEventListener('click', function (e) {
     e.preventDefault();
@@ -56986,23 +56995,13 @@ $(document).ready(function () {
         btn.focus();
       }
     });
-  }); // document.querySelector('.sort').addEventListener('click', () => {
-  //     document.querySelector('.filter').classList.toggle('active')
-  // })
+  });
 
-  var options = {
-    width: 400,
-    // required
-    height: 500,
-    zoomWidth: 500,
-    offset: {
-      vertical: 0,
-      horizontal: 10
-    },
-    scale: 1.5 // more options here
-
-  };
-  new (js_image_zoom__WEBPACK_IMPORTED_MODULE_4___default())(document.getElementById("img-container"), options);
+  if (href.includes('filter')) {
+    document.querySelector('.sort').addEventListener('click', function () {
+      document.querySelector('.filter').classList.toggle('active');
+    });
+  }
 });
 })();
 

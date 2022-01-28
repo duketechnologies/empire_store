@@ -4122,7 +4122,7 @@ section#item .content {
 section#item .content .large-prev-btn {
   position: absolute;
   top: 50%;
-  left: 8rem;
+  left: 4rem;
 }
 section#item .content .large-next-btn {
   position: absolute;
@@ -6002,6 +6002,10 @@ section#test .links a span {
   font-size: 0.8rem;
   text-transform: initial;
   color: #505154;
+}
+
+section#image-test img {
+  width: 100%;
 }
 
 /*pages*/
