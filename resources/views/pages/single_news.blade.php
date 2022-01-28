@@ -14,7 +14,7 @@
             <div class="main-img">
                 <img src="/i/news/single_4.png" alt=""/>
             </div>
-            <h1>Заголовок новости</h1>
+            <h1 class="title">Заголовок новости</h1>
             <div class="content">
                 <div>
                     <p>Уникальное издание, в котором слова великого классика и просветителя – Абая Кунанбаева,
@@ -77,16 +77,7 @@
             </div>
         </div>
 
-        <div class="consultaion">
-            <div class="call">
-                <h1>Нужна помощь ?</h1>
-                <p>Оставьте свой номер для связи с консультантом.<br/>Или поищите ответ на свой вопрос в <a href="/faq">разделе FAQ.</a></p>
-                <form method="POST" action="#">
-                    <input type="tel" name="phone" placeholder="Номер телефона"/>
-                    <button type="submit" class="main-btn">Заказать консультацию</button>
-                </form>
-            </div>
-        </div>
+        @include('partials.consultation')
     </section>
 
 @endsection

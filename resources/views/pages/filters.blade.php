@@ -18,7 +18,13 @@
         <div class="favorites">
             <div class="favorites__menu">
                 <div class="sort">
-                    <p>Сортировать • <span>по новозине</span></p>
+                    <div class="sort__title">Сортировать • <span>по новозине</span>
+                        <div class="filter">
+                            <a href="#">По новизне</a>
+                            <a href="#">Цена по убыванию</a>
+                            <a href="#">Цена по возрастанию</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="wrapper">
                     <div class="categories">
@@ -28,15 +34,30 @@
                             </svg>
                         </p>
                         <ul>
-                            <li>Панно</li>
-                            <li>Статуэтки</li>
-                            <li>Empire gallery</li>
-                            <li><a href="#">Все</a><span>(56)</span></li>
+                            <li><a href="#">Панно</a></li>
+                            <li><a href="#">Статуэтки</a></li>
+                            <li><a href="#">Empire gallery</a></li>
+                            <li><a href="#" class="all">Все</a><span>(56)</span></li>
                         </ul>
                     </div>
-                    <p class="title">Материал</p>
-                    <p class="title">Цвет</p>
-                    <p class="title">Коллекция</p>
+                    <p class="title">Материал
+                        <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </p>
+                    <p class="title">Цвет
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </p>
+                    <p class="title">Коллекция
+                        <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </p>
                 </div>
             </div>
             <div class="favorites__products">
@@ -203,5 +224,7 @@
                 </div>
             </div>
         </div>
+        @include('partials.consultation')
+        @include('partials.faq_block')
     </section>
 @endsection

@@ -21,19 +21,35 @@ section#item {
             gap: .5rem;
             align-items: flex-start;
         }
-        .swiper-product {
-            width: 100%;
-            overflow: hidden;
-        }
-        #img-container {
+        .wrapper {
             position: relative;
             svg {
                 width: 1.1rem;
                 height: 1.2rem;
                 position: absolute;
-                right: 2.5rem;
-                top: 2rem;
+                top: 2.5rem;
+                right: 2rem;
             }
+            .share {
+                svg {
+                    right: 2.8rem;
+                    cursor: pointer;
+                    z-index: 2;
+                    >path {
+                        transition: .2s ease-in;
+                    }
+                    &:hover {
+                        >path {
+                            fill: black;
+                        }
+                    }
+                }
+
+            }
+        }
+        .swiper-product {
+            width: 100%;
+            overflow: hidden;
         }
         .large-img {
             width: 100%;
@@ -193,6 +209,13 @@ section#item {
                 border-radius: 8px;
                 padding: 2rem 2.6rem;
                 margin-top: 1rem;
+                transition: .2s ease-in;
+                display: block;
+                &:hover {
+                    -webkit-box-shadow:  0px 5px 25px rgba(36, 38, 60, 0.05);
+                    -moz-box-shadow:  0px 5px 25px rgba(36, 38, 60, 0.05);
+                    box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+                }
                 p {
                     margin-bottom: .2rem;
                     font-size: .9rem;
@@ -440,111 +463,6 @@ section#item {
                 }
             }
         }
-    }
-    .consultaion {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: white;
-        padding: 8.5rem 0;
-
-        .call {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 21rem;
-
-            h1 {
-                font-size: 1.3rem;
-                text-transform: uppercase;
-                margin: 0;
-            }
-
-            p {
-                font-size: .9rem;
-                color: #505154;
-                margin-top: 1rem;
-                width: 30rem;
-                letter-spacing: .7px;
-                line-height: 1.3rem;
-                text-align: center;
-
-                a {
-                    background-color: rgba(193, 146, 69, 0.1);
-                    padding: .2rem;
-                }
-            }
-
-            form {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin-top: 1.5rem;
-                width: 100%;
-
-                input {
-                    background-color: transparent;
-                    border: none;
-                    border-bottom: 1px solid #303133;
-                    text-align: center;
-                    padding: 1rem;
-                    outline: none;
-                    width: 85%;
-
-                }
-
-                .main-btn {
-                    margin-top: 2rem;
-                    width: 100%;
-                    font-weight: 500;
-                }
-            }
-        }
-    }
-    .faq {
-        margin: 7rem 10.5rem;
-        &:last-child {
-            border-bottom: 1px solid #505154;
-            margin-bottom: 7rem;
-
-        }
-        .questions {
-            border-top: 1px solid #505154;
-            padding: 2.2rem 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            p {
-                border-bottom: 1px solid transparent;
-                padding-bottom: .3rem;
-                transition: .2s ease-in-out;
-                display: inline-block;
-                text-transform: uppercase;
-            }
-            svg {
-                width: 4rem;
-                height: 2rem;
-                >path {
-                    transition: .2s ease-in;
-                }
-
-            }
-            &:hover {
-                p {
-                    border-bottom: 1px solid black;
-                    padding-bottom: 0.3rem;
-                }
-                svg>path {
-                    stroke: #505154;
-                }
-            }
-
-        }
-
     }
 }
 @keyframes fade {

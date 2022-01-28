@@ -10,7 +10,8 @@ Swiper.use([Navigation, Pagination, Scrollbar]);
 
 import 'simplebar';
 import 'simplebar/dist/simplebar.css';
-
+// require('js-image-zoom')
+import ImageZoom from 'js-image-zoom'
 $(document).ready(function () {
 
     console.log('ready...');
@@ -24,7 +25,6 @@ $(document).ready(function () {
     const search = document.querySelector('#search')
     const search_block = document.querySelector('.search-block')
     const craft = document.querySelectorAll('.product__package')
-    const craftInput = document.querySelectorAll('.product__package input')
     const craftLabel = document.querySelectorAll('.product__package label')
     const another_svg = document.querySelector('.another svg')
     const another_block = document.querySelector('.another')
@@ -148,15 +148,20 @@ $(document).ready(function () {
         })
     }
 
-    catalog ? catalog.addEventListener('click', (e) => {
+    catalog.addEventListener('click', (e) => {
         e.preventDefault()
         menu.classList.add("active")
-    }) : null
+    })
 
     close_btn ? close_btn.addEventListener('click', (e) => {
         e.preventDefault()
         menu.classList.remove("active")
     }) : null
+
+    const openMenu = function() {
+        menu.classList.add('active');
+    }
+
 
 
 
@@ -201,25 +206,17 @@ $(document).ready(function () {
             }
         })
     })
-    console.log(document.getElementById("form-wrap"))
-    // if (input4.value !== '') {
-    //     document.querySelector('#form-wrap button').disabled = false
-    // }
-
 
     document.addEventListener("DOMContentLoaded", () => {
-        all[0].focus()
+        inputs[0].focus()
     });
 
-    all.forEach((input, index) => {
+    inputs.forEach((input, index) => {
         input.addEventListener("input", e => {
-            // фокус на след input
-            if ((index+1) < all.length) {
-                all[index+1].focus();
+            if ((index+1) < inputs.length) {
+                inputs[index+1].focus();
             }
-            // все инпуты заполнены?
-            const isValid = all.every(el => el.value.trim());
-            // отключить кнопку и фокус на кнопку
+            const isValid = inputs.every(el => el.value.trim());
             btn.disabled = !isValid;
             if (isValid) {
                 btn.focus()
@@ -227,13 +224,16 @@ $(document).ready(function () {
         })
     })
 
-// let options = {
-//     width: 400, // required
-//     height: 500,
-//     zoomWidth: 500,
-//     offset: {vertical:0 , horizontal: 10},
-//     scale: 1.5,
-//     // more options here
-// };
-// new ImageZoom(document.getElementById("img-container"), options);
+    // document.querySelector('.sort').addEventListener('click', () => {
+    //     document.querySelector('.filter').classList.toggle('active')
+    // })
+    let options = {
+        width: 400, // required
+        height: 500,
+        zoomWidth: 500,
+        offset: {vertical:0 , horizontal: 10},
+        scale: 1.5,
+        // more options here
+    };
+    new ImageZoom(document.getElementById("img-container"), options);
 });

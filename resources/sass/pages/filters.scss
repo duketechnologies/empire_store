@@ -47,16 +47,47 @@ section#filters {
             .sort {
                 margin-bottom: 1rem;
 
-                p {
+                &__title {
                     border-radius: 8px;
                     background-color: white;
                     padding: 1.3rem 1.7rem;
                     font-size: .85rem;
                     letter-spacing: .7px;
                     font-weight: 500;
+                    position: relative;
+                    cursor: pointer;
 
                     span {
                         color: #939393;
+                    }
+                    .filter {
+                        position: absolute;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1rem;
+                        width: 100%;
+                        left:0;
+                        bottom: -8.1rem;
+                        background-color: white;
+                        border-radius: 0 0 8px 8px;
+                        padding: 1.5rem 0;
+                        display: none;
+                        animation: opacity .3s ease-in;
+                        a {
+                            font-size: .8rem;
+                            letter-spacing: .7px;
+                            font-weight: 500;
+                            padding-bottom: .3rem;
+                            transition: .2s ease-in;
+                            border-bottom: 1px solid transparent;
+                            &:hover {
+                                border-bottom: 1px solid black;
+                            }
+                        }
+                    }
+                    .filter.active {
+                        display: flex;
                     }
                 }
             }
@@ -97,8 +128,15 @@ section#filters {
 
                             a {
                                 color: #303133;
-                                border-bottom: 1px solid black;
                                 max-width: fit-content;
+                                border-bottom: 1px solid transparent;
+                                transition: .2s ease-in;
+                                &:hover {
+                                    border-bottom: 1px solid black;
+                                }
+                            }
+                            a.all {
+                                border-bottom: 1px solid black;
                             }
                         }
                     }
@@ -111,6 +149,22 @@ section#filters {
                 letter-spacing: .44px;
                 padding: 1rem 1.35rem;
                 margin: 1rem 0;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &:hover {
+                    svg {
+                        opacity: 1;
+                    }
+                }
+                svg {
+                    width: .9rem;
+                    height: .9rem;
+                    opacity: 0;
+                    transition: .2s ease-in;
+
+                }
             }
         }
 
@@ -318,4 +372,13 @@ section#filters {
             }
         }
     }
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
 }

@@ -40,7 +40,7 @@ list-style: none;
 
 .main-btn {
     text-transform: uppercase;
-    background-color: #303133;
+    background-color: #212123;
     font-size: 0.96rem;
     width: 18.7rem;
     height: 3.3rem;
@@ -54,6 +54,10 @@ list-style: none;
     outline: none;
     cursor: pointer;
     border-radius: 3px;
+    transition: .2s ease-in;
+    &:hover {
+        background-color: #303133;
+    }
 }
 .primary-btn {
     text-transform: uppercase;
@@ -71,6 +75,10 @@ list-style: none;
     outline: none;
     cursor: pointer;
     border-radius: 4px;
+    transition: .2s ease-in;
+    &:hover {
+        background-color: #EDEDED;
+    }
 }
 .secondary-btn {
     font-weight: 500;

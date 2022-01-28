@@ -16621,6 +16621,368 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./node_modules/js-image-zoom/js-image-zoom.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/js-image-zoom/js-image-zoom.js ***!
+  \*****************************************************/
+/***/ (function(module) {
+
+(function (root, factory) {
+    if ( true && module.exports) {
+        module.exports = factory();
+    } else {
+        root.ImageZoom = factory();
+    }
+}(this, function () {
+    /**
+     * @param {Object} container DOM element, which contains an image to be zoomed (required)
+     * @param {Object} options js-image-zoom options (required)
+     * **width** (number) - width of the source image (optional)
+     * **height** (number) - height of the source image (optional).
+     * **zoomWidth** (number) - width of the zoomed image. Zoomed image height equals source image height (optional)
+     * **img** (string) - url of the source image. Provided if container does not contain img element as a tag (optional)
+     * **scale** (number) - zoom scale. if not provided, scale is calculated as natural image size / image size, provided in params (optional if zoomWidth param is provided)
+     * **offset** (object) - {vertical: number, horizontal: number}. Zoomed image offset (optional)
+     * **zoomContainer** (node) - DOM node reference where zoomedImage will be appended to (default to the container element of image)
+     * **zoomStyle** (string) - custom style applied to the zoomed image (i.e. 'opacity: 0.1;background-color: white;')
+     * **zoomPosition** (string) - position of zoomed image. It can be:  `top`, `left`, `bottom`, `original` or the default `right`.
+     * **zoomLensStyle** (string) custom style applied to to zoom lents (i.e. 'opacity: 0.1;background-color: white;')
+     */
+    return function ImageZoom(container, opts) {
+        "use strict";
+        var options = opts;
+        if (!container) {
+            return;
+        }
+        var data = {
+            sourceImg: {
+                element: null,
+                width: 0,
+                height: 0,
+                naturalWidth: 0,
+                naturalHeight: 0
+            },
+            zoomedImgOffset: {
+                vertical: 0,
+                horizontal: 0
+            },
+            zoomedImg: {
+                element: null,
+                width: 0,
+                height: 0
+            },
+            zoomLens: {
+                element: null,
+                width: 0,
+                height: 0
+            }
+        };
+
+        var div = document.createElement('div');
+        var lensDiv = document.createElement('div');
+        var scaleX;
+        var scaleY;
+        var offset;
+        data.zoomedImgOffset = {
+            vertical: options.offset && options.offset.vertical ? options.offset.vertical : 0,
+            horizontal: options.offset && options.offset.horizontal ? options.offset.horizontal : 0
+        };
+        data.zoomPosition = options.zoomPosition || 'right';
+        data.zoomContainer = (options.zoomContainer) ? options.zoomContainer : container;
+        function getOffset(el) {
+            if (el) {
+                var elRect = el.getBoundingClientRect();
+                return {left: elRect.left, top: elRect.top};
+            }
+            return {left: 0, top: 0};
+        }
+
+        function leftLimit(min) {
+            return options.width - min;
+        }
+
+        function topLimit(min) {
+            return options.height - min;
+        }
+
+        function getValue(val, min, max) {
+            if (val < min) {
+                return min;
+            }
+            if (val > max) {
+                return max;
+            }
+            return val;
+        }
+
+        function getPosition(v, min, max) {
+            var value = getValue(v, min, max);
+            return value - min;
+        }
+
+        function zoomLensLeft(left) {
+            var leftMin = data.zoomLens.width / 2;
+            return getPosition(left, leftMin, leftLimit(leftMin));
+        }
+
+        function zoomLensTop(top) {
+            var topMin = data.zoomLens.height / 2;
+            return getPosition(top, topMin, topLimit(topMin));
+        }
+
+        function setZoomedImgSize(options, data) {
+            if (options.scale) {
+                data.zoomedImg.element.style.width = options.width * options.scale + 'px';
+                data.zoomedImg.element.style.height = options.height * options.scale + 'px';
+            } else if (options.zoomWidth) {
+                data.zoomedImg.element.style.width = options.zoomWidth + 'px';
+                data.zoomedImg.element.style.height = data.sourceImg.element.style.height;
+            } else {
+                data.zoomedImg.element.style.width = '100%';
+                data.zoomedImg.element.style.height = '100%';
+            }
+        }
+
+        function onSourceImgLoad() {
+            // use height determined by browser if height is not set in options
+            options.height = options.height || data.sourceImg.element.height;
+            data.sourceImg.element.style.height = options.height + 'px';
+
+            // use width determined by browser if width is not set in options
+            options.width = options.width || data.sourceImg.element.width;
+            data.sourceImg.element.style.width = options.width + 'px';
+
+            setZoomedImgSize(options, data);
+
+            data.sourceImg.naturalWidth = data.sourceImg.element.naturalWidth;
+            data.sourceImg.naturalHeight = data.sourceImg.element.naturalHeight;
+            data.zoomedImg.element.style.backgroundSize = data.sourceImg.naturalWidth + 'px ' + data.sourceImg.naturalHeight + 'px';
+
+            if (options.zoomStyle) {
+                data.zoomedImg.element.style.cssText += options.zoomStyle;
+            }
+            if (options.zoomLensStyle) {
+                data.zoomLens.element.style.cssText += options.zoomLensStyle;
+            } else {
+                data.zoomLens.element.style.background = 'white';
+                data.zoomLens.element.style.opacity = '0.4';
+            }
+
+            scaleX = data.sourceImg.naturalWidth / options.width;
+            scaleY = data.sourceImg.naturalHeight / options.height;
+            offset = getOffset(data.sourceImg.element);
+
+            // set zoomLens dimensions
+            // if custom scale is set
+            if (options.scale) {
+                data.zoomLens.width = options.width / (data.sourceImg.naturalWidth / (options.width * options.scale));
+                data.zoomLens.height = options.height / (data.sourceImg.naturalHeight / (options.height * options.scale));
+            }
+
+            // else if zoomWidth is set
+            else if (options.zoomWidth) {
+                data.zoomLens.width = options.zoomWidth / scaleX;
+                data.zoomLens.height = options.height / scaleY;
+            }
+
+            // else read from the zoomedImg
+            else {
+                data.zoomedImg.element.style.display = 'block';
+                data.zoomLens.width = data.zoomedImg.element.clientWidth / scaleX;
+                data.zoomLens.height = data.zoomedImg.element.clientHeight / scaleY;
+                data.zoomedImg.element.style.display = 'none';
+            }
+
+            data.zoomLens.element.style.position = 'absolute';
+            data.zoomLens.element.style.width = data.zoomLens.width + 'px';
+            data.zoomLens.element.style.height = data.zoomLens.height + 'px';
+            data.zoomLens.element.pointerEvents = 'none';
+        }
+
+        function setup() {
+            // create sourceImg element
+            if (options.img) {
+                var img = document.createElement('img');
+                img.src = options.img;
+                data.sourceImg.element = container.appendChild(img);
+            }
+
+            // or get sourceImg element from specified container
+            else {
+                data.sourceImg.element = container.children[0];
+
+                // if sourceImg is not an img (might be a picture element), try to find one
+                if (data.sourceImg.element.nodeName !== "IMG") {
+                    data.sourceImg.element = data.sourceImg.element.querySelector('img');
+                }
+            }
+
+            options = options || {};
+            container.style.position = 'relative';
+            data.sourceImg.element.style.width = options.width ? options.width + 'px' : 'auto';
+            data.sourceImg.element.style.height = options.height ? options.height + 'px' : 'auto';
+
+            data.zoomLens.element = container.appendChild(lensDiv);
+            data.zoomLens.element.style.display = 'none';
+            data.zoomLens.element.classList.add('js-image-zoom__zoomed-area');
+
+            data.zoomedImg.element = data.zoomContainer.appendChild(div);
+            data.zoomedImg.element.classList.add('js-image-zoom__zoomed-image');
+            data.zoomedImg.element.style.backgroundImage = "url('" + data.sourceImg.element.src + "')";
+            data.zoomedImg.element.style.backgroundRepeat = 'no-repeat';
+            data.zoomedImg.element.style.display = 'none';
+
+            switch (data.zoomPosition) {
+                case 'left':
+                    data.zoomedImg.element.style.position = 'absolute';
+                    data.zoomedImg.element.style.top = data.zoomedImgOffset.vertical + 'px';
+                    data.zoomedImg.element.style.left = data.zoomedImgOffset.horizontal - (data.zoomedImgOffset.horizontal * 2) + 'px';
+                    data.zoomedImg.element.style.transform = 'translateX(-100%)';
+                    break;
+
+                case 'top':
+                    data.zoomedImg.element.style.position = 'absolute';
+                    data.zoomedImg.element.style.top = data.zoomedImgOffset.vertical - (data.zoomedImgOffset.vertical * 2) + 'px';
+                    data.zoomedImg.element.style.left = 'calc(50% + ' + data.zoomedImgOffset.horizontal + 'px)';
+                    data.zoomedImg.element.style.transform = 'translate3d(-50%, -100%, 0)';
+                    break;
+
+                case 'bottom':
+                    data.zoomedImg.element.style.position = 'absolute';
+                    data.zoomedImg.element.style.bottom = data.zoomedImgOffset.vertical - (data.zoomedImgOffset.vertical * 2) + 'px';
+                    data.zoomedImg.element.style.left = 'calc(50% + ' + data.zoomedImgOffset.horizontal + 'px)';
+                    data.zoomedImg.element.style.transform = 'translate3d(-50%, 100%, 0)';
+                    break;
+
+                case 'original':
+                    data.zoomedImg.element.style.position = 'absolute';
+                    data.zoomedImg.element.style.top = '0px';
+                    data.zoomedImg.element.style.left = '0px';
+                    break;
+
+                // Right Position
+                default:
+                    data.zoomedImg.element.style.position = 'absolute';
+                    data.zoomedImg.element.style.top = data.zoomedImgOffset.vertical + 'px';
+                    data.zoomedImg.element.style.right = data.zoomedImgOffset.horizontal - (data.zoomedImgOffset.horizontal * 2) + 'px';
+                    data.zoomedImg.element.style.transform = 'translateX(100%)';
+                    break;
+            }
+
+
+            // setup event listeners
+            container.addEventListener('mousemove', events, false);
+            container.addEventListener('mouseenter', events, false);
+            container.addEventListener('mouseleave', events, false);
+            data.zoomLens.element.addEventListener('mouseenter', events, false);
+            data.zoomLens.element.addEventListener('mouseleave', events, false);
+            window.addEventListener('scroll', events, false);
+
+            return data;
+        }
+
+        function kill() {
+
+            // remove event listeners
+            container.removeEventListener('mousemove', events, false);
+            container.removeEventListener('mouseenter', events, false);
+            container.removeEventListener('mouseleave', events, false);
+            data.zoomLens.element.removeEventListener('mouseenter', events, false);
+            data.zoomLens.element.removeEventListener('mouseleave', events, false);
+            window.removeEventListener('scroll', events, false);
+
+            // remove dom nodes
+            if (data.zoomLens && data.zoomedImg) {
+                container.removeChild(data.zoomLens.element);
+                data.zoomContainer.removeChild(data.zoomedImg.element);
+            }
+
+            if (options.img) {
+                container.removeChild(data.sourceImg.element);
+            } else {
+                data.sourceImg.element.style.width = '';
+                data.sourceImg.element.style.height = '';
+            }
+
+            return data;
+        }
+
+        var events = {
+            handleEvent: function (event) {
+                switch (event.type) {
+                    case 'mousemove':
+                        return this.handleMouseMove(event);
+                    case 'mouseenter':
+                        return this.handleMouseEnter(event);
+                    case 'mouseleave':
+                        return this.handleMouseLeave(event);
+                    case 'scroll':
+                        return this.handleScroll(event);
+                }
+            },
+            handleMouseMove: function (event) {
+                var offsetX;
+                var offsetY;
+                var backgroundTop;
+                var backgroundRight;
+                var backgroundPosition;
+                if (offset) {
+                    offsetX = zoomLensLeft(event.clientX - offset.left);
+                    offsetY = zoomLensTop(event.clientY - offset.top);
+                    backgroundTop = offsetX * scaleX;
+                    backgroundRight = offsetY * scaleY;
+                    backgroundPosition = '-' + backgroundTop + 'px ' + '-' + backgroundRight + 'px';
+                    data.zoomedImg.element.style.backgroundPosition = backgroundPosition;
+                    data.zoomLens.element.style.cssText += 'top:' + offsetY + 'px;' + 'left:' + offsetX + 'px;display: block;';
+
+                }
+            },
+            handleMouseEnter: function () {
+                data.zoomedImg.element.style.display = 'block';
+                data.zoomLens.element.style.display = 'block';
+
+            },
+            handleMouseLeave: function () {
+                data.zoomedImg.element.style.display = 'none';
+                data.zoomLens.element.style.display = 'none';
+            },
+            handleScroll: function () {
+                offset = getOffset(data.sourceImg.element);
+            }
+        };
+
+        // Setup/Initialize library
+        setup();
+
+        if (data.sourceImg.element.complete) {
+            onSourceImgLoad();
+        } else {
+            data.sourceImg.element.onload = onSourceImgLoad;
+        }
+
+        return {
+            setup: function () {
+                setup();
+            },
+            kill: function () {
+                kill();
+            },
+            _getInstanceInfo: function () {
+                return {
+                    setup: setup,
+                    kill: kill,
+                    onSourceImgLoad: onSourceImgLoad,
+                    data: data,
+                    options: options
+                }
+            }
+        }
+    }
+}));
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash.debounce/index.js":
 /*!***********************************************!*\
   !*** ./node_modules/lodash.debounce/index.js ***!
@@ -56422,6 +56784,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper_css_bundle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css/bundle */ "./node_modules/swiper/swiper-bundle.min.css");
 /* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
 /* harmony import */ var simplebar_dist_simplebar_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! simplebar/dist/simplebar.css */ "./node_modules/simplebar/dist/simplebar.css");
+/* harmony import */ var js_image_zoom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! js-image-zoom */ "./node_modules/js-image-zoom/js-image-zoom.js");
+/* harmony import */ var js_image_zoom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(js_image_zoom__WEBPACK_IMPORTED_MODULE_4__);
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
@@ -56432,6 +56796,8 @@ __webpack_require__(/*! select2 */ "./node_modules/select2/dist/js/select2.js");
 
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar]);
+
+ // require('js-image-zoom')
 
 
 $(document).ready(function () {
@@ -56444,7 +56810,6 @@ $(document).ready(function () {
   var search = document.querySelector('#search');
   var search_block = document.querySelector('.search-block');
   var craft = document.querySelectorAll('.product__package');
-  var craftInput = document.querySelectorAll('.product__package input');
   var craftLabel = document.querySelectorAll('.product__package label');
   var another_svg = document.querySelector('.another svg');
   var another_block = document.querySelector('.another');
@@ -56554,14 +56919,19 @@ $(document).ready(function () {
     });
   }
 
-  catalog ? catalog.addEventListener('click', function (e) {
+  catalog.addEventListener('click', function (e) {
     e.preventDefault();
     menu.classList.add("active");
-  }) : null;
+  });
   close_btn ? close_btn.addEventListener('click', function (e) {
     e.preventDefault();
     menu.classList.remove("active");
   }) : null;
+
+  var openMenu = function openMenu() {
+    menu.classList.add('active');
+  };
+
   another_svg ? another_svg.addEventListener('click', function (e) {
     e.preventDefault();
     another_block.classList.add('hidden');
@@ -56598,40 +56968,41 @@ $(document).ready(function () {
       }
     });
   });
-  console.log(document.getElementById("form-wrap")); // if (input4.value !== '') {
-  //     document.querySelector('#form-wrap button').disabled = false
-  // }
-
   document.addEventListener("DOMContentLoaded", function () {
-    all[0].focus();
+    inputs[0].focus();
   });
-  all.forEach(function (input, index) {
+  inputs.forEach(function (input, index) {
     input.addEventListener("input", function (e) {
-      // фокус на след input
-      if (index + 1 < all.length) {
-        all[index + 1].focus();
-      } // все инпуты заполнены?
+      if (index + 1 < inputs.length) {
+        inputs[index + 1].focus();
+      }
 
-
-      var isValid = all.every(function (el) {
+      var isValid = inputs.every(function (el) {
         return el.value.trim();
-      }); // отключить кнопку и фокус на кнопку
-
+      });
       btn.disabled = !isValid;
 
       if (isValid) {
         btn.focus();
       }
     });
-  }); // let options = {
-  //     width: 400, // required
-  //     height: 500,
-  //     zoomWidth: 500,
-  //     offset: {vertical:0 , horizontal: 10},
-  //     scale: 1.5,
-  //     // more options here
-  // };
-  // new ImageZoom(document.getElementById("img-container"), options);
+  }); // document.querySelector('.sort').addEventListener('click', () => {
+  //     document.querySelector('.filter').classList.toggle('active')
+  // })
+
+  var options = {
+    width: 400,
+    // required
+    height: 500,
+    zoomWidth: 500,
+    offset: {
+      vertical: 0,
+      horizontal: 10
+    },
+    scale: 1.5 // more options here
+
+  };
+  new (js_image_zoom__WEBPACK_IMPORTED_MODULE_4___default())(document.getElementById("img-container"), options);
 });
 })();
 

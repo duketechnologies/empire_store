@@ -262,7 +262,10 @@ section#home {
                       }
                   }
                   img {
-                      width: 18rem;
+                      width: 19.5rem;
+                  }
+                  .preorder-bg {
+                      width: 73%;
                   }
               }
               .product {
@@ -274,7 +277,7 @@ section#home {
                   left: auto;
                   top: 10rem;
                   width:20rem;
-                  transition: .2s ease-in;
+                  transition: .3s ease-in;
               }
               .preorder-bg {
                   width: 70%;
@@ -505,104 +508,6 @@ section#home {
       }
     }
   }
-
-  .consultaion {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 8.5rem 0;
-    .call {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        max-width: 21rem;
-        h1 {
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            margin: 0;
-        }
-        p {
-            font-size: .98rem;
-            color: #505154;
-            margin-top: 1rem;
-            text-align: center;
-            width: 35rem;
-            letter-spacing: .7px;
-            line-height: 1.4rem;
-            a {
-                background-color: rgba(193, 146, 69, 0.1);
-                padding:.2rem;
-            }
-        }
-        form {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          margin-top: 1.5rem;
-          width: 100%;
-          input {
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid #303133;
-            text-align: center;
-            padding:1rem;
-            outline: none;
-            width: 17rem;
-            &::placeholder {
-              color: #939393;
-            }
-          }
-          .main-btn {
-            margin-top: 2rem;
-            width: 100%;
-            font-weight: 500;
-          }
-        }
-    }
-  }
-    .faqs {
-        margin: 5rem 10.5rem 0rem;
-        &:last-child {
-            border-bottom: 1px solid #505154;
-            margin-bottom: 4rem;
-        }
-        a {
-            border-top: 1px solid #505154;
-            padding: 2.2rem 0;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            p {
-                border-bottom: 1px solid transparent;
-                padding-bottom: .3rem;
-                transition: .2s ease-in-out;
-                display: inline-block;
-                text-transform: uppercase;
-            }
-            svg {
-                width: 4rem;
-                height: 2rem;
-                >path {
-                    transition: .2s ease-in;
-                }
-
-            }
-            &:hover {
-                p {
-                    border-bottom: 1px solid black;
-                    padding-bottom: 0.3rem;
-                }
-                svg>path {
-                    stroke: #505154;
-                }
-            }
-        }
-    }
   .collab {
     display: grid;
     grid-template-columns: 1fr 1fr;

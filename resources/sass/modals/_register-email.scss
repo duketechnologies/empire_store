@@ -92,9 +92,13 @@
                     padding: 0.2rem;
                     transition: .2s ease-in;
                 }
-                span {
+                a {
                     background-color: white;
                     padding: .3rem .2rem;
+                    transition: .2s ease-in;
+                    &:hover {
+                        background-color: rgba(215, 217, 224, 0.5);
+                    }
                 }
             }
             input[type=checkbox]:checked + label::before {

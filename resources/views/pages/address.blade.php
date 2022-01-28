@@ -211,18 +211,7 @@
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6f30a9d2ff48c68726e78fb92a898ae3a5f09906f5c4b4fa956593e61afb1839&amp;width=1280&amp;height=720&amp;lang=ru_RU&amp;scroll=true"></script>
 
         </div>
-        <div class="consultaion">
-            <div class="call">
-                <h1>Нужна помощь?</h1>
-                <p>Оставьте свой номер для связи с консультантом.<br/>
-                    Или поищите ответ на свой вопрос в <a href="#">разделе FAQ.</a>
-                </p>
-                <form method="POST" action="#">
-                    <input type="tel" name="phone" placeholder="Номер телефона"/>
-                    <button type="submit" class="main-btn">Заказать консультацию</button>
-                </form>
-            </div>
-        </div>
+        @include('partials.consultation')
     </section>
 
 @endsection
