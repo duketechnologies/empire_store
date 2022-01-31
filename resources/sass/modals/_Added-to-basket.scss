@@ -1,6 +1,9 @@
 .remodal[data-remodal-id=Added-to-basket] {
     padding: 1.6rem 0 3.5rem !important;
     max-width: 30rem;
+    position: absolute;
+    top: 4.5rem;
+    right: 2rem;
     .remodal-close-btn {
         top: 1rem;
     }

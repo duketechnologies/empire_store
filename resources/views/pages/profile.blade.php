@@ -76,7 +76,7 @@
               </div>
               <div class="product">
                   <div class="product__date">
-                      <img src="/i/profile/product.png" alt=""/>
+                      <img src={{ url("/i/profile/product.png") }} alt=""/>
                       <div>
                           <p class="mark">№39210</p>
                           <p class="date">24 сентября 2021</p>
@@ -99,7 +99,7 @@
               </div>
               <div class="product">
                   <div class="product__date">
-                      <img src="/i/profile/product-2.png" alt=""/>
+                      <img src={{ url("/i/profile/product-2.png") }} alt=""/>
                       <div>
                           <p class="mark">№39210</p>
                           <p class="date">24 сентября 2021</p>
@@ -125,7 +125,7 @@
               </div>
               <div class="product">
                   <div class="product__date">
-                      <img src="/i/profile/product-3.png" alt=""/>
+                      <img src={{ url("/i/profile/product-3.png") }} alt=""/>
                       <div>
                           <p class="mark">№39210</p>
                           <p class="date">24 сентября 2021</p>
@@ -182,7 +182,7 @@
                               <p class="price">4 350 ₸</p>
                           </div>
                           <div class="grid-img">
-                              <img src="/i/profile/grid-1.png" alt=""/>
+                              <img src={{ url("/i/profile/grid-1.png") }} alt=""/>
                           </div>
                           <div class="buttons">
                               <a href="#" class="main-btn">Купить</a>
@@ -199,7 +199,7 @@
                               <p class="price">4 350 ₸</p>
                           </div>
                           <div class="grid-img">
-                              <img src="/i/profile/grid-1.png" alt=""/>
+                              <img src={{ url("/i/profile/grid-1.png") }} alt=""/>
                           </div>
                           <div class="buttons">
                               <a href="#" class="main-btn">Купить</a>
@@ -216,7 +216,7 @@
                               <p class="price">4 350 ₸</p>
                           </div>
                           <div class="grid-img">
-                              <img src="/i/profile/grid-1.png" alt=""/>
+                              <img src={{ url("/i/profile/grid-1.png") }} alt=""/>
                           </div>
                           <div class="buttons">
                               <a href="#" class="main-btn">Купить</a>
@@ -233,7 +233,7 @@
                               <p class="price">4 350 ₸</p>
                           </div>
                           <div class="grid-img">
-                              <img src="/i/profile/grid-1.png" alt=""/>
+                              <img src={{ url("/i/profile/grid-1.png") }} alt=""/>
                           </div>
                           <div class="buttons">
                               <a href="#" class="main-btn">Купить</a>
@@ -250,7 +250,7 @@
                               <p class="price">4 350 ₸</p>
                           </div>
                           <div class="grid-img">
-                              <img src="/i/profile/grid-1.png" alt=""/>
+                              <img src={{ url("/i/profile/grid-1.png") }} alt=""/>
                           </div>
                           <div class="buttons">
                               <a href="#" class="main-btn">Купить</a>
@@ -267,7 +267,7 @@
                               <p class="price">4 350 ₸</p>
                           </div>
                           <div class="grid-img">
-                              <img src="/i/profile/grid-1.png" alt=""/>
+                              <img src={{ url("/i/profile/grid-1.png") }} alt=""/>
                           </div>
                           <div class="buttons">
                               <a href="#" class="main-btn">Купить</a>

@@ -56927,20 +56927,28 @@ $(document).ready(function () {
     }
   };
 
+  var openMenu = function openMenu(e) {
+    menu.classList.add('active');
+  };
+
   catalog.addEventListener('click', function (e) {
     e.preventDefault();
-    menu.classList.add("active");
-    close_menu();
+    openMenu();
+  });
+  document.addEventListener('click', function (e) {
+    var target = e.target;
+    var its_menu = target == menu || menu.contains(target);
+    var its_btnMenu = target == catalog;
+    var menu_is_active = menu.classList.contains('active');
+
+    if (!its_menu && !its_btnMenu && menu_is_active) {
+      menu.classList.remove('active');
+    }
   });
   close_btn ? close_btn.addEventListener('click', function (e) {
     e.preventDefault();
     menu.classList.remove("active");
   }) : null;
-
-  var openMenu = function openMenu() {
-    menu.classList.add('active');
-  };
-
   another_svg ? another_svg.addEventListener('click', function (e) {
     e.preventDefault();
     another_block.classList.add('hidden');

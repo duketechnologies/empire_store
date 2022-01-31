@@ -21,7 +21,7 @@
                                 <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>
                                 <a href="#" class="main-btn">Перейти в каталог</a>
                                 <div class="rabbit">
-                                    <img src="/i/hero_rabbit.png" alt="" />
+                                    <img src={{ url("/i/hero_rabbit.png") }} alt="" />
                                 </div>
 
                                 <div class="hero-next-btn">
@@ -44,7 +44,7 @@
                                 <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>
                                 <a href="#" class="main-btn">Перейти в каталог</a>
                                 <div class="rabbit">
-                                    <img src="/i/hero_rabbit.png" alt="" />
+                                    <img src={{ url("/i/hero_rabbit.png") }} alt="" />
                                 </div>
 
                                 <div class="hero-next-btn">
@@ -271,7 +271,7 @@
                 <p>Ответьте всего на несколько вопросов, <br/>а мы поможем найти подарок, который <br/>не разочарует вашего получателя</p>
                 <a href="#" class="main-btn">Подобрать подарок</a>
             </div>
-            <img src="/i/home/item_img.png" alt="" class="item_img"/>
+            <img src={{ url("/i/home/item_img.png") }} alt="" class="item_img"/>
         </div>
 
         <div class="preorder">
@@ -312,16 +312,17 @@
         </div>
         <div class="tired">
             <div class="left_side">
-                <img src="/i/home/bottle.png" alt=""/>
+                <img src={{ url("/i/home/bottle.png") }} alt=""/>
+                <p>Набор для напитков<br/><span>Жерұйық</span></p>
             </div>
-            <div class="right_side">
+            <a href="#" class="right_side">
                 <div class="content">
                     <p>Новинка</p>
                     <h3>Жерұйық</h3>
                     <p class="count">5 предметов в коллекции</p>
-                    <a href="#" class="link-btn">Смотреть всю коллекцию</a>
+                    <p class="link-btn">Смотреть всю коллекцию</p>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="compilation">
@@ -333,7 +334,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="content">
-                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <img src={{ url("/i/home/swiper_img.png") }} alt=""/>
                                     <p class="name">Картина «Сакские предания»</p>
                                     <p class="price">4 350 ₸</p>
                                     <div class="count">
@@ -357,7 +358,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="content">
-                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <img src={{ url("/i/home/swiper_img.png") }} alt=""/>
                                     <p class="name">Картина «Сакские предания»</p>
                                     <p class="price">4 350 ₸</p>
                                     <div class="count">
@@ -380,7 +381,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="content">
-                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <img src={{ url("/i/home/swiper_img.png") }} alt=""/>
                                     <p class="name">Картина «Сакские предания»</p>
                                     <p class="price">4 350 ₸</p>
                                     <div class="count">
@@ -403,7 +404,7 @@
                         <div class="swiper-slide">
                             <div class="product">
                                 <div class="content">
-                                    <img src="/i/home/swiper_img.png" alt=""/>
+                                    <img src={{ url("/i/home/swiper_img.png") }} alt=""/>
                                     <p class="name">Картина «Сакские предания»</p>
                                     <p class="price">4 350 ₸</p>
                                     <div class="count">
@@ -447,7 +448,7 @@
                 <p>Особые условия для корпоративных и оптовых клиентов</p>
                 <a href="#" class="main-btn">Узнать больше</a>
             </div>
-            <img src="/i/home/collab_img.png" alt="" class="collab_img"/>
+            <img src={{ url("/i/home/collab_img.png") }} alt="" class="collab_img"/>
         </div>
 
         @include('partials.consultation')

@@ -154,11 +154,25 @@ $(document).ready(function () {
             })
         }
     }
+    const openMenu = function(e) {
+        menu.classList.add('active');
+    }
+
     catalog.addEventListener('click', (e) => {
         e.preventDefault()
-        menu.classList.add("active")
-        close_menu()
+        openMenu()
     })
+
+    document.addEventListener('click', function(e) {
+        const target = e.target;
+        const its_menu = target == menu || menu.contains(target);
+        const its_btnMenu = target == catalog;
+        const menu_is_active = menu.classList.contains('active');
+
+        if (!its_menu && !its_btnMenu && menu_is_active) {
+            menu.classList.remove('active')
+        }
+    });
 
     close_btn ? close_btn.addEventListener('click', (e) => {
         e.preventDefault()
@@ -166,9 +180,6 @@ $(document).ready(function () {
     }) : null
 
 
-    const openMenu = function() {
-        menu.classList.add('active');
-    }
 
     another_svg ? another_svg.addEventListener('click', function (e) {
         e.preventDefault()
@@ -180,6 +191,7 @@ $(document).ready(function () {
         }, 350)
 
     }) : null
+
     another_btn ? another_btn.addEventListener('click', function (e) {
         e.preventDefault()
         another_btn.classList.add('hidden')

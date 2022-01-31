@@ -103,6 +103,9 @@ section#news {
             height: .45rem;
             margin-right: .5rem;
             transition: .2s ease-in;
+            >path {
+                transition: .2s ease-in;
+            }
         }
         &:hover {
             svg {
@@ -113,6 +116,13 @@ section#news {
             }
         }
     }
+      .secondary-btn {
+          color: #505154;
+          transition: .2s ease-in;
+          &:hover {
+              color: black;
+          }
+      }
     .pagination {
       display: flex;
       align-items: center;
@@ -121,6 +131,10 @@ section#news {
             font-size: .9rem;
             color: #939393;
             padding-bottom: .3rem;
+            transition: .2s ease-in;
+            &:hover {
+                color: black;
+            }
             svg {
                 width: 2rem;
                 height: 1rem;

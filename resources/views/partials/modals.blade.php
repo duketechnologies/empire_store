@@ -157,12 +157,12 @@
 <div class="remodal" data-remodal-id="feedback" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
   <button data-remodal-action="close" class="remodal-close-btn"></button>
   <div class="content">
-      <img src="/i/popup/feedback.png" alt=""/>
+      <img src="/i/modals/feedback.png" alt=""/>
       <div class="consultaion">
           <div class="call">
               <h1>Нужна помощь?</h1>
               <p>Оставьте свой номер для связи с консультантом.<br/>
-                  Или поищите ответ на свой вопрос в <a href="#">разделе FAQ.</a>
+                  Или поищите ответ на свой вопрос в <a href="/faq">разделе FAQ.</a>
               </p>
               <form method="POST" action="#">
                   <input type="tel" name="phone" placeholder="Номер телефона"/>
@@ -343,7 +343,8 @@
                 <input type="password" name="password-recovery" autocomplete="off"/>
             </fieldset>
             <fieldset>
-                <input type="password" name="confirm-password-recovery" placeholder="Повторите пароль" autocomplete="off"/>
+                <legend>Повторите пароль</legend>
+                <input type="password" name="confirm-password-recovery"  autocomplete="off"/>
             </fieldset>
             <button type="submit" class="main-btn">Сохранить пароль и войти</button>
         </form>
@@ -622,10 +623,10 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
+                    <div class="wrapper" style="background-image: url('/i/test.png')"></div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
+                    <div class="wrapper" style="background-image: url('/i/test2.png')"></div>
                 </div>
                 <div class="swiper-slide">
                     <div class="wrapper" style="background-image: url('/i/modals/zoom.png')"></div>
@@ -858,4 +859,9 @@
             <a href="# "class="main-btn">Оформить заново</a>
         </div>
     </div>
+</div>
+
+<div class="remodal" data-remodal-id="pickup-modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+    <button data-remodal-action="close" class="remodal-close-btn"></button>
+
 </div>

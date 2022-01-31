@@ -166,11 +166,11 @@
                         <input type="radio" name="craft-package2" id="online"/>
                         <label for="online"><span>Оплата онлайн</span></label>
                         <div class="cards">
-                            <img src="/i/ordering/visa.png" alt=""/>
-                            <img src="/i/ordering/mastercard.png" alt=""/>
-                            <img src="/i/ordering/aexpress.png" alt=""/>
-                            <img src="/i/ordering/mastercard2.png" alt=""/>
-                            <img src="/i/ordering/jsb.png" alt=""/>
+                            <img src={{ url("/i/ordering/visa.png") }} alt=""/>
+                            <img src={{ url("/i/ordering/mastercard.png") }} alt=""/>
+                            <img src={{ url("/i/ordering/aexpress.png") }} alt=""/>
+                            <img src={{ url("/i/ordering/mastercard2.png") }} alt=""/>
+                            <img src={{ url("/i/ordering/jsb.png") }} alt=""/>
 
                         </div>
                         <a href="#" class="link-btn">О безопасной оплате</a>

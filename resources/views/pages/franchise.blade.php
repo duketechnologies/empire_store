@@ -190,7 +190,7 @@
       </div>
     <div class="excursion">
       <div class="description">
-        <img src="/i/franchise/excursion_img.png" alt=""/>
+        <img src={{ url("/i/franchise/excursion_img.png") }} alt=""/>
         <p>Проведете личную встречу с основателем бренда Вольдемаром Айфельд в Алматы</p>
       </div>
       <div class="info">

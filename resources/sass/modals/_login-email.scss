@@ -43,10 +43,12 @@
                 outline: none;
                 border-radius: 8px;
                 padding: 0 1.5rem;
-                font-size: .9rem;
-                letter-spacing: .44px;
+                font-size: 1.1rem;
                 width: 100%;
                 background-color: transparent;
+                font-family: 'Neonderthaw', cursive;
+                font-weight: 700;
+
             }
 
             input[type=password] {
@@ -54,6 +56,11 @@
 
                 &::placeholder {
                     letter-spacing: 0;
+                    font-family: 'Inter';
+                    font-weight: 400;
+                    font-size: .95rem;
+                    letter-spacing: .44px;
+
                 }
             }
         }

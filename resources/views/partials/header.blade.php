@@ -40,7 +40,7 @@
 {{--        @include('partials.header', $title)--}}
 
         <div class="info">
-            <a class="phone" href="#">+7 777 218 92 91</a>
+            <a class="phone" href="tel:+77772189291">+7 777 218 92 91</a>
             <ul class="profile">
                 <li class="language">
                     <a href="#">kz</a>
@@ -221,8 +221,8 @@
             </li>
         </ul>
         <div class="menu__contacts">
-            <a href="#" class="link-btn">+7 777 218 92 91</a>
-            <a href="#" class="link-btn">Email@empire.kz</a>
+            <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+            <a href="mailto:Email@empire.kz" class="link-btn">Email@empire.kz</a>
             <a href="/contacts" class="menu-btn">Контакты</a>
         </div>
     </div>

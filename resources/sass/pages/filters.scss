@@ -119,8 +119,7 @@ section#filters {
                             letter-spacing: .44px;
                             color: #505154;
                             font-weight: 500;
-                            line-height: 2.5rem;
-
+                            margin-bottom: 1.5rem;
                             span {
                                 margin-left: .5rem;
                                 color: #DEDCD8;
@@ -141,6 +140,27 @@ section#filters {
                         }
                     }
                 }
+                //.faq {
+                //    .questions {
+                //        p {
+                //            color: #303133;
+                //            max-width: fit-content;
+                //            border-bottom: 1px solid transparent;
+                //            transition: .2s ease-in;
+                //            cursor: pointer;
+                //            &:hover {
+                //                border-bottom: 1px solid black;
+                //            }
+                //        }
+                //    }
+                //    .answers {
+                //        display: flex;
+                //        flex-direction: column;
+                //        padding-left: 1rem;
+                //        gap:1rem;
+                //        padding-top: 1rem;
+                //    }
+                //}
             }
 
             .title {
@@ -257,6 +277,7 @@ section#filters {
                         .grid-img {
                             display: flex;
                             align-items: center;
+                            padding: 0 1.5rem;
                             img {
                                 width: 100%;
                                 object-fit: cover;

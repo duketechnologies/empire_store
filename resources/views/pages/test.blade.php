@@ -52,6 +52,7 @@
             <a href="#" data-remodal-target="edit-order">Оформление заказа: текущий заказ</a>
             <a href="#" data-remodal-target="access-order">Оформление заказа: Успешное оформление</a>
             <a href="#" data-remodal-target="failed-order">Оформление заказа: Ошибка в оформлении</a>
+            <a href="#" data-remodal-target="pickup-modal">Оформление заказа: Пункты самовывоза</a>
         </div>
     </section>
 @endsection

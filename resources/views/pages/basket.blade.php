@@ -16,7 +16,7 @@
             </div>
             <div class="product">
                 <div class="product__date">
-                    <img src="/i/profile/product.png" alt=""/>
+                    <img src={{ url("/i/profile/product.png") }} alt=""/>
                     <div>
                         <p class="type">Статуэтка</p>
                         <p class="name">Сакские предания</p>
@@ -54,7 +54,7 @@
             </div>
             <div class="product">
                 <div class="product__date">
-                    <img src="/i/profile/product-2.png" alt=""/>
+                    <img src={{ url("/i/profile/product-2.png") }} alt=""/>
                     <div>
                         <p class="type">Статуэтка</p>
                         <p class="name">Сакские предания</p>
@@ -93,7 +93,7 @@
             </div>
             <div class="product">
                 <div class="product__date">
-                    <img src="/i/profile/product-3.png" alt=""/>
+                    <img src={{ url("/i/profile/product-3.png") }} alt=""/>
                     <div>
                         <p class="type">Статуэтка</p>
                         <p class="name">Сакские предания</p>

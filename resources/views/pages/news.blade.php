@@ -13,11 +13,11 @@
             </svg>
         </p>
       </a>
-      <img src="/i/news/news_img.png" alt=""/>
+      <img src={{ url("/i/news/news_img.png") }} alt=""/>
     </div>
     <div class="cards">
       <a href="/single_news" class="card">
-        <img src="/i/news/card_img.png"/>
+        <img src={{ url("/i/news/card_img.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -27,7 +27,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src="/i/news/card_img.png"/>
+        <img src={{ url("/i/news/card_img.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -37,7 +37,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src="/i/news/card_img.png"/>
+        <img src={{ url("/i/news/card_img.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -47,7 +47,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src="/i/news/card_img.png"/>
+        <img src={{ url("/i/news/card_img.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -57,7 +57,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src="/i/news/card_img.png"/>
+        <img src={{ url("/i/news/card_img.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -67,7 +67,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src="/i/news/card_img.png"/>
+        <img src={{ url("/i/news/card_img.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать

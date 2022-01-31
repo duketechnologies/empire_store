@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap);
 /*
  *  Remodal - v1.1.1
  *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
@@ -643,6 +644,10 @@ li {
   }
 }
 
+.remodal-overlay {
+  background: rgba(43, 46, 56, 0.4);
+}
+
 /*helpers*/
 /*blocks*/
 header.header {
@@ -1041,15 +1046,35 @@ header.header .menu.active::before {
   display: block;
   content: "";
   position: fixed;
-  width: calc(100% - 23.5rem);
+  width: 1000%;
   height: 100vh;
-  background-color: red;
+  background-color: black;
   opacity: 0.1;
   top: 0;
-  right: 0;
+  left: 23.5rem;
   z-index: -1;
+  pointer-events: none;
+  -webkit-animation: opacity-menu 0.2s ease-in;
+          animation: opacity-menu 0.2s ease-in;
 }
 
+@-webkit-keyframes opacity-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+@keyframes opacity-menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
 @-webkit-keyframes opacity {
   from {
     opacity: 0;
@@ -1058,7 +1083,6 @@ header.header .menu.active::before {
     opacity: 1;
   }
 }
-
 @keyframes opacity {
   from {
     opacity: 0;
@@ -1690,7 +1714,7 @@ section#home .tired {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 0 2.2rem;
+  padding: 4.5rem;
 }
 section#home .tired .left_side {
   display: flex;
@@ -1698,16 +1722,17 @@ section#home .tired .left_side {
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  width: 100%;
 }
 section#home .tired .left_side img {
-  width: 100%;
+  width: 50%;
+  margin-bottom: 1rem;
 }
 section#home .tired .left_side p {
   font-size: 0.95rem;
   letter-spacing: 0.7px;
   line-height: 2rem;
   text-align: center;
-  margin-bottom: 4rem;
 }
 section#home .tired .left_side p span {
   font-size: 1.4rem;
@@ -1716,12 +1741,16 @@ section#home .tired .left_side p span {
   border-bottom: 1px solid transparent;
 }
 section#home .tired .right_side {
+  cursor: url("/i/cursor.png"), auto;
   background-color: white;
   border-radius: 8px;
   width: 100%;
   margin: 0 auto;
   padding: 8rem 0;
   position: relative;
+}
+section#home .tired .right_side:hover .link-btn {
+  border-bottom: 1px solid black;
 }
 section#home .tired .right_side::before {
   content: "";
@@ -1763,6 +1792,10 @@ section#home .tired .right_side .content h3 {
 }
 section#home .tired .right_side .content .link-btn {
   margin-top: 5.5rem;
+}
+section#home .tired .right_side .content .link-btn:hover {
+  border-bottom: 1px solid black;
+  cursor: initial;
 }
 section#home .compilation {
   background-color: white;
@@ -3447,11 +3480,21 @@ section#news .route .toStart svg {
   margin-right: 0.5rem;
   transition: 0.2s ease-in;
 }
+section#news .route .toStart svg > path {
+  transition: 0.2s ease-in;
+}
 section#news .route .toStart:hover svg {
   transition: 0.2s ease-in;
 }
 section#news .route .toStart:hover svg > path {
   fill: black;
+}
+section#news .route .secondary-btn {
+  color: #505154;
+  transition: 0.2s ease-in;
+}
+section#news .route .secondary-btn:hover {
+  color: black;
 }
 section#news .route .pagination {
   display: flex;
@@ -3462,6 +3505,10 @@ section#news .route .pagination a {
   font-size: 0.9rem;
   color: #939393;
   padding-bottom: 0.3rem;
+  transition: 0.2s ease-in;
+}
+section#news .route .pagination a:hover {
+  color: black;
 }
 section#news .route .pagination a svg {
   width: 2rem;
@@ -4077,6 +4124,8 @@ section#profile .switch .route .toStart svg {
   width: 0.75rem;
   height: 0.45rem;
   margin-right: 0.5rem;
+}
+section#profile .switch .route .toStart svg > path {
   transition: 0.2s ease-in;
 }
 section#profile .switch .route .toStart:hover svg {
@@ -4084,6 +4133,13 @@ section#profile .switch .route .toStart:hover svg {
 }
 section#profile .switch .route .toStart:hover svg > path {
   fill: black;
+}
+section#profile .switch .route .secondary-btn {
+  color: #505154;
+  transition: 0.2s ease-in;
+}
+section#profile .switch .route .secondary-btn:hover {
+  color: black;
 }
 section#profile .switch .route .pagination {
   display: flex;
@@ -4094,10 +4150,20 @@ section#profile .switch .route .pagination a {
   font-size: 0.9rem;
   color: #939393;
   padding-bottom: 0.3rem;
+  transition: 0.2s ease-in;
+}
+section#profile .switch .route .pagination a:hover {
+  color: black;
 }
 section#profile .switch .route .pagination a svg {
   width: 2rem;
   height: 1rem;
+}
+section#profile .switch .route .pagination a svg > path {
+  transition: 0.2s ease-in;
+}
+section#profile .switch .route .pagination a svg:hover > path {
+  stroke: black;
 }
 section#profile .switch .route .pagination .active {
   border-bottom: 1px solid black;
@@ -4286,11 +4352,15 @@ section#item .content .offer__description form .buttons div {
 }
 section#item .content .offer__description form .buttons .favorites {
   border-radius: 3px;
-  background-color: #303133;
+  background-color: #212123;
   padding: 0.9rem 1.2rem;
   outline: none;
   border: none;
   cursor: pointer;
+  transition: 0.2s ease-in;
+}
+section#item .content .offer__description form .buttons .favorites:hover {
+  background-color: #303133;
 }
 section#item .content .offer__description form .buttons .favorites svg {
   width: 1rem;
@@ -5166,7 +5236,7 @@ section#filters .favorites__menu .wrapper .categories ul li {
   letter-spacing: 0.44px;
   color: #505154;
   font-weight: 500;
-  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 section#filters .favorites__menu .wrapper .categories ul li span {
   margin-left: 0.5rem;
@@ -5292,6 +5362,7 @@ section#filters .favorites__products .grid__blocks .content svg {
 section#filters .favorites__products .grid__blocks .content .grid-img {
   display: flex;
   align-items: center;
+  padding: 0 1.5rem;
 }
 section#filters .favorites__products .grid__blocks .content .grid-img img {
   width: 100%;
@@ -6466,7 +6537,7 @@ section#image-test img {
 }
 
 .remodal[data-remodal-id=feedback] {
-  padding: 0;
+  padding: 0 !important;
   max-width: 105rem;
 }
 .remodal[data-remodal-id=feedback] .content {
@@ -6816,6 +6887,9 @@ section#image-test img {
 
 .remodal[data-remodal-id=cookie] {
   max-width: 29rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
 }
 .remodal[data-remodal-id=cookie] .wrapper {
   display: flex;
@@ -7070,22 +7144,35 @@ section#image-test img {
   outline: none;
   border-radius: 8px;
   padding: 0 1.5rem;
-  font-size: 0.9rem;
-  letter-spacing: 0.44px;
+  font-size: 1.1rem;
   width: 100%;
   background-color: transparent;
+  font-family: "Neonderthaw", cursive;
+  font-weight: 700;
 }
 .remodal[data-remodal-id=login-email] form fieldset input[type=password] {
   letter-spacing: 4px;
 }
 .remodal[data-remodal-id=login-email] form fieldset input[type=password]::-moz-placeholder {
   letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
 }
 .remodal[data-remodal-id=login-email] form fieldset input[type=password]:-ms-input-placeholder {
   letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
 }
 .remodal[data-remodal-id=login-email] form fieldset input[type=password]::placeholder {
   letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
 }
 .remodal[data-remodal-id=login-email] form .main-btn {
   width: 100%;
@@ -7417,6 +7504,9 @@ section#image-test img {
 .remodal[data-remodal-id=Added-to-basket] {
   padding: 1.6rem 0 3.5rem !important;
   max-width: 30rem;
+  position: absolute;
+  top: 4.5rem;
+  right: 2rem;
 }
 .remodal[data-remodal-id=Added-to-basket] .remodal-close-btn {
   top: 1rem;
@@ -7510,6 +7600,9 @@ section#image-test img {
 .remodal[data-remodal-id=Added-to-favorites] {
   padding: 1.6rem 0 3.5rem !important;
   max-width: 30rem;
+  position: absolute;
+  top: 4.5rem;
+  right: 2rem;
 }
 .remodal[data-remodal-id=Added-to-favorites] .remodal-close-btn {
   top: 1rem;
