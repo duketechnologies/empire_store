@@ -27,7 +27,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src={{ url("/i/news/card_img.png") }} alt=""/>
+        <img src={{ url("/i/news/card_img-2.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -37,7 +37,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src={{ url("/i/news/card_img.png") }} alt=""/>
+        <img src={{ url("/i/news/card_img-3.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -47,7 +47,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src={{ url("/i/news/card_img.png") }} alt=""/>
+        <img src={{ url("/i/news/card_img-4.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -57,7 +57,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src={{ url("/i/news/card_img.png") }} alt=""/>
+        <img src={{ url("/i/news/card_img-5.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать
@@ -67,7 +67,7 @@
         </p>
       </a>
       <a href="/single_news" class="card">
-        <img src={{ url("/i/news/card_img.png") }} alt=""/>
+        <img src={{ url("/i/news/card_img-6.png") }} alt=""/>
         <p class="title">Заголовок новости</p>
         <p class="info">Не забудьте указать название издания и цель использования запрошенного материала</p>
         <p class="action">Читать

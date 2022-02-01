@@ -648,6 +648,24 @@ li {
   background: rgba(43, 46, 56, 0.4);
 }
 
+.bv_atual {
+  border: none;
+  text-align: left;
+  font-size: 0.95rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  font-family: "Inter";
+}
+
+.bv_mainselect {
+  padding: 0.2rem 0;
+}
+
+.bv_ul_inner {
+  border: 1px solid #DEDCD8;
+  left: 0;
+  width: 23rem !important;
+}
+
 /*helpers*/
 /*blocks*/
 header.header {
@@ -6156,6 +6174,7 @@ section#image-test img {
 }
 .remodal[data-remodal-id=new_location] .new_location .location-form {
   width: 23rem;
+  position: relative;
 }
 .remodal[data-remodal-id=new_location] .new_location .location-form .place {
   width: 100%;
@@ -6259,6 +6278,7 @@ section#image-test img {
   margin-bottom: 4.5rem;
 }
 .remodal[data-remodal-id=change_location] .new_location .location-form {
+  position: relative;
   width: 23rem;
 }
 .remodal[data-remodal-id=change_location] .new_location .location-form .place {

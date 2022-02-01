@@ -52,9 +52,12 @@
         <form method="POST" action="#" class="location-form">
             <input type="text" name="place" placeholder="Введите название адреса ( Дом, Работа... )" class="place"/>
             <fieldset>
-              <select>
-                <option selected>Республика Казахстан</option>
-              </select>
+                <select id="select-country2" name="country">
+                    <option value="kz">Республика Казахстан</option>
+                    <option value="l1">Lorem ipsum.</option>
+                    <option value="2r">Lorem.</option>
+                    <option value="5f">Lorem ipsum dolor.</option>
+                </select>
             </fieldset>
             <fieldset>
               <legend>Область, город</legend>
@@ -230,7 +233,7 @@
 
 <div class="remodal" data-remodal-id="cookie-change-location" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
-    <div class="wrapper">
+    <form class="wrapper">
         <h4>Мое местоположение</h4>
 {{--        <ul class="city-list">--}}
 {{--            <li class="active">Алматы</li>--}}
@@ -269,7 +272,7 @@
             <div class="select" id="location-city">Алматы</div>
         </div>
         <a href="#" class="main-btn">Сохранить местоположение</a>
-    </div>
+    </form>
 </div>
 
 <div class="remodal" data-remodal-id="cookie" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
@@ -865,3 +868,4 @@
     <button data-remodal-action="close" class="remodal-close-btn"></button>
 
 </div>
+

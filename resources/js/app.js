@@ -2,12 +2,10 @@ window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 
 require('remodal');
-require('select2')
+require('select2');
 import Swiper, {Navigation, Pagination, Scrollbar} from 'swiper';
 import 'swiper/css/bundle';
-
 Swiper.use([Navigation, Pagination, Scrollbar]);
-
 import 'simplebar';
 import 'simplebar/dist/simplebar.css';
 // require('js-image-zoom')
@@ -31,7 +29,7 @@ $(document).ready(function () {
     const another_block = document.querySelector('.another')
     const another_btn = document.querySelector('#another-btn')
     const btn = document.querySelector('#form-wrap button');
-    const inputs = document.querySelectorAll('#form-wrap input');
+    const inputs = [...document.querySelectorAll('#form-wrap input')];
     const href = window.location.href
 
 
@@ -43,21 +41,27 @@ $(document).ready(function () {
         })
     })
 
-    $('[data-open-block]').on('click', function () {
+    $('[data-open-block]').on('click', function (e) {
+        e.preventDefault()
         const activeCls = 'is-active';
 
         $('[data-content]').removeClass(activeCls);
         $('[data-nav]').removeClass('active')
         $(`[data-content="${$(this).data('open-block')}"`).addClass(activeCls);
+        $(this).addClass('active')
     });
 
 
-    $('#select-country').select2({
-        maximumSelectionSize: 1
-    }).on('select2-opening', function (e) {
-        if ($(this).select2('val').length > 0) {
-            e.preventDefault();
-        }
+    let mySelect = new BVSelect({
+        selector: "#select-country",
+        width: "100%",
+        placeholder: 'Страна'
+    });
+
+    let mySelect2 = new BVSelect({
+        selector: "#select-country2",
+        width: "100%",
+        placeholder: 'Страна'
     });
 
     search.onfocus = function () {

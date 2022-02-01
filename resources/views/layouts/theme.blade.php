@@ -8,23 +8,20 @@
 
     <title>{{ config('app.name', 'Laravel') }} | @yield('title')</title>
 
+    @yield('styles')
+    <link rel="stylesheet" href={{ url("css/bvselect.css") }} />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-{{--    <style>--}}
-{{--        body {--}}
-{{--            font-family: 'Inter', sans-serif;--}}
-{{--        }--}}
-{{--    </style>--}}
-    @yield('styles')
-    <script src="{{ mix('js/app.js') }}"></script>
     @yield('scripts')
+    <script src={{ url("js/bvselect.js") }}></script>
+    <script src="{{ mix('js/app.js') }}"></script>
+
 </head>
 <body>
     @include('partials.header')
     @yield('content')
     @include('partials.footer')
     @include('partials.modals')
-
 
 </body>
 </html>

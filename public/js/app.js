@@ -56786,6 +56786,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var simplebar_dist_simplebar_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! simplebar/dist/simplebar.css */ "./node_modules/simplebar/dist/simplebar.css");
 /* harmony import */ var js_image_zoom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! js-image-zoom */ "./node_modules/js-image-zoom/js-image-zoom.js");
 /* harmony import */ var js_image_zoom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(js_image_zoom__WEBPACK_IMPORTED_MODULE_4__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
@@ -56815,25 +56827,32 @@ $(document).ready(function () {
   var another_block = document.querySelector('.another');
   var another_btn = document.querySelector('#another-btn');
   var btn = document.querySelector('#form-wrap button');
-  var inputs = document.querySelectorAll('#form-wrap input');
+
+  var inputs = _toConsumableArray(document.querySelectorAll('#form-wrap input'));
+
   var href = window.location.href;
   craftLabel.forEach(function (item, index) {
     item.addEventListener('click', function (e) {
       craft[index].classList.toggle('active');
     });
   });
-  $('[data-open-block]').on('click', function () {
+  $('[data-open-block]').on('click', function (e) {
+    e.preventDefault();
     var activeCls = 'is-active';
     $('[data-content]').removeClass(activeCls);
     $('[data-nav]').removeClass('active');
     $("[data-content=\"".concat($(this).data('open-block'), "\"")).addClass(activeCls);
+    $(this).addClass('active');
   });
-  $('#select-country').select2({
-    maximumSelectionSize: 1
-  }).on('select2-opening', function (e) {
-    if ($(this).select2('val').length > 0) {
-      e.preventDefault();
-    }
+  var mySelect = new BVSelect({
+    selector: "#select-country",
+    width: "100%",
+    placeholder: 'Страна'
+  });
+  var mySelect2 = new BVSelect({
+    selector: "#select-country2",
+    width: "100%",
+    placeholder: 'Страна'
   });
 
   search.onfocus = function () {

@@ -20,6 +20,7 @@
     }
     .location-form {
       width: 23rem;
+        position: relative;
       .place {
         width: 100%;
         border: none;
@@ -95,6 +96,7 @@
         font-size: .95rem;
       }
     }
+
   }
 }
 .remodal[data-remodal-id=change_location] {
@@ -118,6 +120,7 @@
     margin-bottom: 4.5rem;
   }
   .location-form {
+      position: relative;
     width: 23rem;
     .place {
       width: 100%;

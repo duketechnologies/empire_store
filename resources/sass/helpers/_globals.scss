@@ -156,3 +156,21 @@ list-style: none;
 .remodal-overlay {
     background: rgba(43, 46, 56, 0.4);
 }
+.bv {
+
+}
+.bv_atual {
+    border:none;
+    text-align: left;
+    font-size: 0.95rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    font-family: 'Inter';
+}
+.bv_mainselect {
+    padding: .2rem 0;
+}
+.bv_ul_inner {
+    border: 1px solid #DEDCD8;
+    left:0;
+    width: 23rem !important;
+}
