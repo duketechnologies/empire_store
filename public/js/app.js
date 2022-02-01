@@ -56844,16 +56844,20 @@ $(document).ready(function () {
     $("[data-content=\"".concat($(this).data('open-block'), "\"")).addClass(activeCls);
     $(this).addClass('active');
   });
-  var mySelect = new BVSelect({
+  var new_location = new BVSelect({
     selector: "#select-country",
     width: "100%",
     placeholder: 'Страна'
   });
-  var mySelect2 = new BVSelect({
+  var change_location = new BVSelect({
     selector: "#select-country2",
     width: "100%",
     placeholder: 'Страна'
-  });
+  }); // let cookie_change_location = new BVSelect({
+  //     selector: "#location-country",
+  //     width: "100%",
+  //     placeholder: 'Страна'
+  // });
 
   search.onfocus = function () {
     search_block.style.transform = "translateY(0)";

@@ -41,7 +41,7 @@
             font-size: .95rem;
             letter-spacing: .44px;
         }
-        .select {
+        select {
             width: 100%;
             text-align: center;
             outline: none;
@@ -57,7 +57,7 @@
         .country {
             margin-bottom: 3.5rem;
             position: relative;
-            .option {
+            option {
                 position: absolute;
                 width: 100%;
                 background-color:#F5F4F1;
@@ -67,7 +67,9 @@
                 max-height: 30rem;
                 overflow-y: scroll;
                 scrollbar-width: 5px;
-                display: none;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
                 ul {
                     width:100%;
                     display: flex;

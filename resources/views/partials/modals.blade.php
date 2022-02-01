@@ -248,24 +248,25 @@
 {{--        <a href="#" class="link-btn">Другая страна</a>--}}
         <div class="country">
             <p>Страна</p>
-            <div class="select" id="location-country">Казахстан</div>
-            <div class="option">
-                <ul>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p class="active">Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                    <li ><img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p></li>
-                </ul>
+            <div class="custom-select">
+                <select>
+                    <option value="0">Казахстан</option>
+                    <option value="1">Audi</option>
+                    <option value="2">BMW</option>
+                    <option value="3">Citroen</option>
+                    <option value="4">Ford</option>
+                    <option value="5">Honda</option>
+                    <option value="6">Jaguar</option>
+                    <option value="7">Land Rover</option>
+                    <option value="8">Mercedes</option>
+                    <option value="9">Mini</option>
+                    <option value="10">Nissan</option>
+                    <option value="11">Toyota</option>
+                    <option value="12">Volvo</option>
+                </select>
             </div>
+{{--                <img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p>--}}
+
         </div>
         <div class="city">
             <p>Город / Населенный пункт</p>

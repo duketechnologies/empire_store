@@ -52,17 +52,23 @@ $(document).ready(function () {
     });
 
 
-    let mySelect = new BVSelect({
+    let new_location = new BVSelect({
         selector: "#select-country",
         width: "100%",
         placeholder: 'Страна'
     });
 
-    let mySelect2 = new BVSelect({
+    let change_location = new BVSelect({
         selector: "#select-country2",
         width: "100%",
         placeholder: 'Страна'
     });
+
+    // let cookie_change_location = new BVSelect({
+    //     selector: "#location-country",
+    //     width: "100%",
+    //     placeholder: 'Страна'
+    // });
 
     search.onfocus = function () {
         search_block.style.transform = "translateY(0)"

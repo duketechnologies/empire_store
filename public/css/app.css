@@ -666,6 +666,10 @@ li {
   width: 23rem !important;
 }
 
+form#location-country .bv_atual {
+  text-align: center !important;
+}
+
 /*helpers*/
 /*blocks*/
 header.header {
@@ -6850,7 +6854,7 @@ section#image-test img {
   font-size: 0.95rem;
   letter-spacing: 0.44px;
 }
-.remodal[data-remodal-id=cookie-change-location] .wrapper .select {
+.remodal[data-remodal-id=cookie-change-location] .wrapper select {
   width: 100%;
   text-align: center;
   outline: none;
@@ -6867,7 +6871,7 @@ section#image-test img {
   margin-bottom: 3.5rem;
   position: relative;
 }
-.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option {
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country option {
   position: absolute;
   width: 100%;
   background-color: #F5F4F1;
@@ -6877,15 +6881,17 @@ section#image-test img {
   max-height: 30rem;
   overflow-y: scroll;
   scrollbar-width: 5px;
-  display: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option ul {
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country option ul {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option ul li {
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country option ul li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6894,10 +6900,10 @@ section#image-test img {
   font-weight: 500;
   text-transform: uppercase;
 }
-.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option ul li img {
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country option ul li img {
   align-self: flex-start;
 }
-.remodal[data-remodal-id=cookie-change-location] .wrapper .country .option .active {
+.remodal[data-remodal-id=cookie-change-location] .wrapper .country option .active {
   border-bottom: 1px solid black;
   padding-bottom: 0.2rem;
 }
