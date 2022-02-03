@@ -84,6 +84,8 @@ section#profile {
                       max-width: 20rem;
                       background: white;
                       border-radius: 8px;
+                      padding: .1rem;
+                      position: relative;
                       legend {
                           padding-left: .5rem;
                           padding-right: .5rem;
@@ -91,6 +93,10 @@ section#profile {
                           font-size: .9rem;
                           letter-spacing: .7px;
                           color: #505150;
+                          position: absolute;
+                          top: -.55rem;
+                          background-color: white;
+                          opacity: 0;
                       }
                       input {
                           border:none;

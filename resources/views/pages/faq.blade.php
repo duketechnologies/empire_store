@@ -6,10 +6,10 @@
         <h1>FAQ</h1>
         <div class="type">
             <ul class="links">
-                <li><a href="#" class="active">Все вопросы </a></li>
-                <li><a href="#">Изделия</a></li>
-                <li><a href="#">Заказы</a></li>
-                <li><a href="#">Юридическим лицам</a></li>
+                <li><a href="#" data-faq="faq1" class="active">Все вопросы </a></li>
+                <li><a href="#" data-faq="faq2">Изделия</a></li>
+                <li><a href="#" data-faq="faq3">Заказы</a></li>
+                <li><a href="#" data-faq="faq4">Юридическим лицам</a></li>
             </ul>
             <form method="POST" active="#">
                 <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">

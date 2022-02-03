@@ -20,19 +20,19 @@
                       <div class="user">
                           <fieldset>
                               <legend>Имя</legend>
-                              <input type="text" name="name" value="Айжан"/>
+                              <input type="text" name="name" placeholder="Имя"/>
                           </fieldset>
                           <fieldset>
                               <legend>Телефон</legend>
-                              <input type="tel" name="phone" value="+7 (718) 878 38 28"/>
+                              <input type="tel" name="phone" placeholder="Телефон"/>
                           </fieldset>
                           <fieldset>
                               <legend>Фамилия</legend>
-                              <input type="text" name="surname" value="Сулейменова"/>
+                              <input type="text" name="surname" placeholder="Фамилия"/>
                           </fieldset>
                           <fieldset>
                               <legend>Email</legend>
-                              <input type="email" name="email" value="Mail@mail.com"/>
+                              <input type="email" name="email" placeholder="Email"/>
                           </fieldset>
                       </div>
                       <div class="buttons">

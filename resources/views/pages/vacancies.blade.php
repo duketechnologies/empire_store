@@ -44,6 +44,10 @@
                 atience and understanding as we work to ship your order. If anything about your experience is not
                 what you expected, please let us know at 1-888-494-3837
             </p>
+            <div class="buttons">
+                <a href="#" class="main-btn">Отправить резюме</a>
+                <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+            </div>
         </div>
       </div>
       <div class="faq">
@@ -61,6 +65,10 @@
                   atience and understanding as we work to ship your order. If anything about your experience is not
                   what you expected, please let us know at 1-888-494-3837
               </p>
+              <div class="buttons">
+                  <a href="#" class="main-btn">Отправить резюме</a>
+                  <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+              </div>
           </div>
       </div>
       <div class="faq">
@@ -78,6 +86,10 @@
                   atience and understanding as we work to ship your order. If anything about your experience is not
                   what you expected, please let us know at 1-888-494-3837
               </p>
+              <div class="buttons">
+                  <a href="#" class="main-btn">Отправить резюме</a>
+                  <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+              </div>
           </div>
       </div>
       <div class="faq">
@@ -95,6 +107,10 @@
                   atience and understanding as we work to ship your order. If anything about your experience is not
                   what you expected, please let us know at 1-888-494-3837
               </p>
+              <div class="buttons">
+                  <a href="#" class="main-btn">Отправить резюме</a>
+                  <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+              </div>
           </div>
       </div>
       <div class="faq">
@@ -112,6 +128,10 @@
                   atience and understanding as we work to ship your order. If anything about your experience is not
                   what you expected, please let us know at 1-888-494-3837
               </p>
+              <div class="buttons">
+                  <a href="#" class="main-btn">Отправить резюме</a>
+                  <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+              </div>
           </div>
       </div>
     </div>

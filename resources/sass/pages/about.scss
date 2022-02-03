@@ -220,7 +220,7 @@ section#about {
             margin-left: 3rem;
             max-width: 24rem;
             .links {
-                border-top: 1px solid rgba(92, 128, 99, 0.7);
+                border-top: 1px solid white;
                 color: white;
                 a {
                     max-width: fit-content;
@@ -230,11 +230,12 @@ section#about {
                     transition: .2s ease-in;
                     svg>path {
                         transition: .2s ease-in;
+                        stroke: #939393;
                     }
                     &:hover {
                         border-bottom: 1px solid white;
                         svg>path {
-                            stroke: #90DD9F;
+                            stroke: #FFF;
                         }
                     }
                 }
@@ -307,7 +308,7 @@ section#about {
         &:hover {
             -webkit-box-shadow: 0px 5px 17px 11px rgba(34, 60, 80, 0.2);
             -moz-box-shadow: 0px 5px 17px 11px rgba(34, 60, 80, 0.2);
-            box-shadow: 0px 2px 40px 11px rgba(34, 60, 80, 0.2);
+            box-shadow: 0px 2px 17px 11px rgba(34, 60, 80, 0.2);
             transform: translateY(-4px);
         }
     }

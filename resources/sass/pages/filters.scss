@@ -96,19 +96,36 @@ section#filters {
                 background-color: white;
                 padding: .3rem;
                 border-radius: 8px;
-
                 .categories {
-                    background-color: #F5F4F1;
+                    background-color: white;
                     border-radius: 6px;
-                    padding: 2.75rem 1.35rem 2rem;
+                    padding: 2rem 1.35rem 2rem;
+                    max-height: 0rem;
+                    overflow: hidden;
+                    cursor: pointer;
+                    margin-top: .3rem;
+                    &:first-child {
+                        margin-top: 0;
+                    }
+                    svg {
+                        width: .9rem;
+                        height: .9rem;
+                        opacity: 0;
+                        transition: .2s ease-in;
 
-                    p {
+                    }
+                    .pick {
                         font-size: .95rem;
                         letter-spacing: .44px;
                         color: #939393;
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        &:hover {
+                            svg {
+                                opacity: 1;
+                            }
+                        }
                     }
 
                     ul {
@@ -140,27 +157,18 @@ section#filters {
                         }
                     }
                 }
-                //.faq {
-                //    .questions {
-                //        p {
-                //            color: #303133;
-                //            max-width: fit-content;
-                //            border-bottom: 1px solid transparent;
-                //            transition: .2s ease-in;
-                //            cursor: pointer;
-                //            &:hover {
-                //                border-bottom: 1px solid black;
-                //            }
-                //        }
-                //    }
-                //    .answers {
-                //        display: flex;
-                //        flex-direction: column;
-                //        padding-left: 1rem;
-                //        gap:1rem;
-                //        padding-top: 1rem;
-                //    }
-                //}
+                .categories.active {
+                    background-color: #F5F4F1;
+                    max-height: fit-content;
+                    animation: opacity .2s ease-in;
+                    svg {
+                        opacity: 1;
+                        animation: rotate .2s ease-in;
+                    }
+                    #vertical {
+                        opacity: 0;
+                    }
+                }
             }
 
             .title {
@@ -402,4 +410,12 @@ section#filters {
         opacity: 1;
     }
 
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
 }

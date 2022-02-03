@@ -6,7 +6,6 @@ section#vacancies  {
     background-position: center center;
     background-size: cover;
     border-radius: 8px;
-    width: 100%;
     height: 22rem;
     margin: 0 2.2rem 0 2.2rem;
     // margin:0 .5rem;
@@ -147,6 +146,12 @@ section#vacancies  {
             margin-bottom: 5.35rem;
             max-height: 30rem;
             animation: fade 0.5s ease-in-out;
+            .buttons {
+                margin-top: 5rem;
+                display: flex;
+                gap: 3rem;
+                align-items: center;
+            }
         }
 
         #vertical {

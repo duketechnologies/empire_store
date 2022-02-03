@@ -8,9 +8,7 @@ import 'swiper/css/bundle';
 Swiper.use([Navigation, Pagination, Scrollbar]);
 import 'simplebar';
 import 'simplebar/dist/simplebar.css';
-// require('js-image-zoom')
 
-import ImageZoom from 'js-image-zoom'
 $(document).ready(function () {
 
     console.log('ready...');
@@ -31,14 +29,47 @@ $(document).ready(function () {
     const btn = document.querySelector('#form-wrap button');
     const inputs = [...document.querySelectorAll('#form-wrap input')];
     const href = window.location.href
+    const categories = document.querySelectorAll('.categories')
+    const fieldsetInput = document.querySelectorAll('fieldset input')
+    const fieldsetLegend = document.querySelectorAll('fieldset legend')
+    console.log(document.querySelectorAll('fieldset legend'))
 
+    fieldsetInput.forEach((item,index) => {
+        item.onfocus = () => {
+            fieldsetLegend[index].style.opacity = 1
+        }
+        if (item.target.value !== '') {
+            fieldsetLegend[index].style.opacity = 1
+        }
+        item.onblur = () => {
+            fieldsetLegend[index].style.opacity = 0
+        }
+    })
 
-
+    categories.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            categories[index].classList.toggle('active')
+        })
+    })
 
     craftLabel.forEach((item, index) => {
         item.addEventListener('click', function (e) {
             craft[index].classList.toggle('active')
         })
+    })
+
+    $('[data-faq]').on('click', function (e) {
+        e.preventDefault()
+        $('[data-faq]').removeClass('active')
+        $(this).addClass('active')
+
+    })
+
+    $('[data-filter]').on('click', function (e) {
+        e.preventDefault()
+        $('[data-filter]').removeClass('active')
+        $(this).addClass('active')
+
     })
 
     $('[data-open-block]').on('click', function (e) {
@@ -51,8 +82,7 @@ $(document).ready(function () {
         $(this).addClass('active')
     });
 
-
-    let new_location = new BVSelect({
+    let cation = new BVSelect({
         selector: "#select-country",
         width: "100%",
         placeholder: 'Страна'

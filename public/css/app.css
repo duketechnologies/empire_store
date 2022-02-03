@@ -2280,7 +2280,6 @@ section#vacancies .main-img {
   background-position: center center;
   background-size: cover;
   border-radius: 8px;
-  width: 100%;
   height: 22rem;
   margin: 0 2.2rem 0 2.2rem;
   border: none;
@@ -2420,6 +2419,12 @@ section#vacancies .faq.active .answers {
   max-height: 30rem;
   -webkit-animation: fade 0.5s ease-in-out;
           animation: fade 0.5s ease-in-out;
+}
+section#vacancies .faq.active .answers .buttons {
+  margin-top: 5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
 }
 section#vacancies .faq.active #vertical {
   transition: 0.2s linear;
@@ -2731,7 +2736,7 @@ section#about .partners .card-2 .content {
   max-width: 24rem;
 }
 section#about .partners .card-2 .content .links {
-  border-top: 1px solid rgba(92, 128, 99, 0.7);
+  border-top: 1px solid white;
   color: white;
 }
 section#about .partners .card-2 .content .links a {
@@ -2745,12 +2750,13 @@ section#about .partners .card-2 .content .links a {
 }
 section#about .partners .card-2 .content .links a svg > path {
   transition: 0.2s ease-in;
+  stroke: #939393;
 }
 section#about .partners .card-2 .content .links a:hover {
   border-bottom: 1px solid white;
 }
 section#about .partners .card-2 .content .links a:hover svg > path {
-  stroke: #90DD9F;
+  stroke: #FFF;
 }
 section#about .partners .card-3 {
   background-image: url("/i/about/partnership/partners2.png");
@@ -2817,7 +2823,7 @@ section#about .partners .card .content .links svg {
   top: -0.3rem;
 }
 section#about .partners .card:hover {
-  box-shadow: 0px 2px 40px 11px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 2px 17px 11px rgba(34, 60, 80, 0.2);
   transform: translateY(-4px);
 }
 
@@ -3736,6 +3742,8 @@ section#profile .switch .my-profile .profile-info .form fieldset {
   max-width: 20rem;
   background: white;
   border-radius: 8px;
+  padding: 0.1rem;
+  position: relative;
 }
 section#profile .switch .my-profile .profile-info .form fieldset legend {
   padding-left: 0.5rem;
@@ -3744,6 +3752,10 @@ section#profile .switch .my-profile .profile-info .form fieldset legend {
   font-size: 0.9rem;
   letter-spacing: 0.7px;
   color: #505150;
+  position: absolute;
+  top: -0.55rem;
+  background-color: white;
+  opacity: 0;
 }
 section#profile .switch .my-profile .profile-info .form fieldset input {
   border: none;
@@ -5238,17 +5250,33 @@ section#filters .favorites__menu .wrapper {
   border-radius: 8px;
 }
 section#filters .favorites__menu .wrapper .categories {
-  background-color: #F5F4F1;
+  background-color: white;
   border-radius: 6px;
-  padding: 2.75rem 1.35rem 2rem;
+  padding: 2rem 1.35rem 2rem;
+  max-height: 0rem;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 0.3rem;
 }
-section#filters .favorites__menu .wrapper .categories p {
+section#filters .favorites__menu .wrapper .categories:first-child {
+  margin-top: 0;
+}
+section#filters .favorites__menu .wrapper .categories svg {
+  width: 0.9rem;
+  height: 0.9rem;
+  opacity: 0;
+  transition: 0.2s ease-in;
+}
+section#filters .favorites__menu .wrapper .categories .pick {
   font-size: 0.95rem;
   letter-spacing: 0.44px;
   color: #939393;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+section#filters .favorites__menu .wrapper .categories .pick:hover svg {
+  opacity: 1;
 }
 section#filters .favorites__menu .wrapper .categories ul {
   margin-top: 1.5rem;
@@ -5277,6 +5305,22 @@ section#filters .favorites__menu .wrapper .categories ul li a:hover {
 }
 section#filters .favorites__menu .wrapper .categories ul li a.all {
   border-bottom: 1px solid black;
+}
+section#filters .favorites__menu .wrapper .categories.active {
+  background-color: #F5F4F1;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  -webkit-animation: opacity 0.2s ease-in;
+          animation: opacity 0.2s ease-in;
+}
+section#filters .favorites__menu .wrapper .categories.active svg {
+  opacity: 1;
+  -webkit-animation: rotate 0.2s ease-in;
+          animation: rotate 0.2s ease-in;
+}
+section#filters .favorites__menu .wrapper .categories.active #vertical {
+  opacity: 0;
 }
 section#filters .favorites__menu .title {
   font-size: 0.95rem;
@@ -5495,6 +5539,14 @@ section#filters .favorites__products .route .pagination .active {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(180deg);
   }
 }
 section#ordering {
