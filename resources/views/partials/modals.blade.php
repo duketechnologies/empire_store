@@ -100,22 +100,22 @@
             <h4>Контактные данные </h4>
             <fieldset>
               <legend>Ваше имя</legend>
-              <input type="text" name="name"/>
+              <input type="text" name="name" placeholder="Ваше имя"/>
             </fieldset>
-              <fieldset>
+            <fieldset>
               <legend>Номер телефона</legend>
-              <input type="tel" name="phone"/>
+              <input type="tel" name="phone" placeholder="Номер телефона"/>
             </fieldset>
           </div>
           <div class="location">
             <h4>Место открытия бутика</h4>
             <fieldset>
               <legend>Страна</legend>
-              <input type="text" name="country"/>
+              <input type="text" name="country" placeholder="Страна"/>
             </fieldset>
               <fieldset>
               <legend>Город</legend>
-              <input type="text" name="city"/>
+              <input type="text" name="city" placeholder="Город"/>
             </fieldset>
           </div>
           <div class="place">
@@ -233,44 +233,138 @@
 
 <div class="remodal" data-remodal-id="cookie-change-location" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
-    <form class="wrapper">
+    <form method="POST" action="#" class="wrapper">
         <h4>Мое местоположение</h4>
-{{--        <ul class="city-list">--}}
-{{--            <li class="active">Алматы</li>--}}
-{{--            <li>Нур-Султан</li>--}}
-{{--            <li>Атырау</li>--}}
-{{--            <li>Шымкент</li>--}}
-{{--            <li>Актобе</li>--}}
-{{--            <li>Караганда</li>--}}
-{{--            <li>Тараз</li>--}}
-{{--            <li>Павлодар</li>--}}
-{{--        </ul>--}}
-{{--        <a href="#" class="link-btn">Другая страна</a>--}}
         <div class="country">
             <p>Страна</p>
-            <div class="custom-select">
-                <select>
-                    <option value="0">Казахстан</option>
-                    <option value="1">Audi</option>
-                    <option value="2">BMW</option>
-                    <option value="3">Citroen</option>
-                    <option value="4">Ford</option>
-                    <option value="5">Honda</option>
-                    <option value="6">Jaguar</option>
-                    <option value="7">Land Rover</option>
-                    <option value="8">Mercedes</option>
-                    <option value="9">Mini</option>
-                    <option value="10">Nissan</option>
-                    <option value="11">Toyota</option>
-                    <option value="12">Volvo</option>
-                </select>
-            </div>
-{{--                <img src="/i/icons/kz_icon.png" alt=""/><p>Казахстан</p>--}}
+            <div class="select-box">
+                <div class="options-container">
+                    <div class="option">
+                        <input type="radio" class="radio" id="automobiles" name="category"/>
+                        <label for="automobiles"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                    </div>
 
+                    <div class="option">
+                        <input type="radio" class="radio" id="film" name="category" />
+                        <label for="film"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="science" name="category" />
+                        <label for="science"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="art" name="category" />
+                        <label for="art"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="music" name="category" />
+                        <label for="music"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="travel" name="category" />
+                        <label for="travel"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="sports" name="category" />
+                        <label for="sports"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="news" name="category" />
+                        <label for="news"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="tutorials" name="category" />
+                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                    </div>
+                </div>
+
+                <div class="selected">
+                    Казахстан
+                    <svg viewBox="0 0 13 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H11.5" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
         </div>
         <div class="city">
             <p>Город / Населенный пункт</p>
-            <div class="select" id="location-city">Алматы</div>
+            <div class="select-box">
+                <div class="options-container" >
+                    <div class="option">
+                        <input type="radio" class="radio" id="automobiles" name="category"/>
+                        <label for="automobiles"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="film" name="category" />
+                        <label for="film"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="science" name="category" />
+                        <label for="science"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="art" name="category" />
+                        <label for="art"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="music" name="category" />
+                        <label for="music"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="travel" name="category" />
+                        <label for="travel"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="sports" name="category" />
+                        <label for="sports"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="news" name="category" />
+                        <label for="news"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="tutorials" name="category" />
+                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="tutorials" name="category" />
+                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="tutorials" name="category" />
+                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" class="radio" id="tutorials" name="category" />
+                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                    </div>
+                </div>
+
+                <div class="selected">
+                    Казахстан
+                    <svg viewBox="0 0 13 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1H11.5" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
         </div>
         <a href="#" class="main-btn">Сохранить местоположение</a>
     </form>
@@ -867,6 +961,6 @@
 
 <div class="remodal" data-remodal-id="pickup-modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
     <button data-remodal-action="close" class="remodal-close-btn"></button>
-
+    <h2>Выберите бутик для самовывоза</h2>
 </div>
 

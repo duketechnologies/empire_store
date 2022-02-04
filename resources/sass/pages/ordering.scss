@@ -80,6 +80,8 @@ section#ordering {
                 max-width: 20rem;
                 background: white;
                 border-radius: 8px;
+                padding: .1rem;
+                position: relative;
                 legend {
                     padding-left: .5rem;
                     padding-right: .5rem;
@@ -87,10 +89,15 @@ section#ordering {
                     font-size: .9rem;
                     letter-spacing: .7px;
                     color: #505150;
+                    position: absolute;
+                    top: -.55rem;
+                    background-color: white;
+                    opacity: 0;
+                    transition: opacity .2s ease-in;
                 }
                 input {
                     border:none;
-                    padding:1rem 1rem 1rem 1.5rem;
+                    padding: 1rem 1rem 1rem 1.5rem;
                     min-width: 18rem;
                     outline: none;
                     border-radius: 8px;
@@ -194,6 +201,10 @@ section#ordering {
                     }
                     fieldset {
                         margin: 1.9rem 3rem;
+                        legend {
+                            background-color: #F5F4F1;
+                            top: -0.8rem
+                        }
                     }
                     .last {
                         margin-top: 2.4rem;

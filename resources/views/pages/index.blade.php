@@ -19,7 +19,7 @@
                                 </div>
 
                                 <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>
-                                <a href="#" class="main-btn">Перейти в каталог</a>
+                                <a href="/filters" class="main-btn">Перейти в каталог</a>
                                 <div class="rabbit">
                                     <img src={{ url("/i/hero_rabbit.png") }} alt="" />
                                 </div>
@@ -42,7 +42,7 @@
                                 </div>
 
                                 <h1><span>Подарок</span><br/> скажет больше, <br/>чем слова</h1>
-                                <a href="#" class="main-btn">Перейти в каталог</a>
+                                <a href="/filters" class="main-btn">Перейти в каталог</a>
                                 <div class="rabbit">
                                     <img src={{ url("/i/hero_rabbit.png") }} alt="" />
                                 </div>
@@ -269,7 +269,7 @@
                 </svg>
                 <h3>Не знаете что подарить?</h3>
                 <p>Ответьте всего на несколько вопросов, <br/>а мы поможем найти подарок, который <br/>не разочарует вашего получателя</p>
-                <a href="#" class="main-btn">Подобрать подарок</a>
+                <button href="#"  data-remodal-target="quiz" class="main-btn">Подобрать подарок</button>
             </div>
             <img src={{ url("/i/home/item_img.png") }} alt="" class="item_img"/>
         </div>
@@ -278,7 +278,7 @@
             <div class="discount">
                 <h2>Скидки<br/>на предзаказ<br/>новых коллекций</h2>
                 <p>Ответьте всего на несколько<br/>вопросов, а мы поможем найти<br/>подарок, который не разочарует<br/>вашего получателя</p>
-                <a href="#" class="link-btn">Перейти на сайт прездзаказа</a>
+                <a href="https://landing.empire.kz/" target="_blank" class="link-btn">Перейти на сайт прездзаказа</a>
             </div>
             <div class="collections">
                 <div class="collections__item">

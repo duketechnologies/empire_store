@@ -54,6 +54,7 @@ list-style: none;
     outline: none;
     cursor: pointer;
     border-radius: 3px;
+    font-family: 'Inter';
     transition: .2s ease-in;
     &:hover {
         background-color: #303133;
@@ -178,4 +179,23 @@ form#location-country {
     .bv_atual {
         text-align: center !important;
     }
+}
+.arrow {
+    padding: 0;
+    border-width: 0;
+    position: absolute;
+    right: 1.5rem;
+    background-image: url(/i/modals/dropdown_icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 0.7rem;
+    height: 0.5rem;
+
+}
+.down {
+    transform: rotate(0);
+}
+.up {
+    transform: rotate(-180deg);
 }

@@ -62,8 +62,11 @@ header.header {
                     border-radius: 9.8rem;
                     outline: none;
                     border: none;
+                    font-size: .95rem;
+                    font-family: 'Inter';
                     background-color: inherit;
                     width: 20rem;
+                    letter-spacing: .7px;
                     transition: .2s ease-in-out;
                     position: relative;
                     padding: 1rem 1rem 1rem 2.5rem;
@@ -140,11 +143,7 @@ header.header {
                 }
                 .language {
                     position: relative;
-                    &:hover {
-                        div {
-                            display: flex;
-                        }
-                    }
+                    border-radius: 8px;
                     div {
                         position: absolute;
                         background-color: white;
@@ -154,13 +153,25 @@ header.header {
                         display: none;
                         animation: opacity .2s ease-in;
                         border-right: 1px solid #F5F4F1;
+                        &:hover {
+
+                        }
                         a {
                             &:hover {
                                 text-decoration: underline;
                             }
                         }
                     }
-
+                }
+                .language.active {
+                    background-color: white;
+                    border-radius: 8px;
+                    a {
+                        color: black;
+                    }
+                    div {
+                        display: flex;
+                    }
                 }
             }
         }

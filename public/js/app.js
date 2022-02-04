@@ -18143,6 +18143,22 @@ module.exports = throttle;
 
 /***/ }),
 
+/***/ "./node_modules/lodash/fp/placeholder.js":
+/*!***********************************************!*\
+  !*** ./node_modules/lodash/fp/placeholder.js ***!
+  \***********************************************/
+/***/ ((module) => {
+
+/**
+ * The default argument placeholder value for methods.
+ *
+ * @type {Object}
+ */
+module.exports = {};
+
+
+/***/ }),
+
 /***/ "./node_modules/lodash/lodash.js":
 /*!***************************************!*\
   !*** ./node_modules/lodash/lodash.js ***!
@@ -56418,10 +56434,12 @@ var __webpack_exports__ = {};
   !*** ./resources/js/app.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
-/* harmony import */ var swiper_css_bundle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/css/bundle */ "./node_modules/swiper/swiper-bundle.min.css");
-/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
-/* harmony import */ var simplebar_dist_simplebar_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! simplebar/dist/simplebar.css */ "./node_modules/simplebar/dist/simplebar.css");
+/* harmony import */ var lodash_fp_placeholder__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/fp/placeholder */ "./node_modules/lodash/fp/placeholder.js");
+/* harmony import */ var lodash_fp_placeholder__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_fp_placeholder__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var swiper_css_bundle__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/css/bundle */ "./node_modules/swiper/swiper-bundle.min.css");
+/* harmony import */ var simplebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! simplebar */ "./node_modules/simplebar/dist/simplebar.esm.js");
+/* harmony import */ var simplebar_dist_simplebar_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! simplebar/dist/simplebar.css */ "./node_modules/simplebar/dist/simplebar.css");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -56434,6 +56452,7 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 window.$ = window.jQuery = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
@@ -56443,7 +56462,7 @@ __webpack_require__(/*! select2 */ "./node_modules/select2/dist/js/select2.js");
 
 
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Scrollbar]);
+swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_1__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_1__.Scrollbar]);
 
 
 $(document).ready(function () {
@@ -56468,18 +56487,35 @@ $(document).ready(function () {
   var categories = document.querySelectorAll('.categories');
   var fieldsetInput = document.querySelectorAll('fieldset input');
   var fieldsetLegend = document.querySelectorAll('fieldset legend');
-  console.log(document.querySelectorAll('fieldset legend'));
+  var selected = document.querySelectorAll(".selected");
+  var optionsContainer = document.querySelectorAll(".options-container");
+  var optionsList = document.querySelectorAll(".option");
+  var language = document.querySelector('.language');
+  var headerPhone = document.querySelector('#header-phone');
+  language.addEventListener('click', function (e) {
+    e.preventDefault();
+    language.classList.toggle('active');
+    language.classList.contains('active') ? headerPhone.style.opacity = 0 : headerPhone.style.opacity = 1;
+  });
+  selected.forEach(function (item, index) {
+    item.addEventListener("click", function () {
+      selected[index].classList.toggle('active');
+      optionsContainer[index].classList.toggle("active");
+    });
+  });
+  optionsList.forEach(function (item) {
+    item.addEventListener("click", function () {
+      selected.innerHTML = item.querySelector("label").innerHTML;
+      optionsContainer.classList.remove("active");
+    });
+  });
   fieldsetInput.forEach(function (item, index) {
-    item.onfocus = function () {
-      fieldsetLegend[index].style.opacity = 1;
-    };
-
-    if (item.target.value !== '') {
-      fieldsetLegend[index].style.opacity = 1;
-    }
-
-    item.onblur = function () {
-      fieldsetLegend[index].style.opacity = 0;
+    item.onchange = function (e) {
+      if (e.target.value !== "") {
+        fieldsetLegend[index].style.opacity = 1;
+      } else if (e.target.value === "") {
+        fieldsetLegend[index].style.opacity = 0;
+      }
     };
   });
   categories.forEach(function (item, index) {
@@ -56519,11 +56555,7 @@ $(document).ready(function () {
     selector: "#select-country2",
     width: "100%",
     placeholder: 'Страна'
-  }); // let cookie_change_location = new BVSelect({
-  //     selector: "#location-country",
-  //     width: "100%",
-  //     placeholder: 'Страна'
-  // });
+  });
 
   search.onfocus = function () {
     search_block.style.transform = "translateY(0)";
@@ -56533,7 +56565,7 @@ $(document).ready(function () {
     search_block.style.transform = "translateY(-34rem)";
   };
 
-  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-box', {
+  var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-box', {
     loop: true,
     slidesPerView: 1,
     autoplay: {
@@ -56544,7 +56576,7 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev'
     }
   });
-  var swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-hero', {
+  var swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-hero', {
     loop: true,
     slidesPerView: 1,
     autoplay: {
@@ -56555,7 +56587,7 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev'
     }
   });
-  var swiperProduct = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-product', {
+  var swiperProduct = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-product', {
     loop: true,
     slidesPerView: 1,
     autoplay: {
@@ -56566,7 +56598,7 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev'
     }
   });
-  var swiperItem = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-item', {
+  var swiperItem = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-item', {
     loop: true,
     slidesPerView: 4,
     spaceBetween: 16,
@@ -56578,7 +56610,7 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev'
     }
   });
-  var swiperZoom = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper-zoom', {
+  var swiperZoom = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-zoom', {
     // loop: true,
     slidesPerView: 1,
     scrollbar: {

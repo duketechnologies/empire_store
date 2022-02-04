@@ -40,7 +40,7 @@
       display: grid ;
       grid-template-columns: 1fr 1fr;
       margin-top: 6rem;
-      gap: 4rem;
+      gap: 3rem;
       width: 100%;
       h4 {
         font-weight: 700;
@@ -50,54 +50,37 @@
         text-align: left;
         margin-bottom: 2.5rem;
       }
-      fieldset {
-        border: 1px solid #DEDCD8;
-        border-style: solid;
-        width: 100%;
-        background: white;
-        border-radius: 8px;
-        margin-bottom: 2.4rem;
-        legend {
-          padding-left: .5rem;
-          padding-right: .5rem;
-          margin-left: 1rem;
-          font-size: .9rem;
-          letter-spacing: .7px;
-          color: #505150;
-          text-align: left;
+        fieldset {
+            border: 1px solid #DEDCD8;
+            max-width: 20rem;
+            background: white;
+            border-radius: 8px;
+            padding: .1rem;
+            position: relative;
+            margin-bottom: 2rem;
+            legend {
+                padding-left: .5rem;
+                padding-right: .5rem;
+                margin-left: 1rem;
+                font-size: .9rem;
+                letter-spacing: .7px;
+                color: #505150;
+                position: absolute;
+                top: -.55rem;
+                background-color: white;
+                opacity: 0;
+                transition: opacity .2s ease-in;
+            }
+            input {
+                border:none;
+                padding: 1rem 1rem 1rem 1.5rem;
+                min-width: 18rem;
+                outline: none;
+                border-radius: 8px;
+                font-size: .9rem;
+                letter-spacing: .44px;
+            }
         }
-        select {
-          width: 100%;
-          border:none;
-          padding:1rem;
-          border-radius: 8px;
-          outline: none;
-          position: relative;
-          option {
-            padding:1rem 0;
-          }
-        }
-        input {
-          border:none;
-          padding:1rem;
-          padding-left: 1.5rem;
-          width: 100%;
-          outline: none;
-          border-radius: 8px;
-          // padding-left: 1.5rem;
-          font-size: .9rem;
-          letter-spacing: .44px;
-        }
-        textarea {
-          width: 100%;
-          border:none;
-          border-radius: 8px;
-          resize: none;
-          outline: none;
-          min-height: 6rem;
-          padding:1rem;
-        }
-      }
       .checkboxes {
         display: flex;
         align-items: center;

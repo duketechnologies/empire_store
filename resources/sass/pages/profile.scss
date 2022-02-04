@@ -97,6 +97,7 @@ section#profile {
                           top: -.55rem;
                           background-color: white;
                           opacity: 0;
+                          transition: opacity .2s ease-in;
                       }
                       input {
                           border:none;
@@ -386,37 +387,77 @@ section#profile {
                   letter-spacing: .44px;
                   padding: 1.75rem 1.35rem;
               }
-              div {
-                  background-color: #F5F4F1;
-                  border-radius: 8px;
-                  padding: 2.75rem 1.35rem 2rem;
-                  p {
+              .categories {
+                  background-color: white;
+                  border-radius: 6px;
+                  padding: 2rem 1.35rem 2rem;
+                  max-height: 0rem;
+                  overflow: hidden;
+                  cursor: pointer;
+                  margin-top: .3rem;
+                  &:first-child {
+                      margin-top: 0;
+                  }
+                  svg {
+                      width: .9rem;
+                      height: .9rem;
+                      opacity: 0;
+                      transition: .2s ease-in;
+
+                  }
+                  .pick {
                       font-size: .95rem;
                       letter-spacing: .44px;
                       color: #939393;
                       display: flex;
                       align-items: center;
                       justify-content: space-between;
+                      &:hover {
+                          svg {
+                              opacity: 1;
+                          }
+                      }
                   }
+
                   ul {
                       margin-top: 1.5rem;
+
                       li {
                           font-size: .85rem;
                           letter-spacing: .44px;
                           color: #505154;
                           font-weight: 500;
-                          line-height: 2.5rem;
+                          margin-bottom: 1.5rem;
                           span {
                               margin-left: .5rem;
                               color: #DEDCD8;
-                              font-weight: 500;
                           }
+
                           a {
                               color: #303133;
-                              border-bottom: 1px solid black;
                               max-width: fit-content;
+                              border-bottom: 1px solid transparent;
+                              transition: .2s ease-in;
+                              &:hover {
+                                  border-bottom: 1px solid black;
+                              }
+                          }
+                          a.all {
+                              border-bottom: 1px solid black;
                           }
                       }
+                  }
+              }
+              .categories.active {
+                  background-color: #F5F4F1;
+                  max-height: fit-content;
+                  animation: opacity .2s ease-in;
+                  svg {
+                      opacity: 1;
+                      animation: rotate .2s ease-in;
+                  }
+                  #vertical {
+                      opacity: 0;
                   }
               }
           }
@@ -574,4 +615,12 @@ section#profile {
         opacity: 1;
     }
 
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(180deg);
+    }
 }

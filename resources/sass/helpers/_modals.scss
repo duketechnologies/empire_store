@@ -6,15 +6,27 @@
     background-image: url("/i/icons/close_icon.png");
     background-repeat: no-repeat;
     background-color: transparent;
+    background-position: center;
     border:none;
-    width: 2rem;
-    height: 2rem;
+    width: 1.4rem;
+    height: 1.4rem;
     position: absolute;
     right: 2rem;
     top: 2rem;
     cursor: pointer;
 }
+::-webkit-scrollbar {
+    width: 7px; /* ширина scrollbar */
+}
 
+::-webkit-scrollbar-track {
+    background: transparent;        /* цвет дорожки */
+}
+::-webkit-scrollbar-thumb {
+    background-color: darkgray;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    //border: 3px solid orange;  /* padding вокруг плашки */
+}
 @media only screen and (min-width: 2560px) {
     .remodal {
         max-width: 1200px;

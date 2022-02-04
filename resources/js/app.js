@@ -1,3 +1,5 @@
+import placeholder from "lodash/fp/placeholder";
+
 window._ = require('lodash');
 window.$ = window.jQuery = require('jquery');
 
@@ -12,7 +14,6 @@ import 'simplebar/dist/simplebar.css';
 $(document).ready(function () {
 
     console.log('ready...');
-
 
     const faqs = document.querySelectorAll('.faq')
     const menu = document.querySelector('.menu')
@@ -32,18 +33,45 @@ $(document).ready(function () {
     const categories = document.querySelectorAll('.categories')
     const fieldsetInput = document.querySelectorAll('fieldset input')
     const fieldsetLegend = document.querySelectorAll('fieldset legend')
-    console.log(document.querySelectorAll('fieldset legend'))
+    const selected = document.querySelectorAll(".selected");
+    const optionsContainer = document.querySelectorAll(".options-container");
+    const optionsList = document.querySelectorAll(".option");
+    const language = document.querySelector('.language')
+    const headerPhone = document.querySelector('#header-phone')
+
+    language.addEventListener('click', (e) => {
+        e.preventDefault();
+        language.classList.toggle('active')
+        language.classList.contains('active') ? headerPhone.style.opacity = 0 : headerPhone.style.opacity = 1
+    })
+
+
+
+    selected.forEach((item,index) => {
+        item.addEventListener("click", () => {
+            selected[index].classList.toggle('active')
+            optionsContainer[index].classList.toggle("active");
+        });
+    })
+
+    optionsList.forEach(item => {
+        item.addEventListener("click", () => {
+            selected.innerHTML = item.querySelector("label").innerHTML;
+            optionsContainer.classList.remove("active");
+        });
+    });
+
+
 
     fieldsetInput.forEach((item,index) => {
-        item.onfocus = () => {
-            fieldsetLegend[index].style.opacity = 1
+        item.onchange = (e) => {
+            if (e.target.value !== "") {
+                fieldsetLegend[index].style.opacity = 1
+            } else if (e.target.value === "") {
+                fieldsetLegend[index].style.opacity = 0
+            }
         }
-        if (item.target.value !== '') {
-            fieldsetLegend[index].style.opacity = 1
-        }
-        item.onblur = () => {
-            fieldsetLegend[index].style.opacity = 0
-        }
+
     })
 
     categories.forEach((item, index) => {
@@ -93,12 +121,6 @@ $(document).ready(function () {
         width: "100%",
         placeholder: 'Страна'
     });
-
-    // let cookie_change_location = new BVSelect({
-    //     selector: "#location-country",
-    //     width: "100%",
-    //     placeholder: 'Страна'
-    // });
 
     search.onfocus = function () {
         search_block.style.transform = "translateY(0)"

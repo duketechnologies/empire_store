@@ -114,7 +114,7 @@
                     </div>
 
                 </div>
-                <div class="product__package active">
+                <div class="product__package">
                     <form method="POST" action="#">
                         <input type="checkbox" name="craft-package" id="craft3"/>
                         <label for="craft3" >Крафт-пакет</label>

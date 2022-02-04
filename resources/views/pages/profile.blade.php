@@ -20,19 +20,19 @@
                       <div class="user">
                           <fieldset>
                               <legend>Имя</legend>
-                              <input type="text" name="name" placeholder="Имя"/>
+                              <input type="text" name="name" value="" placeholder="Имя"/>
                           </fieldset>
                           <fieldset>
                               <legend>Телефон</legend>
-                              <input type="tel" name="phone" placeholder="Телефон"/>
+                              <input type="tel" name="phone" value="" placeholder="Телефон"/>
                           </fieldset>
                           <fieldset>
                               <legend>Фамилия</legend>
-                              <input type="text" name="surname" placeholder="Фамилия"/>
+                              <input type="text" name="surname" value="" placeholder="Фамилия"/>
                           </fieldset>
                           <fieldset>
                               <legend>Email</legend>
-                              <input type="email" name="email" placeholder="Email"/>
+                              <input type="email" name="email" value="" placeholder="Email"/>
                           </fieldset>
                       </div>
                       <div class="buttons">
@@ -153,20 +153,34 @@
           <div class="favorites" data-content="wishlist">
 
               <div class="favorites__menu">
-                  <div>
-                      <p>Катергория
-                          <svg width="13" height="2" viewBox="0 0 13 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M1 1H11.5" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <div class="categories active">
+                      <p class="pick">Катергория
+                          <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path id="vertical"d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
                           </svg>
                       </p>
                       <ul>
-                          <li>Панно</li>
-                          <li>Статуэтки</li>
-                          <li>Empire gallery</li>
-                          <li><a href="#">Все</a><span>(56)</span></li>
+                          <li><a href="#">Панно</a></li>
+                          <li><a href="#">Статуэтки</a></li>
+                          <li><a href="#">Empire gallery</a></li>
+                          <li><a href="#" class="all">Все</a><span>(56)</span></li>
                       </ul>
                   </div>
-                  <p class="title">Коллекция</p>
+                  <div class="categories">
+                      <p class="pick">Катергория
+                          <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path id="vertical"d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                      </p>
+                      <ul>
+                          <li><a href="#">Панно</a></li>
+                          <li><a href="#">Статуэтки</a></li>
+                          <li><a href="#">Empire gallery</a></li>
+                          <li><a href="#" class="all">Все</a><span>(56)</span></li>
+                      </ul>
+                  </div>
               </div>
 
               <div class="favorites__products">

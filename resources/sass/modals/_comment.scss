@@ -1,6 +1,6 @@
 .remodal[data-remodal-id=comment] {
     padding: 6rem !important;
-    max-width: 800px;
+    max-width: 50%;
     .content {
         h1 {
             text-align: center;
@@ -28,7 +28,7 @@
                 width: 17rem;
             }
             textarea {
-                width: 42rem;
+                width: 100%;
                 min-height: 17rem;
                 background-color: #F5F4F1;
                 padding-top: 1.6rem;

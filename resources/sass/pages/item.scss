@@ -344,14 +344,19 @@ section#item {
                     }
                 }
                 svg {
-                    width: 1rem;
-                    height: 1rem;
+                    width: .8rem;
+                    height: .8rem;
                     margin-bottom: .3rem;
-
+                    >path {
+                        transition: .2s ease-in;
+                    }
                 }
                 &:hover {
                     border-bottom: 1px solid black;
                     padding-bottom: 0.5rem;
+                    .rotate>path {
+                        stroke: black;
+                    }
                 }
             }
             .answers {

@@ -32,19 +32,19 @@
                             <div class="user">
                                 <fieldset>
                                     <legend>Имя</legend>
-                                    <input type="text" name="name" value="Айжан"/>
+                                    <input type="text" name="name" placeholder="Имя"/>
                                 </fieldset>
                                 <fieldset>
                                     <legend>Телефон</legend>
-                                    <input type="tel" name="phone" value="+7 (718) 878 38 28"/>
+                                    <input type="tel" name="phone" placeholder="Телефон"/>
                                 </fieldset>
                                 <fieldset>
                                     <legend>Фамилия</legend>
-                                    <input type="text" name="surname" value="Сулейменова"/>
+                                    <input type="text" name="surname" placeholder="Фамилия"/>
                                 </fieldset>
                                 <fieldset>
                                     <legend>Email</legend>
-                                    <input type="email" name="email" value="Mail@mail.com"/>
+                                    <input type="email" name="email" placeholder="Email"/>
                                 </fieldset>
                             </div>
                         </div>
@@ -58,11 +58,11 @@
                         <p class="title">Получатель заказа</p>
                         <fieldset>
                             <legend>Имя получателя</legend>
-                            <input type="text" name="name" value="Айжан"/>
+                            <input type="text" name="name" placeholder="Имя получателя"/>
                         </fieldset>
                         <fieldset class="last">
                             <legend>Телефон получателя</legend>
-                            <input type="tel" name="phone" value="+7 (718) 878 38 28"/>
+                            <input type="tel" name="phone" placeholder="Телефон получателя"/>
                         </fieldset>
                     </div>
                     <button id="another-btn" class="main-btn">
@@ -124,7 +124,7 @@
                         </p>
                         <p class="info">Ежедневно 10:00–22:00</p>
                     </div>
-                    <button class="link-btn">Выбрать другой пункт самовывоза</button>
+                    <button class="link-btn" data-remodal-target="pickup-modal">Выбрать другой пункт самовывоза</button>
                 </div>
                 <div class="order_adress">
                     <p class="title">
@@ -196,39 +196,39 @@
                     <div class="grid">
                         <fieldset>
                             <legend>Контактное лицо</legend>
-                            <input type="text" name="name" value="Аружан Сулейменова"/>
+                            <input type="text" name="name" placeholder="Контактное лицо"/>
                         </fieldset>
                         <fieldset>
                             <legend>Телефон</legend>
-                            <input type="text" name="name" value="+7 (777) 777-77-77"/>
+                            <input type="text" name="name" placeholder="Телефон"/>
                         </fieldset>
                         <fieldset>
                             <legend>E-Mail</legend>
-                            <input type="text" name="name" value="Email@mail.com"/>
+                            <input type="text" name="name" placeholder="E-Mail"/>
                         </fieldset>
                         <fieldset>
-                            <legend>Название компании </legend>
-                            <input type="text" name="name" value="ООО “Кирсанов”"/>
+                            <legend>Название компании</legend>
+                            <input type="text" name="name" placeholder="Название компании"/>
                         </fieldset>
                         <fieldset>
                             <legend>Юридический адрес</legend>
-                            <input type="text" name="name" value="Алматы ул.Жарокова дом 56 "/>
+                            <input type="text" name="name" placeholder="Юридический адрес"/>
                         </fieldset>
                         <fieldset>
                             <legend>Наименование банка</legend>
-                            <input type="text" name="name" value="Сбербанк"/>
+                            <input type="text" name="name" placeholder="Наименование банка"/>
                         </fieldset>
                         <fieldset>
                             <legend>БИН</legend>
-                            <input type="text" name="name" value="Айжан"/>
+                            <input type="text" name="name" placeholder="БИН"/>
                         </fieldset>
                         <fieldset>
                             <legend>Расчетный счет</legend>
-                            <input type="text" name="name" value="Айжан"/>
+                            <input type="text" name="name" placeholder="Расчетный счет"/>
                         </fieldset>
                         <fieldset>
                             <legend>БИК</legend>
-                            <input type="text" name="name" value="Айжан"/>
+                            <input type="text" name="name" placeholder="БИК"/>
                         </fieldset>
                     </div>
                 </div>
