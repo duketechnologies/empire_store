@@ -113,7 +113,7 @@
                 <p class="serial-number">арт. E0738828</p>
             </div>
             <div class="item-breadcrumbs">
-                <a href="#">Главная</a>
+                <a href="/">Главная</a>
                 <a href="#">Декор</a>
                 <a href="#">Ваза Тұлпар</a>
             </div>

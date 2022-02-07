@@ -15,7 +15,8 @@
     @yield('scripts')
     <script src={{ url("js/bvselect.js") }}></script>
     <script src="{{ mix('js/app.js') }}"></script>
-
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d391fd21-8248-4af2-b18d-72f15cfe6cdf&lang=ru_RU" type="text/javascript"/>
+    <script src="mapbasics.js" type="text/javascript"></script>
 </head>
 <body>
     @include('partials.header')

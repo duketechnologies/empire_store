@@ -43,6 +43,7 @@ section#address {
         gap: 6rem;
         div {
             margin-right: 2.5rem;
+            width: 12.5rem;
             p {
                 display: flex;
                 flex-direction: column;
@@ -52,6 +53,10 @@ section#address {
                 letter-spacing: .44px;
                 margin-bottom: 1.6rem;
                 padding-left: .2rem;
+                svg {
+                    width: 1.5rem;
+                    height: 1.1rem;
+                }
             }
             .address-list {
                 li {
@@ -154,7 +159,7 @@ section#address {
             }
         }
 
-        .ymaps {
+        #map {
             border-radius: 16px;
             max-width: 85rem;
             max-height: 47rem;

@@ -240,48 +240,48 @@
             <div class="select-box">
                 <div class="options-container">
                     <div class="option">
-                        <input type="radio" class="radio" id="automobiles" name="category"/>
-                        <label for="automobiles"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                        <input type="radio" class="radio" id="kz" name="category"/>
+                        <label for="kz"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="film" name="category" />
-                        <label for="film"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                        <input type="radio" class="radio" id="uk" name="country" />
+                        <label for="uk"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="science" name="category" />
-                        <label for="science"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+                        <input type="radio" class="radio" id="kr" name="country" />
+                        <label for="kr"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="art" name="category" />
-                        <label for="art"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                        <input type="radio" class="radio" id="kz2" name="country" />
+                        <label for="kz2"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="music" name="category" />
-                        <label for="music"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+                        <input type="radio" class="radio" id="ru" name="country" />
+                        <label for="ru"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="travel" name="category" />
-                        <label for="travel"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+                        <input type="radio" class="radio" id="kz3" name="country" />
+                        <label for="kz3"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="sports" name="category" />
-                        <label for="sports"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+                        <input type="radio" class="radio" id="ru2" name="country" />
+                        <label for="ru2"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="news" name="category" />
-                        <label for="news"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+                        <input type="radio" class="radio" id="kr2" name="country" />
+                        <label for="kr2"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="tutorials" name="category" />
-                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                        <input type="radio" class="radio" id="uk2" name="country" />
+                        <label for="uk2"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
                     </div>
                 </div>
 
@@ -338,23 +338,23 @@
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="tutorials" name="category" />
-                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                        <input type="radio" class="radio" id="uk3" name="category" />
+                        <label for="uk3"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="tutorials" name="category" />
-                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                        <input type="radio" class="radio" id="uk4" name="category" />
+                        <label for="uk4"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="tutorials" name="category" />
-                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                        <input type="radio" class="radio" id="uk5" name="category" />
+                        <label for="uk5"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
                     </div>
 
                     <div class="option">
-                        <input type="radio" class="radio" id="tutorials" name="category" />
-                        <label for="tutorials"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+                        <input type="radio" class="radio" id="uk6" name="category" />
+                        <label for="uk6"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
                     </div>
                 </div>
 

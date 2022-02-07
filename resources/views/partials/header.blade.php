@@ -121,109 +121,111 @@
             </a>
         </div>
     </div>
-    <div class="menu">
-        <div id="close-menu">
-            <svg viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 1.5L1 12.5" stroke="#303133" stroke-linecap="square" stroke-linejoin="round"/>
-                <path d="M1 1.5L12 12.5" stroke="#303133" stroke-linecap="square" stroke-linejoin="round"/>
-            </svg>
-        </div>
-        <h2>Каталог</h2>
-        <ul class="menu__links">
-            <li>
-                <a href="#">Эксклюзивные подарки
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">Бизнес-аксессуары
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">Декор
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">Посуда
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li><a href="#">Аксессуары
-                    <svg  viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">Часы
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">Книги
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">Шахматы и нарды
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">VIP Jewelry
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-        <ul class="menu__discount">
-            <li>
-                <a href="#">Новинки
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">Акции
-                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-        <div class="menu__contacts">
-            <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
-            <a href="mailto:Email@empire.kz" class="link-btn">Email@empire.kz</a>
-            <a href="/contacts" class="menu-btn">Контакты</a>
+    <div class="menu-bg">
+        <div class="menu">
+            <div id="close-menu">
+                <svg viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 1.5L1 12.5" stroke="#303133" stroke-linecap="square" stroke-linejoin="round"/>
+                    <path d="M1 1.5L12 12.5" stroke="#303133" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h2>Каталог</h2>
+            <ul class="menu__links">
+                <li>
+                    <a href="#">Эксклюзивные подарки
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Бизнес-аксессуары
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Декор
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Посуда
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="#">Аксессуары
+                        <svg  viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Часы
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Книги
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Шахматы и нарды
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">VIP Jewelry
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menu__discount">
+                <li>
+                    <a href="#">Новинки
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Акции
+                        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.999984 7.24611H13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7.24609 1L13.4922 7.24611L7.24609 13.4922" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <div class="menu__contacts">
+                <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+                <a href="mailto:Email@empire.kz" class="link-btn">Email@empire.kz</a>
+                <a href="/contacts" class="menu-btn">Контакты</a>
+            </div>
         </div>
     </div>
 </header>

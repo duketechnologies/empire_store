@@ -1,14 +1,14 @@
 .remodal[data-remodal-id=Zoom-popup] {
     max-width: 98%;
-    height: 98.6%;
+    //height: 98.6%;
     margin:auto auto;
-    display: flex;
+    //display: flex;
     position: relative;
     overflow: hidden;
-    padding:0 !important;
+    padding:6rem 2.2rem !important;
     .swiper-scrollbar {
         height: .2rem;
-        width: 30%;
+        width: 27%;
         margin: 0 auto;
         margin-top: 2rem;
     }
@@ -31,7 +31,7 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        height: 80vh;
+        height: calc(80vh - 5rem);
         width: 100%;
         align-self: center;
         //overflow: hidden;
