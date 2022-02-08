@@ -736,10 +736,6 @@ form#location-country .bv_atual {
   display: none;
 }
 
-[class*=ymaps-2][class*=-float-button-icon_icon_ruler] {
-  display: none;
-}
-
 /*helpers*/
 /*blocks*/
 header.header {
@@ -1049,6 +1045,10 @@ header.header .search-block .right_side .product p {
   align-self: flex-end;
   margin-bottom: 2rem;
 }
+header.header .search-block.active {
+  -webkit-animation: opacity 0.2s ease-in;
+          animation: opacity 0.2s ease-in;
+}
 header.header .menu {
   position: fixed;
   top: 0;
@@ -1152,7 +1152,6 @@ header.header .menu-bg.active::before {
   opacity: 0.1;
   top: 0;
   left: 0rem;
-  z-index: -1;
   -webkit-animation: opacity-menu 0.2s ease-in;
           animation: opacity-menu 0.2s ease-in;
 }
@@ -1308,6 +1307,12 @@ header.header .menu.active {
 }
 .footer .wrapper .subscribe .media li:hover {
   background-color: transparent;
+}
+.footer .wrapper .subscribe .media a svg {
+  transition: 0.2s ease-in;
+}
+.footer .wrapper .subscribe .media a:hover svg {
+  transform: scale(1.1);
 }
 .footer .wrapper .subscribe .media a:hover svg > path {
   fill: black;
@@ -1504,6 +1509,114 @@ header.header .menu.active {
 section#home {
   position: relative;
   margin-top: 2rem;
+}
+section#home .loader {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  top: -9vh;
+  background-color: white;
+  -webkit-animation: loader 0.5s ease-in 3s;
+          animation: loader 0.5s ease-in 3s;
+  transition: 1s ease-in;
+}
+section#home .loader #logo {
+  width: 40rem;
+  height: 30rem;
+}
+section#home .loader #logo path:nth-child(1) {
+  stroke-dasharray: 374;
+  stroke-dashoffset: 374;
+  -webkit-animation: line-anim 2s ease forwards 0.4s;
+          animation: line-anim 2s ease forwards 0.4s;
+}
+section#home .loader #logo path:nth-child(2) {
+  stroke-dasharray: 1141;
+  stroke-dashoffset: 1141;
+  -webkit-animation: line-anim 2.5s ease forwards 0.4s;
+          animation: line-anim 2.5s ease forwards 0.4s;
+}
+section#home .loader #logo path:nth-child(3) {
+  stroke-dasharray: 867;
+  stroke-dashoffset: 867;
+  -webkit-animation: line-anim 2s ease forwards 0.4s;
+          animation: line-anim 2s ease forwards 0.4s;
+}
+section#home .loader #logo path:nth-child(4) {
+  stroke-dasharray: 867;
+  stroke-dashoffset: 867;
+  -webkit-animation: line-anim 2s ease forwards 0.6s;
+          animation: line-anim 2s ease forwards 0.6s;
+}
+section#home .loader #logo path:nth-child(5) {
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  -webkit-animation: line-anim 2s ease forwards 0.8s;
+          animation: line-anim 2s ease forwards 0.8s;
+}
+section#home .loader #logo path:nth-child(6) {
+  stroke-dasharray: 679;
+  stroke-dashoffset: 679;
+  -webkit-animation: line-anim 2s ease forwards 0.6s;
+          animation: line-anim 2s ease forwards 0.6s;
+}
+section#home .loader #logo path:nth-child(7) {
+  stroke-dasharray: 698;
+  stroke-dashoffset: 698;
+  -webkit-animation: line-anim 2s ease forwards 0.8s;
+          animation: line-anim 2s ease forwards 0.8s;
+}
+section#home .loader #logo path:nth-child(8) {
+  stroke-dasharray: 387;
+  stroke-dashoffset: 387;
+  -webkit-animation: line-anim 2s ease forwards 0.6s;
+          animation: line-anim 2s ease forwards 0.6s;
+}
+section#home .loader #logo path:nth-child(9) {
+  stroke-dasharray: 383;
+  stroke-dashoffset: 383;
+  -webkit-animation: line-anim 2s ease forwards 0.8s;
+          animation: line-anim 2s ease forwards 0.8s;
+}
+section#home .loader #logo path:nth-child(10) {
+  stroke-dasharray: 382;
+  stroke-dashoffset: 382;
+  -webkit-animation: line-anim 2s ease forwards 0.6s;
+          animation: line-anim 2s ease forwards 0.6s;
+}
+section#home .loader #logo path:nth-child(11) {
+  stroke-dasharray: 380;
+  stroke-dashoffset: 380;
+  -webkit-animation: line-anim 2s ease forwards 0.4s;
+          animation: line-anim 2s ease forwards 0.4s;
+}
+section#home .loader #logo path:nth-child(12) {
+  stroke-dasharray: 388;
+  stroke-dashoffset: 388;
+  -webkit-animation: line-anim 2s ease forwards 0.6s;
+          animation: line-anim 2s ease forwards 0.6s;
+}
+section#home .loader #logo path:nth-child(13) {
+  stroke-dasharray: 384;
+  stroke-dashoffset: 384;
+  -webkit-animation: line-anim 2s ease forwards 0.8s;
+          animation: line-anim 2s ease forwards 0.8s;
+}
+section#home .loader #logo path:nth-child(14) {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 187;
+  -webkit-animation: line-anim 2s ease forwards 0.4s;
+          animation: line-anim 2s ease forwards 0.4s;
+}
+section#home .loader #logo path:nth-child(15) {
+  stroke-dasharray: 151;
+  stroke-dashoffset: 151;
+  -webkit-animation: line-anim 2s ease forwards 0.6s;
+          animation: line-anim 2s ease forwards 0.6s;
 }
 section#home svg {
   width: 1.35rem;
@@ -2022,6 +2135,16 @@ section#home .collab .title p {
 section#home .collab .collab_img {
   width: 100%;
   padding: 10.5rem;
+}
+@-webkit-keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 section#faq h1 {
   font-size: 1.6rem;
@@ -3097,6 +3220,7 @@ section#franchise .gift ul li:last-child .circle::after {
   display: none;
 }
 section#franchise .gift ul li .circle {
+  background-color: white;
   border-radius: 50%;
   border: 1px solid #E7E6E1;
   position: relative;
@@ -4259,6 +4383,7 @@ section#profile .switch .favorites__products .grid__blocks .info .name {
 section#profile .switch .favorites__products .grid__blocks .info .name svg {
   width: 1.15rem;
   height: 1.1rem;
+  cursor: pointer;
 }
 section#profile .switch .favorites__products .grid__blocks .info .name svg > path {
   transition: 0.2s ease-in;
@@ -5273,10 +5398,14 @@ section#basket .orders .checkout .consultaion p {
 }
 section#basket .orders .checkout .consultaion .move_to {
   background-color: rgba(193, 146, 69, 0.1);
-  padding: 0.2rem;
+  padding: 0.2rem 0.2rem 0.2rem 0.4rem;
   border-bottom: none;
   font-weight: 400;
   text-transform: initial;
+  transition: 0.2s ease-in;
+}
+section#basket .orders .checkout .consultaion .move_to:hover {
+  background-color: rgba(222, 220, 216, 0.5);
 }
 section#basket .orders .checkout .consultaion a {
   text-transform: uppercase;
@@ -5381,6 +5510,7 @@ section#filters .favorites__menu .sort__title {
   font-weight: 500;
   position: relative;
   cursor: pointer;
+  z-index: 10;
 }
 section#filters .favorites__menu .sort__title span {
   color: #939393;
@@ -5391,8 +5521,8 @@ section#filters .favorites__menu .sort__title .filter {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 100%;
-  left: 0;
+  width: 102%;
+  left: -0.2rem;
   bottom: -8.1rem;
   background-color: white;
   border-radius: 0 0 8px 8px;
@@ -5414,6 +5544,9 @@ section#filters .favorites__menu .sort__title .filter a:hover {
 }
 section#filters .favorites__menu .sort__title .filter.active {
   display: flex;
+  padding-top: 4rem;
+  z-index: -1;
+  box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
 }
 section#filters .favorites__menu .wrapper {
   background-color: white;
@@ -5595,6 +5728,7 @@ section#filters .favorites__products .grid__blocks .content svg {
   top: 2rem;
   opacity: 0;
   transition: 0.2s ease-in;
+  z-index: 10;
 }
 section#filters .favorites__products .grid__blocks .content .grid-img {
   display: flex;
@@ -5605,6 +5739,17 @@ section#filters .favorites__products .grid__blocks .content .grid-img img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+section#filters .favorites__products .grid__blocks .content .grid-img .img-top {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s ease-in;
+  height: 100%;
+}
+section#filters .favorites__products .grid__blocks .content .grid-img:hover .img-top {
+  opacity: 1;
 }
 section#filters .favorites__products .grid__blocks .content:hover {
   box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
@@ -8324,6 +8469,11 @@ section#test .links a span {
   padding: 0.2rem;
   border-bottom: none;
   font-weight: 400;
+  transition: 0.2s ease-in;
+  text-transform: initial;
+}
+.remodal[data-remodal-id=edit-order] .orders .checkout .consultaion .move_to:hover {
+  background-color: rgba(222, 220, 216, 0.5);
 }
 .remodal[data-remodal-id=edit-order] .orders .checkout .consultaion a {
   text-transform: uppercase;

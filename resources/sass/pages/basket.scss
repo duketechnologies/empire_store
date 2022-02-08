@@ -262,10 +262,14 @@ section#basket {
                 }
                 .move_to {
                     background-color: rgba(193, 146, 69, 0.1);
-                    padding: .2rem;
+                    padding: .2rem .2rem .2rem .4rem;
                     border-bottom: none;
                     font-weight: 400;
                     text-transform: initial;
+                    transition: .2s ease-in;
+                    &:hover {
+                        background-color: rgba(222, 220, 216, 0.5);;
+                    }
 
                 }
                 a {

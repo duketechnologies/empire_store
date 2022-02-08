@@ -38,6 +38,19 @@ $(document).ready(function () {
     const optionsList = document.querySelectorAll(".option");
     const language = document.querySelector('.language')
     const headerPhone = document.querySelector('#header-phone')
+    const logo = document.querySelectorAll('#logo path')
+
+    for (let i = 0; i < logo.length; i++) {
+        console.log(`letter ${i} is ${logo[i].getTotalLength()}`)
+    }
+    const loader = () => {
+        document.querySelector('.loader').style.opacity = 0
+    }
+    const loader_display = () => {
+        document.querySelector('.loader').style.display = 'none'
+    }
+    setTimeout(loader, 3000)
+    setTimeout(loader_display, 4000)
 
     ymaps.ready(function () {
         var myMap = new ymaps.Map('map', {
@@ -175,9 +188,11 @@ $(document).ready(function () {
 
     search.onfocus = function () {
         search_block.style.transform = "translateY(0)"
+        search_block.classList.add('active')
     }
     search.onblur = function () {
         search_block.style.transform = "translateY(-34rem)"
+        search_block.classList.remove('active')
     }
 
     const swiper = new Swiper('.swiper-box', {

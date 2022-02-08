@@ -56492,6 +56492,22 @@ $(document).ready(function () {
   var optionsList = document.querySelectorAll(".option");
   var language = document.querySelector('.language');
   var headerPhone = document.querySelector('#header-phone');
+  var logo = document.querySelectorAll('#logo path');
+
+  for (var i = 0; i < logo.length; i++) {
+    console.log("letter ".concat(i, " is ").concat(logo[i].getTotalLength()));
+  }
+
+  var loader = function loader() {
+    document.querySelector('.loader').style.opacity = 0;
+  };
+
+  var loader_display = function loader_display() {
+    document.querySelector('.loader').style.display = 'none';
+  };
+
+  setTimeout(loader, 3000);
+  setTimeout(loader_display, 4000);
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
       center: [43.237163, 76.945627],
@@ -56605,10 +56621,12 @@ $(document).ready(function () {
 
   search.onfocus = function () {
     search_block.style.transform = "translateY(0)";
+    search_block.classList.add('active');
   };
 
   search.onblur = function () {
     search_block.style.transform = "translateY(-34rem)";
+    search_block.classList.remove('active');
   };
 
   var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-box', {
