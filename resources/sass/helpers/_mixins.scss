@@ -1,100 +1,92 @@
 @mixin responsive {
-    @media only screen and (max-width: $responsive) {
-        @content;
-    }
+  @media only screen and (max-width: $responsive) {
+    @content;
+  }
 }
 
 @mixin box($width, $height: $width) {
-    width: $width;
-    height: $height;
+  width: $width;
+  height: $height;
 }
 
 @mixin flex($justify: space-between, $items: center, $direction : row, $wrap : nowrap ) {
-    justify-content: $justify;
-    align-items: $items;
-    flex-direction: $direction;
-    flex-wrap: $wrap;
-    display: flex;
+  justify-content: $justify;
+  align-items: $items;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  display: flex;
 }
 
 @mixin ff($ff: im) {
-    @if($ff == im) {
-        font-family: 'SNK-Impact_KZ-AZ';
-        letter-spacing: 1px;
-    }
-    @if($ff == dn) {
-        font-family: 'SNK-DINPro-CondensedBlack';
-    }
-    @if($ff == dnbold) {
-        font-family: 'SNK-DINPro-CondensedBold';
-    }
+  @if($ff == im) {
+    font-family: 'SNK-Impact_KZ-AZ';
+    letter-spacing: 1px;
+  }
+  @if($ff == dn) {
+    font-family: 'SNK-DINPro-CondensedBlack';
+  }
+  @if($ff == dnbold) {
+    font-family: 'SNK-DINPro-CondensedBold';
+  }
 }
 
 @mixin btn($size : 3.2rem, $type : red) {
-    padding: 0.65em 1.1em;
-    display: block;
-    width: max-content;
+  padding: 0.65em 1.1em;
+  display: block;
+  width: max-content;
 
-    border-radius: 0.4em;
-    border: 2px solid transparent;
-    outline: none;
-    cursor: pointer;
-    transition: .4s;
+  border-radius: 0.4em;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  transition: .4s;
 
-    @include ff();
-    font-size: $size;
-    text-transform: uppercase;
-    text-align: center;
+  @include ff();
+  font-size: $size;
+  text-transform: uppercase;
+  text-align: center;
 
 
-    &:active{
-        transform: scale(.95);
+  &:active{
+    transform: scale(.95);
+  }
+  @if($type == red) {
+    $color : $red;
+    background-color: $color;
+    color: $white;
+
+    &:hover{
+        background: darken($color, 10);
     }
-    @if($type == red) {
-        $color : $red;
-        background-color: $color;
-        color: $white;
-
-        &:hover{
-            background: darken($color, 10);
-        }
-    }
-    @if($type == brown) {
-        $color : $white;
-        color: $color;
-        border-color: $color;
-
-        transition: all 0.2s ease-in-out;
-
-        &:hover{
-            background: $color;
-            color: $brown;
-        }
-    }
-    @if($type == yellow) {
-        $color : $brown;
+  }
+  @if($type == brown) {
+    $color : $white;
+    color: $color;
+    border-color: $color;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background: $color;
         color: $brown;
-        border-color: $brown;
-
-        @include ff(dn);
-
-        padding: 0.6em 1.25em;
-
-        transition: all 0.2s ease-in-out;
-
-        &:hover{
-            background: $color;
-            color: $yellow;
-        }
     }
+  }
+  @if($type == yellow) {
+    $color : $brown;
+    color: $brown;
+    border-color: $brown;
+    @include ff(dn);
+    padding: 0.6em 1.25em;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+        background: $color;
+        color: $yellow;
+    }
+  }
 }
 
 @mixin underline_link($color : $brown) {
-
-    position: relative;
-
-    color: $color;
-    border-bottom: 2px solid $color;
+  position: relative;
+  color: $color;
+  border-bottom: 2px solid $color;
 }
 
 

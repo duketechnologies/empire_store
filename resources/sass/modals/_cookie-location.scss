@@ -1,44 +1,44 @@
 .remodal[data-remodal-id=cookie-location] {
-    max-width: 40rem;
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-        h4 {
-            font-size: 1.6rem;
-            font-weight: 300;
-            text-align: center;
-        }
-        p {
-            font-size: 1.23rem;
-            font-weight: 300;
-            color: #505154;
-            text-align: center;
-            margin-top: .5rem;
-            margin-bottom: 4rem;
-        }
-        ul {
-            align-self: flex-start;
-            li {
-                list-style: initial;
-                font-size: .95rem;
-                letter-spacing: .7px;
-                font-weight: 500;
-                margin-bottom: .4rem;
-            }
-        }
-        .link-btn {
-            font-weight: 500;
-            font-size: .85rem;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #505154;
-            padding-bottom: .3rem;
-            text-transform: uppercase;
-            align-self: center;
-            margin-top: 4rem;
-            margin-bottom: 2.4rem;
-        }
-        .main-btn {
-            width: 100%;
-        }
+  max-width: 40rem;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    h4 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-align: center;
     }
+    p {
+      font-size: 1.23rem;
+      font-weight: 300;
+      color: #505154;
+      text-align: center;
+      margin-top: .5rem;
+      margin-bottom: 4rem;
+    }
+    ul {
+      align-self: flex-start;
+      li {
+        list-style: initial;
+        font-size: .95rem;
+        letter-spacing: .7px;
+        font-weight: 500;
+        margin-bottom: .4rem;
+      }
+    }
+    .link-btn {
+      font-weight: 500;
+      font-size: .85rem;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #505154;
+      padding-bottom: .3rem;
+      text-transform: uppercase;
+      align-self: center;
+      margin-top: 4rem;
+      margin-bottom: 2.4rem;
+    }
+    .main-btn {
+      width: 100%;
+    }
+  }
 }

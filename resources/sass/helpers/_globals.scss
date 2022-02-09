@@ -1,223 +1,219 @@
 html, body{
-    font-size: $font-size;
-    font-family: 'Inter', sans-serif;
-    letter-spacing: -.1px;
-    scroll-behavior: smooth;
+  font-size: $font-size;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -.1px;
+  scroll-behavior: smooth;
 }
 html {
-    overflow-x: hidden;
-    font-family: 'Inter', sans-serif;
-    width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
 }
 * {
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
 }
 body {
-    width: 100vw;
-    max-width:100%;
-    position: relative;
-    font-family: 'Inter', sans-serif;
-    background-color: #F5F4F1;
-    //overflow-x: hidden;
+  width: 100vw;
+  max-width:100%;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  background-color: #F5F4F1;
+  //overflow-x: hidden;
 }
 body::-webkit-scrollbar {
-    width: 7px; /* ширина scrollbar */
+  width: 7px; /* ширина scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-    background: transparent;        /* цвет дорожки */
+  background: transparent;        /* цвет дорожки */
 }
 body::-webkit-scrollbar-thumb {
-    background-color: darkgray;    /* цвет плашки */
-    border-radius: 20px;       /* закругления плашки */
-    //border: 3px solid orange;  /* padding вокруг плашки */
+  background-color: darkgray;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+  //border: 3px solid orange;  /* padding вокруг плашки */
 }
 li {
-list-style: none;
+  list-style: none;
 }
 
 .main-btn {
-    text-transform: uppercase;
-    background-color: #212123;
-    font-size: 0.96rem;
-    width: 18.7rem;
-    height: 3.3rem;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 3px;
-    font-family: 'Inter';
-    transition: .2s ease-in;
-    &:hover {
-        background-color: #303133;
-    }
+  text-transform: uppercase;
+  background-color: #212123;
+  font-size: 0.96rem;
+  width: 18.7rem;
+  height: 3.3rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: 'Inter';
+  transition: .2s ease-in;
+  &:hover {
+    background-color: #303133;
+  }
 }
 .primary-btn {
-    text-transform: uppercase;
-    background-color: #F5F4F1;
-    font-size: 0.96rem;
-    width: 18.7rem;
-    height: 3.3rem;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    letter-spacing: 1px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: .2s ease-in;
-    &:hover {
-        background-color: #EDEDED;
-    }
+  text-transform: uppercase;
+  background-color: #F5F4F1;
+  font-size: 0.96rem;
+  width: 18.7rem;
+  height: 3.3rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: .2s ease-in;
+  &:hover {
+    background-color: #EDEDED;
+  }
 }
 .secondary-btn {
-    font-weight: 500;
-    font-size: .8rem;
-    text-transform:uppercase;
-    letter-spacing: .6px;
-    padding: 1rem 2rem .9rem;
-    background-color: white;
-    border-radius: 8px;
+  font-weight: 500;
+  font-size: .8rem;
+  text-transform:uppercase;
+  letter-spacing: .6px;
+  padding: 1rem 2rem .9rem;
+  background-color: white;
+  border-radius: 8px;
 }
 .link-btn {
-    font-size: .85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border:none;
-    border-bottom: 1px solid #DEDCD8;
-    font-weight: 600;
-    padding-bottom: .2rem;
-    transition: .2s ease-in;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-    color: #303133;
-    &:hover {
-        border-bottom: 1px solid black;
-    }
+  font-size: .85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border:none;
+  border-bottom: 1px solid #DEDCD8;
+  font-weight: 600;
+  padding-bottom: .2rem;
+  transition: .2s ease-in;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #303133;
+  &:hover {
+    border-bottom: 1px solid black;
+  }
 }
 .swiper-button-next {
-    &::after {
-        display: none;
-    }
+  &::after {
+    display: none;
+  }
 }
 .swiper-button-prev {
-    &::after {
-        display: none;
-    }
+  &::after {
+    display: none;
+  }
 }
 @media only screen and (max-width: 1599px) {
-    html{
-        font-size: 12px;
-    }
+  html{
+    font-size: 12px;
+  }
 }
 @media only screen and (max-width: 1366px) {
-    html{
-        font-size: 11px;
-    }
-    body{
-        //overflow-x: scroll;
-    }
+  html{
+    font-size: 11px;
+  }
+  body{
+    //overflow-x: scroll;
+  }
 }
 @media only screen and (width: 2560px) {
-    html, body {
-        font-size: 1.4vmin;
-    }
+  html, body {
+    font-size: 1.4vmin;
+  }
 }
 @mixin responsive {
-    @media only screen and (max-width: 1200px) {
-        @content;
-    }
+  @media only screen and (max-width: 1200px) {
+    @content;
+  }
 }
 
 @mixin notMobile {
-    @media only screen and (min-width: 1200px) {
-        @content;
-    }
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
 }
 .container {
-    margin: 0 auto;
-    position: relative;
-    width: 120rem;
-    @include responsive{
-        width: 95vmin;
-    }
+  margin: 0 auto;
+  position: relative;
+  width: 120rem;
+  @include responsive{
+    width: 95vmin;
+  }
 }
 .remodal-overlay {
-    background: rgba(43, 46, 56, 0.4);
-}
-.bv {
-
+  background: rgba(43, 46, 56, 0.4);
 }
 .bv_atual {
-    border:none;
-    text-align: left;
-    font-size: 0.95rem;
-    padding: 1rem 1rem 1rem 1.5rem;
-    font-family: 'Inter';
+  border:none;
+  text-align: left;
+  font-size: 0.95rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  font-family: 'Inter';
 }
 .bv_mainselect {
-    padding: .2rem 0;
+  padding: .2rem 0;
 }
 .bv_ul_inner {
-    border: 1px solid #DEDCD8;
-    left:0;
-    width: 23rem !important;
+  border: 1px solid #DEDCD8;
+  left:0;
+  width: 23rem !important;
 }
 form#location-country {
-    .bv_atual {
-        text-align: center !important;
-    }
+  .bv_atual {
+    text-align: center !important;
+  }
 }
 .arrow {
-    padding: 0;
-    border-width: 0;
-    position: absolute;
-    right: 1.5rem;
-    background-image: url(/i/modals/dropdown_icon.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: 0.7rem;
-    height: 0.5rem;
-
+  padding: 0;
+  border-width: 0;
+  position: absolute;
+  right: 1.5rem;
+  background-image: url(/i/modals/dropdown_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 0.7rem;
+  height: 0.5rem;
 }
 .down {
-    transform: rotate(0);
+  transform: rotate(0);
 }
 .up {
-    transform: rotate(-180deg);
+  transform: rotate(-180deg);
 }
 [class*="ymaps-2"][class*="-ground-pane"] {
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
-    /* Firefox 3.5+ */
-    -webkit-filter: grayscale(100%);
-    /* Chrome 19+ & Safari 6+ */
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  /* Firefox 3.5+ */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
 }
 .ymaps-2-1-79-map {
-    border-radius: 16px;
+  border-radius: 16px;
 }
 [class*="ymaps-2"][class*="-gototech"] {
-    display: none;
+  display: none;
 }
 [class*="ymaps-2"][class*="-copyright__content-cell"] {
-    display: none;
+  display: none;
 }
 [class*="ymaps-2"][class*="-scaleline"] {
-    display: none;
+  display: none;
 }

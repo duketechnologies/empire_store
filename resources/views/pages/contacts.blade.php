@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="contact-card_list-image">
-          <img src={{ url("/i/contacts/vector.png") }} alt="" />
+        <img src={{ url("/i/contacts/vector.png") }} alt="" />
       </div>
     </article>
     <article class="contact-card_list-item">
@@ -48,7 +48,7 @@
         </div>
       </div>
       <div class="contact-card_list-image">
-          <img src={{ url("/i/contacts/vector.png") }} alt="" />
+        <img src={{ url("/i/contacts/vector.png") }} alt="" />
       </div>
     </article>
     <article class="contact-card_list-item">
@@ -69,5 +69,4 @@
        </div>
       @include('partials.consultation')
   </section>
-
 @endsection

@@ -7114,13 +7114,6 @@ section#test .links a span {
   border-bottom: 1px solid black;
 }
 
-.remodal[data-remodal-id=menu] {
-  border-radius: 0px;
-}
-.remodal[data-remodal-id=menu] .remodal-wrapper {
-  padding: 0;
-}
-
 .remodal[data-remodal-id=cookie-location] {
   max-width: 40rem;
 }

@@ -18,20 +18,20 @@ section#news {
         font-weight: 300;
         font-size: 1.6rem;
         &:first-child {
-            flex: 1;
-            display: flex;
-            align-items: center;
+          flex: 1;
+          display: flex;
+          align-items: center;
         }
         &:last-child {
           font-size: 1.25rem;
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 4.5rem;
-            align-items: center;
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 4.5rem;
+          align-items: center;
           svg {
-              width: .6rem;
-              height: .9rem;
-              margin-top: 0.2rem;
+            width: .6rem;
+            height: .9rem;
+            margin-top: 0.2rem;
           }
         }
       }
@@ -100,51 +100,51 @@ section#news {
       letter-spacing: 2px;
       position: relative;
         svg {
-            width: .75rem;
-            height: .45rem;
-            margin-right: .5rem;
-            transition: .2s ease-in;
-            >path {
-                transition: .2s ease-in;
-            }
+          width: .75rem;
+          height: .45rem;
+          margin-right: .5rem;
+          transition: .2s ease-in;
+          >path {
+              transition: .2s ease-in;
+          }
         }
         &:hover {
-            svg {
-                transition: .2s ease-in;
-                >path {
-                    fill: black;
-                }
+          svg {
+            transition: .2s ease-in;
+            >path {
+              fill: black;
             }
+          }
         }
     }
       .secondary-btn {
-          color: #505154;
-          transition: .2s ease-in;
-          &:hover {
-              color: black;
-          }
+        color: #505154;
+        transition: .2s ease-in;
+        &:hover {
+          color: black;
+        }
       }
     .pagination {
       display: flex;
       align-items: center;
       gap: 2rem;
         a {
-            font-size: .9rem;
-            color: #939393;
-            padding-bottom: .3rem;
-            transition: .2s ease-in;
-            &:hover {
-                color: black;
-            }
-            svg {
-                width: 2rem;
-                height: 1rem;
-            }
+          font-size: .9rem;
+          color: #939393;
+          padding-bottom: .3rem;
+          transition: .2s ease-in;
+          &:hover {
+            color: black;
+          }
+          svg {
+            width: 2rem;
+            height: 1rem;
+          }
         }
         .active {
-            border-bottom: 1px solid black;
-            padding-bottom: .3rem;
-            color: black;
+          border-bottom: 1px solid black;
+          padding-bottom: .3rem;
+          color: black;
         }
     }
   }

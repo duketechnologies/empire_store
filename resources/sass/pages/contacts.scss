@@ -19,9 +19,9 @@ section#contacts {
        -moz-box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
        box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
     }
-      &:last-child {
-          padding-bottom: 6.305rem;
-      }
+    &:last-child {
+        padding-bottom: 6.305rem;
+    }
   }
   .contact-card_list-info {
     max-width: fit-content;
@@ -35,8 +35,8 @@ section#contacts {
     p {
       font-weight: 300;
       margin-top: 2rem;
-        line-height: 1.5rem;
-        letter-spacing: .44px;
+      line-height: 1.5rem;
+      letter-spacing: .44px;
     }
   }
   .contact-card_list-contacts {
@@ -55,22 +55,22 @@ section#contacts {
       }
     }
   }
-    .last {
-        display: inline-block;
-        color: #303133;
-        text-transform: uppercase;
-        border-bottom: 1px solid #e0e0e0;
-        margin-right: 2.5rem;
-        padding: .5rem 0;
-        margin-top: 2rem;
-        font-weight: 500;
-        transition: .2s ease-in;
-        margin-top: 1rem;
-        max-width: fit-content;
-        &:hover {
-            border-bottom-color: #303133;
-        }
+  .last {
+    display: inline-block;
+    color: #303133;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e0e0e0;
+    margin-right: 2.5rem;
+    padding: .5rem 0;
+    margin-top: 2rem;
+    font-weight: 500;
+    transition: .2s ease-in;
+    margin-top: 1rem;
+    max-width: fit-content;
+    &:hover {
+        border-bottom-color: #303133;
     }
+  }
   .contact-card_list-action {
     text-transform: uppercase;
     background-color: #F5F4F1;
@@ -80,12 +80,12 @@ section#contacts {
     font-weight: 500;
     padding: 1rem 2rem;
     margin-top: 2rem;
-      border-radius: 4px;
-      transition: .2s ease-in;
-      &:hover {
-          background-color: #303133;
-          color: white;
-      }
+    border-radius: 4px;
+    transition: .2s ease-in;
+    &:hover {
+        background-color: #303133;
+        color: white;
+    }
   }
   .contact-card_list-image {
     min-width: 200px;

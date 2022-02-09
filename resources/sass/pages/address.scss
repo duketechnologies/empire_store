@@ -1,170 +1,168 @@
 section#address {
-    margin-top: 1rem;
-    h3 {
-        font-size: 1.6rem;
-        font-weight: 300;
-        color: #303133;
-        text-align: center;
-        margin-top: 2.3rem;
-        margin-bottom: 2rem;
+  margin-top: 1rem;
+  h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #303133;
+    text-align: center;
+    margin-top: 2.3rem;
+    margin-bottom: 2rem;
+  }
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    max-width: 29rem;
+    margin: 0 auto;
+    border-radius: 999rem;
+    gap:1rem;
+    svg {
+      width: .98rem;
+      height: .98rem;
     }
-    .search {
+    input {
+      flex: 1;
+      border:none;
+      outline: none;
+      font-size: .95rem;
+      letter-spacing: .7px;
+      &::placeholder {
+          font-size: .95rem;
+          letter-spacing: .7px;
+          color: #939393;
+
+      }
+    }
+  }
+  .city {
+    display: flex;
+    margin: 6rem 10.5rem;
+    flex-wrap: wrap;
+    gap: 6rem;
+    div {
+      margin-right: 2.5rem;
+      width: 12.5rem;
+      p {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        background-color: white;
-        max-width: 29rem;
-        margin: 0 auto;
-        border-radius: 999rem;
-        gap:1rem;
+        flex-direction: column;
+        gap: .5rem;
+        text-transform: uppercase;
+        font-size: .85rem;
+        letter-spacing: .44px;
+        margin-bottom: 1.6rem;
+        padding-left: .2rem;
         svg {
-            width: .98rem;
-            height: .98rem;
+          width: 1.5rem;
+          height: 1.1rem;
         }
-        input {
-            flex: 1;
-            border:none;
-            outline: none;
-            font-size: .95rem;
-            letter-spacing: .7px;
-            &::placeholder {
-                font-size: .95rem;
-                letter-spacing: .7px;
-                color: #939393;
-
-            }
+      }
+      .address-list {
+        li {
+          font-size: .95rem;
+          color: #939393;
+          letter-spacing: .7px;
+          line-height: 1.35rem;
+          cursor: pointer;
+          margin-bottom: .6rem;
+          padding: .2rem;
+          transition: .2s ease-in;
+          max-width: max-content;
+          &:hover {
+            background-color: white;
+            padding: .2rem;
+            color: black;
+            max-width: fit-content;
+          }
         }
+        a {
+          color: black;
+          border-bottom: 1px solid #DEDCD8;
+          padding-bottom: .2rem;
+          cursor: pointer;
+          transition: .2s ease-in;
+          padding-left: .2rem;
+          &:hover {
+            border-bottom: 1px solid black;
+          }
+        }
+      }
     }
-    .city {
-        display: flex;
-        margin: 6rem 10.5rem;
-        flex-wrap: wrap;
-        gap: 6rem;
-        div {
-            margin-right: 2.5rem;
-            width: 12.5rem;
-            p {
-                display: flex;
-                flex-direction: column;
-                gap: .5rem;
-                text-transform: uppercase;
-                font-size: .85rem;
-                letter-spacing: .44px;
-                margin-bottom: 1.6rem;
-                padding-left: .2rem;
-                svg {
-                    width: 1.5rem;
-                    height: 1.1rem;
-                }
-            }
-            .address-list {
-                li {
-                    font-size: .95rem;
-                    color: #939393;
-                    letter-spacing: .7px;
-                    line-height: 1.35rem;
-                    cursor: pointer;
-                    margin-bottom: .6rem;
-                    padding: .2rem;
-                    transition: .2s ease-in;
-                    max-width: max-content;
-                    &:hover {
-                        background-color: white;
-                        padding: .2rem;
-                        color: black;
-                        max-width: fit-content;
-                    }
-                }
-                a {
-                    color: black;
-                    border-bottom: 1px solid #DEDCD8;
-                    padding-bottom: .2rem;
-                    cursor: pointer;
-                    transition: .2s ease-in;
-                    padding-left: .2rem;
-                    &:hover {
-                        border-bottom: 1px solid black;
-                    }
-                }
-            }
+  }
+  .map {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    padding-right: 3.15rem;
+    padding-top: 3.15rem;
+    padding-left: 7rem;
+    max-height: 50rem;
+    overflow-y: hidden;
+    .info {
+      width: 31rem;
+      padding-right: 1rem;
+      .simplebar-scrollbar::before {
+        background-color: #DEDCD8;
+        height: 7rem;
+        width: 4px;
+      }
+      .title {
+        font-size: .85rem;
+        color: #939393;
+        letter-spacing: .44px;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        span {
+          color: black;
         }
+      }
+      .boutique {
+        background-color: rgba(245, 244, 241, 0.5);
+        padding: 3.5rem 4.4rem;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: .5rem;
+        &__place {
+          font-size: 1.25rem;
+          margin-bottom: 1rem;
+        }
+        &__location {
+          font-size: .95rem;
+          color: #505154;
+          line-height: 1.3rem;
+          letter-spacing: .44px;
+          margin-bottom: 1rem;
+        }
+        &__contacts {
+          font-size: .85rem;
+          letter-spacing: .6px;
+          font-weight: 500;
+          display: flex;
+          gap: .6rem;
+          flex-direction: column;
+          a {
+            border-bottom: 1px solid #DEDCD8;
+            padding-bottom: .1rem;
+            max-width: fit-content;
+            transition: .2s ease-in;
+            cursor: pointer;
+            &:hover {
+              border-bottom: 1px solid black;
+            }
+          }
+        }
+      }
     }
-    .map {
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-        gap: 4rem;
-        padding-right: 3.15rem;
-        padding-top: 3.15rem;
-        padding-left: 7rem;
-        max-height: 50rem;
-        overflow-y: hidden;
-        .info {
-            width: 31rem;
-            padding-right: 1rem;
-            .simplebar-scrollbar::before {
-                background-color: #DEDCD8;
-                height: 7rem;
-                width: 4px;
-            }
-            .title {
-                font-size: .85rem;
-                color: #939393;
-                letter-spacing: .44px;
-                text-align: center;
-                text-transform: uppercase;
-                margin-bottom: 2rem;
 
-                span {
-                    color: black;
-                }
-
-            }
-            .boutique {
-                background-color: rgba(245, 244, 241, 0.5);
-                padding: 3.5rem 4.4rem;
-                border-radius: 8px;
-                cursor: pointer;
-                margin-bottom: .5rem;
-                &__place {
-                    font-size: 1.25rem;
-                    margin-bottom: 1rem;
-                }
-                &__location {
-                    font-size: .95rem;
-                    color: #505154;
-                    line-height: 1.3rem;
-                    letter-spacing: .44px;
-                    margin-bottom: 1rem;
-                }
-                &__contacts {
-                    font-size: .85rem;
-                    letter-spacing: .6px;
-                    font-weight: 500;
-                    display: flex;
-                    gap: .6rem;
-                    flex-direction: column;
-                    a {
-                        border-bottom: 1px solid #DEDCD8;
-                        padding-bottom: .1rem;
-                        max-width: fit-content;
-                        transition: .2s ease-in;
-                        cursor: pointer;
-                        &:hover {
-                            border-bottom: 1px solid black;
-                        }
-                    }
-                }
-            }
-        }
-
-        #map {
-            border-radius: 16px;
-            max-width: 85rem;
-            max-height: 47rem;
-            flex: 1;
-            align-self: flex-end;
-        }
+    #map {
+        border-radius: 16px;
+        max-width: 85rem;
+        max-height: 47rem;
+        flex: 1;
+        align-self: flex-end;
     }
+  }
 }
