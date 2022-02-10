@@ -135,7 +135,6 @@ $(document).ready(function () {
         fieldsetLegend[index].style.opacity = 0
       }
     }
-
   })
 
   categories.forEach((item, index) => {

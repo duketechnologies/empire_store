@@ -41,15 +41,22 @@
             outline: none;
             border-radius: 8px;
             padding:0 1.5rem;
-            font-size: .9rem;
+            font-size: 1.1rem;
             letter-spacing: .44px;
             width: 100%;
             background-color: transparent;
+            font-family: 'Neonderthaw', cursive;
+            font-weight: 700;
         }
         input[type=password] {
             letter-spacing: 4px;
             &::placeholder {
-                letter-spacing: 0;
+              letter-spacing: 0;
+              font-family: 'Inter';
+              font-size: .95rem;
+              font-weight: 400;
+              color: #303133;
+              letter-spacing: .44px;
             }
         }
     }

@@ -1311,26 +1311,35 @@ header.header .menu.active {
 .footer .wrapper .subscribe .media a svg {
   transition: 0.2s ease-in;
 }
+.footer .wrapper .subscribe .media a svg > path {
+  transition: 0.2s ease-in;
+}
 .footer .wrapper .subscribe .media a:hover svg {
   transform: scale(1.1);
 }
 .footer .wrapper .subscribe .media a:hover svg > path {
   fill: black;
 }
-.footer .wrapper .subscribe .media .insta svg > rect {
+.footer .wrapper .subscribe .media a.whats:hover svg > path {
+  fill: #0A9243;
+}
+.footer .wrapper .subscribe .media a.facebook:hover svg > path {
+  fill: #4267B2;
+}
+.footer .wrapper .subscribe .media a.vk:hover svg > path {
+  fill: #5082B9;
+}
+.footer .wrapper .subscribe .media a.ytube:hover svg > path {
+  fill: #FB0000;
+}
+.footer .wrapper .subscribe .media .insta svg > stop {
   transition: 0.2s ease-in;
 }
 .footer .wrapper .subscribe .media .insta svg > path {
   transition: 0.2s ease-in;
 }
-.footer .wrapper .subscribe .media .insta:hover svg > rect {
-  fill: black;
-}
 .footer .wrapper .subscribe .media .insta:hover svg > path {
-  fill: white;
-}
-.footer .wrapper .subscribe .media .insta:hover svg > path:first-child {
-  fill: black;
+  fill: url("#paint0_linear_2522_35534");
 }
 .footer .wrapper .subscribe .media svg {
   width: 1.2rem;
@@ -7440,22 +7449,39 @@ section#test .links a span {
   outline: none;
   border-radius: 8px;
   padding: 0 1.5rem;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   letter-spacing: 0.44px;
   width: 100%;
   background-color: transparent;
+  font-family: "Neonderthaw", cursive;
+  font-weight: 700;
 }
 .remodal[data-remodal-id=register-email] form fieldset input[type=password] {
   letter-spacing: 4px;
 }
 .remodal[data-remodal-id=register-email] form fieldset input[type=password]::-moz-placeholder {
   letter-spacing: 0;
+  font-family: "Inter";
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #303133;
+  letter-spacing: 0.44px;
 }
 .remodal[data-remodal-id=register-email] form fieldset input[type=password]:-ms-input-placeholder {
   letter-spacing: 0;
+  font-family: "Inter";
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #303133;
+  letter-spacing: 0.44px;
 }
 .remodal[data-remodal-id=register-email] form fieldset input[type=password]::placeholder {
   letter-spacing: 0;
+  font-family: "Inter";
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #303133;
+  letter-spacing: 0.44px;
 }
 .remodal[data-remodal-id=register-email] form .main-btn {
   margin-top: 2.1rem;

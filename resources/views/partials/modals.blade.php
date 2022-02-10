@@ -466,7 +466,7 @@
                 <input type="checkbox" name="personal_info" id="personal_info"/>
                 <label for="personal_info">
                     Соглашаюсь на обработку персональной информации в соответствии с
-                    <a href="#">Политикой конфиденциальности</a>
+                    <a href="/policy">Политикой конфиденциальности</a>
                 </label>
             </div>
             <button type="submit" class="main-btn">Сохранить</button>

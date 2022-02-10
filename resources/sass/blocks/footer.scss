@@ -90,6 +90,9 @@
         a {
           svg {
             transition: .2s ease-in;
+            >path {
+              transition: .2s ease-in;
+            }
           }
           &:hover {
             svg {
@@ -99,25 +102,47 @@
               fill: black;
             }
           }
+
+        }
+        a.whats {
+          &:hover {
+            svg>path {
+              fill:#0A9243;
+            }
+          }
+        }
+        a.facebook {
+          &:hover {
+            svg>path {
+              fill: #4267B2;
+            }
+          }
+        }
+        a.vk {
+          &:hover {
+            svg>path {
+              fill: #5082B9;
+            }
+          }
+        }
+        a.ytube {
+          &:hover {
+            svg>path {
+              fill: #FB0000;
+            }
+          }
         }
         .insta {
-          svg>rect {
+          svg>stop {
             transition: .2s ease-in;
           }
           svg>path {
             transition: .2s ease-in;
           }
           &:hover {
-            svg>rect {
-              fill:black;
-            }
             svg>path {
-              fill: white;
+              fill: url('#paint0_linear_2522_35534');
             }
-            svg>path:first-child {
-              fill: black;
-            }
-
           }
         }
         svg {
@@ -127,7 +152,6 @@
             transition: .2s ease-in;
           }
         }
-
       }
     }
   }
