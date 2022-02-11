@@ -1520,14 +1520,14 @@ section#home {
   margin-top: 2rem;
 }
 section#home .loader {
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100;
-  top: -9vh;
+  top: 0;
   background-color: white;
   -webkit-animation: loader 0.5s ease-in 3s;
           animation: loader 0.5s ease-in 3s;
@@ -5084,12 +5084,13 @@ section#address .map {
 }
 section#address .map .info {
   width: 31rem;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
+  overflow-y: scroll;
 }
 section#address .map .info .simplebar-scrollbar::before {
   background-color: #DEDCD8;
   height: 7rem;
-  width: 4px;
+  width: 2px;
 }
 section#address .map .info .title {
   font-size: 0.85rem;

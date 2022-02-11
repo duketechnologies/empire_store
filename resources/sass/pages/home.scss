@@ -2,14 +2,14 @@ section#home {
   position: relative;
   margin-top: 2rem;
   .loader {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
-    top:- 9vh;
+    top: 0;
     background-color: white;
     animation: loader .5s ease-in 3s;
     transition: 1s ease-in;

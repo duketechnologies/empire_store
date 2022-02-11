@@ -102,11 +102,12 @@ section#address {
     overflow-y: hidden;
     .info {
       width: 31rem;
-      padding-right: 1rem;
+      padding-right: .5rem;
+      overflow-y: scroll;
       .simplebar-scrollbar::before {
         background-color: #DEDCD8;
         height: 7rem;
-        width: 4px;
+        width: 2px;
       }
       .title {
         font-size: .85rem;
