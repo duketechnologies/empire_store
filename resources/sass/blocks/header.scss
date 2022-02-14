@@ -1,3 +1,4 @@
+
 header.header {
   margin: 10px 0;
   background-color: transparent;
@@ -12,6 +13,11 @@ header.header {
     .links {
       display: flex;
       gap: 2rem;
+      .burger {
+        display: none;
+        width: 2.1rem;
+        height: .95rem;
+      }
       .logo {
         align-self: center;
         svg {
@@ -137,6 +143,13 @@ header.header {
                   stroke: black;
               }
             }
+          }
+        }
+        li.search-icon {
+          display: none;
+          svg {
+            width: 1.1rem;
+            height: 1.1rem;
           }
         }
         .language {
@@ -450,3 +463,34 @@ header.header {
     opacity: 0;
   }
 }
+
+@include responsive {
+  header.header {
+    margin:0;
+    background-color: white;
+    .wrapper {
+      .links {
+        .burger {
+          display: initial;
+        }
+        .nav,form {
+          display: none;
+        }
+      }
+      .info {
+        .phone {
+          display: none;
+        }
+        .profile {
+          .language,.fav,.profile {
+            display: none;
+          }
+          li.search-icon {
+            display: initial;
+          }
+        }
+      }
+    }
+  }
+}
+

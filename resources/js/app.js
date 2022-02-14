@@ -16,8 +16,11 @@ $(document).ready(function () {
   console.log('ready...');
 
   const faqs = document.querySelectorAll('.faq')
+  console.log(faqs)
+
   const menu = document.querySelector('.menu')
   const catalog = document.querySelector('#catalog')
+  const burger = document.querySelector('.burger')
   const close_btn = document.querySelector('#close-menu')
   const in_stock = document.querySelector('.existence')
   const search = document.querySelector('#search')
@@ -39,26 +42,24 @@ $(document).ready(function () {
   const language = document.querySelector('.language')
   const headerPhone = document.querySelector('#header-phone')
 
-  if (href.includes('/')) {
-   const loader = () => {
+
+  const loader = () => {
     document.querySelector('.loader').style.opacity = 0
     }
-    const loader_display = () => {
-      document.querySelector('.loader').style.display = 'none'
-    }
-    setTimeout(loader, 3000)
-    setTimeout(loader_display, 4000)
+  const loader_display = () => {
+    document.querySelector('.loader').style.display = 'none'
   }
+  setTimeout(loader, 3000)
+  setTimeout(loader_display, 4000)
 
-
-
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-        center: [43.237163, 76.945627],
-        zoom: 14
-      }, {
-        searchControlProvider: 'yandex#search'
-      }),
+  if (href.includes('/address')) {
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+          center: [43.237163, 76.945627],
+          zoom: 14
+        }, {
+          searchControlProvider: 'yandex#search'
+        }),
 
         // Создаём макет содержимого.
         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
@@ -102,10 +103,11 @@ $(document).ready(function () {
           iconContentLayout: MyIconContentLayout
         });
 
-    myMap.geoObjects
-      .add(myPlacemark)
-      .add(myPlacemarkWithContent);
-  });
+      myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+    });
+  }
 
   language.addEventListener('click', (e) => {
     e.preventDefault();
@@ -275,6 +277,7 @@ $(document).ready(function () {
     if(menu.classList.contains('active')){
       document.addEventListener('click', () => {
         menu.classList.remove('active')
+
       })
     }
   }
@@ -282,11 +285,15 @@ $(document).ready(function () {
     menu.classList.add('active');
     document.querySelector('.menu-bg').classList.add('active')
   }
-
   catalog.addEventListener('click', (e) => {
     e.preventDefault()
     openMenu()
   })
+  burger.addEventListener('click', (e) => {
+    e.preventDefault()
+    openMenu()
+  })
+
   document.addEventListener('click', function(e) {
     const target = e.target;
     const its_menu = target == menu || menu.contains(target);
@@ -312,7 +319,6 @@ $(document).ready(function () {
       another_block.style.display = "none"
       another_btn.style.display = 'flex'
     }, 350)
-
   }) : null
 
   another_btn ? another_btn.addEventListener('click', function (e) {
