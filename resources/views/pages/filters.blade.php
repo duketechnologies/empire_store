@@ -3,6 +3,7 @@
 
 @section('content')
   <section id="filters">
+    @include("mobile-components.filters_mobile")
     <div class="type">
       <ul class="links">
         <li ><a href="#" data-filter="filter1" class="active">Декор</a></li>

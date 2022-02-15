@@ -433,3 +433,10 @@ section#filters {
       transform: rotate(180deg);
   }
 }
+@include responsive() {
+  section#filters {
+    .type, .favorites {
+      display: none;
+    }
+  }
+}

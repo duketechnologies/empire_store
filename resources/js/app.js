@@ -16,8 +16,6 @@ $(document).ready(function () {
   console.log('ready...');
 
   const faqs = document.querySelectorAll('.faq')
-  console.log(faqs)
-
   const menu = document.querySelector('.menu')
   const catalog = document.querySelector('#catalog')
   const burger = document.querySelector('.burger')
@@ -197,6 +195,7 @@ $(document).ready(function () {
   const swiper = new Swiper('.swiper-box', {
     loop: true,
     slidesPerView: 1,
+    spaceBetween: 8,
     autoplay: {
       delay: 3000,
     },
@@ -204,7 +203,15 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    pagination: {
+      el: ".swiper-pagination2",
+    },
+    breakpoints: {
+      1200: {
+        centeredSlides: true,
 
+      }
+    }
   });
   const swiperHero = new Swiper('.swiper-hero', {
     loop: true,
@@ -216,7 +223,9 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
+    pagination: {
+      el: ".swiper-pagination",
+    }
   });
   const swiperProduct = new Swiper('.swiper-product', {
     loop: true,
@@ -259,6 +268,45 @@ $(document).ready(function () {
     },
 
   })
+  // mobile swipers
+  const swiperTired = new Swiper('.swiper-tired', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 8,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination3",
+    },
+    breakpoints: {
+      1200: {
+        centeredSlides: true,
+
+      }
+    }
+  });
+  const swiperPreorder = new Swiper('.swiper-preorder', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 8,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: ".swiper-pagination4",
+    },
+    breakpoints: {
+      1200: {
+        centeredSlides: true,
+
+      }
+    }
+  });
+
+
+  // mobile swipers
+
 
   if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies')) {
     faqs.forEach(faq => {
@@ -267,6 +315,7 @@ $(document).ready(function () {
       });
     });
   }
+
   if (window.location.href.includes('item')) {
     in_stock.addEventListener('click', () => {
       in_stock.classList.toggle('active')

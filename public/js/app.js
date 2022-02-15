@@ -56468,7 +56468,6 @@ swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 $(document).ready(function () {
   console.log('ready...');
   var faqs = document.querySelectorAll('.faq');
-  console.log(faqs);
   var menu = document.querySelector('.menu');
   var catalog = document.querySelector('#catalog');
   var burger = document.querySelector('.burger');
@@ -56633,12 +56632,21 @@ $(document).ready(function () {
   var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-box', {
     loop: true,
     slidesPerView: 1,
+    spaceBetween: 8,
     autoplay: {
       delay: 3000
     },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: ".swiper-pagination2"
+    },
+    breakpoints: {
+      1200: {
+        centeredSlides: true
+      }
     }
   });
   var swiperHero = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-hero', {
@@ -56650,6 +56658,9 @@ $(document).ready(function () {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: ".swiper-pagination"
     }
   });
   var swiperProduct = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-product', {
@@ -56689,7 +56700,40 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     }
+  }); // mobile swipers
+
+  var swiperTired = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-tired', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 8,
+    autoplay: {
+      delay: 3000
+    },
+    pagination: {
+      el: ".swiper-pagination3"
+    },
+    breakpoints: {
+      1200: {
+        centeredSlides: true
+      }
+    }
   });
+  var swiperPreorder = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-preorder', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 8,
+    autoplay: {
+      delay: 3000
+    },
+    pagination: {
+      el: ".swiper-pagination4"
+    },
+    breakpoints: {
+      1200: {
+        centeredSlides: true
+      }
+    }
+  }); // mobile swipers
 
   if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies')) {
     faqs.forEach(function (faq) {

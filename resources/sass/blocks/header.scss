@@ -468,7 +468,10 @@ header.header {
   header.header {
     margin:0;
     background-color: white;
+    box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
     .wrapper {
+      padding: 0 .5rem 0 1.5rem;
+      height: 100%;
       .links {
         .burger {
           display: initial;
@@ -482,14 +485,34 @@ header.header {
           display: none;
         }
         .profile {
+          gap:0;
           .language,.fav,.profile {
             display: none;
           }
+          .basket {
+            svg {
+              width: 2rem;
+              height: 1.4rem;
+              >g {
+                >path {
+                  stroke: #212123;
+                }
+              }
+            }
+          }
           li.search-icon {
             display: initial;
+            padding:1rem;
+            svg {
+              width: 2rem;
+              height: 1.4rem;
+            }
           }
         }
       }
+    }
+    .search-block {
+      display: none;
     }
   }
 }

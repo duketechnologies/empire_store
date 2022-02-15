@@ -1224,6 +1224,11 @@ header.header .menu.active {
   header.header {
     margin: 0;
     background-color: white;
+    box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+  }
+  header.header .wrapper {
+    padding: 0 0.5rem 0 1.5rem;
+    height: 100%;
   }
   header.header .wrapper .links .burger {
     display: initial;
@@ -1234,11 +1239,29 @@ header.header .menu.active {
   header.header .wrapper .info .phone {
     display: none;
   }
+  header.header .wrapper .info .profile {
+    gap: 0;
+  }
   header.header .wrapper .info .profile .language, header.header .wrapper .info .profile .fav, header.header .wrapper .info .profile .profile {
     display: none;
   }
+  header.header .wrapper .info .profile .basket svg {
+    width: 2rem;
+    height: 1.4rem;
+  }
+  header.header .wrapper .info .profile .basket svg > g > path {
+    stroke: #212123;
+  }
   header.header .wrapper .info .profile li.search-icon {
     display: initial;
+    padding: 1rem;
+  }
+  header.header .wrapper .info .profile li.search-icon svg {
+    width: 2rem;
+    height: 1.4rem;
+  }
+  header.header .search-block {
+    display: none;
   }
 }
 .footer {
@@ -1939,6 +1962,9 @@ section#home .hero-next-btn {
   right: -1.5rem;
   z-index: 1;
 }
+section#home .swiper-pagination {
+  display: none;
+}
 section#home .hero-main {
   position: relative;
 }
@@ -1987,11 +2013,17 @@ section#home .hero-main .hero a {
 }
 section#home .hero-main .hero .rabbit {
   justify-self: center;
-  max-width: 30rem;
-}
-section#home .hero-main .hero .rabbit img {
+  width: 26rem;
+  background: linear-gradient(180deg, #FFEAE3 21.66%, #FFF6E8 100%), linear-gradient(0deg, #EFE5D4, #EFE5D4), url(image.png);
+  height: 35rem;
   box-shadow: -13px 15px 5px 0px rgba(34, 60, 80, 0.06);
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+section#home .hero-main .hero .rabbit img {
+  -o-object-fit: none;
+     object-fit: none;
   width: 100%;
 }
 section#home .sell {
@@ -2440,7 +2472,113 @@ section#home .collab .collab_img {
 section#home .collab .collab_img-mobile {
   display: none;
 }
+@-webkit-keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
 @media only screen and (max-width: 1200px) {
+  section#home .swiper-hero .hero-next-btn, section#home .swiper-hero .hero-prev-btn {
+    display: none;
+  }
+  section#home .swiper-pagination {
+    display: initial;
+    bottom: 2rem;
+  }
+  section#home .swiper-pagination-bullet {
+    background: white;
+    opacity: 1;
+    width: 1rem;
+    height: 1rem;
+  }
+  section#home .swiper-pagination-bullet-active {
+    background: black;
+  }
+  section#home .hero-main .hero {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #FFF6E8 21.66%, #FFEAE3 100%), linear-gradient(0deg, #EFE5D4, #EFE5D4);
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  section#home .hero-main .hero h1 {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+  section#home .hero-main .hero h1 span {
+    -webkit-text-decoration: underline 1px;
+            text-decoration: underline 1px;
+  }
+  section#home .hero-main .hero h1::before {
+    display: none;
+  }
+  section#home .hero-main .hero a {
+    align-self: center;
+    width: 90%;
+    height: initial;
+    padding: 1.5rem 0 1.4rem;
+    font-size: 1.1rem;
+    order: 3;
+    margin-bottom: 4rem;
+  }
+  section#home .hero-main .hero .rabbit {
+    background: transparent;
+    box-shadow: none;
+  }
+  section#home .hero-main .hero .rabbit img {
+    box-shadow: none;
+  }
+  section#home .preorder, section#home .tired {
+    display: none;
+  }
+  section#home .compilation {
+    padding: 2rem 1.5rem;
+  }
+  section#home .compilation h2 {
+    margin: 0 1.5rem 2rem;
+    text-align: left;
+  }
+  section#home .compilation .swiper-prev-btn, section#home .compilation .swiper-button-next {
+    display: none;
+  }
+  section#home .compilation .swiper-pagination2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+  }
+  section#home .compilation .swiper-pagination-bullet {
+    background: #DEDCD8;
+  }
+  section#home .compilation .swiper-pagination-bullet-active {
+    background: black;
+  }
+  section#home .compilation .product {
+    margin-left: 0;
+  }
+  section#home .compilation .product .info {
+    display: none;
+  }
+  section#home .compilation .product .content img {
+    box-shadow: none;
+  }
+  section#home .compilation .product .content img:hover {
+    box-shadow: none;
+  }
+  section#home .compilation .product .content .name {
+    font-size: 1.4rem;
+  }
+  section#home .compilation .product .content .price {
+    font-size: 1.1rem;
+  }
   section#home .sell {
     display: none;
   }
@@ -2516,15 +2654,9 @@ section#home .collab .collab_img-mobile {
   }
 }
 
-@-webkit-keyframes line-anim {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes line-anim {
-  to {
-    stroke-dashoffset: 0;
+@media only screen and (max-width: 1200px) {
+  section#home {
+    margin-top: 0;
   }
 }
 section#faq h1 {
@@ -6228,6 +6360,11 @@ section#filters .favorites__products .route .pagination .active {
     transform: rotate(180deg);
   }
 }
+@media only screen and (max-width: 1200px) {
+  section#filters .type, section#filters .favorites {
+    display: none;
+  }
+}
 section#ordering {
   margin: 3rem 0;
 }
@@ -6840,6 +6977,239 @@ section#test .links a span {
 }
 
 /*pages*/
+/*mobile-components*/
+.tired-swiper {
+  background: #F5F4F1;
+  padding: 0 1.5rem 7rem;
+  display: none;
+}
+.tired-swiper h2 {
+  font-size: 2rem;
+  padding: 4.5rem 2rem;
+  font-family: "Spectral";
+  font-style: italic;
+  color: #303133;
+  text-align: center;
+}
+.tired-swiper .content {
+  background: white;
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8rem;
+}
+.tired-swiper .content .new-product {
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem 0.5rem;
+  border-radius: 999rem;
+  text-transform: uppercase;
+  position: absolute;
+  left: 2rem;
+  top: 2rem;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+}
+.tired-swiper .content img {
+  width: 80%;
+}
+.tired-swiper .content .name {
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 2.6rem;
+  margin-bottom: 3.5rem;
+  margin-top: 6rem;
+}
+.tired-swiper .content .link-btn {
+  font-size: 1.1rem;
+  margin-bottom: 3.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
+.tired-swiper .swiper-pagination3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.tired-swiper .swiper-pagination-bullet {
+  background: #DEDCD8 !important;
+}
+.tired-swiper .swiper-pagination-bullet-active {
+  background: black !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tired-swiper {
+    display: block;
+  }
+}
+.preorder-swiper {
+  background: white;
+  padding: 0 1.5rem 7rem;
+  display: none;
+}
+.preorder-swiper h2 {
+  font-size: 2rem;
+  padding: 4.5rem 2rem;
+  font-family: "Spectral";
+  font-style: italic;
+  color: #303133;
+  text-align: center;
+}
+.preorder-swiper .content {
+  background-color: #F3E8E6;
+  position: relative;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13rem;
+}
+.preorder-swiper .content .discount {
+  background-color: black;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem 0.4rem;
+  border-radius: 999rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 2rem;
+  letter-spacing: 0.7px;
+  font-weight: 500;
+}
+.preorder-swiper .content .preorder-bg {
+  position: absolute;
+  top: 9rem;
+  width: 80%;
+}
+.preorder-swiper .content .preorder-img {
+  width: 50%;
+  -o-object-fit: none;
+     object-fit: none;
+  position: relative;
+}
+.preorder-swiper .content .name {
+  font-family: "Spectral";
+  font-style: italic;
+  font-size: 2.6rem;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+.preorder-swiper .content .link-btn {
+  font-size: 1.1rem;
+  margin-bottom: 3.5rem;
+  font-weight: 500;
+  border-bottom: 1px solid black;
+}
+.preorder-swiper .swiper-pagination4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.preorder-swiper .swiper-pagination-bullet {
+  background: #DEDCD8 !important;
+}
+.preorder-swiper .swiper-pagination-bullet-active {
+  background: black !important;
+}
+
+@media only screen and (max-width: 1200px) {
+  .preorder-swiper {
+    display: block;
+  }
+}
+.filter-header {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: #FFFFFF;
+  position: relative;
+}
+.filter-header svg {
+  width: 1.4rem;
+  height: 1.3rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 1rem;
+}
+
+.filter-content {
+  font-size: 2rem;
+  font-family: "Spectral";
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+.filter-content div {
+  display: flex;
+  gap: 0.5rem;
+}
+.filter-content div .icons {
+  padding: 0.5rem;
+}
+.filter-content div .icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.filter-content div .icons.active {
+  background-color: white;
+  border-radius: 8px;
+}
+.filter-content div .icons.active svg > path {
+  stroke: black;
+}
+
+.filter-product {
+  margin-bottom: 3rem;
+}
+.filter-product .product-img {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2.2rem;
+}
+.filter-product .product-img img {
+  width: 100%;
+}
+.filter-product div {
+  width: 100%;
+  position: relative;
+  padding: 1.5rem 0;
+}
+.filter-product div svg {
+  width: 1.8rem;
+  height: 1.7rem;
+  position: absolute;
+  left: 1.5rem;
+}
+.filter-product div .product-name, .filter-product div .product-price {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.44px;
+  text-align: center;
+  color: #303133;
+}
+.filter-product div .product-price {
+  margin-top: 0.5rem;
+  color: #505154;
+  font-size: 1.2rem;
+}
+
+/*mobile-components*/
 /*modals*/
 .remodal[data-remodal-id=mail_to] .content h1 {
   text-align: center;

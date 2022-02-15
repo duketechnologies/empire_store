@@ -1,0 +1,83 @@
+.filter-header {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem 0;
+  background-color: #FFFFFF;
+  position: relative;
+  svg {
+    width: 1.4rem;
+    height: 1.3rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+  }
+}
+.filter-content {
+  font-size: 2rem;
+  font-family: "Spectral";
+  font-style: italic;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  div {
+    display: flex;
+    gap: .5rem;
+    .icons {
+      padding:.5rem;
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+    .icons.active {
+      background-color: white;
+      border-radius: 8px;
+      svg {
+        >path {
+          stroke: black;
+        }
+      }
+    }
+  }
+}
+.filter-product {
+  margin-bottom: 3rem;
+  .product-img {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2.2rem;
+    img {
+      width: 100%;
+    }
+  }
+  div {
+    width: 100%;
+    position: relative;
+    padding: 1.5rem 0;
+    svg {
+      width: 1.8rem;
+      height: 1.7rem;
+      position: absolute;
+      left: 1.5rem;
+    }
+    .product-name,.product-price {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: .44px;
+      text-align: center;
+      color: #303133;
+    }
+    .product-price {
+      margin-top: .5rem;
+      color: #505154;
+      font-size: 1.2rem;
+    }
+  }
+}
