@@ -56468,6 +56468,7 @@ swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 $(document).ready(function () {
   console.log('ready...');
   var faqs = document.querySelectorAll('.faq');
+  var faqs_mobile = document.querySelectorAll('.faqs-mobile .faq');
   var menu = document.querySelector('.menu');
   var catalog = document.querySelector('#catalog');
   var burger = document.querySelector('.burger');
@@ -56493,6 +56494,28 @@ $(document).ready(function () {
   var optionsList = document.querySelectorAll(".option");
   var language = document.querySelector('.language');
   var headerPhone = document.querySelector('#header-phone');
+  var positionBlock = document.querySelector('#position-block');
+  var positionGrid = document.querySelector('#position-grid');
+  var icons = document.querySelectorAll('.icons');
+  var filterProducts = document.querySelector('.filter-products');
+  faqs_mobile.forEach(function (faq) {
+    faq.addEventListener('click', function () {
+      faq.classList.toggle('active');
+    });
+  });
+
+  if (href.includes('/filter')) {
+    positionGrid.addEventListener('click', function () {
+      positionBlock.classList.remove('active');
+      positionGrid.classList.add('active');
+      filterProducts.classList.add('grid');
+    });
+    positionBlock.addEventListener('click', function () {
+      positionGrid.classList.remove('active');
+      positionBlock.classList.add('active');
+      filterProducts.classList.remove('grid');
+    });
+  }
 
   var loader = function loader() {
     document.querySelector('.loader').style.opacity = 0;
@@ -56767,8 +56790,8 @@ $(document).ready(function () {
     openMenu();
   });
   burger.addEventListener('click', function (e) {
-    e.preventDefault();
-    openMenu();
+    menu.classList.add('active');
+    document.querySelector('.menu-bg').classList.add('active');
   });
   document.addEventListener('click', function (e) {
     var target = e.target;

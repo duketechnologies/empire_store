@@ -1612,7 +1612,6 @@ header.header .menu.active {
   }
   .footer .wrapper .faqs-mobile .faq:last-child .questions {
     border-bottom: 1px solid #505154;
-    margin-bottom: 3.5rem;
   }
   .footer .wrapper .faqs-mobile .faq.active .answers {
     display: flex;
@@ -1621,11 +1620,19 @@ header.header .menu.active {
     border-bottom: 1px solid #505154;
     font-size: 1.2rem;
     padding-bottom: 2.5rem;
+    margin-bottom: 3rem;
+  }
+  .footer .wrapper .faqs-mobile .faq.active .questions {
+    border-bottom: none;
+  }
+  .footer .wrapper .faqs-mobile .faq.active .questions p {
+    border-bottom: none;
   }
   .footer .wrapper .subscribe-mobile {
     display: initial;
     width: 100%;
     padding: 0 1.5rem;
+    margin-top: 3.5rem;
   }
   .footer .wrapper .subscribe-mobile .content {
     background-color: white;
@@ -1787,41 +1794,24 @@ header.header .menu.active {
 .faq_block .questions:hover svg > path, .faq_block-mobile .questions:hover svg > path {
   stroke: #505154;
 }
-
-.mobile {
-  display: none;
+.faq_block .questions:last-child, .faq_block-mobile .questions:last-child {
+  border-bottom: 1px solid #505154;
 }
 
 @media only screen and (max-width: 1200px) {
   .faq_block {
-    display: none;
+    margin: 5rem 1.5rem;
   }
-
-  .faq_block-mobile {
-    margin: 6rem 1.5rem 0;
-  }
-  .faq_block-mobile .questions {
+  .faq_block .questions {
     font-size: 1.1rem;
+    padding: 2rem 0;
   }
-  .faq_block-mobile .questions svg {
-    width: 3rem !important;
-    height: 1.5rem !important;
+  .faq_block .questions svg {
+    width: 2.4rem;
+    height: 1.5rem;
   }
-  .faq_block-mobile .questions svg > path {
+  .faq_block .questions svg > path {
     stroke: #939393;
-  }
-  .faq_block-mobile .questions p {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .faq_block-mobile .questions p svg {
-    width: 1.1rem !important;
-    height: 1.72rem !important;
-  }
-  .faq_block-mobile .questions:last-child {
-    border-bottom: 1px solid #505154;
-    margin-bottom: 6rem;
   }
 }
 /*blocks*/
@@ -1939,10 +1929,6 @@ section#home .loader #logo path:nth-child(15) {
   -webkit-animation: line-anim 2s ease forwards 0.6s;
           animation: line-anim 2s ease forwards 0.6s;
 }
-section#home svg {
-  width: 1.35rem;
-  height: 1.2rem;
-}
 section#home .hero-prev-btn {
   position: absolute;
   background-color: #F5F4F1;
@@ -1951,6 +1937,10 @@ section#home .hero-prev-btn {
   top: 45%;
   left: -1.5rem;
   z-index: 1;
+}
+section#home .hero-prev-btn svg {
+  width: 1.35rem;
+  height: 1.2rem;
 }
 section#home .hero-next-btn {
   position: absolute;
@@ -1961,6 +1951,10 @@ section#home .hero-next-btn {
   top: 45%;
   right: -1.5rem;
   z-index: 1;
+}
+section#home .hero-next-btn svg {
+  width: 1.35rem;
+  height: 1.2rem;
 }
 section#home .swiper-pagination {
   display: none;
@@ -2352,6 +2346,9 @@ section#home .compilation {
   padding: 15rem 0;
   position: relative;
 }
+section#home .compilation .swiper-pagination2 {
+  display: none;
+}
 section#home .compilation .swiper-next-btn {
   width: 4.1rem;
   height: 2.3rem;
@@ -2652,13 +2649,11 @@ section#home .collab .collab_img-mobile {
   section#home .consultaion_block {
     display: none;
   }
-}
-
-@media only screen and (max-width: 1200px) {
-  section#home {
-    margin-top: 0;
+  section#home .display {
+    display: none;
   }
 }
+
 section#faq h1 {
   font-size: 1.6rem;
   font-weight: 300;
@@ -7125,90 +7120,380 @@ section#test .links a span {
     display: block;
   }
 }
-.filter-header {
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  text-align: center;
-  width: 100%;
-  padding: 1.5rem 0;
-  background-color: #FFFFFF;
-  position: relative;
-}
-.filter-header svg {
-  width: 1.4rem;
-  height: 1.3rem;
-  position: absolute;
-  right: 1.5rem;
-  top: 1rem;
+.filter-mobile {
+  display: none;
 }
 
-.filter-content {
-  font-size: 2rem;
-  font-family: "Spectral";
-  font-style: italic;
+.filter-mobile-menu {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .filter-mobile {
+    display: block;
+  }
+  .filter-mobile .filter-header {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: #FFFFFF;
+    position: relative;
+  }
+  .filter-mobile .filter-header svg {
+    width: 1.4rem;
+    height: 1.3rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+  }
+  .filter-mobile .filter-content {
+    font-size: 2rem;
+    font-family: "Spectral";
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  .filter-mobile .filter-content div {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .filter-mobile .filter-content div .icons {
+    padding: 0.5rem;
+  }
+  .filter-mobile .filter-content div .icons svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .filter-mobile .filter-content div .icons.active {
+    background-color: white;
+    border-radius: 8px;
+    -webkit-animation: opacity 0.2s ease-in;
+            animation: opacity 0.2s ease-in;
+  }
+  .filter-mobile .filter-content div .icons.active svg > path {
+    stroke: black;
+  }
+  .filter-mobile .filter-products {
+    position: relative;
+  }
+  .filter-mobile .filter-products .filter-product {
+    margin-bottom: 3rem;
+  }
+  .filter-mobile .filter-products .filter-product .product-img {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2.2rem;
+  }
+  .filter-mobile .filter-products .filter-product .product-img img {
+    width: 100%;
+  }
+  .filter-mobile .filter-products .filter-product div {
+    width: 100%;
+    position: relative;
+    padding: 1.5rem 0;
+  }
+  .filter-mobile .filter-products .filter-product div svg {
+    width: 1.8rem;
+    height: 1.7rem;
+    position: absolute;
+    left: 1.5rem;
+  }
+  .filter-mobile .filter-products .filter-product div .product-name, .filter-mobile .filter-products .filter-product div .product-price {
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 0.44px;
+    text-align: center;
+    color: #303133;
+  }
+  .filter-mobile .filter-products .filter-product div .product-price {
+    margin-top: 0.5rem;
+    color: #505154;
+    font-size: 1.2rem;
+  }
+  .filter-mobile .filter-products .top {
+    background-color: #212123;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    border-radius: 8px 0 0 8px;
+    position: -webkit-sticky;
+    position: sticky;
+  }
+  .filter-mobile .filter-products .top svg {
+    width: 0.9rem;
+    height: 1.3rem;
+  }
+  .filter-mobile .filter-products.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    -webkit-animation: opacity 0.2s ease-in;
+            animation: opacity 0.2s ease-in;
+  }
+  .filter-mobile .filter-products.grid .filter-product div .product-name, .filter-mobile .filter-products.grid .filter-product div .product-price {
+    font-size: 1.1rem;
+  }
+  .filter-mobile .filter-products.grid .filter-product div svg {
+    width: 1.4rem;
+    height: 1.5rem;
+    left: 1.1rem;
+    top: 1.4rem;
+  }
+  .filter-mobile .main-btn {
+    width: 90%;
+    margin: 0 auto 7rem;
+  }
+
+  .filter-mobile-menu {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    top: 5vh;
+    left: 0;
+    width: 100%;
+    min-height: 95vh;
+    background-color: white;
+  }
+  .filter-mobile-menu .menu-header {
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem 0;
+    background-color: #F5F4F1;
+    position: relative;
+  }
+  .filter-mobile-menu .menu-header svg {
+    width: 1.4rem;
+    height: 1.3rem;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.2rem;
+  }
+  .filter-mobile-menu .faqs-mobile .faq {
+    background-color: white;
+    border-top: 1px solid #939393;
+  }
+  .filter-mobile-menu .faqs-mobile .faq:last-child {
+    border-bottom: 1px solid #939393;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .questions {
+    font-size: 1.15rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #303133;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .questions svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .questions .updown {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .questions .updown > path {
+    transition: 0.2s ease-in;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .questions p {
+    display: flex;
+    align-items: center;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .questions span {
+    color: #505154;
+    text-transform: initial;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .questions span::before {
+    content: "•";
+    font-size: 1rem;
+    color: #505154;
+    padding: 0 0.5rem 0 1rem;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .answers {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.44px;
+    color: #303133;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .answers a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .answers a svg {
+    width: 1.1rem;
+    height: 1.1rem;
+    transition: 0.2s ease-in;
+    opacity: 0;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .answers .selected span {
+    border-bottom: 1px solid black;
+    padding-bottom: 0.3rem;
+  }
+  .filter-mobile-menu .faqs-mobile .faq .answers .selected svg {
+    opacity: 1;
+  }
+  .filter-mobile-menu .faqs-mobile .faq.active .questions svg {
+    -webkit-animation: rotate 0.3s ease-in-out;
+            animation: rotate 0.3s ease-in-out;
+  }
+  .filter-mobile-menu .faqs-mobile .faq.active .questions .updown > path {
+    stroke: black;
+  }
+  .filter-mobile-menu .faqs-mobile .faq.active #vertical {
+    transition: 0.2s linear;
+    opacity: 0;
+  }
+  .filter-mobile-menu .faqs-mobile .faq.active .answers {
+    max-height: 30rem;
+    padding: 1.5rem 1.5rem 2rem 2.4rem;
+    -webkit-animation: fade 0.4s ease-in;
+            animation: fade 0.4s ease-in;
+  }
+  .filter-mobile-menu .apply {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 9px 20px 71px rgba(0, 0, 0, 0.19);
+  }
+  .filter-mobile-menu .apply .reset {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Inter";
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+  }
+  .filter-mobile-menu .apply .reset svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .filter-mobile-menu .apply .main-btn {
+    width: 100%;
+    height: initial;
+    padding: 1.4rem 1.5rem 1.3rem;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(200deg);
+  }
+}
+.faq_block-mobile {
+  margin: 6rem 1.5rem 0;
+  display: none;
+}
+.faq_block-mobile .questions {
+  border-top: 1px solid #505154;
+  padding: 2.2rem 0;
+  cursor: pointer;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem;
 }
-.filter-content div {
-  display: flex;
-  gap: 0.5rem;
+.faq_block-mobile .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  text-transform: uppercase;
 }
-.filter-content div .icons {
-  padding: 0.5rem;
+.faq_block-mobile .questions svg {
+  width: 4rem;
+  height: 2rem;
 }
-.filter-content div .icons svg {
-  width: 1.5rem;
-  height: 1.5rem;
+.faq_block-mobile .questions svg > path {
+  transition: 0.2s ease-in;
 }
-.filter-content div .icons.active {
-  background-color: white;
-  border-radius: 8px;
+.faq_block-mobile .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
 }
-.filter-content div .icons.active svg > path {
-  stroke: black;
-}
-
-.filter-product {
-  margin-bottom: 3rem;
-}
-.filter-product .product-img {
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6rem 2.2rem;
-}
-.filter-product .product-img img {
-  width: 100%;
-}
-.filter-product div {
-  width: 100%;
-  position: relative;
-  padding: 1.5rem 0;
-}
-.filter-product div svg {
-  width: 1.8rem;
-  height: 1.7rem;
-  position: absolute;
-  left: 1.5rem;
-}
-.filter-product div .product-name, .filter-product div .product-price {
-  font-size: 1.4rem;
-  font-weight: 500;
-  letter-spacing: 0.44px;
-  text-align: center;
-  color: #303133;
-}
-.filter-product div .product-price {
-  margin-top: 0.5rem;
-  color: #505154;
-  font-size: 1.2rem;
+.faq_block-mobile .questions:hover svg > path {
+  stroke: #505154;
 }
 
+@media only screen and (max-width: 1200px) {
+  .faq_block-mobile {
+    display: block;
+  }
+  .faq_block-mobile .questions {
+    font-size: 1.1rem;
+  }
+  .faq_block-mobile .questions svg {
+    width: 3rem !important;
+    height: 1.5rem !important;
+  }
+  .faq_block-mobile .questions svg > path {
+    stroke: #939393;
+  }
+  .faq_block-mobile .questions p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .faq_block-mobile .questions p svg {
+    width: 1.1rem !important;
+    height: 1.72rem !important;
+  }
+  .faq_block-mobile .questions:last-child {
+    border-bottom: 1px solid #505154;
+    margin-bottom: 6rem;
+  }
+}
 /*mobile-components*/
 /*modals*/
 .remodal[data-remodal-id=mail_to] .content h1 {

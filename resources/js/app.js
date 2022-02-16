@@ -16,6 +16,7 @@ $(document).ready(function () {
   console.log('ready...');
 
   const faqs = document.querySelectorAll('.faq')
+  const faqs_mobile = document.querySelectorAll('.faqs-mobile .faq')
   const menu = document.querySelector('.menu')
   const catalog = document.querySelector('#catalog')
   const burger = document.querySelector('.burger')
@@ -39,6 +40,28 @@ $(document).ready(function () {
   const optionsList = document.querySelectorAll(".option");
   const language = document.querySelector('.language')
   const headerPhone = document.querySelector('#header-phone')
+  const positionBlock = document.querySelector('#position-block')
+  const positionGrid = document.querySelector('#position-grid')
+  const icons = document.querySelectorAll('.icons')
+  const filterProducts = document.querySelector('.filter-products')
+  faqs_mobile.forEach(faq => {
+    faq.addEventListener('click', () => {
+      faq.classList.toggle('active');
+    });
+  });
+  if ( href.includes('/filter')) {
+    positionGrid.addEventListener('click', () => {
+      positionBlock.classList.remove('active')
+      positionGrid.classList.add('active')
+      filterProducts.classList.add('grid')
+    })
+    positionBlock.addEventListener('click', () => {
+      positionGrid.classList.remove('active')
+      positionBlock.classList.add('active')
+      filterProducts.classList.remove('grid')
+    })
+
+  }
 
 
   const loader = () => {
@@ -303,8 +326,6 @@ $(document).ready(function () {
       }
     }
   });
-
-
   // mobile swipers
 
 
@@ -339,8 +360,8 @@ $(document).ready(function () {
     openMenu()
   })
   burger.addEventListener('click', (e) => {
-    e.preventDefault()
-    openMenu()
+    menu.classList.add('active');
+    document.querySelector('.menu-bg').classList.add('active')
   })
 
   document.addEventListener('click', function(e) {

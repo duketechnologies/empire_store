@@ -463,8 +463,10 @@
     </div>
 
     @include('partials.consultation')
-
-    @include('partials.faq_block')
+    <div class="display">
+      @include('partials.faq_block')
+    </div>
+    @include('mobile-components.faq_block_mobile')
 
   </section>
 @endsection

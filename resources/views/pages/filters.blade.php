@@ -15,7 +15,6 @@
         <li ><a href="#" data-filter="filter7">Бизнес-аксессуары</a></li>
       </ul>
     </div>
-
     <div class="favorites">
       <div class="favorites__menu">
         <div class="sort">
