@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CityListController;
+use App\Http\Controllers\GoodsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +38,6 @@ Route::get('/filters', [HomeController::class, 'filters']);
 Route::get('/ordering', [HomeController::class, 'ordering']);
 Route::get('/test', [HomeController::class, 'test']);
 Route::get('/image-test', [HomeController::class, 'imageTest']);
+
+Route::get('/cities', [CityListController::class, 'getCities']);
+Route::get('/goods', [GoodsController::class, 'getGoods']);
