@@ -7,6 +7,7 @@
 @include responsive() {
   .filter-mobile {
     display: block;
+    position: relative;
     .filter-header {
       font-size: 1rem;
       font-weight: 500;
@@ -21,7 +22,7 @@
         width: 1.4rem;
         height: 1.3rem;
         position: absolute;
-        right: 1.5rem;
+        right: 2rem;
         top: 1.2rem;
       }
     }
@@ -135,7 +136,7 @@
   }
   .filter-mobile-menu {
     display: block;
-    position: fixed;
+    //position: fixed;
     z-index: 10;
     top:5vh;
     left:0;

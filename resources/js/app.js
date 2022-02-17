@@ -260,6 +260,9 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    pagination: {
+      el: ".swiper-pagination5",
+    },
 
   });
   const swiperItem = new Swiper('.swiper-item', {
@@ -273,7 +276,6 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
   })
   const swiperZoom = new Swiper('.swiper-zoom', {
     // loop: true,

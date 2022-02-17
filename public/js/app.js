@@ -56695,6 +56695,9 @@ $(document).ready(function () {
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
+    },
+    pagination: {
+      el: ".swiper-pagination5"
     }
   });
   var swiperItem = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-item', {

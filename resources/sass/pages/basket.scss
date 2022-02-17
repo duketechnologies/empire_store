@@ -328,4 +328,21 @@ section#basket {
       }
     }
   }
+  .consultaion_block {
+    display: none;
+  }
+}
+@include responsive {
+  section#basket {
+    .orders, .my-basket, .faq_block{
+      display:none;
+    }
+    .consultaion_block {
+      display: flex;
+      padding: 8.5rem 0 14rem;
+    }
+  }
+  .footer {
+    display: none;
+  }
 }

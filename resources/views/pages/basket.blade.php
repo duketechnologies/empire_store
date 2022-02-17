@@ -160,6 +160,10 @@
         </div>
       </div>
     </div>
+{{--    basket-mobile--}}
+    @include('mobile-components.basket-mobile')
+    @include('partials.consultation')
+{{--    basket-mobile--}}
     @include('partials.faq_block')
   </section>
 @endsection

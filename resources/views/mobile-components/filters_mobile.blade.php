@@ -73,7 +73,7 @@
   </div>
   <button class="main-btn">Показать больше</button>
 </div>
-<form method="POSTP" action="#" class="filter-mobile-menu">
+<form method="POST" action="#" class="filter-mobile-menu">
   <div class="menu-header">
     Фильтры
     <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

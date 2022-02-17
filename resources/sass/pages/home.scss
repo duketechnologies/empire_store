@@ -665,6 +665,7 @@ section#home {
 
 
   @include responsive {
+    margin-top: 0;
     .swiper-hero {
       .hero-next-btn, .hero-prev-btn {
         display: none;
@@ -785,9 +786,10 @@ section#home {
         z-index: 10;
         top:-4rem;
         overflow: hidden;
-        padding: 0 1.5rem 4rem;
+        padding: 0 2rem 4rem;
         svg {
-          border-radius: 8px;
+          border-radius: 8px 8px 0 0;
+          background: white;
         }
         h3 {
           align-self: flex-start;
@@ -811,7 +813,7 @@ section#home {
       background-color: #EDEDF0;
       .title {
         align-items: flex-start;
-        padding: 5rem 1.5rem;
+        padding: 5rem 2rem;
         h3 {
           text-align: left;
         }

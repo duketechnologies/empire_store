@@ -1,0 +1,92 @@
+.single-product-swiper {
+  display: none;
+  position: relative;
+  .swiper-pagination2 {
+    display: none;
+  }
+  .product {
+    .similar-content {
+      .name {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-top: 2rem;
+        text-align: center;
+      }
+      .price {
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+      }
+      .count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        margin-top: 2rem;
+        flex-direction: row-reverse;
+        .wishlist-btn {
+          text-transform: uppercase;
+          background-color: #303133;
+          font-size: 0.96rem;
+          width: 3.5rem;
+          height: 3.3rem;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 500;
+          letter-spacing: 1px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          border-radius: 3px;
+          svg {
+            width: .95rem;
+            height: .9rem;
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive {
+  .single-product-swiper {
+    display: block;
+    .swiper-pagination2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 3rem;
+    }
+    .swiper-pagination-bullet {
+      background: #DEDCD8;
+      opacity: 1;
+    }
+    .swiper-pagination-bullet-active {
+      background: black;
+    }
+    .product {
+      margin-left: 0;
+      .similar-content  {
+        .content-img {
+          background-color: #F5F4F1;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5rem 3rem;
+          img {
+            width: 100%;
+          }
+        }
+        .name {
+          font-size: 1.4rem;
+        }
+        .price {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
