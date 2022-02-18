@@ -41,6 +41,9 @@ section#news {
       max-height: 30rem;
     }
   }
+  .mobile-title {
+    display: none;
+  }
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -146,6 +149,60 @@ section#news {
           padding-bottom: .3rem;
           color: black;
         }
+    }
+  }
+  @include responsive {
+    .hero, .route {
+      display: none;
+    }
+    .mobile-title {
+      display: block;
+      font-size: 1.89rem;
+      font-family: 'Spectral';
+      padding: 3rem 2rem;
+      font-style: italic;
+      color: #303133;
+
+    }
+    .cards {
+      margin:0;
+      grid-template-columns: 1fr;
+      gap: 3rem 0;
+      .card {
+        padding:0;
+        border-radius: 0;
+        .title {
+          margin-left: 2rem;
+        }
+        .info {
+          margin:0;
+          padding:2rem;
+          font-size: 1.2rem;
+        }
+        .action {
+          margin-left: 2rem;
+          display: none;
+        }
+      }
+    }
+    .consultaion_block {
+      margin-top: 3rem;
+      .call {
+        width: 100%;
+        max-width: initial;
+        padding: 0 2rem;
+        h1 {
+          font-size: 1.5rem;
+        }
+        form {
+          input {
+            width: 65%;
+          }
+        }
+        p {
+          display: none;
+        }
+      }
     }
   }
 }

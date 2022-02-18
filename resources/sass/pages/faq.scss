@@ -192,6 +192,116 @@ section#faq  {
       }
     }
   }
+  @include responsive {
+    h1 {
+      background-color: white;
+      margin:0 ;
+      padding: 3rem 2rem;
+    }
+    .type {
+      margin:0 0 4rem;
+      padding: 1rem 2rem 0;
+      background-color: white;
+      flex-direction: column-reverse;
+      gap:4rem;
+      form {
+        width: 100%;
+        max-width: initial;
+        input {
+          width: 100%;
+          background-color: #F5F4F1;
+          font-size: 1.1rem;
+          &:focus {
+            background-color: #F5F4F1;
+          }
+          &::placeholder {
+            font-size: 1.1rem;
+          }
+        }
+      }
+      .links {
+        gap: 2rem;
+        width: 100%;
+        overflow-y: scroll;
+        justify-content: flex-start;
+        align-items: flex-end;
+        border-radius: 0;
+        li {
+          list-style: none;
+        }
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        li a {
+          font-size: 1rem;
+          font-weight: 500;
+          letter-spacing: .7px;
+          white-space: nowrap;
+          padding:0 0 1.5rem;
+          text-transform: uppercase;
+          margin:0;
+          border-bottom: 1px solid transparent;
+        }
+        li a.active {
+          background-color: transparent;
+          border-bottom: 1px solid black;
+          border-radius: 0;
+          padding:0 0 1.5rem;
+          margin:0;
+        }
+      }
+    }
+    .faq {
+      margin: 0 2rem;
+      .questions {
+        &:hover {
+          p {
+            border-bottom: none;
+          }
+        }
+      }
+      .answers {
+        padding-left: 0;
+        font-size: 1rem;
+        color: #505154;
+      }
+    }
+    .faq.active {
+      .questions {
+        p {
+          border-bottom: none;
+        }
+      }
+    }
+    .consultaion {
+      .call {
+        max-width: initial;
+        width: 100%;
+        padding: 0 2rem;
+        h1 {
+          font-size: 1.5rem;
+          padding: 1.5rem;
+        }
+        p {
+          display: none;
+        }
+        form {
+          input {
+            font-size: 1.1rem;
+            width: 65%;
+            &::placeholder {
+              font-size: 1.1rem;
+            }
+          }
+          .main-btn {
+            height: 3.6rem;
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+    }
+  }
 }
 @keyframes fade {
   from {

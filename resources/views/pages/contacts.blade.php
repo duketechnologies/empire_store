@@ -28,6 +28,7 @@
         <h1>Корпоративным клиентам</h1>
         <div class="contact-card_list-contacts">
           <a href="">+7 (727) 277-77-33 (вн. 122)</a>
+          <a href="" class="mobile">+7 (727) 311-00-80</a>
           <a href="">shop@empire.kz</a>
         </div>
           <a href="" class="last">+7 (771) 949-91-77</a>

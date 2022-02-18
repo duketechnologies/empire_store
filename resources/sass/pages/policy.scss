@@ -51,4 +51,30 @@ section#policy {
       }
     }
   }
+  @include responsive {
+    h2 {
+      margin:0;
+      padding: 2rem;
+    }
+    .content {
+      display: block;
+      margin-top: 0;
+      padding:0 2rem;
+      .links {
+        display: none;
+      }
+      .rules {
+        p {
+          display: none;
+        }
+        &__title {
+          font-size: 1.15rem;
+        }
+        &__info li{
+          font-size: 1.15rem;
+          padding-bottom: .5rem;
+        }
+      }
+    }
+  }
 }

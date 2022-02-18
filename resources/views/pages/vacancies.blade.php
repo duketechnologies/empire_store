@@ -28,7 +28,7 @@
         </div>
       </div>
     </div>
-      <h2 class="title">40 актуальных вакансий:</h2>
+      <h2 class="title">4 актуальных вакансий:</h2>
       <div class="faq">
         <div class="questions">
           <p>Копирайтер / Графический дизайнер</p>

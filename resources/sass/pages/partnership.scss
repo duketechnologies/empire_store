@@ -97,4 +97,55 @@ section#partnership {
       justify-content: center;
     }
   }
+  @include responsive {
+    h1 {
+      text-align: left;
+    }
+    p {
+      text-align: left;
+      font-size: 1.1rem;
+      margin-bottom: 6rem;
+    }
+    .route {
+      font-size: 1rem;
+      align-self: center;
+    }
+    .info {
+      padding: 2.5rem 2rem 4rem;
+      align-items: flex-start;
+      #display {
+        display: none;
+      }
+    }
+    .details {
+      margin:0;
+      padding: 3rem 2rem 40rem;
+      align-items: flex-start;
+      background-position: bottom left 5%;
+      border-radius: 0;
+    }
+    .cooperation {
+      padding: 10rem 2rem;
+      margin-top: 0;
+      h2 {
+        text-align: center;
+        line-height: 2rem;
+        font-weight: 500;
+      }
+      .contacts {
+        flex-direction: column;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        a {
+          font-size: 1.1rem;
+        }
+      }
+      .buttons {
+        width: 100%;
+        .main-btn, .primary-btn {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

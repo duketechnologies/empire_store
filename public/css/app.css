@@ -2860,6 +2860,115 @@ section#faq .consultaion .call form .main-btn {
   width: 100%;
   font-weight: 500;
 }
+@media only screen and (max-width: 1200px) {
+  section#faq h1 {
+    background-color: white;
+    margin: 0;
+    padding: 3rem 2rem;
+  }
+  section#faq .type {
+    margin: 0 0 4rem;
+    padding: 1rem 2rem 0;
+    background-color: white;
+    flex-direction: column-reverse;
+    gap: 4rem;
+  }
+  section#faq .type form {
+    width: 100%;
+    max-width: initial;
+  }
+  section#faq .type form input {
+    width: 100%;
+    background-color: #F5F4F1;
+    font-size: 1.1rem;
+  }
+  section#faq .type form input:focus {
+    background-color: #F5F4F1;
+  }
+  section#faq .type form input::-moz-placeholder {
+    font-size: 1.1rem;
+  }
+  section#faq .type form input:-ms-input-placeholder {
+    font-size: 1.1rem;
+  }
+  section#faq .type form input::placeholder {
+    font-size: 1.1rem;
+  }
+  section#faq .type .links {
+    gap: 2rem;
+    width: 100%;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: 0;
+  }
+  section#faq .type .links li {
+    list-style: none;
+  }
+  section#faq .type .links::-webkit-scrollbar {
+    display: none;
+  }
+  section#faq .type .links li a {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    white-space: nowrap;
+    padding: 0 0 1.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    border-bottom: 1px solid transparent;
+  }
+  section#faq .type .links li a.active {
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    padding: 0 0 1.5rem;
+    margin: 0;
+  }
+  section#faq .faq {
+    margin: 0 2rem;
+  }
+  section#faq .faq .questions:hover p {
+    border-bottom: none;
+  }
+  section#faq .faq .answers {
+    padding-left: 0;
+    font-size: 1rem;
+    color: #505154;
+  }
+  section#faq .faq.active .questions p {
+    border-bottom: none;
+  }
+  section#faq .consultaion .call {
+    max-width: initial;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  section#faq .consultaion .call h1 {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+  section#faq .consultaion .call p {
+    display: none;
+  }
+  section#faq .consultaion .call form input {
+    font-size: 1.1rem;
+    width: 65%;
+  }
+  section#faq .consultaion .call form input::-moz-placeholder {
+    font-size: 1.1rem;
+  }
+  section#faq .consultaion .call form input:-ms-input-placeholder {
+    font-size: 1.1rem;
+  }
+  section#faq .consultaion .call form input::placeholder {
+    font-size: 1.1rem;
+  }
+  section#faq .consultaion .call form .main-btn {
+    height: 3.6rem;
+    font-size: 1.1rem;
+  }
+}
 
 @keyframes fade {
   from {
@@ -2973,6 +3082,57 @@ section#partnership .cooperation .buttons {
   align-items: center;
   gap: 1rem;
   justify-content: center;
+}
+@media only screen and (max-width: 1200px) {
+  section#partnership h1 {
+    text-align: left;
+  }
+  section#partnership p {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 6rem;
+  }
+  section#partnership .route {
+    font-size: 1rem;
+    align-self: center;
+  }
+  section#partnership .info {
+    padding: 2.5rem 2rem 4rem;
+    align-items: flex-start;
+  }
+  section#partnership .info #display {
+    display: none;
+  }
+  section#partnership .details {
+    margin: 0;
+    padding: 3rem 2rem 40rem;
+    align-items: flex-start;
+    background-position: bottom left 5%;
+    border-radius: 0;
+  }
+  section#partnership .cooperation {
+    padding: 10rem 2rem;
+    margin-top: 0;
+  }
+  section#partnership .cooperation h2 {
+    text-align: center;
+    line-height: 2rem;
+    font-weight: 500;
+  }
+  section#partnership .cooperation .contacts {
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+  section#partnership .cooperation .contacts a {
+    font-size: 1.1rem;
+  }
+  section#partnership .cooperation .buttons {
+    width: 100%;
+  }
+  section#partnership .cooperation .buttons .main-btn, section#partnership .cooperation .buttons .primary-btn {
+    width: 100%;
+  }
 }
 
 section#vacancies {
@@ -3137,6 +3297,57 @@ section#vacancies .faq.active #vertical {
 section#vacancies .top {
   margin-bottom: 7rem;
 }
+@media only screen and (max-width: 1200px) {
+  section#vacancies {
+    margin-top: 0;
+  }
+  section#vacancies .main-img {
+    display: none;
+  }
+  section#vacancies .description {
+    margin: 0;
+  }
+  section#vacancies .description .actual {
+    display: none;
+  }
+  section#vacancies .description .info {
+    border-radius: 0;
+    padding: 4rem 2rem;
+    max-width: initial;
+  }
+  section#vacancies .description .info h3 {
+    font-size: 1.8rem;
+  }
+  section#vacancies .description .info p {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
+  section#vacancies .description .info .main-btn {
+    padding: 1.3rem 0 1.2rem;
+    font-size: 1.1rem;
+    height: initial;
+  }
+  section#vacancies .title {
+    margin: 5rem 2rem;
+  }
+  section#vacancies .faq {
+    margin: 0 2rem;
+  }
+  section#vacancies .faq .answers {
+    padding-left: 0;
+    font-size: 1rem;
+    color: #505154;
+  }
+  section#vacancies .faq .answers .buttons .link-btn {
+    font-size: 1.1rem;
+  }
+  section#vacancies .faq.active .answers .buttons {
+    margin-top: 3rem;
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+}
 
 @keyframes fade {
   from {
@@ -3210,6 +3421,9 @@ section#contacts .contact-card_list-contacts a {
 section#contacts .contact-card_list-contacts a:hover {
   border-bottom-color: #303133;
 }
+section#contacts .contact-card_list-contacts .mobile {
+  display: none;
+}
 section#contacts .last {
   display: inline-block;
   color: #303133;
@@ -3251,6 +3465,81 @@ section#contacts .contact-card_list-image img {
   aspect-ratio: 1/1;
   border-radius: 999rem;
   width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+  section#contacts .contact-card_list {
+    display: block;
+    margin: 2rem;
+  }
+  section#contacts .contact-card_list-item {
+    margin-bottom: 2rem;
+    box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+    padding: 3rem 2rem;
+    justify-content: center;
+  }
+  section#contacts .contact-card_list-image {
+    display: none;
+  }
+  section#contacts .contact-card_list-info {
+    justify-content: center;
+    width: 100%;
+    max-width: initial;
+  }
+  section#contacts .contact-card_list-info h1 {
+    text-align: center;
+  }
+  section#contacts .contact-card_list-info p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  section#contacts .contact-card_list-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  section#contacts .contact-card_list-contacts a {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  section#contacts .contact-card_list-contacts .mobile {
+    display: block;
+  }
+  section#contacts .last {
+    margin-right: 0;
+    font-size: 1.1rem;
+    display: none;
+  }
+  section#contacts div .contact-card_list-action {
+    font-size: 1.1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+section#contacts .consultaion_block {
+  margin-top: 5rem;
+}
+section#contacts .consultaion_block .call {
+  width: 100%;
+  padding: 0 2rem;
+  max-width: initial;
+}
+section#contacts .consultaion_block .call h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+section#contacts .consultaion_block .call p {
+  display: none;
+}
+section#contacts .consultaion_block .call form input {
+  width: 65%;
+}
+section#contacts .consultaion_block .call form .main-btn {
+  margin-top: 4rem;
 }
 
 section#about .main_img {
@@ -3604,6 +3893,30 @@ section#policy .content .rules__info li {
   letter-spacing: 0.44px;
   line-height: 1.3rem;
   padding-left: 0.5rem;
+}
+@media only screen and (max-width: 1200px) {
+  section#policy h2 {
+    margin: 0;
+    padding: 2rem;
+  }
+  section#policy .content {
+    display: block;
+    margin-top: 0;
+    padding: 0 2rem;
+  }
+  section#policy .content .links {
+    display: none;
+  }
+  section#policy .content .rules p {
+    display: none;
+  }
+  section#policy .content .rules__title {
+    font-size: 1.15rem;
+  }
+  section#policy .content .rules__info li {
+    font-size: 1.15rem;
+    padding-bottom: 0.5rem;
+  }
 }
 
 section#franchise .hero {
@@ -4172,6 +4485,9 @@ section#news .hero img {
   width: 100%;
   max-height: 30rem;
 }
+section#news .mobile-title {
+  display: none;
+}
 section#news .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -4276,6 +4592,57 @@ section#news .route .pagination .active {
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
   color: black;
+}
+@media only screen and (max-width: 1200px) {
+  section#news .hero, section#news .route {
+    display: none;
+  }
+  section#news .mobile-title {
+    display: block;
+    font-size: 1.89rem;
+    font-family: "Spectral";
+    padding: 3rem 2rem;
+    font-style: italic;
+    color: #303133;
+  }
+  section#news .cards {
+    margin: 0;
+    grid-template-columns: 1fr;
+    gap: 3rem 0;
+  }
+  section#news .cards .card {
+    padding: 0;
+    border-radius: 0;
+  }
+  section#news .cards .card .title {
+    margin-left: 2rem;
+  }
+  section#news .cards .card .info {
+    margin: 0;
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+  section#news .cards .card .action {
+    margin-left: 2rem;
+    display: none;
+  }
+  section#news .consultaion_block {
+    margin-top: 3rem;
+  }
+  section#news .consultaion_block .call {
+    width: 100%;
+    max-width: initial;
+    padding: 0 2rem;
+  }
+  section#news .consultaion_block .call h1 {
+    font-size: 1.5rem;
+  }
+  section#news .consultaion_block .call form input {
+    width: 65%;
+  }
+  section#news .consultaion_block .call p {
+    display: none;
+  }
 }
 
 section#single_news .wrapper {
@@ -4387,6 +4754,56 @@ section#single_news .routes .next svg {
   width: 5.2rem;
   height: 5.2rem;
   transform: rotate(180deg);
+}
+@media only screen and (max-width: 1200px) {
+  section#single_news .wrapper {
+    margin: 0;
+  }
+  section#single_news .secondary-btn {
+    display: none;
+  }
+  section#single_news .main-img {
+    margin-top: 0;
+  }
+  section#single_news .title {
+    margin: 0;
+    padding: 4rem 2rem 0;
+  }
+  section#single_news .content {
+    display: block;
+  }
+  section#single_news .content p {
+    font-size: 1.05rem;
+    padding: 0 2rem;
+  }
+  section#single_news .content img {
+    width: 97%;
+    margin: 0 auto 0.5rem;
+  }
+  section#single_news .mobile {
+    display: none;
+  }
+  section#single_news h2 {
+    display: none;
+  }
+  section#single_news .routes .prev {
+    display: none;
+  }
+  section#single_news .routes .next {
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  section#single_news .routes .next div p {
+    font-size: 1.8rem;
+  }
+  section#single_news .routes .next div .name {
+    align-self: flex-start;
+    font-size: 1.1rem;
+  }
+  section#single_news .secondary-img {
+    display: none;
+  }
 }
 
 section#profile .switch {
@@ -6184,10 +6601,6 @@ section#basket .consultaion_block {
   section#basket .consultaion_block {
     display: flex;
     padding: 8.5rem 0 14rem;
-  }
-
-  .footer {
-    display: none;
   }
 }
 section#filters .type {
