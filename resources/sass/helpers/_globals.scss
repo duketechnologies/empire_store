@@ -107,6 +107,15 @@ li {
     border-bottom: 1px solid black;
   }
 }
+.open {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  color: #303133;
+  font-weight: 300;
+}
 .swiper-button-next {
   &::after {
     display: none;

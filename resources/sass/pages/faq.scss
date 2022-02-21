@@ -209,8 +209,11 @@ section#faq  {
         max-width: initial;
         input {
           width: 100%;
-          background-color: #F5F4F1;
+          background-color: #F5F4F1 !important;
           font-size: 1.1rem;
+          &:hover {
+            background-color: #F5F4F1;
+          }
           &:focus {
             background-color: #F5F4F1;
           }

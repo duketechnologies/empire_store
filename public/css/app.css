@@ -629,6 +629,16 @@ li {
   border-bottom: 1px solid black;
 }
 
+.open {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  color: #303133;
+  font-weight: 300;
+}
+
 .swiper-button-next::after {
   display: none;
 }
@@ -1250,7 +1260,7 @@ header.header .menu.active {
     height: 1.4rem;
   }
   header.header .wrapper .info .profile .basket svg > g > path {
-    stroke: #212123;
+    stroke: #303133;
   }
   header.header .wrapper .info .profile li.search-icon {
     display: initial;
@@ -1259,6 +1269,24 @@ header.header .menu.active {
   header.header .wrapper .info .profile li.search-icon svg {
     width: 2rem;
     height: 1.4rem;
+  }
+  header.header .wrapper.active .logo svg > path {
+    fill: black;
+  }
+  header.header .wrapper.active .phone {
+    color: white;
+  }
+  header.header .wrapper.active .profile li a {
+    color: black;
+  }
+  header.header .wrapper.active .profile svg > path {
+    fill: black;
+  }
+  header.header .wrapper.active .profile svg > g > path {
+    stroke: black;
+  }
+  header.header .wrapper.active input {
+    background-color: white !important;
   }
   header.header .search-block {
     display: none;
@@ -2879,8 +2907,11 @@ section#faq .consultaion .call form .main-btn {
   }
   section#faq .type form input {
     width: 100%;
-    background-color: #F5F4F1;
+    background-color: #F5F4F1 !important;
     font-size: 1.1rem;
+  }
+  section#faq .type form input:hover {
+    background-color: #F5F4F1;
   }
   section#faq .type form input:focus {
     background-color: #F5F4F1;
@@ -4119,6 +4150,9 @@ section#franchise .team__content {
 section#franchise .team__content div {
   padding: 7rem 7.5rem 7rem 12rem;
 }
+section#franchise .team__content div .workers-mobile {
+  display: none;
+}
 section#franchise .team__content div:first-child {
   background-color: #2A2019;
 }
@@ -4423,6 +4457,161 @@ section#franchise .consultaion .call form .main-btn {
   margin-top: 2rem;
   width: 100%;
   font-weight: 500;
+}
+@media only screen and (max-width: 1200px) {
+  section#franchise .hero__title {
+    max-width: initial;
+    width: 100%;
+    padding: 0 2rem;
+    gap: 8rem;
+  }
+  section#franchise .hero__title svg {
+    margin-bottom: 12rem;
+  }
+  section#franchise .hero__title p {
+    display: none;
+  }
+  section#franchise .hero__title .request {
+    font-size: 1rem;
+    padding: 1.1rem 3rem 1rem;
+  }
+  section#franchise .hero .links {
+    padding: 0 2rem;
+  }
+  section#franchise .hero .links a {
+    font-size: 1.4rem;
+  }
+  section#franchise .hero .links a span {
+    display: none;
+  }
+  section#franchise .gift {
+    flex-direction: column;
+    margin-top: 0rem;
+    padding: 0 2rem;
+    margin-bottom: 10rem;
+  }
+  section#franchise .gift ul {
+    margin-top: 0;
+  }
+  section#franchise .gift ul li {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  section#franchise .gift ul li .circle::after {
+    bottom: -4.15rem;
+    height: 4.2rem;
+  }
+  section#franchise .gift .info div {
+    flex-direction: column;
+    margin-top: 4.5rem;
+  }
+  section#franchise .gift .info div a {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    font-size: 1.3rem;
+  }
+  section#franchise .team {
+    margin: 0;
+  }
+  section#franchise .team__title {
+    display: none;
+  }
+  section#franchise .team__content {
+    grid-template-columns: 1fr;
+  }
+  section#franchise .team__content div {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 7rem 4rem;
+  }
+  section#franchise .team__content div .workers {
+    display: none;
+  }
+  section#franchise .team__content div .workers-mobile {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #B98671;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+  section#franchise .team__content div .workers-mobile span {
+    font-weight: 200;
+    font-size: 6rem;
+  }
+  section#franchise .team__content div .info br {
+    display: none;
+  }
+  section#franchise .team__content div:last-child {
+    flex-direction: column;
+    padding: 6rem 2rem;
+  }
+  section#franchise .team__content div:last-child .workers {
+    display: block;
+  }
+  section#franchise .team__content div:last-child .questions {
+    margin-top: 0;
+    width: 100%;
+  }
+  section#franchise .team__content div:last-child .questions a {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  section#franchise .team__content div:last-child .questions a:last-child {
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    padding: 1.3rem 0 1.2rem;
+    color: black;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 2rem;
+  }
+  section#franchise .rules {
+    display: none;
+  }
+  section#franchise .half {
+    display: none;
+  }
+  section#franchise .rules-mobile .faq .questions p {
+    font-size: 1.3rem;
+  }
+  section#franchise .rules-mobile .faq .answers {
+    padding-left: 0;
+    font-size: 1.1rem;
+  }
+  section#franchise .excursion {
+    display: none;
+  }
+  section#franchise .faq {
+    margin: 0 2rem;
+  }
+  section#franchise .consultaion .call {
+    max-width: initial;
+    width: 100%;
+    padding: 0 2rem;
+  }
+  section#franchise .consultaion .call #desktop {
+    display: none;
+  }
+  section#franchise .consultaion .call .call-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  section#franchise .consultaion .call .call-mobile p {
+    font-size: 1.1rem;
+  }
+  section#franchise .consultaion .call .call-mobile a {
+    font-size: 1.25rem;
+    margin-top: 2rem;
+  }
 }
 
 @keyframes fade {
@@ -4810,7 +4999,7 @@ section#profile .switch {
   margin: 0 10.5rem;
   margin-bottom: 6rem;
 }
-section#profile .switch h1 {
+section#profile .switch .title h1 {
   font-family: "Spectral";
   font-size: 1.6rem;
   color: #939393;
@@ -4818,11 +5007,14 @@ section#profile .switch h1 {
   margin-top: 4rem;
   margin-bottom: 2.5rem;
 }
-section#profile .switch h1 span {
+section#profile .switch .title h1 span {
   font-family: "Inter";
   font-style: normal;
   color: black;
   font-size: 1.3rem;
+}
+section#profile .switch .title a {
+  display: none;
 }
 section#profile .switch .type {
   display: flex;
@@ -5327,6 +5519,12 @@ section#profile .switch .favorites__products .grid__blocks .buttons .primary-btn
 section#profile .switch .favorites.is-active {
   display: flex;
 }
+section#profile .switch .my-profile-mobile {
+  display: none;
+}
+section#profile .switch .location-mobile {
+  display: none;
+}
 section#profile .switch .route {
   display: flex;
   margin: 6rem 0;
@@ -5390,6 +5588,137 @@ section#profile .switch .route .pagination .active {
   border-bottom: 1px solid black;
   padding-bottom: 0.3rem;
   color: black;
+}
+@media only screen and (max-width: 1200px) {
+  section#profile .switch .type .links li a {
+    border-radius: 0;
+    border-bottom: 1px solid transparent;
+    padding: 1rem 0;
+  }
+  section#profile .switch .type .links li .active {
+    border-bottom: 1px solid black;
+  }
+  section#profile .switch {
+    margin: 0;
+  }
+  section#profile .switch .title {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: flex-start;
+    padding: 3rem 2rem;
+  }
+  section#profile .switch .title h1 {
+    margin: 0;
+    display: flex;
+    gap: 0.6rem;
+    flex-direction: column;
+    position: relative;
+  }
+  section#profile .switch .title a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  section#profile .switch .title a p {
+    font-size: 1rem;
+    border-bottom: 1px solid black;
+    padding-bottom: 0.3rem;
+    font-weight: 600;
+  }
+  section#profile .switch .type {
+    background-color: white;
+    padding-top: 1rem;
+  }
+  section#profile .switch .type .links {
+    background-color: white;
+    width: 100%;
+    padding: 0 2rem;
+    justify-content: space-between;
+  }
+  section#profile .switch .type .links li a {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    margin: 0;
+  }
+  section#profile .switch .type .links li.active {
+    border-bottom: 1px solid black;
+  }
+  section#profile .switch .type .btn {
+    display: none;
+  }
+  section#profile .switch .my-profile.is-active {
+    display: none;
+  }
+  section#profile .switch .my-profile-mobile {
+    margin: 0.5rem;
+    border-radius: 8px;
+    background-color: white;
+  }
+  section#profile .switch .my-profile-mobile .content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 2rem 4rem;
+    gap: 2rem;
+  }
+  section#profile .switch .my-profile-mobile .content input {
+    padding: 1.3rem 2rem;
+    border-radius: 8px;
+    border: 1px solid #505154;
+  }
+  section#profile .switch .my-profile-mobile .content .main-btn {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  section#profile .switch .my-profile-mobile.is-active {
+    display: block;
+    -webkit-animation: opacity 0.3s linear;
+            animation: opacity 0.3s linear;
+  }
+  section#profile .switch .location-mobile {
+    margin: 0.5rem;
+    border-radius: 8px;
+  }
+  section#profile .switch .location-mobile .content {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem 4rem;
+  }
+  section#profile .switch .location-mobile .content .address-mobile {
+    border: 1px solid #DEDCD8;
+    border-radius: 8px;
+    padding: 2.5rem;
+    transition: 0.2s ease-in;
+  }
+  section#profile .switch .location-mobile .content .address-mobile .address-top {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    margin-bottom: 1rem;
+  }
+  section#profile .switch .location-mobile .content .address-mobile .address-bottom {
+    font-size: 1.2rem;
+    letter-spacing: 0.7px;
+    color: #303133;
+    line-height: 1.6rem;
+  }
+  section#profile .switch .location-mobile .content .address-mobile:hover {
+    border: 1px solid #505154;
+  }
+  section#profile .switch .location-mobile.is-active {
+    display: block;
+    -webkit-animation: opacity 0.3s linear;
+            animation: opacity 0.3s linear;
+    background-color: white;
+  }
 }
 
 @keyframes opacity {
@@ -5860,6 +6189,9 @@ section#item .similar .single .single-breadcrumbs a:first-child::before {
 section#item .similar .single .single-breadcrumbs a::before {
   content: "•";
   margin-right: 0.5rem;
+}
+section#item .buttons-mobile {
+  display: none;
 }
 section#item .similar-mobile {
   display: none;
@@ -7625,6 +7957,11 @@ section#test .links a span {
   color: #505154;
 }
 
+@media only screen and (max-width: 1200px) {
+  section#test {
+    margin: 0;
+  }
+}
 /*pages*/
 /*mobile-components*/
 .tired-swiper {
@@ -8442,6 +8779,164 @@ section#test .links a span {
     color: #303133;
   }
 }
+.excursion-mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .excursion-mobile {
+    display: block;
+  }
+  .excursion-mobile .excursion-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    z-index: 1;
+  }
+  .excursion-mobile .excursion-info #line {
+    width: 29rem;
+    height: 60rem;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    right: 2rem;
+  }
+  .excursion-mobile .excursion-info h2 {
+    font-size: 1.8rem;
+    color: #303133;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 4rem;
+  }
+  .excursion-mobile .excursion-info p {
+    font-size: 1.2rem;
+    color: #505154;
+    letter-spacing: 0.44px;
+    text-align: center;
+    margin-top: 1.2rem;
+  }
+  .excursion-mobile .excursion-info .excursion-content {
+    margin-bottom: 4rem;
+  }
+  .excursion-mobile .excursion-info .excursion-content div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+  }
+  .excursion-mobile .excursion-info .excursion-content div svg {
+    width: 1.6rem;
+    height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .excursion-mobile .excursion-info .excursion-content div p {
+    line-height: 2rem;
+  }
+  .excursion-mobile .excursion-info img {
+    width: 100%;
+  }
+}
+.rules-mobile {
+  display: none;
+}
+.rules-mobile .faq {
+  margin: 0 10.5rem;
+}
+.rules-mobile .faq .questions:last-child {
+  border-bottom: 1px solid red;
+}
+.rules-mobile .faq .questions {
+  border-top: 1px solid #DEDCD8;
+  padding: 2.2rem 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rules-mobile .faq .questions p {
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.3rem;
+  transition: 0.2s ease-in-out;
+  display: inline-block;
+  font-size: 1.35rem;
+}
+.rules-mobile .faq .questions svg {
+  width: 2rem;
+  height: 2rem;
+}
+.rules-mobile .faq .questions:hover p {
+  border-bottom: 1px solid black;
+  padding-bottom: 0.3rem;
+}
+.rules-mobile .faq .answers {
+  font-size: 1.1rem;
+  letter-spacing: 0.44px;
+  line-height: 1.3rem;
+  max-width: 53.5rem;
+  max-height: 0;
+  overflow: hidden;
+}
+.rules-mobile .faq .answers ul li {
+  line-height: 1.8rem;
+  margin-top: 1rem;
+}
+.rules-mobile .faq #vertical {
+  transition: 0.2s linear;
+  -webkit-animation: rotate 0.2s linear;
+          animation: rotate 0.2s linear;
+}
+.rules-mobile .faq.active .questions p {
+  border-bottom: 1px solid black;
+}
+.rules-mobile .faq.active .answers {
+  margin-bottom: 5.35rem;
+  max-height: 30rem;
+  -webkit-animation: fade 0.5s ease-in;
+          animation: fade 0.5s ease-in;
+}
+.rules-mobile .faq.active #vertical {
+  transition: 0.2s linear;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .rules-mobile {
+    background-color: white;
+    padding: 5rem 0;
+    display: block;
+  }
+  .rules-mobile .main-btn {
+    width: 90%;
+    margin: 5rem auto 0;
+    height: initial;
+    padding: 1.3rem 0 1.2rem;
+  }
+  .rules-mobile .faq .answers {
+    padding-left: 0;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(200deg);
+  }
+}
 /*mobile-components*/
 /*modals*/
 .remodal[data-remodal-id=mail_to] .content h1 {
@@ -8495,6 +8990,24 @@ section#test .links a span {
   font-size: 0.9rem;
   color: #939393;
   font-family: Inter, sans-serif;
+}
+@media only screen and (max-width: 1200px) {
+  .remodal[data-remodal-id=mail_to] {
+    padding: 4.5rem 2rem !important;
+  }
+  .remodal[data-remodal-id=mail_to] .content form textarea {
+    width: 100%;
+    min-height: 10rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .remodal[data-remodal-id=mail_to] .content form input {
+    font-family: "Inter";
+    width: 80%;
+  }
+  .remodal[data-remodal-id=mail_to] .content form .main-btn {
+    width: 100%;
+  }
 }
 
 .remodal[data-remodal-id=new_location] .new_location {
@@ -8791,7 +9304,7 @@ section#test .links a span {
   align-items: center;
   gap: 4rem;
 }
-.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=checkbox] {
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=radio] {
   display: none;
 }
 .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes label {
@@ -8828,14 +9341,71 @@ section#test .links a span {
   padding: 0.2rem;
   transition: 0.2s ease-in;
 }
-.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=checkbox]:checked + label::before {
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=radio]:checked + label::before {
   background-color: black;
 }
-.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=checkbox]:hover + label::before {
+.remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=radio]:hover + label::before {
   background-color: rgba(0, 0, 0, 0.2);
 }
 .remodal[data-remodal-id=franchise-modal] .franchise-form .main-btn {
   margin-top: 5.2rem;
+}
+@media only screen and (max-width: 1200px) {
+  .remodal[data-remodal-id=franchise-modal] {
+    padding: 4.5rem 2rem !important;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise h3 {
+    margin-bottom: 3.6rem;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise .price {
+    display: none;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .person h4 {
+    display: none;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .location h4 {
+    display: none;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset {
+    max-width: initial;
+    border: 1px solid #505154;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset input {
+    width: 100%;
+    padding: 1.3rem 1rem 1.3rem 1.5rem;
+    font-size: 1.1rem;
+    font-family: "Inter";
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset input::-moz-placeholder {
+    font-size: 1.1rem;
+    color: #303133;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset input:-ms-input-placeholder {
+    font-size: 1.1rem;
+    color: #303133;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper fieldset input::placeholder {
+    font-size: 1.1rem;
+    color: #303133;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .checkboxes input[type=radio]:hover + label::before {
+    background-color: black;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .wrapper .place {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+  .remodal[data-remodal-id=franchise-modal] .franchise-form .main-btn {
+    width: 100%;
+  }
 }
 
 .remodal[data-remodal-id=quiz] {
@@ -8975,6 +9545,30 @@ section#test .links a span {
   width: 1rem;
   height: 1rem;
 }
+@media only screen and (max-width: 1200px) {
+  .remodal[data-remodal-id=feedback] {
+    max-width: initial;
+    padding: 3rem !important;
+  }
+  .remodal[data-remodal-id=feedback] .content {
+    display: block;
+  }
+  .remodal[data-remodal-id=feedback] .content img {
+    display: none;
+  }
+  .remodal[data-remodal-id=feedback] .consultaion .call {
+    max-width: initial;
+    width: 100%;
+  }
+  .remodal[data-remodal-id=feedback] .consultaion .call p {
+    display: none;
+  }
+  .remodal[data-remodal-id=feedback] .consultaion .call form input {
+    border: 1px solid #505154;
+    border-radius: 6px;
+    width: 100%;
+  }
+}
 
 .remodal[data-remodal-id=comment] {
   padding: 6rem !important;
@@ -9032,6 +9626,50 @@ section#test .links a span {
   color: #939393;
   font-family: Inter, sans-serif;
 }
+@media only screen and (max-width: 1200px) {
+  .remodal[data-remodal-id=comment] {
+    max-width: initial;
+    padding: 4rem 2rem !important;
+  }
+  .remodal[data-remodal-id=comment] .content h1 {
+    margin-bottom: 2rem;
+  }
+  .remodal[data-remodal-id=comment] .content p {
+    display: none;
+  }
+  .remodal[data-remodal-id=comment] .content form textarea {
+    min-height: 10rem;
+    padding: 1rem 2rem 0;
+  }
+  .remodal[data-remodal-id=comment] .content form textarea::-moz-placeholder {
+    font-size: 1rem;
+  }
+  .remodal[data-remodal-id=comment] .content form textarea:-ms-input-placeholder {
+    font-size: 1rem;
+  }
+  .remodal[data-remodal-id=comment] .content form textarea::placeholder {
+    font-size: 1rem;
+  }
+  .remodal[data-remodal-id=comment] .content form input {
+    border: 1px solid #505154;
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 6px;
+    text-align: left;
+  }
+  .remodal[data-remodal-id=comment] .content form input::-moz-placeholder {
+    color: #303133;
+  }
+  .remodal[data-remodal-id=comment] .content form input:-ms-input-placeholder {
+    color: #303133;
+  }
+  .remodal[data-remodal-id=comment] .content form input::placeholder {
+    color: #303133;
+  }
+  .remodal[data-remodal-id=comment] .content form .main-btn {
+    width: 100%;
+  }
+}
 
 .remodal[data-remodal-id=payment] {
   background-color: #F5F4F1;
@@ -9078,6 +9716,20 @@ section#test .links a span {
   font-size: 0.95rem;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid black;
+}
+@media only screen and (max-width: 1200px) {
+  .remodal[data-remodal-id=payment] {
+    padding: 4.5rem 2rem !important;
+  }
+  .remodal[data-remodal-id=payment] .details {
+    border: none;
+    background-color: #212123;
+    border-radius: 4px;
+    color: white;
+    padding: 1.3rem 0 1.2rem !important;
+    font-size: 1.2rem;
+    width: 100%;
+  }
 }
 
 .remodal[data-remodal-id=cookie-location] {

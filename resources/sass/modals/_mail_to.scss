@@ -43,4 +43,24 @@
       }
     }
   }
+  @include responsive {
+    padding: 4.5rem 2rem !important;
+    .content {
+      form {
+        textarea {
+          width: 100%;
+          min-height: 10rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        input {
+          font-family: 'Inter';
+          width: 80%;
+        }
+        .main-btn {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

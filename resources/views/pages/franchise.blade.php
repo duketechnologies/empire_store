@@ -61,15 +61,18 @@
       <div class="team__content">
         <div>
           <p class="workers">консультантов</p>
-          <p class="info">Маркетинговая поддержка<br/>на всех этапах</p>
+          <p class="workers-mobile"><span>12</span><br/>консультантов</p>
+          <p class="info">Маркетинговая поддержка<br/> на всех этапах</p>
         </div>
         <div>
           <p class="workers">семинаров в год</p>
-          <p class="info">Маркетинговая поддержка<br/>на всех этапах</p>
+          <p class="workers-mobile"><span>30</span><br/>бизнес тренеров</p>
+          <p class="info">Поддержка и обучение <br/> организации работы</p>
         </div>
         <div>
           <p class="workers">бизнес тренеров</p>
-          <p class="info">Маркетинговая поддержка<br/>на всех этапах</p>
+          <p class="workers-mobile"><span>6</span><br/>семинаров в год</p>
+          <p class="info">База знаний по открытию<br/>и ведению бизнеса</p>
         </div>
         <div>
           <p class="workers">Остались вопросы?</p>
@@ -118,8 +121,12 @@
           </ul>
         </div>
       </div>
-      <a href="#" class="main-btn" data-remodal-target="franchise-modal">ПОДАТЬ ЗАЯВКУ</a>
+      <a href="#" class="main-btn" data-remodal-target="franchise-modal" >Подать заявку</a>
     </div>
+{{--    mobile-rules--}}
+    @include('mobile-components.rules-franchise-mobile')
+{{--    mobile rules--}}
+    <div class="half">
       <div class="faq">
         <div class="questions">
           <p>Где производят изделия Empire?</p>
@@ -172,22 +179,23 @@
         </div>
       </div>
       <div class="faq">
-        <div class="questions">
-          <p>Где производят изделия Empire?</p>
-          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M33.9426 22.6262L11.3152 22.6262" stroke="#505154" stroke-linecap="round" stroke-linejoin="round"/>
-            <path id="vertical" d="M22.6289 11.3152L22.6289 33.9426" stroke="#505154" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="answers">
-          <p>Due to Covid-19, many of our shipping carriers are experiencing delays in delivering orders. Please expect that after your order has shipped,
-            it might experience carrier delays and may take longer than usual to receive.<br/><br/>
-            The health and safety of our customers and teams is our #1 priority and we appreciate your p
-            atience and understanding as we work to ship your order. If anything about your experience is not
-            what you expected, please let us know at 1-888-494-3837
-          </p>
-        </div>
+      <div class="questions">
+        <p>Где производят изделия Empire?</p>
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M33.9426 22.6262L11.3152 22.6262" stroke="#505154" stroke-linecap="round" stroke-linejoin="round"/>
+          <path id="vertical" d="M22.6289 11.3152L22.6289 33.9426" stroke="#505154" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
+      <div class="answers">
+        <p>Due to Covid-19, many of our shipping carriers are experiencing delays in delivering orders. Please expect that after your order has shipped,
+          it might experience carrier delays and may take longer than usual to receive.<br/><br/>
+          The health and safety of our customers and teams is our #1 priority and we appreciate your p
+          atience and understanding as we work to ship your order. If anything about your experience is not
+          what you expected, please let us know at 1-888-494-3837
+        </p>
+      </div>
+    </div>
+    </div>
     <div class="excursion">
       <div class="description">
         <img src={{ url("/i/franchise/excursion_img.png") }} alt=""/>
@@ -204,10 +212,15 @@
         <a href="#" class="main-btn">записаться на Экскурсию</a>
       </div>
     </div>
+    @include('mobile-components.excursion-mobile')
     <div class="consultaion">
       <div class="call">
         <h1>Не нашли ответ на вопрос?</h1>
-        <p>Наш консультант свяжется с вами, так же вы можете самостоятеьлно позвонить консультанту по франшизе <br/><span>Номер для обратной связи  +7 (778) 605-08-07</span></p>
+        <p id="desktop">Наш консультант свяжется с вами, так же вы можете самостоятеьлно позвонить консультанту по франшизе <br/><span>Номер для обратной связи  +7 (778) 605-08-07</span></p>
+        <div class="call-mobile">
+          <p>Номер для обратной связи</p>
+          <a href="tel:+77772189291" class="link-btn">+7 777 218 92 91</a>
+        </div>
         <form method="POST" action="#">
           <input type="tel" name="phone" placeholder="Номер телефона"/>
           <button type="submit" class="main-btn">Заказать консультацию</button>

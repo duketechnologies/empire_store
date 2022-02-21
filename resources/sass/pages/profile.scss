@@ -2,18 +2,24 @@ section#profile {
   .switch {
     margin: 0 10.5rem;
     margin-bottom: 6rem;
-    h1 {
-      font-family: 'Spectral';
-      font-size: 1.6rem;
-      color: #939393;
-      font-style: italic;
-      margin-top: 4rem;
-      margin-bottom: 2.5rem;
+    .title {
+      h1 {
+        font-family: 'Spectral';
+        font-size: 1.6rem;
+        color: #939393;
+        font-style: italic;
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
+
       span {
         font-family: 'Inter';
         font-style: normal;
         color:black;
         font-size: 1.3rem;
+      }
+     }
+      a {
+        display: none;
       }
     }
     .type {
@@ -531,6 +537,12 @@ section#profile {
     .favorites.is-active {
       display: flex;
     }
+    .my-profile-mobile {
+      display: none;
+    }
+    .location-mobile {
+      display: none;
+    }
     .route {
       display: flex;
       margin: 6rem 0;
@@ -598,6 +610,138 @@ section#profile {
           padding-bottom: .3rem;
           color: black;
         }
+      }
+    }
+  }
+  @include responsive {
+    .switch .type .links li a {
+      border-radius: 0;
+      border-bottom: 1px solid transparent;
+      padding: 1rem 0;
+    }
+    .switch .type .links li .active {
+      border-bottom: 1px solid black;
+    }
+    .switch {
+      margin:0;
+      .title {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        align-items: flex-start;
+        padding: 3rem 2rem;
+        h1 {
+          margin:0;
+          display: flex;
+          gap: .6rem;
+          flex-direction: column;
+          position: relative;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          p {
+            font-size: 1rem;
+            border-bottom: 1px solid black;
+            padding-bottom: .3rem;
+            font-weight: 600;
+          }
+        }
+
+      }
+      .type {
+        background-color: white;
+        padding-top: 1rem;
+        .links {
+          background-color: white;
+          width: 100%;
+          padding:0 2rem;
+          justify-content: space-between;
+          li {
+            a {
+              display: block;
+              text-transform: uppercase;
+              font-size: 1.1rem;
+              font-weight: 500;
+              letter-spacing: .7px;
+              margin:0;
+            }
+          }
+          li.active {
+            border-bottom: 1px solid black ;
+          }
+        }
+        .btn {
+          display: none;
+        }
+      }
+      .my-profile.is-active {
+        display: none;
+      }
+      .my-profile-mobile {
+        margin: .5rem;
+        border-radius: 8px;
+        background-color: white;
+        .content {
+          display: flex;
+          flex-direction: column;
+          padding: 2rem 2rem 4rem;
+          gap: 2rem;
+          input {
+            padding: 1.3rem 2rem;
+            border-radius: 8px;
+            border: 1px solid #505154;
+          }
+          .main-btn {
+            width: 100%;
+            margin-top: 2rem;
+          }
+        }
+      }
+      .my-profile-mobile.is-active {
+        display: block;
+        animation: opacity .3s linear;
+      }
+      .location-mobile {
+        margin: .5rem;
+        border-radius: 8px;
+        .content {
+          padding: 0 2rem;
+          display: flex;
+          flex-direction: column;
+          gap: 2rem;
+          padding: 2rem 2rem 4rem;
+          .address-mobile {
+            border: 1px solid #DEDCD8;
+            border-radius: 8px;
+            padding: 2.5rem;
+            transition: .2s ease-in;
+            .address-top {
+              display: flex;
+              align-items: center;
+              gap: 1rem;
+              font-size: 1.2rem;
+              font-weight: 600;
+              letter-spacing: .7px;
+              margin-bottom: 1rem;
+            }
+            .address-bottom {
+              font-size: 1.2rem;
+              letter-spacing: .7px;
+              color: #303133;
+              line-height: 1.6rem;
+            }
+            &:hover {
+              border: 1px solid #505154;
+            }
+          }
+        }
+      }
+      .location-mobile.is-active {
+        display: block;
+        animation: opacity .3s linear;
+        background-color: white;
       }
     }
   }

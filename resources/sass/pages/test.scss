@@ -29,3 +29,8 @@ section#test {
     }
   }
 }
+@include responsive {
+  section#test {
+    margin:0;
+  }
+}

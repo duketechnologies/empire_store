@@ -495,7 +495,7 @@ header.header {
               height: 1.4rem;
               >g {
                 >path {
-                  stroke: #212123;
+                  stroke: #303133;
                 }
               }
             }
@@ -509,6 +509,32 @@ header.header {
             }
           }
         }
+      }
+    }
+    .wrapper.active {
+      .logo {
+        svg>path {
+          fill: black;
+        }
+      }
+      .phone {
+        color: white;
+      }
+      .profile {
+        li {
+          a {
+            color: black;
+          }
+        }
+        svg>path {
+          fill: black;
+        }
+        svg>g>path {
+          stroke: black;
+        }
+      }
+      input {
+        background-color: white !important;
       }
     }
     .search-block {

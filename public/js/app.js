@@ -56468,7 +56468,9 @@ swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 $(document).ready(function () {
   console.log('ready...');
   var faqs = document.querySelectorAll('.faq');
+  console.log(faqs);
   var faqs_mobile = document.querySelectorAll('.faqs-mobile .faq');
+  console.log(faqs_mobile);
   var menu = document.querySelector('.menu');
   var catalog = document.querySelector('#catalog');
   var burger = document.querySelector('.burger');

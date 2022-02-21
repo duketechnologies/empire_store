@@ -45,4 +45,38 @@
       }
     }
   }
+  @include responsive {
+    max-width: initial;
+    padding: 4rem 2rem !important;
+    .content {
+      h1 {
+        margin-bottom: 2rem;
+      }
+      p {
+        display: none;
+      }
+      form {
+        textarea {
+          min-height: 10rem;
+          padding: 1rem 2rem 0;
+          &::placeholder {
+            font-size: 1rem;
+          }
+        }
+        input {
+          border: 1px solid #505154;
+          width: 100%;
+          padding: .9rem;
+          border-radius: 6px;
+          text-align: left;
+          &::placeholder {
+            color: #303133;
+          }
+        }
+        .main-btn {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

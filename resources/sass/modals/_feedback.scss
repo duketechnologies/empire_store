@@ -88,4 +88,30 @@
       }
     }
   }
+  @include responsive {
+    max-width: initial;
+    padding: 3rem !important;
+    .content {
+      display: block;
+      img {
+        display: none;
+      }
+    }
+    .consultaion {
+      .call {
+        max-width: initial;
+        width: 100%;
+        p {
+          display: none;
+        }
+        form {
+          input {
+            border: 1px solid #505154;
+            border-radius: 6px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

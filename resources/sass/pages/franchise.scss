@@ -214,6 +214,9 @@ section#franchise {
       grid-template-columns: 1fr 1fr;
       div {
         padding: 7rem 7.5rem 7rem 12rem;
+        .workers-mobile {
+          display: none;
+        }
         &:first-child {
           background-color: #2A2019;
           .workers {
@@ -228,6 +231,7 @@ section#franchise {
                 font-weight: 300;
             }
           }
+
         }
         &:nth-child(2) {
           background-color: #734436;
@@ -531,6 +535,175 @@ section#franchise {
           margin-top: 2rem;
           width: 100%;
           font-weight: 500;
+        }
+      }
+    }
+  }
+  @include responsive {
+    .hero {
+      &__title {
+        max-width: initial;
+        width: 100%;
+        padding: 0 2rem;
+        gap: 8rem;
+        svg {
+          margin-bottom: 12rem;
+        }
+        p {
+          display: none;
+        }
+        .request {
+          font-size: 1rem;
+          padding: 1.1rem 3rem 1rem;
+        }
+      }
+      .links {
+        padding: 0 2rem;
+        a {
+          font-size: 1.4rem;
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+    .gift {
+      flex-direction: column;
+      margin-top: 0rem;
+      padding: 0 2rem;
+      margin-bottom: 10rem;
+      ul {
+        margin-top: 0;
+        li {
+          margin-bottom: 1rem;
+          font-size: 1.2rem;
+          .circle {
+            &::after {
+              bottom: -4.15rem;
+              height: 4.2rem;
+            }
+          }
+        }
+      }
+      .info {
+        div {
+          flex-direction: column;
+          margin-top: 4.5rem;
+          a {
+            max-width: fit-content;
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+    .team {
+      margin:0;
+      &__title {
+        display: none;
+      }
+      &__content {
+        grid-template-columns: 1fr;
+        div {
+          display: flex;
+          align-items: center;
+          gap: 4rem;
+          padding: 7rem 4rem;
+          .workers {
+            display: none;
+          }
+          .workers-mobile {
+            display: flex !important;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #B98671;
+            width: 100%;
+            font-size: 1.2rem;
+            span {
+              font-weight: 200;
+              font-size: 6rem;
+            }
+          }
+          .info {
+            br {
+              display: none;
+            }
+          }
+          &:last-child {
+            flex-direction: column;
+            padding: 6rem 2rem;
+            .workers {
+              display: block;
+            }
+            .questions {
+              margin-top: 0;
+              width: 100%;
+              a {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                &:last-child {
+                  text-transform: uppercase;
+                  background-color: white;
+                  border:none;
+                  padding: 1.3rem 0 1.2rem;
+                  color: black;
+                  width: 100% ;
+                  border-radius: 4px;
+                  margin-top: 2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .rules {
+      display: none;
+    }
+    .half {
+      display: none;
+    }
+    .rules-mobile {
+      .faq {
+        .questions {
+          p {
+            font-size: 1.3rem;
+          }
+        }
+        .answers {
+          padding-left: 0;
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .excursion {
+      display: none;
+    }
+    .faq {
+      margin:0 2rem;
+    }
+    .consultaion {
+      .call {
+        max-width: initial;
+        width: 100%;
+        padding: 0 2rem;
+        #desktop {
+          display: none;
+        }
+        .call-mobile {
+          display: flex;
+          flex-direction: column;
+          gap:1.5rem;
+          justify-content: center;
+          align-items: center;
+          margin-top: 2rem;
+          p {
+            font-size: 1.1rem;
+          }
+          a {
+            font-size: 1.25rem;
+            margin-top: 2rem;
+          }
         }
       }
     }
