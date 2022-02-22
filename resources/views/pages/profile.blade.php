@@ -20,7 +20,7 @@
           <ul class="links">
             <li ><a href="#" class="active" data-nav="first" data-open-block="my-account">Мой аккаунт</a></li>
             <li ><a href="#" data-nav="second" data-open-block="my-orders">Заказы</a></li>
-            <li ><a href="#" data-nav="third"data-open-block="wishlist" >Избранное</a></li>
+            <li ><a href="#" data-nav="third" data-open-block="wishlist" >Избранное</a></li>
           </ul>
           <button class="btn">Выйти</button>
         </div>
@@ -324,13 +324,13 @@
         </div>
 {{--      DESKTOP PROFILE BLOCKS--}}
 {{--      MOBILE PROFILE BLOCKS--}}
-      <div class="my-profile-mobile is-active" data-content="my-account">
+      <div class="my-profile-mobile is-active" id="open-block" data-content="my-account">
           <p class="open">Обо мне
             <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14 1L7.5 8L1 0.999999" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </p>
-          <form method="POST" action="#" class="content">
+          <form method="POST" action="#" class="open-content">
             <input type="text" placeholder="Имя">
             <input type="text" placeholder="Фамилия">
             <input type="text" placeholder="Телефон">
@@ -338,14 +338,14 @@
             <button class="main-btn">Изменить пароль</button>
           </form>
       </div>
-      <div class="location-mobile is-active" data-content="my-account">
+      <div class="location-mobile is-active" id="open-block" data-content="my-account">
         <p class="open">Мои адреса
           <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 1L7.5 8L1 0.999999" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </p>
-        <div class="content">
-          <div class="address-mobile">
+        <div class="open-content">
+          <div class="address-mobile" data-remodal-target="location-mobile">
             <p class="address-top">
               <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.13084 0C1.92523 0 0.130859 1.83644 0.130859 4.09375C0.130859 5.35639 0.766045 6.88894 2.01883 8.64881C2.93562 9.93676 3.83904 10.8553 3.87705 10.8938C3.94693 10.9645 4.03886 11 4.1309 11C4.22027 11 4.3097 10.9665 4.37902 10.8994C4.41712 10.8625 5.32283 9.98114 6.24135 8.71099C7.49514 6.97717 8.13086 5.42372 8.13086 4.09373C8.13082 1.83645 6.3364 0 4.13084 0ZM4.13084 5.86108C3.05253 5.86108 2.1753 4.9791 2.1753 3.89502C2.1753 2.81094 3.05256 1.92896 4.13084 1.92896C5.20912 1.92896 6.08638 2.81094 6.08638 3.89502C6.08638 4.9791 5.2091 5.86108 4.13084 5.86108Z" fill="#505154"/>
@@ -354,7 +354,7 @@
             </p>
             <p class="address-bottom">Российская Федерация,<br/> Новосибирская область,<br/> Бердск, дом 17</p>
           </div>
-          <div class="address-mobile">
+          <div class="address-mobile" data-remodal-target="location-mobile"">
             <p class="address-top">
               <svg width="9" height="11" viewBox="0 0 9 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.13084 0C1.92523 0 0.130859 1.83644 0.130859 4.09375C0.130859 5.35639 0.766045 6.88894 2.01883 8.64881C2.93562 9.93676 3.83904 10.8553 3.87705 10.8938C3.94693 10.9645 4.03886 11 4.1309 11C4.22027 11 4.3097 10.9665 4.37902 10.8994C4.41712 10.8625 5.32283 9.98114 6.24135 8.71099C7.49514 6.97717 8.13086 5.42372 8.13086 4.09373C8.13082 1.83645 6.3364 0 4.13084 0ZM4.13084 5.86108C3.05253 5.86108 2.1753 4.9791 2.1753 3.89502C2.1753 2.81094 3.05256 1.92896 4.13084 1.92896C5.20912 1.92896 6.08638 2.81094 6.08638 3.89502C6.08638 4.9791 5.2091 5.86108 4.13084 5.86108Z" fill="#505154"/>
@@ -362,6 +362,113 @@
               Дом
             </p>
             <p class="address-bottom">Российская Федерация,<br/> Новосибирская область,<br/> Бердск, дом 17</p>
+        </div>
+        <button class="primary-btn" data-remodal-target="location-mobile">Другой адрес
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12.25" cy="12.25" r="11.25" fill="white" stroke="#DEDCD8"/>
+            <path d="M12.25 7.25L12.25 17.25" stroke="#303133" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.25 12.25L7.25 12.25" stroke="#303133" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      </div>
+      <div class="orders-mobile" data-content="my-orders">
+        <h3>Мои заказы<sup>(2)</sup></h3>
+{{--        <div class="single-order">--}}
+          <div class="order-product" data-remodal-target="profile-order-mobile">
+            <div class="order-image">
+              <img src={{ url("/i/profile/mobile.png") }} />
+            </div>
+            <div>
+              <p class="in-process">В обработке</p>
+              <p class="serial-num">№39210</p>
+              <p class="order-date">24 сентября 2021</p>
+              <p class="order-count">3 товара</p>
+              <p class="order-price">80 100	₸</p>
+            </div>
+          </div>
+          <div class="order-product" data-remodal-target="profile-order-mobile">
+            <div class="order-image">
+              <img src={{ url("/i/profile/mobile.png") }} />
+            </div>
+            <div>
+              <p class="process-success">
+                <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.125 5.75L2.85809 7.04982C3.28678 7.37134 3.89272 7.29779 4.23205 6.88305L9.25 0.75" stroke="#27AE60" stroke-linecap="round"/>
+                </svg>
+                Доставлено</p>
+              <p class="serial-num">№39210</p>
+              <p class="order-date">24 сентября 2021</p>
+              <p class="order-count">3 товара</p>
+              <p class="order-price">80 100	₸</p>
+            </div>
+          </div>
+{{--        </div>--}}
+      </div>
+      <div class="favorites-mobile" data-content="wishlist">
+        <div class="favorites-title">
+          <h3>
+            Избранные товары<sup>(4)</sup>
+          </h3>
+          <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 4L17 4" stroke="#303133" stroke-width="1.3" stroke-linecap="round"/>
+            <path d="M1 12L11 12" stroke="#303133" stroke-width="1.3" stroke-linecap="round"/>
+            <ellipse cx="4" cy="4" rx="3" ry="3" transform="rotate(90 4 4)" stroke="#303133" stroke-width="1.3" stroke-linecap="round"/>
+            <ellipse cx="14" cy="12" rx="3" ry="3" transform="rotate(90 14 12)" stroke="#303133" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="favorites-grid">
+          <div class="favorites-product">
+            <div class="favorites-image">
+              <img src={{ url("/i/profile/product-mob-1.png") }} />
+            </div>
+            <div class="product-info">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 1L12.1265 6.26604L18 7.11567L13.75 11.2124L14.753 17L9.5 14.266L4.247 17L5.25 11.2124L1 7.11567L6.8735 6.26604L9.5 1Z" fill="#303133" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              <p>Бозінген</p>
+              <p>4 350 ₸</p>
+            </div>
+          </div>
+          <div class="favorites-product">
+            <div class="favorites-image">
+              <img src={{ url("/i/profile/product-mob-2.png") }} />
+            </div>
+            <div class="product-info">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 1L12.1265 6.26604L18 7.11567L13.75 11.2124L14.753 17L9.5 14.266L4.247 17L5.25 11.2124L1 7.11567L6.8735 6.26604L9.5 1Z" fill="#303133" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              <p>Бозінген</p>
+              <p>4 350 ₸</p>
+            </div>
+          </div>
+          <div class="favorites-product">
+            <div class="favorites-image">
+              <img src={{ url("/i/profile/product-mob-1.png") }} />
+            </div>
+            <div class="product-info">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 1L12.1265 6.26604L18 7.11567L13.75 11.2124L14.753 17L9.5 14.266L4.247 17L5.25 11.2124L1 7.11567L6.8735 6.26604L9.5 1Z" fill="#303133" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              <p>Бозінген</p>
+              <p>4 350 ₸</p>
+            </div>
+          </div>
+          <div class="favorites-product">
+            <div class="favorites-image">
+              <img src={{ url("/i/profile/product-mob-2.png") }} />
+            </div>
+            <div class="product-info">
+              <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 1L12.1265 6.26604L18 7.11567L13.75 11.2124L14.753 17L9.5 14.266L4.247 17L5.25 11.2124L1 7.11567L6.8735 6.26604L9.5 1Z" fill="#303133" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+
+              <p>Бозінген</p>
+              <p>4 350 ₸</p>
+            </div>
           </div>
         </div>
       </div>

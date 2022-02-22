@@ -537,10 +537,7 @@ section#profile {
     .favorites.is-active {
       display: flex;
     }
-    .my-profile-mobile {
-      display: none;
-    }
-    .location-mobile {
+    .my-profile-mobile, .location-mobile, .orders-mobile, .favorites-mobile {
       display: none;
     }
     .route {
@@ -683,10 +680,12 @@ section#profile {
         margin: .5rem;
         border-radius: 8px;
         background-color: white;
-        .content {
+        box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+        .open-content {
           display: flex;
           flex-direction: column;
-          padding: 2rem 2rem 4rem;
+          max-height: 0;
+          overflow: hidden;
           gap: 2rem;
           input {
             padding: 1.3rem 2rem;
@@ -702,16 +701,19 @@ section#profile {
       .my-profile-mobile.is-active {
         display: block;
         animation: opacity .3s linear;
+
+        margin-bottom: 1.5rem;
       }
       .location-mobile {
-        margin: .5rem;
+        margin: .5rem .5rem 6rem;
         border-radius: 8px;
-        .content {
-          padding: 0 2rem;
+        box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+        .open-content {
           display: flex;
           flex-direction: column;
           gap: 2rem;
-          padding: 2rem 2rem 4rem;
+          max-height: 0;
+          overflow: hidden;
           .address-mobile {
             border: 1px solid #DEDCD8;
             border-radius: 8px;
@@ -736,12 +738,184 @@ section#profile {
               border: 1px solid #505154;
             }
           }
+          .primary-btn {
+            display: flex;
+            width: 100%;
+            gap: 1rem;
+            font-weight: 600;
+            align-items: center;
+            font-family: 'Inter';
+            margin-top: 2rem;
+            height: initial;
+            padding: 1.4rem 0;
+            svg {
+              width: 1.7rem;
+              height: 1.7rem;
+            }
+          }
         }
       }
       .location-mobile.is-active {
         display: block;
         animation: opacity .3s linear;
         background-color: white;
+      }
+      .orders.is-active {
+        display: none;
+      }
+      .orders-mobile {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 0 1.5rem;
+        margin-bottom: 6rem;
+        h3 {
+          font-size: 1.9rem;
+          font-family: 'Spectral';
+          font-style: italic;
+          color: #303133;
+          margin-bottom: 1.5rem;
+          margin-left: 2rem;
+          align-self: flex-start;
+          sup {
+            vertical-align: super;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding-left: .5rem;
+            font-style: normal;
+          }
+        }
+        .order-product {
+          display: flex;
+          align-items: center;
+          background-color: white;
+          gap:2rem;
+          width: 100%;
+          padding: .8rem;
+          border-radius: 8px;
+          .order-image {
+            background-color: #F5F4F1;
+            width: 14rem;
+            height: 18rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            img {
+              width: 100%;
+            }
+          }
+          .in-process, .process-success {
+            padding: .5rem .8rem .35rem;
+            border: 1px solid #505154;
+            border-radius: 999rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: .44px;
+            margin-bottom: 2rem;
+            max-width: fit-content;
+          }
+          .process-success {
+            color: #27AE60;
+            border: 1px solid #27AE60;
+            display: flex;
+            gap: .5rem;
+            align-items: center;
+          }
+          .serial-num {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+          }
+          .order-date {
+            font-size: 1.1rem;
+            letter-spacing: .44px;
+            color: #939393;
+            margin-bottom: 2.5rem;
+          }
+          .order-count, .order-price {
+            font-size: 1.1rem;
+            letter-spacing: .44px;
+            margin-bottom: .7rem;
+          }
+        }
+      }
+      .orders-mobile.is-active {
+        display: flex;
+        animation: opacity .3s linear;
+      }
+      .favorites.is-active {
+        display: none;
+      }
+      .favorites-mobile {
+        margin-bottom: 5rem;
+        .favorites-title {
+          display: flex;
+          padding: 2rem 1.5rem;
+          justify-content: space-between;
+          align-items: center;
+        }
+        h3 {
+          font-size: 1.9rem;
+          font-family: "Spectral";
+          font-style: italic;
+
+          sup {
+            vertical-align: super;
+            font-size: 1.3rem;
+            font-weight: 500;
+            padding-left: .5rem;
+            font-style: normal;
+          }
+        }
+        .favorites-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem .5rem;
+          .favorites-product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .favorites-image {
+              background-color: white;
+              width: 100%;
+              height: 19rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 100%;
+              }
+            }
+            .product-info {
+              width: 100%;
+              position: relative;
+              margin-top: .5rem;
+              p {
+                font-size: 1.2rem;
+                letter-spacing: .44px;
+                color: #303133;
+                font-weight: 500;
+                margin-top: .8rem;
+                text-align: center;
+              }
+              svg {
+                width: 1.2rem;
+                height: 1.3rem;
+                position: absolute;
+                top:1rem;
+                left:1rem;
+              }
+            }
+
+          }
+        }
+      }
+      .favorites-mobile.is-active {
+        display: block;
+        animation: opacity .3s linear;
       }
     }
   }

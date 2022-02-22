@@ -16,9 +16,7 @@ $(document).ready(function () {
   console.log('ready...');
 
   const faqs = document.querySelectorAll('.faq')
-  console.log(faqs)
   const faqs_mobile = document.querySelectorAll('.faqs-mobile .faq')
-  console.log(faqs_mobile)
   const menu = document.querySelector('.menu')
   const catalog = document.querySelector('#catalog')
   const burger = document.querySelector('.burger')
@@ -46,6 +44,14 @@ $(document).ready(function () {
   const positionGrid = document.querySelector('#position-grid')
   const icons = document.querySelectorAll('.icons')
   const filterProducts = document.querySelector('.filter-products')
+  const openBtn = document.querySelectorAll('#open-block .open')
+  const openBlock = document.querySelectorAll('#open-block .open-content')
+
+  openBtn.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      openBlock[index].classList.toggle('opened')
+    })
+  })
 
   faqs_mobile.forEach(faq => {
     faq.addEventListener('click', () => {

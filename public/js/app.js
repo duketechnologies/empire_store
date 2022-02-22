@@ -56468,9 +56468,7 @@ swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 $(document).ready(function () {
   console.log('ready...');
   var faqs = document.querySelectorAll('.faq');
-  console.log(faqs);
   var faqs_mobile = document.querySelectorAll('.faqs-mobile .faq');
-  console.log(faqs_mobile);
   var menu = document.querySelector('.menu');
   var catalog = document.querySelector('#catalog');
   var burger = document.querySelector('.burger');
@@ -56500,6 +56498,13 @@ $(document).ready(function () {
   var positionGrid = document.querySelector('#position-grid');
   var icons = document.querySelectorAll('.icons');
   var filterProducts = document.querySelector('.filter-products');
+  var openBtn = document.querySelectorAll('#open-block .open');
+  var openBlock = document.querySelectorAll('#open-block .open-content');
+  openBtn.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+      openBlock[index].classList.toggle('opened');
+    });
+  });
   faqs_mobile.forEach(function (faq) {
     faq.addEventListener('click', function () {
       faq.classList.toggle('active');

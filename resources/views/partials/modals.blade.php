@@ -79,6 +79,24 @@
   </div>
 </div>
 
+<div class="remodal" data-remodal-id="location-mobile" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+  <button data-remodal-action="close" class="remodal-close-btn"></button>
+  <div class="location-mobile">
+    <h3>Новый адрес</h3>
+    <form method="POST" action="#" class="location-form">
+      <input type="text" placeholder="Введите название адреса" name="adress-name"/>
+      <input type="text" placeholder="Область, город" name="adress-city"/>
+      <input type="text" placeholder="Адрес" name="adress-location"/>
+      <input type="text" placeholder="Телефон получателя" name="adress-phone"/>
+      <input type="text" placeholder="Комментарий" name="adress-comment"/>
+      <div class="buttons">
+        <button type="submit" class="main-btn">Сохранить адрес</button>
+        <button class="text-btn" data-remodal-action="close">Отменить</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <div class="remodal" data-remodal-id="franchise-modal" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
   <button data-remodal-action="close" class="remodal-close-btn"></button>
   <div class="franchise">
@@ -963,3 +981,66 @@
   <h2>Выберите бутик для самовывоза</h2>
 </div>
 
+<div class="remodal" data-remodal-id="profile-order-mobile" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+  <button data-remodal-action="close" class="remodal-close-btn"></button>
+  <div class="container-custom">
+    <div class="order-title">
+      <h3>Заказ #39210</h3>
+      <p class="process-success">
+        <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.125 5.75L2.85809 7.04982C3.28678 7.37134 3.89272 7.29779 4.23205 6.88305L9.25 0.75" stroke="#27AE60" stroke-linecap="round"/>
+        </svg>
+        Доставлено
+      </p>
+    </div>
+    <p class="order-data">24 сентября 2021</p>
+    <div class="product">
+      <div class="product-image">
+        <img src={{ url("/i/profile/mobile.png") }} />
+      </div>
+      <div class="info">
+        <p class="name">Статуэтка Күйші ару</p>
+        <p class="price">4 350 ₸</p>
+        <p class="count">1 шт</p>
+        <div class="package">
+          <input type="radio" id="profile-1"/>
+          <label for="profile-1">Крафт пакет</label>
+        </div>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-image">
+        <img src={{ url("/i/profile/mobile.png") }} />
+      </div>
+      <div class="info">
+        <p class="name">Статуэтка Күйші ару</p>
+        <p class="price">4 350 ₸</p>
+        <p class="count">1 шт</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="details">
+    <p class="details-title">Детали заказа</p>
+    <div class="about">
+      <p class="title">О заказе</p>
+      <p class="desc">Дата создания <span>20 июня 2021</span></p>
+      <p class="desc">Дата доставки <span>30 июня 2021</span></p>
+    </div>
+    <div class="delivery">
+      <p class="title">Доставка</p>
+      <p class="desc">Адрес: "Дом" Алматы, Жаракова, 57</p>
+      <p class="desc">+7 (777) 674-22-11</p>
+    </div>
+    <div class="pay">
+      <p class="title">Оплата</p>
+      <p class="desc">Наличными курьеру</p>
+    </div>
+  </div>
+  <div class="summary">
+    <p>13 товаров <span>7 400 350 ₸</span></p>
+    <p>Доставка <span class="green">Бесплатно по Алматы</span></p>
+    <p>Итого <span>7 400 350 ₸</span></p>
+    <button class="main-btn">Нужна помощь с заказом?</button>
+  </div>
+</div>

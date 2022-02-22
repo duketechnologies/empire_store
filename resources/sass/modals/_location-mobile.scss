@@ -1,0 +1,35 @@
+.remodal[data-remodal-id=location-mobile] {
+  padding: 4.5rem 2rem !important;
+  h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #303133;
+    margin-bottom: 3.5rem ;
+  }
+  form {
+    input {
+      padding: 1.4rem 1.5rem;
+      border: 1px solid #505154;
+      border-radius: 8px;
+      margin-bottom: 2.2rem;
+      width: 100%;
+    }
+    .main-btn {
+      width: 100%;
+      height: initial;
+      padding: 1.3rem 0 1.2rem;
+    }
+    .text-btn {
+      background-color: transparent;
+      border:none;
+      padding: 1.3rem 0 1.2rem;
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: 'Inter';
+      margin-top: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+}

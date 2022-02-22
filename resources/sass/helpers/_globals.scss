@@ -116,6 +116,12 @@ li {
   color: #303133;
   font-weight: 300;
 }
+.open-content.opened {
+  max-height: 60rem !important;
+  padding: 2rem 2rem 4rem;
+  overflow:visible !important;
+  animation: opacity .3s linear;
+}
 .swiper-button-next {
   &::after {
     display: none;
