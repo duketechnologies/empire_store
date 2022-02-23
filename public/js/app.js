@@ -56468,7 +56468,9 @@ swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 $(document).ready(function () {
   console.log('ready...');
   var faqs = document.querySelectorAll('.faq');
-  var faqs_mobile = document.querySelectorAll('.faqs-mobile .faq');
+  var faqs_mobile = document.querySelectorAll('.filter-mobile-items');
+  var activeTrigger = document.querySelectorAll('#menu-trigger');
+  var activeContent = document.querySelectorAll('.filter-mobile-items .answers');
   var menu = document.querySelector('.menu');
   var catalog = document.querySelector('#catalog');
   var burger = document.querySelector('.burger');
@@ -56481,12 +56483,16 @@ $(document).ready(function () {
   var another_svg = document.querySelector('.another svg');
   var another_block = document.querySelector('.another');
   var another_btn = document.querySelector('#another-btn');
+  var another_btn_mobile = document.querySelector('#another-mobile-btn');
+  var another_block_mobile = document.querySelector('#another-btn-block');
+  var another_btn_delete = document.querySelector('#another-btn-delete');
   var btn = document.querySelector('#form-wrap button');
 
   var inputs = _toConsumableArray(document.querySelectorAll('#form-wrap input'));
 
   var href = window.location.href;
-  var categories = document.querySelectorAll('.categories');
+  var categories = document.querySelectorAll('.categories'); // const categoriesBlock = document.querySelectorAll('.categories ul')
+
   var fieldsetInput = document.querySelectorAll('fieldset input');
   var fieldsetLegend = document.querySelectorAll('fieldset legend');
   var selected = document.querySelectorAll(".selected");
@@ -56500,16 +56506,48 @@ $(document).ready(function () {
   var filterProducts = document.querySelector('.filter-products');
   var openBtn = document.querySelectorAll('#open-block .open');
   var openBlock = document.querySelectorAll('#open-block .open-content');
-  openBtn.forEach(function (item, index) {
+  var filterOpenBlock = document.querySelector('.sort__title');
+  var filterCloseBlock = document.querySelector('.filter-title');
+  var filterBlock = document.querySelector('#filter-block');
+  var myElement = document.querySelector('#filter-string');
+  var myString = document.querySelector('#filter-string').innerHTML;
+  console.log(myString); // MOBILE FILTER MENU
+
+  activeTrigger.forEach(function (item, index) {
     item.addEventListener('click', function () {
-      openBlock[index].classList.toggle('opened');
+      item.classList.toggle('active');
+      activeContent[index].classList.toggle('active');
     });
   });
+
+  var filterString = function filterString(myString) {
+    if (myString.length > 22) {
+      return myString.substring(0, 22) + '...';
+    }
+  };
+
+  myElement.innerHTML = filterString(myString); // MOBILE FILTER MENU
+  // FILTER PAGE
+
+  filterOpenBlock.addEventListener('click', function () {
+    filterBlock.classList.add('active');
+  }); // FILTER PAGE
+  // MOBILE OPEN BLOCK FUNCTION , page "ordering", "profile"
+
+  openBtn.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+      item.classList.toggle('opened');
+      openBlock[index].classList.toggle('opened');
+    });
+  }); // MOBILE OPEN BLOCK FUNCTION , page "ordering", "profile"
+  // FAQS mobile
+
   faqs_mobile.forEach(function (faq) {
     faq.addEventListener('click', function () {
       faq.classList.toggle('active');
     });
-  });
+  }); // FAQS mobile
+  // Mobile filter page , handleChange display: flex to grid
 
   if (href.includes('/filter')) {
     positionGrid.addEventListener('click', function () {
@@ -56522,7 +56560,9 @@ $(document).ready(function () {
       positionBlock.classList.add('active');
       filterProducts.classList.remove('grid');
     });
-  }
+  } // Mobile filter page , handleChange display: flex to grid
+  // HOME ANIMATION
+
 
   var loader = function loader() {
     document.querySelector('.loader').style.opacity = 0;
@@ -56533,7 +56573,8 @@ $(document).ready(function () {
   };
 
   setTimeout(loader, 3000);
-  setTimeout(loader_display, 4000);
+  setTimeout(loader_display, 4000); // HOME ANIMATION
+  // ADDRESS PAGE MAP , нужно доделать
 
   if (href.includes('/address')) {
     ymaps.ready(function () {
@@ -56582,25 +56623,32 @@ $(document).ready(function () {
       });
       myMap.geoObjects.add(myPlacemark).add(myPlacemarkWithContent);
     });
-  }
+  } // ADDRESS PAGE MAP , нужно доделать
+  // Появление выбора языка , десктоп хедер
+
 
   language.addEventListener('click', function (e) {
     e.preventDefault();
     language.classList.toggle('active');
     language.classList.contains('active') ? headerPhone.style.opacity = 0 : headerPhone.style.opacity = 1;
-  });
+  }); // Появление выбора языка , десктоп хедер
+  // Mobile filter page, клик на элемент в блоке фильтра , рядом появляется свг чекмарка и выделяется текст бордер боттомом
+
   selected.forEach(function (item, index) {
     item.addEventListener("click", function () {
       selected[index].classList.toggle('active');
       optionsContainer[index].classList.toggle("active");
     });
-  });
+  }); // Mobile filter page, клик на элемент в блоке фильтра , рядом появляется свг чекмарка и выделяется текст бордер боттомом
+  // Модалка локация куки 2 , кастомный селект
+
   optionsList.forEach(function (item) {
     item.addEventListener("click", function () {
       selected.innerHTML = item.querySelector("label").innerHTML;
       optionsContainer.classList.remove("active");
     });
-  });
+  }); // Модалка локация куки 2
+
   fieldsetInput.forEach(function (item, index) {
     item.onchange = function (e) {
       if (e.target.value !== "") {
@@ -56836,6 +56884,16 @@ $(document).ready(function () {
       another_block.style.display = 'block';
     }, 350);
   }) : null;
+  another_btn_mobile.addEventListener('click', function (e) {
+    e.preventDefault();
+    another_btn_mobile.classList.add('hidden');
+    another_block_mobile.classList.add('show');
+  });
+  another_btn_delete.addEventListener('click', function (e) {
+    e.preventDefault();
+    another_block_mobile.classList.remove('show');
+    another_btn_mobile.classList.remove('hidden');
+  });
   document.querySelectorAll('.blocks input').forEach(function (item) {
     item.addEventListener('click', function (e) {
       if (item.id === 'free') {

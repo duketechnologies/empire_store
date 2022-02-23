@@ -81,9 +81,9 @@
       <path d="M17 1L1 17" stroke="#303133" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   </div>
-  <div class="faqs-mobile">
-    <div class="faq">
-      <div class="questions">
+  <div class="filter-mobile-list">
+    <div class="filter-mobile-items">
+      <div class="questions active" id="menu-trigger">
         <p>Сортировать<span> По новизне</span></p>
         <svg class="updown" viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M14.1689 1L14.1689 13.3379" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
@@ -92,7 +92,7 @@
           <path d="M3.15527 4.01367L6.16894 1.00001L9.1826 4.01367" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <div class="answers">
+      <div class="answers active">
         <a href="#" >
           <span>Цена по убыванию</span>
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,8 +117,8 @@
           </svg></a>
       </div>
     </div>
-    <div class="faq">
-      <div class="questions">
+    <div class="filter-mobile-items">
+      <div class="questions " id="menu-trigger">
         <p>Категория</p>
         <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.9991 8.99907L1.00093 8.99907" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
@@ -132,7 +132,7 @@
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
           </svg></a>
-        <a href="#">
+        <a href="#" class="selected">
           <span>Цена по убыванию</span>
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
@@ -152,9 +152,9 @@
         </a>
       </div>
     </div>
-    <div class="faq">
-      <div class="questions">
-        <p>Коллекция</p>
+    <div class="filter-mobile-items">
+      <div class="questions" id="menu-trigger">
+        <p>Коллекция <span> Название</span></p>
         <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.9991 8.99907L1.00093 8.99907" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
           <path id="vertical" d="M8.99898 1.00191L8.99898 17" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
@@ -162,8 +162,8 @@
 
       </div>
       <div class="answers">
-        <a href="#">
-          <span>Цена по убыванию</span>
+        <a href="#" class="selected">
+          <span >Цена по убыванию</span>
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
           </svg></a>
@@ -185,9 +185,9 @@
         </a>
       </div>
     </div>
-    <div class="faq">
-      <div class="questions">
-        <p>Материал</p>
+    <div class="filter-mobile-items">
+      <div class="questions" id="menu-trigger">
+        <p>Материал <span id="filter-string"> Золото, Фарфор, Серебро</span></p>
         <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.9991 8.99907L1.00093 8.99907" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
           <path id="vertical" d="M8.99898 1.00191L8.99898 17" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
@@ -196,25 +196,25 @@
       </div>
       <div class="answers">
         <div>
-          <label for="1">Серебро</label>
-          <input type="checkbox" id="1" name="material[]" value="Серебро">
+          <input type="checkbox" id="material1" name="material[]" value="Серебро">
+          <label for="material1">Серебро</label>
         </div>
         <div>
-          <label for="2">Золото</label>
-          <input type="checkbox" id="2" name="material[]" value="Золото">
+          <input type="checkbox" id="material2" name="material[]" value="Золото">
+          <label for="material2">Золото</label>
         </div>
         <div>
-          <label for="3">Дерево</label>
-          <input type="checkbox" id="3" name="material[]" value="Дерево">
+          <input type="checkbox" id="material3" name="material[]" value="Дерево">
+          <label for="material3">Дерево</label>
         </div>
         <div>
-          <label for="4">Фарфор</label>
-          <input type="checkbox" id="4" name="material[]" value="Фарфор">
+          <input type="checkbox" id="material4" name="material[]" value="Фарфор">
+          <label for="material4">Фарфор</label>
         </div>
       </div>
     </div>
-    <div class="faq">
-      <div class="questions">
+    <div class="filter-mobile-items">
+      <div class="questions" id="menu-trigger">
         <p>Цвет</p>
         <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.9991 8.99907L1.00093 8.99907" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>

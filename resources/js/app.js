@@ -16,7 +16,9 @@ $(document).ready(function () {
   console.log('ready...');
 
   const faqs = document.querySelectorAll('.faq')
-  const faqs_mobile = document.querySelectorAll('.faqs-mobile .faq')
+  const faqs_mobile = document.querySelectorAll('.filter-mobile-items')
+  const activeTrigger = document.querySelectorAll('#menu-trigger')
+  const activeContent = document.querySelectorAll('.filter-mobile-items .answers')
   const menu = document.querySelector('.menu')
   const catalog = document.querySelector('#catalog')
   const burger = document.querySelector('.burger')
@@ -29,10 +31,14 @@ $(document).ready(function () {
   const another_svg = document.querySelector('.another svg')
   const another_block = document.querySelector('.another')
   const another_btn = document.querySelector('#another-btn')
+  const another_btn_mobile = document.querySelector('#another-mobile-btn')
+  const another_block_mobile = document.querySelector('#another-btn-block')
+  const another_btn_delete = document.querySelector('#another-btn-delete')
   const btn = document.querySelector('#form-wrap button');
   const inputs = [...document.querySelectorAll('#form-wrap input')];
   const href = window.location.href
   const categories = document.querySelectorAll('.categories')
+  // const categoriesBlock = document.querySelectorAll('.categories ul')
   const fieldsetInput = document.querySelectorAll('fieldset input')
   const fieldsetLegend = document.querySelectorAll('fieldset legend')
   const selected = document.querySelectorAll(".selected");
@@ -46,18 +52,53 @@ $(document).ready(function () {
   const filterProducts = document.querySelector('.filter-products')
   const openBtn = document.querySelectorAll('#open-block .open')
   const openBlock = document.querySelectorAll('#open-block .open-content')
+  const filterOpenBlock = document.querySelector('.sort__title')
+  const filterCloseBlock = document.querySelector('.filter-title')
+  const filterBlock = document.querySelector('#filter-block')
+  const myElement = document.querySelector('#filter-string')
+  const myString = document.querySelector('#filter-string').innerHTML
+  console.log(myString)
 
+  // MOBILE FILTER MENU
+  activeTrigger.forEach((item,index) => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active')
+      activeContent[index].classList.toggle('active')
+    })
+  })
+  const filterString = (myString) => {
+    if (myString.length > 22) {
+      return myString.substring(0, 22) + '...'
+    }
+  }
+  myElement.innerHTML = filterString(myString)
+
+  // MOBILE FILTER MENU
+
+  // FILTER PAGE
+  filterOpenBlock.addEventListener('click', () => {
+    filterBlock.classList.add('active')
+  })
+  // FILTER PAGE
+
+  // MOBILE OPEN BLOCK FUNCTION , page "ordering", "profile"
   openBtn.forEach((item, index) => {
     item.addEventListener('click', () => {
+      item.classList.toggle('opened')
       openBlock[index].classList.toggle('opened')
     })
   })
+  // MOBILE OPEN BLOCK FUNCTION , page "ordering", "profile"
 
+  // FAQS mobile
   faqs_mobile.forEach(faq => {
     faq.addEventListener('click', () => {
       faq.classList.toggle('active');
     });
   });
+  // FAQS mobile
+
+  // Mobile filter page , handleChange display: flex to grid
   if ( href.includes('/filter')) {
     positionGrid.addEventListener('click', () => {
       positionBlock.classList.remove('active')
@@ -71,8 +112,9 @@ $(document).ready(function () {
     })
 
   }
+  // Mobile filter page , handleChange display: flex to grid
 
-
+  // HOME ANIMATION
   const loader = () => {
     document.querySelector('.loader').style.opacity = 0
     }
@@ -81,7 +123,9 @@ $(document).ready(function () {
   }
   setTimeout(loader, 3000)
   setTimeout(loader_display, 4000)
+  // HOME ANIMATION
 
+  // ADDRESS PAGE MAP , нужно доделать
   if (href.includes('/address')) {
     ymaps.ready(function () {
       var myMap = new ymaps.Map('map', {
@@ -138,26 +182,33 @@ $(document).ready(function () {
         .add(myPlacemarkWithContent);
     });
   }
+  // ADDRESS PAGE MAP , нужно доделать
 
+  // Появление выбора языка , десктоп хедер
   language.addEventListener('click', (e) => {
     e.preventDefault();
     language.classList.toggle('active')
     language.classList.contains('active') ? headerPhone.style.opacity = 0 : headerPhone.style.opacity = 1
   })
+  // Появление выбора языка , десктоп хедер
 
+  // Mobile filter page, клик на элемент в блоке фильтра , рядом появляется свг чекмарка и выделяется текст бордер боттомом
   selected.forEach((item,index) => {
     item.addEventListener("click", () => {
       selected[index].classList.toggle('active')
       optionsContainer[index].classList.toggle("active");
     });
   })
+  // Mobile filter page, клик на элемент в блоке фильтра , рядом появляется свг чекмарка и выделяется текст бордер боттомом
 
+  // Модалка локация куки 2 , кастомный селект
   optionsList.forEach(item => {
     item.addEventListener("click", () => {
       selected.innerHTML = item.querySelector("label").innerHTML;
       optionsContainer.classList.remove("active");
     });
   });
+  // Модалка локация куки 2
 
   fieldsetInput.forEach((item,index) => {
     item.onchange = (e) => {
@@ -412,6 +463,18 @@ $(document).ready(function () {
     }, 350)
 
   }) : null
+
+  another_btn_mobile.addEventListener('click', (e) => {
+    e.preventDefault()
+    another_btn_mobile.classList.add('hidden')
+    another_block_mobile.classList.add('show')
+  })
+
+  another_btn_delete.addEventListener('click', (e) => {
+    e.preventDefault()
+    another_block_mobile.classList.remove('show')
+    another_btn_mobile.classList.remove('hidden')
+  })
 
   document.querySelectorAll('.blocks input').forEach(item => {
     item.addEventListener('click', e => {

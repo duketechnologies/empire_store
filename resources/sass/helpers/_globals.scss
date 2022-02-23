@@ -115,9 +115,18 @@ li {
   padding: 3rem 2rem;
   color: #303133;
   font-weight: 300;
+  .upper {
+    transform: rotate(180deg);
+    transition: .2s ease-in;
+  }
+}
+.open.opened {
+  .upper {
+    transform: rotate(0);
+  }
 }
 .open-content.opened {
-  max-height: 60rem !important;
+  max-height: 70rem !important;
   padding: 2rem 2rem 4rem;
   overflow:visible !important;
   animation: opacity .3s linear;

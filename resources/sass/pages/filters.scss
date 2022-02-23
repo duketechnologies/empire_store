@@ -52,7 +52,7 @@ section#filters {
           font-weight: 500;
           position: relative;
           cursor: pointer;
-          z-index: 10;
+          z-index: 9;
 
           span {
             color: #939393;
@@ -65,13 +65,11 @@ section#filters {
             gap: 1rem;
             width: 102%;
             left:-.2rem;
-            bottom: -8.1rem;
+            bottom: -7.5rem;
             background-color: white;
             border-radius: 0 0 8px 8px;
             padding: 1.5rem 0;
             display: none;
-
-            animation: opacity .3s ease-in;
             a {
               font-size: .8rem;
               letter-spacing: .7px;
@@ -86,9 +84,15 @@ section#filters {
           }
           .filter.active {
             display: flex;
-            padding-top: 4rem;
-            z-index: -1;
+            border-radius: 8px;
+            z-index: 0;
             box-shadow: 0px 5px 25px rgb(36 38 60 / 5%);
+            animation: opacity .3s ease-in;
+            .filter-title {
+              padding: .5rem 0 1rem;
+              width: 100%;
+              text-align: center;
+            }
           }
         }
       }
@@ -131,7 +135,6 @@ section#filters {
 
           ul {
             margin-top: 1.5rem;
-
             li {
               font-size: .85rem;
               letter-spacing: .44px;

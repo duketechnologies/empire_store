@@ -638,9 +638,17 @@ li {
   color: #303133;
   font-weight: 300;
 }
+.open .upper {
+  transform: rotate(180deg);
+  transition: 0.2s ease-in;
+}
+
+.open.opened .upper {
+  transform: rotate(0);
+}
 
 .open-content.opened {
-  max-height: 60rem !important;
+  max-height: 70rem !important;
   padding: 2rem 2rem 4rem;
   overflow: visible !important;
   -webkit-animation: opacity 0.3s linear;
@@ -1796,6 +1804,29 @@ header.header .menu.active {
   font-size: 1rem;
   letter-spacing: 1px;
   font-family: "Inter";
+}
+@media only screen and (max-width: 1200px) {
+  .consultaion_block {
+    margin-top: 5rem;
+  }
+  .consultaion_block .call {
+    width: 100%;
+    padding: 0 2rem;
+    max-width: initial;
+  }
+  .consultaion_block .call h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .consultaion_block .call p {
+    display: none;
+  }
+  .consultaion_block .call form input {
+    width: 65%;
+  }
+  .consultaion_block .call form .main-btn {
+    margin-top: 4rem;
+  }
 }
 
 .faq_block, .faq_block-mobile {
@@ -3558,27 +3589,6 @@ section#contacts .contact-card_list-image img {
     align-items: center;
     justify-content: center;
   }
-}
-section#contacts .consultaion_block {
-  margin-top: 5rem;
-}
-section#contacts .consultaion_block .call {
-  width: 100%;
-  padding: 0 2rem;
-  max-width: initial;
-}
-section#contacts .consultaion_block .call h1 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-section#contacts .consultaion_block .call p {
-  display: none;
-}
-section#contacts .consultaion_block .call form input {
-  width: 65%;
-}
-section#contacts .consultaion_block .call form .main-btn {
-  margin-top: 4rem;
 }
 
 section#about .main_img {
@@ -7169,7 +7179,7 @@ section#filters .favorites__menu .sort__title {
   font-weight: 500;
   position: relative;
   cursor: pointer;
-  z-index: 10;
+  z-index: 9;
 }
 section#filters .favorites__menu .sort__title span {
   color: #939393;
@@ -7182,13 +7192,11 @@ section#filters .favorites__menu .sort__title .filter {
   gap: 1rem;
   width: 102%;
   left: -0.2rem;
-  bottom: -8.1rem;
+  bottom: -7.5rem;
   background-color: white;
   border-radius: 0 0 8px 8px;
   padding: 1.5rem 0;
   display: none;
-  -webkit-animation: opacity 0.3s ease-in;
-          animation: opacity 0.3s ease-in;
 }
 section#filters .favorites__menu .sort__title .filter a {
   font-size: 0.8rem;
@@ -7203,9 +7211,16 @@ section#filters .favorites__menu .sort__title .filter a:hover {
 }
 section#filters .favorites__menu .sort__title .filter.active {
   display: flex;
-  padding-top: 4rem;
-  z-index: -1;
+  border-radius: 8px;
+  z-index: 0;
   box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
+  -webkit-animation: opacity 0.3s ease-in;
+          animation: opacity 0.3s ease-in;
+}
+section#filters .favorites__menu .sort__title .filter.active .filter-title {
+  padding: 0.5rem 0 1rem;
+  width: 100%;
+  text-align: center;
 }
 section#filters .favorites__menu .wrapper {
   background-color: white;
@@ -7537,6 +7552,9 @@ section#ordering h3 {
   color: #505154;
   font-weight: 300;
   margin: 0 10.5rem 2.4rem;
+}
+section#ordering h4 {
+  display: none;
 }
 section#ordering .title {
   font-size: 1.2rem;
@@ -8149,10 +8167,22 @@ section#ordering .content-mobile input[type=radio]:checked + label::before {
 }
 @media only screen and (max-width: 1200px) {
   section#ordering {
-    margin: 3rem 0 0;
+    margin: 0;
   }
   section#ordering h3 {
     display: none;
+  }
+  section#ordering h4 {
+    display: flex;
+    padding: 2rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    font-weight: 500;
+    color: #303133;
+    background-color: white;
+    margin-bottom: 3rem;
   }
   section#ordering .content, section#ordering .faq_block, section#ordering .consultaion_block {
     display: none;
@@ -8169,6 +8199,15 @@ section#ordering .payment-mobile {
     margin: 0.5rem 0.5rem 2.5rem;
     box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
     border-radius: 8px;
+  }
+  section#ordering .email-mobile .open span,
+section#ordering .contacts-mobile .open span,
+section#ordering .delivery-mobile .open span,
+section#ordering .my-address-mobile .open span,
+section#ordering .payment-mobile .open span {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
   section#ordering .email-mobile .open-content {
     max-height: 0;
@@ -8202,7 +8241,7 @@ section#ordering .payment-mobile {
     border-radius: 8px;
     font-family: "Inter";
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    margin: 0 2rem 2.5rem;
   }
   section#ordering .contacts-mobile .open-content input::-moz-placeholder {
     font-family: "Inter";
@@ -8220,11 +8259,51 @@ section#ordering .payment-mobile {
     border: none;
     justify-content: center;
     font-family: "Inter";
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    font-size: 1.25rem;
+    margin: 2rem;
     border-radius: 8px;
     gap: 2rem;
-    padding: 1.2rem 0 1.1rem;
+    letter-spacing: 0.6px;
+    padding: 1.3rem 0 1.2rem;
+    -webkit-animation: opacity 0.3s linear;
+            animation: opacity 0.3s linear;
+  }
+  section#ordering .contacts-mobile .open-content .another-btn.hidden {
+    display: none;
+  }
+  section#ordering .contacts-mobile .open-content .another-person {
+    border-top: 1px solid #DEDCD8;
+    padding: 3rem 0;
+    justify-content: center;
+    flex-direction: column;
+    -webkit-animation: opacity 0.3s linear;
+            animation: opacity 0.3s linear;
+    display: none;
+  }
+  section#ordering .contacts-mobile .open-content .another-person span {
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 4.5rem;
+    padding-left: 2rem;
+  }
+  section#ordering .contacts-mobile .open-content .another-person .link-btn {
+    text-transform: initial;
+    border-bottom: 1px solid black;
+    display: block;
+    font-size: 1.1rem;
+    margin-top: 3.5rem;
+    margin-left: 2rem;
+    padding-bottom: 0.1rem;
+    align-self: flex-start;
+  }
+  section#ordering .contacts-mobile .open-content .another-person.show {
+    display: flex;
+  }
+  section#ordering .contacts-mobile .open-content.opened {
+    padding: 2rem 0;
   }
   section#ordering .delivery-mobile .open-content {
     max-height: 0;
@@ -8711,14 +8790,14 @@ section#test .links a span {
     right: 1.5rem;
     top: 1.2rem;
   }
-  .filter-mobile-menu .faqs-mobile .faq {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items {
     background-color: white;
     border-top: 1px solid #939393;
   }
-  .filter-mobile-menu .faqs-mobile .faq:last-child {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items:last-child {
     border-bottom: 1px solid #939393;
   }
-  .filter-mobile-menu .faqs-mobile .faq .questions {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .questions {
     font-size: 1.15rem;
     width: 100%;
     display: flex;
@@ -8729,32 +8808,32 @@ section#test .links a span {
     letter-spacing: 1px;
     color: #303133;
   }
-  .filter-mobile-menu .faqs-mobile .faq .questions svg {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .questions svg {
     width: 1.5rem;
     height: 1.5rem;
   }
-  .filter-mobile-menu .faqs-mobile .faq .questions .updown {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .questions .updown {
     width: 1.7rem;
     height: 1.7rem;
   }
-  .filter-mobile-menu .faqs-mobile .faq .questions .updown > path {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .questions .updown > path {
     transition: 0.2s ease-in;
   }
-  .filter-mobile-menu .faqs-mobile .faq .questions p {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .questions p {
     display: flex;
     align-items: center;
   }
-  .filter-mobile-menu .faqs-mobile .faq .questions span {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .questions span {
     color: #505154;
     text-transform: initial;
   }
-  .filter-mobile-menu .faqs-mobile .faq .questions span::before {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .questions span::before {
     content: "•";
     font-size: 1rem;
     color: #505154;
     padding: 0 0.5rem 0 1rem;
   }
-  .filter-mobile-menu .faqs-mobile .faq .answers {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -8764,36 +8843,82 @@ section#test .links a span {
     max-height: 0;
     overflow: hidden;
   }
-  .filter-mobile-menu .faqs-mobile .faq .answers a {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers a {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .filter-mobile-menu .faqs-mobile .faq .answers a svg {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers a svg {
     width: 1.1rem;
     height: 1.1rem;
     transition: 0.2s ease-in;
     opacity: 0;
   }
-  .filter-mobile-menu .faqs-mobile .faq .answers .selected span {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers .selected span {
     border-bottom: 1px solid black;
     padding-bottom: 0.3rem;
   }
-  .filter-mobile-menu .faqs-mobile .faq .answers .selected svg {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers .selected svg {
     opacity: 1;
   }
-  .filter-mobile-menu .faqs-mobile .faq.active .questions svg {
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div input[type=checkbox] {
+    display: none;
+  }
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div label {
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    line-height: 1.3rem;
+    letter-spacing: 0.7px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    padding: 1rem 1.5rem 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #505154;
+    text-transform: initial;
+    width: 100%;
+  }
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div label span {
+    font-weight: 600;
+  }
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div label::before {
+    content: "";
+    outline: none;
+    display: inline-block;
+    width: 0.6rem;
+    height: 0.6rem;
+    position: absolute;
+    left: 0rem;
+    top: 1rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 1px solid #939393;
+    padding: 0.2rem;
+    transition: 0.2s ease-in;
+  }
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div input[type=checkbox] + label::before {
+    background-color: white;
+  }
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div input[type=checkbox]:checked + label::before {
+    background-color: black;
+  }
+  .filter-mobile-menu .filter-mobile-list .questions.active svg {
     -webkit-animation: rotate 0.3s ease-in-out;
             animation: rotate 0.3s ease-in-out;
   }
-  .filter-mobile-menu .faqs-mobile .faq.active .questions .updown > path {
+  .filter-mobile-menu .filter-mobile-list .questions.active .updown > path {
     stroke: black;
   }
-  .filter-mobile-menu .faqs-mobile .faq.active #vertical {
+  .filter-mobile-menu .filter-mobile-list .questions.active #vertical {
     transition: 0.2s linear;
     opacity: 0;
   }
-  .filter-mobile-menu .faqs-mobile .faq.active .answers {
+  .filter-mobile-menu .filter-mobile-list .answers.active {
     max-height: 30rem;
     padding: 1.5rem 1.5rem 2rem 2.4rem;
     -webkit-animation: fade 0.4s ease-in;
@@ -9036,7 +9161,7 @@ section#test .links a span {
   .basket-mobile .mobile-product {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
     padding: 3rem 0;
     border-bottom: 1px solid #939393;
   }
@@ -11911,6 +12036,201 @@ section#test .links a span {
   margin-top: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+.remodal[data-remodal-id=edit-order-mobile] {
+  padding: 4rem 2rem !important;
+}
+@media only screen and (max-width: 1200px) {
+  .remodal[data-remodal-id=edit-order-mobile] .order-mobile-title {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .order-mobile-title span {
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    color: #303133;
+    font-weight: 300;
+    display: block;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile {
+    background-color: white;
+    display: block;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .basket-title {
+    padding: 1.5rem 0 0;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .basket-title p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: #303133;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .basket-title span {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+    display: block;
+    color: #303133;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem 0;
+    border-bottom: 1px solid #939393;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-img {
+    background-color: #F5F4F1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    height: 17rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-img img {
+    width: 100%;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .pr-name {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #303133;
+    margin-bottom: 1rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .pr-price {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.44px;
+    color: #303133;
+    margin-bottom: 2rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .mobile-quantity {
+    background-color: #f6f6f6;
+    border-radius: 999rem;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .mobile-quantity .button-quantity-mobile {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 2rem;
+    color: #303133;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .mobile-quantity .button-quantity-mobile.disabled {
+    color: #D7D9E0;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .mobile-quantity span {
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .package {
+    background-color: #f6f6f6;
+    border-radius: 999rem;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    font-size: 1rem;
+    margin-bottom: 2.7rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .package input[type=checkbox] {
+    display: none;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .package label {
+    outline: none;
+    font-weight: 300;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    line-height: 1.3rem;
+    letter-spacing: 0.7px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    padding: 1rem 1.5rem 1rem 3rem;
+    border-radius: 4px;
+    transition: 0.2s ease-in;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .package label::before {
+    content: "";
+    outline: none;
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    position: absolute;
+    left: 1.2rem;
+    top: 1.1rem;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 1px solid black;
+    padding: 0.2rem;
+    transition: 0.2s ease-in;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .package input[type=checkbox]:checked + label::before {
+    background-color: black;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .pr-delete {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.4rem;
+    color: #505154;
+    font-weight: 300;
+    flex: 1;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-product .product-info .pr-delete svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-checkout-price {
+    margin-top: 4rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-checkout-price div {
+    display: flex;
+    justify-content: space-between;
+    color: #303133;
+    font-weight: 300;
+    border-top: 1px solid #DEDCD8;
+    padding: 1.5rem 0;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-checkout-price div:last-child {
+    border-bottom: 1px solid #DEDCD8;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-checkout-price div p {
+    font-size: 1.2rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-checkout-price div span {
+    font-weight: 700;
+    letter-spacing: 0.44px;
+    font-size: 1.3rem;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-checkout-price div .green {
+    color: #27AE60;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .remodal[data-remodal-id=edit-order-mobile] .edit-order-mobile .mobile-checkout-price .main-btn {
+    height: initial;
+    padding: 1.3rem 0 1.2rem;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
 }
 
 /*modals*/

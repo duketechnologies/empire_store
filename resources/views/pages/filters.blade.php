@@ -21,7 +21,8 @@
       <div class="favorites__menu">
         <div class="sort">
           <div class="sort__title">Сортировать • <span>по новозине</span>
-            <div class="filter">
+            <div class="filter" id="filter-block">
+              <p class="filter-title">Сортировать • <span>по новозине</span></p>
               <a href="#">По новизне</a>
               <a href="#">Цена по убыванию</a>
               <a href="#">Цена по возрастанию</a>

@@ -260,11 +260,24 @@
         </div>
       </div>
     </form>
+{{--    MOBILE ORDER--}}
+    <h4 data-remodal-target="edit-order-mobile">
+      Содержимое моего заказа
+      <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 3C1 2.05719 1 1.58579 1.29289 1.29289C1.58579 1 2.05719 1 3 1H13.9296C14.4536 1 14.7156 1 14.9367 1.11833C15.1578 1.23665 15.3031 1.45463 15.5937 1.8906L18.2604 5.8906C18.6189 6.42835 18.7981 6.69722 18.7981 7C18.7981 7.30278 18.6189 7.57165 18.2604 8.1094L15.5937 12.1094C15.3031 12.5454 15.1578 12.7633 14.9367 12.8817C14.7156 13 14.4536 13 13.9296 13H3C2.05719 13 1.58579 13 1.29289 12.7071C1 12.4142 1 11.9428 1 11V3Z" stroke="#303133" stroke-width="1.2"/>
+        <circle cx="13" cy="7" r="1" stroke="#303133" stroke-width="1.2"/>
+      </svg>
+    </h4>
     <form method="POST" action="#" class="content-mobile">
       <div class="email-mobile" id="open-block">
         <p class="open">
-          Email
-          <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span>
+            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Email
+          </span>
+          <svg class="upper" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 8L7.5 0.999999L1 8" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </p>
@@ -277,8 +290,13 @@
       </div>
       <div class="contacts-mobile" id="open-block">
         <p class="open">
-          Контакты
-          <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span>
+            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Контакты
+          </span>
+          <svg class="upper" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 8L7.5 0.999999L1 8" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </p>
@@ -287,7 +305,7 @@
           <input type="text" placeholder="Фамилия"/>
           <input type="text" placeholder="Телефон"/>
           <input type="text" placeholder="Email"/>
-          <button class="another-btn">
+          <button class="another-btn" id="another-mobile-btn">
             Получатель другой человек
             <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="17" cy="11" r="11" fill="#212123"/>
@@ -295,12 +313,28 @@
               <path d="M15.5781 7.93359L18.6455 11.001L15.5781 14.0684" stroke="#F5F4F1" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </button>
+          <div class="another-person" id="another-btn-block">
+            <span>
+            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Получатель заказа
+          </span>
+            <input type="text" placeholder="Имя получателя"/>
+            <input type="text" placeholder="Телефон получателя"/>
+            <button class="link-btn" id="another-btn-delete">Удалить получателя</button>
+          </div>
         </div>
       </div>
       <div class="delivery-mobile" id="open-block">
         <p class="open">
-          Способ доставки
-          <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span>
+            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Способ доставки
+          </span>
+          <svg class="upper" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 8L7.5 0.999999L1 8" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </p>
@@ -323,9 +357,15 @@
         </div>
       </div>
       <div class="my-address-mobile" id="open-block">
-        <p class="open">Мои адреса
-          <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14 1L7.5 8L1 0.999999" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        <p class="open">
+          <span>
+            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Адрес доставки
+          </span>
+          <svg class="upper" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 8L7.5 0.999999L1 8" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </p>
         <div class="open-content">
@@ -358,8 +398,13 @@
       </div>
       <div class="payment-mobile"id="open-block">
         <p class="open">
-          Способ оплаты
-          <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <span>
+            <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#27AE60" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            Способ оплаты
+          </span>
+          <svg class="upper" width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 8L7.5 0.999999L1 8" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </p>
@@ -394,7 +439,7 @@
         <button class="main-btn">Оплатить заказ</button>
       </div>
     </form>
-
+{{--    MOBILE ORDER--}}
     @include('partials.faq_block')
     @include('partials.consultation')
   </section>
