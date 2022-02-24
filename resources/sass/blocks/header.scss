@@ -226,8 +226,14 @@ header.header {
     .left_side {
       width: 100%;
       padding-left: 15rem;
+      .search-mobile-input {
+        display: none;
+      }
       .row {
         margin-top: 2.8rem;
+        .row-mobile-title {
+          display: none;
+        }
         p {
           font-size: .95rem;
           letter-spacing: .44px;
@@ -502,10 +508,21 @@ header.header {
           }
           li.search-icon {
             display: initial;
-            padding:1rem;
+            padding: 0.7rem 0.8rem;
+            transition: .2s ease-in;
             svg {
-              width: 2rem;
-              height: 1.4rem;
+              width: 1.2rem;
+              height: 1.2rem;
+              transition: .2s ease-in;
+            }
+          }
+          li.search-icon.active {
+            background-color: #212123;
+            border-radius: 100%;
+            svg {
+              >path {
+                fill: white;
+              }
             }
           }
         }
@@ -538,7 +555,70 @@ header.header {
       }
     }
     .search-block {
-      display: none;
+      grid-template-columns: 1fr;
+      padding: 3.5rem 2rem 2rem;
+      .left_side {
+        padding-left: 0;
+        .search-mobile-input {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px solid #303133;
+          padding-bottom: .5rem;
+          margin-bottom: 5rem;
+          .search-close-btn {
+            padding: .5rem;
+          }
+          svg {
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+          input {
+            border:none;
+            font-family: 'Inter';
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #303133;
+            &::placeholder {
+              text-transform: uppercase;
+              font-size: 1rem;
+              letter-spacing: 1px;
+              font-weight: 500;
+              color: #303133;
+            }
+          }
+        }
+        .row {
+          p {
+            display: none;
+          }
+          .row-mobile-title {
+            display: block;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: .9rem;
+            margin-bottom: 2rem;
+            letter-spacing: 2px;
+          }
+          ul {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.5rem;
+            li {
+              font-size: 1.05rem;
+              border: 1px solid #505154;
+              color: #303133;
+              padding: .5rem .8rem .4rem;
+            }
+          }
+        }
+        .row:last-child {
+          display: none;
+        }
+      }
+      .right_side {
+        display: none;
+      }
     }
   }
 }

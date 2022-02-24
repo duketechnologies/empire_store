@@ -39,11 +39,6 @@
           <input id="search" type="text" name="search" placeholder="Поиск"/>
         </form>
     </div>
-{{--        @php--}}
-{{--        $title = 'Header';--}}
-{{--        @endphp--}}
-{{--        @include('partials.header', $title)--}}
-
     <div class="info">
       <a class="phone" id="header-phone" href="tel:+77772189291">+7 777 218 92 91</a>
       <ul class="profile">
@@ -88,8 +83,22 @@
   </div>
   <div class="search-block">
     <div class="left_side">
+      <form method="POST" action="#" class="search-mobile-input">
+        <input type="text" placeholder="Что вы ищите?"/>
+        <div class="search-close-btn">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L17 17" stroke="#212123" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 1L1 17" stroke="#212123" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </form>
       <div class="row">
         <p>Вы искали</p>
+
+{{--        Mobile search input--}}
+
+{{--        Mobile search input--}}
+        <p class="row-mobile-title">Популярное</p>
         <ul>
           <li>Панно</li>
           <li>Фарфор</li>
@@ -108,6 +117,7 @@
       </div>
     </div>
     <div class="right_side">
+{{--      Тут другой контент когда вводишь что то в инпут поиска--}}
 {{--            <div class="collection">--}}
 {{--                <p class="title">Новинка</p>--}}
 {{--                <a href="#" class="link"/>--}}
@@ -136,6 +146,7 @@
       </a>
     </div>
   </div>
+{{--  search-block-mobile--}}
   <div class="menu-bg">
     <div class="menu">
       <div id="close-menu">
@@ -243,5 +254,8 @@
         <a href="/contacts" class="menu-btn">Контакты</a>
       </div>
     </div>
+  </div>
+  <div class="menu-mobile">
+
   </div>
 </header>

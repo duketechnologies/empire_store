@@ -32,8 +32,11 @@
       font-weight: 500;
       padding-bottom: .3rem;
       &:hover {
-          border-bottom: 1px solid black 70%;
+        border-bottom: 1px solid black 70%;
       }
     }
+  }
+  @include responsive {
+
   }
 }

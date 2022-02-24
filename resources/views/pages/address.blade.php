@@ -4,12 +4,18 @@
 @section('content')
   <section id="address">
     <h3>Адреса бутиков Empire</h3>
-    <form class="search">
-      <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.44444 9.87C3.00533 9.87 1.02044 7.88511 1.02044 5.44522C1.02044 3.00533 3.00533 1.02045 5.44444 1.02045C7.88511 1.02045 9.87 3.00533 9.87 5.44522C9.87 7.88511 7.88511 9.87 5.44444 9.87ZM13.2564 12.5767L9.61722 8.93822C10.4113 7.99167 10.8904 6.77444 10.8904 5.44522C10.8904 2.443 8.44744 0 5.44445 0C2.44222 0 0 2.443 0 5.44522C0 8.44822 2.44222 10.8904 5.44445 10.8904C6.58233 10.8904 7.63778 10.5389 8.512 9.94L12.2018 13.6298C12.3472 13.776 12.5378 13.8491 12.7291 13.8491C12.9197 13.8491 13.111 13.776 13.2564 13.6298C13.5473 13.3397 13.5473 12.8668 13.2564 12.5767Z" fill="#505154"/>
-      </svg>
-      <input type="text" name="search_address" placeholder="Поиск бутика по городу, улице или названию"/>
-    </form>
+    <div class="form-wrapper">
+      <form method="POST" action="#" class="search">
+        <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.44444 9.87C3.00533 9.87 1.02044 7.88511 1.02044 5.44522C1.02044 3.00533 3.00533 1.02045 5.44444 1.02045C7.88511 1.02045 9.87 3.00533 9.87 5.44522C9.87 7.88511 7.88511 9.87 5.44444 9.87ZM13.2564 12.5767L9.61722 8.93822C10.4113 7.99167 10.8904 6.77444 10.8904 5.44522C10.8904 2.443 8.44744 0 5.44445 0C2.44222 0 0 2.443 0 5.44522C0 8.44822 2.44222 10.8904 5.44445 10.8904C6.58233 10.8904 7.63778 10.5389 8.512 9.94L12.2018 13.6298C12.3472 13.776 12.5378 13.8491 12.7291 13.8491C12.9197 13.8491 13.111 13.776 13.2564 13.6298C13.5473 13.3397 13.5473 12.8668 13.2564 12.5767Z" fill="#505154"/>
+        </svg>
+        <input type="text" name="search_address" placeholder="Поиск бутика по городу, улице или названию"/>
+      </form>
+    </div>
+    <ul class="mobile-links">
+      <li data-open-block="info" data-nav="first" class="active">Список</li>
+      <li data-open-block="map" data-nav="second">Карта</li>
+    </ul>
     <div class="city">
       <div>
         <p >
@@ -105,8 +111,15 @@
         </ul>
       </div>
     </div>
+    <div class="open-modal" data-remodal-target="address-mobile-modal">
+      <p>Все города
+        <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 1L7.5 8L1 0.999999" stroke="#505154" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </p>
+    </div>
     <div class="map">
-      <div class="info" data-simplebar>
+      <div class="info is-active" data-simplebar data-content="info" >
         <p class="title"><span>Алматы</span> 18 бутиков</p>
         <div class="boutique">
           <p class="boutique__place">БЦ «Нурлы Тау»</p>
@@ -217,7 +230,7 @@
           </div>
         </div>
       </div>
-      <div id="map" style="width:100%; height: 47rem; border-radius: 16px"></div>
+      <div id="map" style="width:100%; height: 47rem; border-radius: 16px" data-content="map"></div>
     </div>
     @include('partials.consultation')
   </section>

@@ -208,14 +208,25 @@
           <label for="material3">Дерево</label>
         </div>
         <div>
-          <input type="checkbox" id="material4" name="material[]" value="Фарфор">
+          <input type="checkbox" checked id="material4" name="material[]" value="Фарфор">
           <label for="material4">Фарфор</label>
         </div>
       </div>
     </div>
     <div class="filter-mobile-items">
       <div class="questions" id="menu-trigger">
-        <p>Цвет</p>
+        <p>Цвет
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 10L2 10" stroke="#B0FAEC" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 14L5 15" stroke="#B0EC9A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 5L6 6" stroke="#B6D5F9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 14L10 18" stroke="#EBC6B1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 2L10 6" stroke="#B7A1F6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 14L15 15" stroke="#FFBBBB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 5L14 6" stroke="#EC96AB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 10L14 10" stroke="#D7D7D7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </p>
         <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M16.9991 8.99907L1.00093 8.99907" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
           <path id="vertical" d="M8.99898 1.00191L8.99898 17" stroke="#939393" stroke-linecap="round" stroke-linejoin="round"/>
@@ -223,10 +234,33 @@
 
       </div>
       <div class="answers">
-        <a href="#">Цена по убыванию</a>
-        <a href="#">Цена по возрастанию</a>
-        <a href="#">По новизне</a>
-        <a href="#">По скидке</a>
+        <div class="color-1 active">
+          <input type="checkbox" id="material1" name="material[]" value="Серебро">
+          <label for="material1">Белый</label>
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="color-2 active">
+          <input type="checkbox" id="material2" name="material[]" value="Золото">
+          <label for="material2">Черный</label>
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+
+        </div>
+        <div class="color-3 active">
+          <input type="checkbox" id="material3" name="material[]" value="Дерево">
+          <label for="material3">Зеленый</label>
+          <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+
+        </div>
+        <div class="color-4">
+          <input type="checkbox" id="material4" name="material[]" value="Фарфор">
+          <label for="material4">Желтый</label>
+        </div>
       </div>
     </div>
   </div>

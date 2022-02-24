@@ -131,6 +131,26 @@ li {
   overflow:visible !important;
   animation: opacity .3s linear;
 }
+.open-modal {
+  display: none;
+}
+@include responsive {
+  .open-modal {
+    display: block;
+    margin: 3.5rem 1.4rem;
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.6rem;
+      font-weight: 300;
+      padding: 2rem 2.2rem;
+      border-radius: 8px;
+      border: 1px solid #DEDCD8;
+      color: #505154;
+    }
+  }
+}
 .swiper-button-next {
   &::after {
     display: none;

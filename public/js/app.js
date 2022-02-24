@@ -56468,9 +56468,6 @@ swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 $(document).ready(function () {
   console.log('ready...');
   var faqs = document.querySelectorAll('.faq');
-  var faqs_mobile = document.querySelectorAll('.filter-mobile-items');
-  var activeTrigger = document.querySelectorAll('#menu-trigger');
-  var activeContent = document.querySelectorAll('.filter-mobile-items .answers');
   var menu = document.querySelector('.menu');
   var catalog = document.querySelector('#catalog');
   var burger = document.querySelector('.burger');
@@ -56483,9 +56480,6 @@ $(document).ready(function () {
   var another_svg = document.querySelector('.another svg');
   var another_block = document.querySelector('.another');
   var another_btn = document.querySelector('#another-btn');
-  var another_btn_mobile = document.querySelector('#another-mobile-btn');
-  var another_block_mobile = document.querySelector('#another-btn-block');
-  var another_btn_delete = document.querySelector('#another-btn-delete');
   var btn = document.querySelector('#form-wrap button');
 
   var inputs = _toConsumableArray(document.querySelectorAll('#form-wrap input'));
@@ -56499,7 +56493,14 @@ $(document).ready(function () {
   var optionsContainer = document.querySelectorAll(".options-container");
   var optionsList = document.querySelectorAll(".option");
   var language = document.querySelector('.language');
-  var headerPhone = document.querySelector('#header-phone');
+  var headerPhone = document.querySelector('#header-phone'); // Mobile
+
+  var faqs_mobile = document.querySelectorAll('.filter-mobile-items');
+  var activeTrigger = document.querySelectorAll('#menu-trigger');
+  var activeContent = document.querySelectorAll('.filter-mobile-items .answers');
+  var another_btn_mobile = document.querySelector('#another-mobile-btn');
+  var another_block_mobile = document.querySelector('#another-btn-block');
+  var another_btn_delete = document.querySelector('#another-btn-delete');
   var positionBlock = document.querySelector('#position-block');
   var positionGrid = document.querySelector('#position-grid');
   var icons = document.querySelectorAll('.icons');
@@ -56510,28 +56511,18 @@ $(document).ready(function () {
   var filterCloseBlock = document.querySelector('.filter-title');
   var filterBlock = document.querySelector('#filter-block');
   var myElement = document.querySelector('#filter-string');
-  var myString = document.querySelector('#filter-string').innerHTML;
-  console.log(myString); // MOBILE FILTER MENU
+  var search_mobile_open = document.querySelector('.search-icon');
+  var search_mobile_close = document.querySelector('.search-close-btn'); // const myString = document.querySelector('#filter-string').innerHTML
+  // Mobile open search block
 
-  activeTrigger.forEach(function (item, index) {
-    item.addEventListener('click', function () {
-      item.classList.toggle('active');
-      activeContent[index].classList.toggle('active');
-    });
+  search_mobile_open.addEventListener('click', function () {
+    search_mobile_open.classList.add('active');
+    search_block.style.transform = "translateY(-.5rem)";
   });
-
-  var filterString = function filterString(myString) {
-    if (myString.length > 22) {
-      return myString.substring(0, 22) + '...';
-    }
-  };
-
-  myElement.innerHTML = filterString(myString); // MOBILE FILTER MENU
-  // FILTER PAGE
-
-  filterOpenBlock.addEventListener('click', function () {
-    filterBlock.classList.add('active');
-  }); // FILTER PAGE
+  search_mobile_close.addEventListener('click', function () {
+    search_mobile_open.classList.remove('active');
+    search_block.style.transform = "translateY(-34rem)";
+  }); // Mobile open search block
   // MOBILE OPEN BLOCK FUNCTION , page "ordering", "profile"
 
   openBtn.forEach(function (item, index) {
@@ -56549,7 +56540,7 @@ $(document).ready(function () {
   }); // FAQS mobile
   // Mobile filter page , handleChange display: flex to grid
 
-  if (href.includes('/filter')) {
+  if (href.includes('/filters')) {
     positionGrid.addEventListener('click', function () {
       positionBlock.classList.remove('active');
       positionGrid.classList.add('active');
@@ -56559,7 +56550,11 @@ $(document).ready(function () {
       positionGrid.classList.remove('active');
       positionBlock.classList.add('active');
       filterProducts.classList.remove('grid');
-    });
+    }); // FILTER PAGE
+
+    filterOpenBlock.addEventListener('click', function () {
+      filterBlock.classList.add('active');
+    }); // FILTER PAGE
   } // Mobile filter page , handleChange display: flex to grid
   // HOME ANIMATION
 
@@ -56648,6 +56643,7 @@ $(document).ready(function () {
       optionsContainer.classList.remove("active");
     });
   }); // Модалка локация куки 2
+  // Появление legend если input не пустой
 
   fieldsetInput.forEach(function (item, index) {
     item.onchange = function (e) {
@@ -56657,27 +56653,34 @@ $(document).ready(function () {
         fieldsetLegend[index].style.opacity = 0;
       }
     };
-  });
+  }); //
+
   categories.forEach(function (item, index) {
     item.addEventListener('click', function () {
       categories[index].classList.toggle('active');
     });
-  });
+  }); //
+  // Выделение блока другим цветом при активном "крафт-пакета" на странице "корзина"
+
   craftLabel.forEach(function (item, index) {
     item.addEventListener('click', function (e) {
       craft[index].classList.toggle('active');
     });
-  });
+  }); // Выделение блока другим цветом при активном "крафт-пакета" на странице "корзина"
+  // Активный элемент в меню , страница "faq"
+
   $('[data-faq]').on('click', function (e) {
     e.preventDefault();
     $('[data-faq]').removeClass('active');
     $(this).addClass('active');
-  });
+  }); // Активный элемент в меню , страница "faq"
+
   $('[data-filter]').on('click', function (e) {
     e.preventDefault();
     $('[data-filter]').removeClass('active');
     $(this).addClass('active');
-  });
+  }); // Смена контента при клике , страница "Личный кабинет"
+
   $('[data-open-block]').on('click', function (e) {
     e.preventDefault();
     var activeCls = 'is-active';
@@ -56685,7 +56688,8 @@ $(document).ready(function () {
     $('[data-nav]').removeClass('active');
     $("[data-content=\"".concat($(this).data('open-block'), "\"")).addClass(activeCls);
     $(this).addClass('active');
-  });
+  }); // Кастомные селекторы , в модалке "франшизы"
+
   var cation = new BVSelect({
     selector: "#select-country",
     width: "100%",
@@ -56695,7 +56699,8 @@ $(document).ready(function () {
     selector: "#select-country2",
     width: "100%",
     placeholder: 'Страна'
-  });
+  }); // Кастомные селекторы , в модалке "франшизы"
+  // появление блока с поиском , главная страница
 
   search.onfocus = function () {
     search_block.style.transform = "translateY(0)";
@@ -56705,7 +56710,8 @@ $(document).ready(function () {
   search.onblur = function () {
     search_block.style.transform = "translateY(-34rem)";
     search_block.classList.remove('active');
-  };
+  }; // появление блока с поиском , главная страница
+
 
   var swiper = new swiper__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-box', {
     loop: true,
@@ -56815,6 +56821,7 @@ $(document).ready(function () {
       }
     }
   }); // mobile swipers
+  // страница faq
 
   if (href.includes('faq') || href.includes('franchise') || href.includes('vacancies')) {
     faqs.forEach(function (faq) {
@@ -56822,13 +56829,16 @@ $(document).ready(function () {
         faq.classList.toggle('active');
       });
     });
-  }
+  } // страница faq
+  // открывающийся элемент , "карточка товара"
+
 
   if (window.location.href.includes('item')) {
     in_stock.addEventListener('click', function () {
       in_stock.classList.toggle('active');
     });
-  }
+  } // Меню при клике на каталог
+
 
   var close_menu = function close_menu() {
     if (menu.classList.contains('active')) {
@@ -56865,35 +56875,42 @@ $(document).ready(function () {
   close_btn ? close_btn.addEventListener('click', function (e) {
     e.preventDefault();
     menu.classList.remove("active");
-  }) : null;
-  another_svg ? another_svg.addEventListener('click', function (e) {
-    e.preventDefault();
-    another_block.classList.add('hidden');
-    another_btn.classList.remove('hidden');
-    setTimeout(function () {
-      another_block.style.display = "none";
-      another_btn.style.display = 'flex';
-    }, 350);
-  }) : null;
-  another_btn ? another_btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    another_btn.classList.add('hidden');
-    another_block.classList.remove('hidden');
-    setTimeout(function () {
-      another_btn.style.display = 'none';
-      another_block.style.display = 'block';
-    }, 350);
-  }) : null;
-  another_btn_mobile.addEventListener('click', function (e) {
-    e.preventDefault();
-    another_btn_mobile.classList.add('hidden');
-    another_block_mobile.classList.add('show');
-  });
-  another_btn_delete.addEventListener('click', function (e) {
-    e.preventDefault();
-    another_block_mobile.classList.remove('show');
-    another_btn_mobile.classList.remove('hidden');
-  });
+  }) : null; // Меню при клике на каталог
+  // "Другой получатель" , страница "оформление заказа"
+
+  if (href.includes('/ordering')) {
+    another_svg ? another_svg.addEventListener('click', function (e) {
+      e.preventDefault();
+      another_block.classList.add('hidden');
+      another_btn.classList.remove('hidden');
+      setTimeout(function () {
+        another_block.style.display = "none";
+        another_btn.style.display = 'flex';
+      }, 350);
+    }) : null;
+    another_btn ? another_btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      another_btn.classList.add('hidden');
+      another_block.classList.remove('hidden');
+      setTimeout(function () {
+        another_btn.style.display = 'none';
+        another_block.style.display = 'block';
+      }, 350);
+    }) : null; // Тоже самое ток мобильная
+
+    another_btn_mobile.addEventListener('click', function (e) {
+      e.preventDefault();
+      another_btn_mobile.classList.add('hidden');
+      another_block_mobile.classList.add('show');
+    });
+    another_btn_delete.addEventListener('click', function (e) {
+      e.preventDefault();
+      another_block_mobile.classList.remove('show');
+      another_btn_mobile.classList.remove('hidden');
+    }); // "Другой получатель" , страница "оформление заказа"
+  } // Появление блоков при выборе соответствующего radio инпута , "оформление заказа"
+
+
   document.querySelectorAll('.blocks input').forEach(function (item) {
     item.addEventListener('click', function (e) {
       if (item.id === 'free') {
@@ -56911,7 +56928,9 @@ $(document).ready(function () {
         document.querySelector('.requisites').style.display = 'none';
       }
     });
-  });
+  }); // Появление блоков при выборе соответствующего radio инпута , "оформление заказа"
+  // Переход на следующий инпут при заполнений первого , модалка "код с телефона"
+
   document.addEventListener("DOMContentLoaded", function () {
     inputs[0].focus();
   });
@@ -56930,13 +56949,30 @@ $(document).ready(function () {
         btn.focus();
       }
     });
-  });
+  }); // Переход на следующий инпут при заполнений первого , модалка "код с телефона"
+  // открытие блоков при клике , мобильная сортировка , страница "каталог и фильтры"
 
   if (href.includes('filter')) {
     document.querySelector('.sort').addEventListener('click', function () {
       document.querySelector('.filter').classList.toggle('active');
     });
-  }
+  } // MOBILE FILTER MENU
+
+
+  if (href.includes('/filters')) {
+    activeTrigger.forEach(function (item, index) {
+      item.addEventListener('click', function () {
+        item.classList.toggle('active');
+        activeContent[index].classList.toggle('active');
+      });
+    }); // const filterString = (myString) => {
+    //   if (myString.length > 22) {
+    //     return myString.substring(0, 22) + '...'
+    //   }
+    // }
+    // myElement.innerHTML = filterString(myString)
+  } // MOBILE FILTER MENU
+
 });
 })();
 

@@ -174,7 +174,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1.5rem 1.5rem;
+          padding: 1.5rem 2rem;
           text-transform: uppercase;
           letter-spacing: 1px;
           color: #303133;
@@ -192,6 +192,11 @@
           p {
             display: flex;
             align-items: center;
+            gap: 1rem;
+            svg {
+              width: 1.6rem;
+              height: 1.6rem;
+            }
           }
           span {
             color: #505154;
@@ -204,6 +209,7 @@
             }
           }
         }
+
         .answers {
           display: flex;
           flex-direction: column;
@@ -237,6 +243,7 @@
 
 
           div {
+            padding-left: .5rem;
             input[type=checkbox] {
               display: none;
             }
@@ -281,6 +288,58 @@
               background-color: black;
             }
           }
+          .color-1, .color-2, .color-3, .color-4 {
+            label::before {
+              width: 1rem;
+              height: 1rem;
+              outline: 1px solid white;
+              top: .8rem;
+              border-radius: 100%;
+            }
+          }
+          .active {
+            display: flex;
+            justify-content: space-between;
+            svg {
+              width: 1.2rem;
+              height: 1.2rem;
+              align-items: center;
+              margin-right: .5rem;
+            }
+
+            label {
+              background-color: #F5F4F1;
+              max-width: fit-content;
+              padding-left: 3rem;
+              border-radius: 999rem;
+              &::before {
+                outline: 1px solid #939393;
+              }
+            }
+          }
+          .color-1 {
+            label::before {
+              border: 1px solid #DEDCD8;
+            }
+            input[type=checkbox]+label::before {
+              background-color: white;
+            }
+          }
+          .color-2 {
+            input[type=checkbox]+label::before {
+              background-color: black;
+            }
+          }
+          .color-3 {
+            input[type=checkbox]+label::before {
+              background-color: #A6DE79;
+            }
+          }
+          .color-4 {
+            input[type=checkbox]+label::before {
+              background-color: #FFF597;
+            }
+          }
         }
       }
       .questions.active {
@@ -299,7 +358,7 @@
       }
       .answers.active {
         max-height: 30rem;
-        padding: 1.5rem 1.5rem 2rem 2.4rem;
+        padding: 1.5rem 1.5rem 2rem 1.5rem;
         animation: fade .4s ease-in;
       }
     }
