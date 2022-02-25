@@ -153,4 +153,20 @@
       display: none;
     }
   }
+  @include responsive {
+    .wrapper {
+      .selected {
+        font-size: 1rem;
+      }
+    }
+    .option {
+      labe {}
+      font-size: .9rem;
+      img {
+        width: 1.2rem;
+        height: 1.2rem;
+        top: 0.8rem;
+      }
+    }
+  }
 }

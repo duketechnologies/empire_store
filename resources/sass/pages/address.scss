@@ -107,6 +107,9 @@ section#address {
       width: 31rem;
       padding-right: .5rem;
       overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .simplebar-scrollbar::before {
         background-color: #DEDCD8;
         height: 7rem;

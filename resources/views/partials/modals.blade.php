@@ -236,7 +236,6 @@
   </div>
 </div>
 
-{{-- Вход по EMIAL - пароль --}}
 <div class="remodal" data-remodal-id="payment" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
   <button data-remodal-action="close" class="remodal-close-btn"></button>
   <div class="content">
@@ -256,7 +255,6 @@
     <a href="#" class="details">Подробнее о рассрочке</a>
   </div>
 </div>
-{{-- Вход по EMIAL - пароль --}}
 
 <div class="remodal" data-remodal-id="cookie-location" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
   <button data-remodal-action="close" class="remodal-close-btn"></button>
@@ -340,62 +338,62 @@
         <div class="options-container" >
           <div class="option">
             <input type="radio" class="radio" id="automobiles" name="category"/>
-            <label for="automobiles"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+            <label for="automobiles">Казахстан<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="film" name="category" />
-            <label for="film"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+            <label for="film">Украина<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="science" name="category" />
-            <label for="science"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+            <label for="science">Киргизия<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="art" name="category" />
-            <label for="art"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+            <label for="art">Казахстан<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="music" name="category" />
-            <label for="music"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+            <label for="music">Россия<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="travel" name="category" />
-            <label for="travel"><img src="/i/icons/kz_icon.png" alt=""/>Казахстан<span></span></label>
+            <label for="travel">Казахстан<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="sports" name="category" />
-            <label for="sports"><img src="/i/icons/ru_icon.png" alt=""/>Россия<span></span></label>
+            <label for="sports">Россия<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="news" name="category" />
-            <label for="news"><img src="/i/icons/kr_icon.png" alt=""/>Киргизия<span></span></label>
+            <label for="news">Киргизия<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="uk3" name="category" />
-            <label for="uk3"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+            <label for="uk3">Украина<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="uk4" name="category" />
-            <label for="uk4"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+            <label for="uk4">Украина<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="uk5" name="category" />
-            <label for="uk5"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+            <label for="uk5">Украина<span></span></label>
           </div>
 
           <div class="option">
             <input type="radio" class="radio" id="uk6" name="category" />
-            <label for="uk6"><img src="/i/icons/uk_icon.png" alt=""/>Украина<span></span></label>
+            <label for="uk6">Украина<span></span></label>
           </div>
         </div>
 
@@ -443,50 +441,56 @@
 
 <div class="remodal" data-remodal-id="login-email" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
   <button data-remodal-action="close" class="remodal-close-btn"></button>
-{{--    <div class="wrapper">--}}
-{{--        <h3>Введите пароль</h3>--}}
-{{--        <p>Введите пароль от аккаунта<span>Mail@mail.kz</span></p>--}}
-{{--        <form method="POST" action="#">--}}
-{{--            <fieldset>--}}
-{{--                <legend>Телефон или Email</legend>--}}
-{{--                <input type="text" name="login-email" autocomplete="off"/>--}}
-{{--            </fieldset>--}}
-{{--            <fieldset>--}}
-{{--                <input type="password" name="register_password" placeholder="Повторите пароль" autocomplete="off"/>--}}
-{{--            </fieldset>--}}
-{{--            <button type="submit" class="main-btn">Войти</button>--}}
-{{--            <button type="submit" class="link-btn">Забыл пароль</button>--}}
-{{--        </form>--}}
-{{--    </div>--}}
+    <div class="wrapper">
+      <h3>Введите пароль</h3>
+      <p>Введите пароль от аккаунта<span>Mail@mail.kz</span></p>
+      <form method="POST" action="#">
+        <fieldset>
+          <legend>Телефон или Email</legend>
+          <input id="font" type="text" name="login-email" autocomplete="off"/>
+        </fieldset>
+        <fieldset>
+          <input type="password" name="register_password" placeholder="Повторите пароль" autocomplete="off"/>
+        </fieldset>
+        <button type="submit" class="main-btn">Войти</button>
+        <button type="submit" class="link-btn">Забыл пароль</button>
+      </form>
+    </div>
+</div>
 
-{{--    <div class="forget-password">--}}
-{{--        <svg viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">--}}
-{{--            <path d="M22.2167 10.3837L27.4846 5.04861M30.4949 2L27.4846 5.04861L30.4949 2ZM16.0306 16.6486C16.8078 17.4252 17.4256 18.3498 17.8485 19.3691C18.2713 20.3885 18.4909 21.4826 18.4946 22.5882C18.4982 23.6939 18.2859 24.7894 17.8698 25.8116C17.4537 26.8339 16.842 27.7626 16.07 28.5445C15.298 29.3263 14.3809 29.9458 13.3715 30.3672C12.3622 30.7886 11.2805 31.0037 10.1887 31C9.09693 30.9962 8.01667 30.7739 7.01011 30.3456C6.00356 29.9174 5.09059 29.2917 4.32378 28.5046C2.81585 26.9234 1.98145 24.8057 2.00031 22.6075C2.01917 20.4094 2.88978 18.3066 4.42462 16.7522C5.95947 15.1978 8.03574 14.3161 10.2062 14.297C12.3768 14.2779 14.4678 15.1229 16.0291 16.6501L16.0306 16.6486ZM16.0306 16.6486L22.2167 10.3837L16.0306 16.6486ZM22.2167 10.3837L26.7321 14.9566L32 9.62153L27.4846 5.04861L22.2167 10.3837Z" stroke="#505154" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>--}}
-{{--        </svg>--}}
-{{--        <h3>Восстановление пароля</h3>--}}
-{{--        <p>--}}
-{{--            Мы отправили ссылку для восстановления--}}
-{{--            доступа на почту, указанную при регистрации--}}
-{{--            <br/>--}}
-{{--            <span>Mail@mail.kz</span>--}}
-{{--        </p>--}}
-{{--        <button class="link-btn">Мне не пришло письмо</button>--}}
-{{--    </div>--}}
+<div class="remodal" data-remodal-id="new-password" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+  <button data-remodal-action="close" class="remodal-close-btn"></button>
+    <div class="recovery">
+      <h3>Создайте новый пароль</h3>
+      <p>Введите пароль от аккаунта<span> Mail@mail.kz</span></p>
+      <form method="POST" action="#">
+        <fieldset>
+          <legend>Новый пароль</legend>
+          <input type="password" name="password-recovery" autocomplete="off"/>
+        </fieldset>
+        <fieldset>
+          <legend>Повторите пароль</legend>
+          <input type="password" name="confirm-password-recovery"  autocomplete="off"/>
+        </fieldset>
+        <button type="submit" class="main-btn">Сохранить пароль и войти</button>
+      </form>
+    </div>
+</div>
 
-  <div class="recovery">
-    <h3>Создайте новый пароль</h3>
-    <p>Введите пароль от аккаунта<span> Mail@mail.kz</span></p>
-    <form method="POST" action="#">
-      <fieldset>
-        <legend>Новый пароль</legend>
-        <input type="password" name="password-recovery" autocomplete="off"/>
-      </fieldset>
-      <fieldset>
-        <legend>Повторите пароль</legend>
-        <input type="password" name="confirm-password-recovery"  autocomplete="off"/>
-      </fieldset>
-      <button type="submit" class="main-btn">Сохранить пароль и войти</button>
-    </form>
+<div class="remodal" data-remodal-id="forget-password" data-remodal-options="hashTracking: false, closeOnOutsideClick: true">
+  <button data-remodal-action="close" class="remodal-close-btn"></button>
+  <div class="forget-password">
+    <svg viewBox="0 0 34 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.2167 10.3837L27.4846 5.04861M30.4949 2L27.4846 5.04861L30.4949 2ZM16.0306 16.6486C16.8078 17.4252 17.4256 18.3498 17.8485 19.3691C18.2713 20.3885 18.4909 21.4826 18.4946 22.5882C18.4982 23.6939 18.2859 24.7894 17.8698 25.8116C17.4537 26.8339 16.842 27.7626 16.07 28.5445C15.298 29.3263 14.3809 29.9458 13.3715 30.3672C12.3622 30.7886 11.2805 31.0037 10.1887 31C9.09693 30.9962 8.01667 30.7739 7.01011 30.3456C6.00356 29.9174 5.09059 29.2917 4.32378 28.5046C2.81585 26.9234 1.98145 24.8057 2.00031 22.6075C2.01917 20.4094 2.88978 18.3066 4.42462 16.7522C5.95947 15.1978 8.03574 14.3161 10.2062 14.297C12.3768 14.2779 14.4678 15.1229 16.0291 16.6501L16.0306 16.6486ZM16.0306 16.6486L22.2167 10.3837L16.0306 16.6486ZM22.2167 10.3837L26.7321 14.9566L32 9.62153L27.4846 5.04861L22.2167 10.3837Z" stroke="#505154" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <h3>Восстановление пароля</h3>
+    <p>
+      Мы отправили ссылку для восстановления
+      доступа на почту, указанную при регистрации
+      <br/>
+      <span>Mail@mail.kz</span>
+    </p>
+    <button class="link-btn">Мне не пришло письмо</button>
   </div>
 </div>
 
@@ -501,7 +505,8 @@
         <input type="password" name="register_password"/>
       </fieldset>
       <fieldset>
-        <input type="password" name="register_password" placeholder="Повторите пароль"/>
+        <legend>Повторите пароль</legend>
+        <input type="password" name="register_password" />
       </fieldset>
       <div>
         <input type="checkbox" name="personal_info" id="personal_info"/>

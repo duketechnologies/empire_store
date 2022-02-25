@@ -103,6 +103,11 @@
         max-width: fit-content;
         border-radius: 8px 0 0 8px;
         position: sticky;
+        top: 10rem;
+        margin-left: auto;
+        height: 3.5rem;
+        bottom: 1rem;
+        right: 0;
         svg {
           width: .9rem;
           height: 1.3rem;
@@ -135,14 +140,19 @@
     }
   }
   .filter-mobile-menu {
-    display: block;
-    //position: fixed;
+    display: none;
+    position: fixed;
     z-index: 10;
     top:5vh;
     left:0;
     width: 100%;
-    min-height: 95vh;
+    height: 100%;
+    max-height: 95vh;
+    overflow-y: scroll;
     background-color: white;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .menu-header {
       font-size: 1rem;
       font-weight: 500;
@@ -154,10 +164,10 @@
       background-color: #F5F4F1;
       position: relative;
       svg {
-        width: 1.4rem;
-        height: 1.3rem;
+        width: 1.2rem;
+        height: 1.2rem;
         position: absolute;
-        right: 1.5rem;
+        right: 2rem;
         top: 1.2rem;
       }
     }
@@ -244,6 +254,11 @@
 
           div {
             padding-left: .5rem;
+            display: flex;
+            svg {
+              opacity: 0;
+              transition: .2s ease-in;
+            }
             input[type=checkbox] {
               display: none;
             }
@@ -255,7 +270,7 @@
               line-height: 1.3rem;
               letter-spacing: .7px;
               user-select: none;
-              padding: 1rem 1.5rem 1rem 2.5rem;
+              padding: 1rem 1.5rem 1rem 3rem;
               font-size: 1.2rem;
               font-weight: 400;
               color: #505154;
@@ -271,7 +286,7 @@
                 width: .6rem;
                 height: .6rem;
                 position: absolute;
-                left: 0rem;
+                left: .5rem;
                 top: 1rem;
                 background-color: white;
                 border-radius: 50%;
@@ -305,6 +320,7 @@
               height: 1.2rem;
               align-items: center;
               margin-right: .5rem;
+              opacity: 1;
             }
 
             label {
@@ -395,6 +411,10 @@
         padding: 1.4rem 1.5rem 1.3rem;
       }
     }
+  }
+  .filter-mobile-menu.active {
+    display: block;
+    animation: opacity .2s ease-in;
   }
 }
 @keyframes opacity {

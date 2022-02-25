@@ -56495,6 +56495,9 @@ $(document).ready(function () {
   var language = document.querySelector('.language');
   var headerPhone = document.querySelector('#header-phone'); // Mobile
 
+  var filter_sort_open = document.querySelector('.filter-header');
+  var filter_sort_close = document.querySelector('.menu-header');
+  var filter_sort_menu = document.querySelector('.filter-mobile-menu');
   var faqs_mobile = document.querySelectorAll('.filter-mobile-items');
   var activeTrigger = document.querySelectorAll('#menu-trigger');
   var activeContent = document.querySelectorAll('.filter-mobile-items .answers');
@@ -56507,13 +56510,64 @@ $(document).ready(function () {
   var filterProducts = document.querySelector('.filter-products');
   var openBtn = document.querySelectorAll('#open-block .open');
   var openBlock = document.querySelectorAll('#open-block .open-content');
-  var filterOpenBlock = document.querySelector('.sort__title');
-  var filterCloseBlock = document.querySelector('.filter-title');
   var filterBlock = document.querySelector('#filter-block');
   var myElement = document.querySelector('#filter-string');
   var search_mobile_open = document.querySelector('.search-icon');
-  var search_mobile_close = document.querySelector('.search-close-btn'); // const myString = document.querySelector('#filter-string').innerHTML
-  // Mobile open search block
+  var search_mobile_close = document.querySelector('.search-close-btn'); // mobile burger click
+
+  var menu_mobile = document.querySelector('.menu-mobile');
+  var menu_mobile_close = document.querySelectorAll('#anti-burger');
+  var menu_mobile_bg = document.querySelector('.menu-mobile-bg');
+  burger.addEventListener('click', function () {
+    menu_mobile.classList.add('active');
+    menu_mobile_bg.classList.add('active');
+  });
+  document.addEventListener('click', function (e) {
+    var target_mobile = e.target;
+    var its_menu_mobile = target_mobile == menu_mobile || menu_mobile.contains(target_mobile);
+    var its_btnMenu_mobile = target_mobile == burger;
+    var menu_mobile_is_active = menu_mobile.classList.contains('active');
+
+    if (!its_menu_mobile && !its_btnMenu_mobile && menu_mobile_is_active) {
+      menu_mobile.classList.remove('active');
+      menu_mobile_bg.classList.remove('active');
+    }
+  });
+  menu_mobile_close ? menu_mobile_close.forEach(function (item) {
+    item.addEventListener('click', function () {
+      menu_mobile.classList.remove('active');
+      menu_mobile_bg.classList.remove('active');
+    });
+  }) : null; // mobile burger click
+  // переход на другие ссылки внутри мобильного меню
+
+  var main_items = document.querySelectorAll('#main-items li');
+  var mainBlock = document.querySelector('.menu-mobile--main');
+  var referenceBlock = document.querySelector('.menu-mobile--references');
+  var back_to_main_button = document.querySelector('.menu-back-button');
+  main_items.forEach(function (item, index) {
+    item.addEventListener('click', function () {
+      mainBlock.classList.remove('active');
+      referenceBlock.classList.add('active');
+    });
+  });
+  back_to_main_button.addEventListener('click', function () {
+    referenceBlock.classList.remove('active');
+    mainBlock.classList.add('active');
+  }); // переход на другие ссылки внутри мобильного меню
+  // filter mobile sort menu , страница "каталог и фильтры
+
+  if (href.includes('/filters')) {
+    filter_sort_open.addEventListener('click', function () {
+      filter_sort_menu.classList.add('active');
+    });
+    filter_sort_close.addEventListener('click', function () {
+      filter_sort_menu.classList.remove('active');
+    });
+  } // filter mobile sort menu , страница "каталог и фильтры
+  // const myString = document.querySelector('#filter-string').innerHTML
+  // Mobile open search block , header
+
 
   search_mobile_open.addEventListener('click', function () {
     search_mobile_open.classList.add('active');
@@ -56551,10 +56605,7 @@ $(document).ready(function () {
       positionBlock.classList.add('active');
       filterProducts.classList.remove('grid');
     }); // FILTER PAGE
-
-    filterOpenBlock.addEventListener('click', function () {
-      filterBlock.classList.add('active');
-    }); // FILTER PAGE
+    // FILTER PAGE
   } // Mobile filter page , handleChange display: flex to grid
   // HOME ANIMATION
 
@@ -56653,14 +56704,30 @@ $(document).ready(function () {
         fieldsetLegend[index].style.opacity = 0;
       }
     };
-  }); //
+  }); // Открывает сортировка товаров , страница "каталог и фильтры"
 
-  categories.forEach(function (item, index) {
+  if (href.includes('/filters')) {
+    var sortClose = document.querySelector('.sort__title');
+    var sortBlock = document.querySelector('#filter-block');
+    sortClose.addEventListener('click', function () {
+      sortBlock.classList.toggle('active');
+    });
+  } // Открывает сортировка товаров , страница "каталог и фильтры"
+  // Открывает подменюшки предметов , страница "каталог и фильтры"
+
+
+  var pick = document.querySelectorAll('.pick'); // categories.forEach((item, index) => {
+  //   item.addEventListener('click', () => {
+  //     categories[index].classList.add('active')
+  //     console.log(1)
+  //   })
+  // });
+
+  pick.forEach(function (item, index) {
     item.addEventListener('click', function () {
       categories[index].classList.toggle('active');
     });
-  }); //
-  // Выделение блока другим цветом при активном "крафт-пакета" на странице "корзина"
+  }); // Выделение блока другим цветом при активном "крафт-пакета" на странице "корзина"
 
   craftLabel.forEach(function (item, index) {
     item.addEventListener('click', function (e) {
@@ -56840,14 +56907,6 @@ $(document).ready(function () {
   } // Меню при клике на каталог
 
 
-  var close_menu = function close_menu() {
-    if (menu.classList.contains('active')) {
-      document.addEventListener('click', function () {
-        menu.classList.remove('active');
-      });
-    }
-  };
-
   var openMenu = function openMenu(e) {
     menu.classList.add('active');
     document.querySelector('.menu-bg').classList.add('active');
@@ -56856,10 +56915,6 @@ $(document).ready(function () {
   catalog.addEventListener('click', function (e) {
     e.preventDefault();
     openMenu();
-  });
-  burger.addEventListener('click', function (e) {
-    menu.classList.add('active');
-    document.querySelector('.menu-bg').classList.add('active');
   });
   document.addEventListener('click', function (e) {
     var target = e.target;
@@ -56951,13 +57006,7 @@ $(document).ready(function () {
     });
   }); // Переход на следующий инпут при заполнений первого , модалка "код с телефона"
   // открытие блоков при клике , мобильная сортировка , страница "каталог и фильтры"
-
-  if (href.includes('filter')) {
-    document.querySelector('.sort').addEventListener('click', function () {
-      document.querySelector('.filter').classList.toggle('active');
-    });
-  } // MOBILE FILTER MENU
-
+  // MOBILE FILTER MENU
 
   if (href.includes('/filters')) {
     activeTrigger.forEach(function (item, index) {

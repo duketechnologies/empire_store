@@ -34,7 +34,9 @@
             <a href="#" data-remodal-target="cookie-change-location">Локации куки - 2</a>
             <a href="#" data-remodal-target="cookie-location">Локации куки - 3</a>
             <a href="#" data-remodal-target="login">Авторизация : вход по тел. или почта</a>
-            <a href="#" data-remodal-target="login-email">Авторизация : забыли пароль </a>
+            <a href="#" data-remodal-target="login-email">Авторизация </a>
+            <a href="#" data-remodal-target="forget-password">Авторизация : забыли пароль </a>
+            <a href="#" data-remodal-target="new-password">Авторизация : новый пароль </a>
             <a href="#" data-remodal-target="login-phone">Авторизация : Смс с телефона </a>
             <a href="#" data-remodal-target="register-email">Авторизация : Регистрация по почте</a>
             <a href="#" data-remodal-target="Added-to-basket">Карточка товара: Добавлено в корзину</a>

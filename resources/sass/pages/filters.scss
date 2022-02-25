@@ -87,7 +87,7 @@ section#filters {
             border-radius: 8px;
             z-index: 0;
             box-shadow: 0px 5px 25px rgb(36 38 60 / 5%);
-            animation: opacity .3s ease-in;
+            animation: opacity .2s ease-in;
             .filter-title {
               padding: .5rem 0 1rem;
               width: 100%;
@@ -102,75 +102,87 @@ section#filters {
         padding: .3rem;
         border-radius: 8px;
         .categories {
-          background-color: white;
-          border-radius: 6px;
-          padding: 2rem 1.35rem 2rem;
-          max-height: 0rem;
-          overflow: hidden;
-          cursor: pointer;
-          margin-top: .3rem;
-          &:first-child {
-            margin-top: 0;
+          margin-bottom: .3rem;
+          &:last-child {
+            margin-bottom: 0;
+            padding-bottom: 2rem;
           }
-          svg {
-            width: .9rem;
-            height: .9rem;
-            opacity: 0;
-            transition: .2s ease-in;
+          .categories-item {
+            background-color: white;
+            border-radius: 6px;
+            padding: 1rem 1.35rem 2rem;
+            max-height: 0rem;
+            overflow: hidden;
+            cursor: pointer;
+            margin-top: .3rem;
+            &:first-child {
+              margin-top: 0;
+            }
+            svg {
+              width: .9rem;
+              height: .9rem;
+              opacity: 0;
+              transition: .2s ease-in;
 
-          }
-          .pick {
-            font-size: .95rem;
-            letter-spacing: .44px;
-            color: #939393;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            &:hover {
-              svg {
-                opacity: 1;
+            }
+            .pick {
+              font-size: .95rem;
+              letter-spacing: .44px;
+              color: #939393;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              padding: 1rem 0;
+              &:hover {
+                svg {
+                  opacity: 1;
+                }
               }
             }
-          }
 
-          ul {
-            margin-top: 1.5rem;
-            li {
-              font-size: .85rem;
-              letter-spacing: .44px;
-              color: #505154;
-              font-weight: 500;
-              margin-bottom: 1.5rem;
-              span {
-                margin-left: .5rem;
-                color: #DEDCD8;
-              }
+            ul {
+              li {
+                font-size: .85rem;
+                letter-spacing: .44px;
+                color: #505154;
+                font-weight: 500;
+                padding: 1rem 0;
+                span {
+                  margin-left: .5rem;
+                  color: #DEDCD8;
+                }
 
-              a {
-                color: #303133;
-                max-width: fit-content;
-                border-bottom: 1px solid transparent;
-                transition: .2s ease-in;
-                &:hover {
+                a {
+                  color: #303133;
+                  max-width: fit-content;
+                  border-bottom: 1px solid transparent;
+                  transition: .2s ease-in;
+                  &:hover {
                     border-bottom: 1px solid black;
-              }
-              }
-              a.all {
-                border-bottom: 1px solid black;
+                  }
+                }
+                a.all {
+                  border-bottom: 1px solid black;
+                }
               }
             }
           }
         }
         .categories.active {
-          background-color: #F5F4F1;
-          max-height: fit-content;
-          animation: opacity .2s ease-in;
-          svg {
-            opacity: 1;
-            animation: rotate .2s ease-in;
+          &:last-child {
+            padding-bottom: 0;
           }
-          #vertical {
-            opacity: 0;
+          .categories-item {
+            background-color: #F5F4F1;
+            max-height: fit-content;
+            animation: opacity .2s ease-in;
+            svg {
+              opacity: 1;
+              animation: rotate .2s ease-in;
+            }
+            #vertical {
+              opacity: 0;
+            }
           }
         }
       }

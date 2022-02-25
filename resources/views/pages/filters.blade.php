@@ -31,61 +31,72 @@
         </div>
         <div class="wrapper">
           <div class="categories active">
-            <p class="pick">Катергория
-              <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path id="vertical"d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </p>
-            <ul>
-              <li><a href="#">Панно</a></li>
-              <li><a href="#">Статуэтки</a></li>
-              <li><a href="#">Empire gallery</a></li>
-              <li><a href="#" class="all">Все</a><span>(56)</span></li>
-            </ul>
+            <div class="categories-item">
+              <p class="pick">Катергория
+                <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path id="vertical"d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </p>
+              <ul>
+                <li><a href="#">Панно</a></li>
+                <li><a href="#">Статуэтки</a></li>
+                <li><a href="#">Empire gallery</a></li>
+                <li><a href="#" class="all">Все</a><span>(56)</span></li>
+              </ul>
+            </div>
           </div>
           <div class="categories">
-            <p class="pick">Материал
-              <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path id="vertical" d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </p>
-            <ul>
-              <li><a href="#">Панно</a></li>
-              <li><a href="#">Статуэтки</a></li>
-              <li><a href="#">Empire gallery</a></li>
-              <li><a href="#" class="all">Все</a><span>(56)</span></li>
-            </ul>
+            <div class="categories-item">
+              <p class="pick">Материал
+                <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path id="vertical" d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </p>
+              <ul>
+                <li><a href="#">Панно</a></li>
+                <li><a href="#">Статуэтки</a></li>
+                <li><a href="#">Empire gallery</a></li>
+                <li><a href="#" class="all">Все</a><span>(56)</span></li>
+              </ul>
+            </div>
           </div>
           <div class="categories">
-            <p class="pick">Цвет
-              <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path id="vertical" d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </p>
-            <ul>
-              <li><a href="#">Панно</a></li>
-              <li><a href="#">Статуэтки</a></li>
-              <li><a href="#">Empire gallery</a></li>
-              <li><a href="#" class="all">Все</a><span>(56)</span></li>
-            </ul>
+            <div class="categories-item">
+              <p class="pick">Цвет
+                <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path id="vertical" d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </p>
+              <ul>
+                <li><a href="#">Панно</a></li>
+                <li><a href="#">Статуэтки</a></li>
+                <li><a href="#">Empire gallery</a></li>
+                <li><a href="#" class="all">Все</a><span>(56)</span></li>
+              </ul>
+            </div>
           </div>
           <div class="categories">
-            <p class="pick">Коллекция
-              <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-                <path id="vertical" d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </p>
-            <ul>
-              <li><a href="#">Панно</a></li>
-              <li><a href="#">Статуэтки</a></li>
-              <li><a href="#">Empire gallery</a></li>
-              <li><a href="#" class="all">Все</a><span>(56)</span></li>
-            </ul>
+            <div class="categories-item">
+              <p class="pick">Коллекция
+                <svg  viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 8H15" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path id="vertical" d="M8 15L8 1" stroke="#939393" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </p>
+              <ul>
+                <li><a href="#">Панно</a></li>
+                <li><a href="#">Статуэтки</a></li>
+                <li><a href="#">Empire gallery</a></li>
+                <li><a href="#" class="all">Все</a><span>(56)</span></li>
+              </ul>
+            </div>
           </div>
+
+
+
         </div>
       </div>
       <div class="favorites__products">

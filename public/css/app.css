@@ -593,6 +593,7 @@ li {
   cursor: pointer;
   border-radius: 4px;
   transition: 0.2s ease-in;
+  font-family: "Inter";
 }
 .primary-btn:hover {
   background-color: #EDEDED;
@@ -606,6 +607,7 @@ li {
   padding: 1rem 2rem 0.9rem;
   background-color: white;
   border-radius: 8px;
+  font-family: "Inter";
 }
 
 .link-btn {
@@ -621,6 +623,7 @@ li {
   outline: none;
   cursor: pointer;
   color: #303133;
+  font-family: "Inter";
 }
 .link-btn:hover {
   border-bottom: 1px solid black;
@@ -1118,11 +1121,15 @@ header.header .menu {
   height: 100%;
   width: 23.5rem;
   padding-top: 2rem;
+  overflow-y: scroll;
   background-color: white;
   display: flex;
   flex-direction: column;
   transform: translateX(-30rem);
   transition: transform 0.3s ease-in;
+}
+header.header .menu::-webkit-scrollbar {
+  display: none;
 }
 header.header .menu #close-menu {
   max-width: -webkit-fit-content;
@@ -1220,6 +1227,9 @@ header.header .menu-bg.active::before {
 header.header .menu.active {
   transform: translateX(0rem);
 }
+header.header .menu-mobile {
+  display: none;
+}
 
 @-webkit-keyframes opacity-menu {
   from {
@@ -1277,8 +1287,11 @@ header.header .menu.active {
     box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
   }
   header.header .wrapper {
-    padding: 0 0.8rem 0 2rem;
+    padding: 0 0.8rem 0 1rem;
     height: 100%;
+  }
+  header.header .wrapper .links .burger-padding {
+    padding: 1rem;
   }
   header.header .wrapper .links .burger {
     display: initial;
@@ -1414,6 +1427,187 @@ header.header .menu.active {
   }
   header.header .search-block .right_side {
     display: none;
+  }
+  header.header .menu-mobile {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    height: 100%;
+    width: 30rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    overflow-y: scroll;
+    transform: translateX(-30rem);
+    transition: 0.2s ease-in;
+  }
+  header.header .menu-mobile::-webkit-scrollbar {
+    display: none;
+  }
+  header.header .menu-mobile--main {
+    display: none;
+  }
+  header.header .menu-mobile--main.active {
+    display: block;
+    -webkit-animation: opacity 0.2s ease-in;
+            animation: opacity 0.2s ease-in;
+  }
+  header.header .menu-mobile--header {
+    display: flex;
+    justify-content: flex-start;
+    gap: 7rem;
+    padding: 0.5rem 1rem 2.5rem;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #303133;
+    text-transform: uppercase;
+  }
+  header.header .menu-mobile--header svg {
+    width: 9rem;
+    height: 2rem;
+  }
+  header.header .menu-mobile--header .burger-padding {
+    padding: 1rem;
+  }
+  header.header .menu-mobile--header .burger-padding svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  header.header .menu-mobile--image img {
+    width: 100%;
+    max-height: 12.5rem;
+  }
+  header.header .menu-mobile--item {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #303133;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 2rem;
+    border-bottom: 1px solid #DEDCD8;
+  }
+  header.header .menu-mobile--item svg {
+    width: 1rem;
+    height: 1.6rem;
+    padding-bottom: 0.1rem;
+  }
+  header.header .menu-mobile--item.discount {
+    background-color: #FDFFB4;
+  }
+  header.header .menu-mobile--item.something-new {
+    background: linear-gradient(90deg, #F5F4F1 0%, rgba(245, 244, 241, 0) 100%);
+  }
+  header.header .menu-mobile--references {
+    display: none;
+  }
+  header.header .menu-mobile--references.active {
+    display: block;
+    -webkit-animation: opacity 0.2s ease-in;
+            animation: opacity 0.2s ease-in;
+  }
+  header.header .menu-mobile .menu-back-button {
+    border-bottom: 1px solid #DEDCD8;
+    padding: 2rem;
+  }
+  header.header .menu-mobile .menu-back-button svg {
+    width: 2.7rem;
+    height: 1.6rem;
+  }
+  header.header .menu-mobile--links {
+    margin: 6.5rem 2rem 2rem;
+  }
+  header.header .menu-mobile--links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #303133;
+    border-radius: 8px;
+    gap: 1rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.6px;
+    color: #303133;
+    padding: 1.2rem 0;
+    margin-bottom: 1.8rem;
+  }
+  header.header .menu-mobile--links a svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  header.header .menu-mobile--help {
+    background-color: #F5F4F1;
+    flex: 1;
+    max-height: 20rem;
+    margin-top: auto;
+  }
+  header.header .menu-mobile--help .help-to {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #303133;
+    padding: 2rem;
+    border-bottom: 1px solid #DEDCD8;
+    background-color: transparent;
+  }
+  header.header .menu-mobile--help .help-to svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  header.header .menu-mobile--languages {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2.2rem 0;
+  }
+  header.header .menu-mobile--languages a {
+    border: 1px solid transparent;
+    width: 4rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding-left: 0.1rem;
+    justify-content: center;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+  header.header .menu-mobile--languages a.active {
+    border: 1px solid #303133;
+  }
+  header.header .menu-mobile-bg.active::before {
+    display: block;
+    content: "";
+    position: fixed;
+    width: 1000%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.45;
+    top: 0;
+    left: 0rem;
+    -webkit-animation: opacity-menu 0.2s ease-in;
+            animation: opacity-menu 0.2s ease-in;
+  }
+  header.header .menu-mobile.active {
+    transform: translateX(0);
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .footer {
@@ -4538,6 +4732,9 @@ section#franchise .consultaion {
   background-color: white;
   padding: 8.5rem 0;
 }
+section#franchise .consultaion .call-mobile {
+  display: none;
+}
 section#franchise .consultaion .call {
   display: flex;
   flex-direction: column;
@@ -6863,6 +7060,9 @@ section#address .map .info {
   padding-right: 0.5rem;
   overflow-y: scroll;
 }
+section#address .map .info::-webkit-scrollbar {
+  display: none;
+}
 section#address .map .info .simplebar-scrollbar::before {
   background-color: #DEDCD8;
   height: 7rem;
@@ -7454,8 +7654,8 @@ section#filters .favorites__menu .sort__title .filter.active {
   border-radius: 8px;
   z-index: 0;
   box-shadow: 0px 5px 25px rgba(36, 38, 60, 0.05);
-  -webkit-animation: opacity 0.3s ease-in;
-          animation: opacity 0.3s ease-in;
+  -webkit-animation: opacity 0.2s ease-in;
+          animation: opacity 0.2s ease-in;
 }
 section#filters .favorites__menu .sort__title .filter.active .filter-title {
   padding: 0.5rem 0 1rem;
@@ -7468,49 +7668,54 @@ section#filters .favorites__menu .wrapper {
   border-radius: 8px;
 }
 section#filters .favorites__menu .wrapper .categories {
+  margin-bottom: 0.3rem;
+}
+section#filters .favorites__menu .wrapper .categories:last-child {
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+section#filters .favorites__menu .wrapper .categories .categories-item {
   background-color: white;
   border-radius: 6px;
-  padding: 2rem 1.35rem 2rem;
+  padding: 1rem 1.35rem 2rem;
   max-height: 0rem;
   overflow: hidden;
   cursor: pointer;
   margin-top: 0.3rem;
 }
-section#filters .favorites__menu .wrapper .categories:first-child {
+section#filters .favorites__menu .wrapper .categories .categories-item:first-child {
   margin-top: 0;
 }
-section#filters .favorites__menu .wrapper .categories svg {
+section#filters .favorites__menu .wrapper .categories .categories-item svg {
   width: 0.9rem;
   height: 0.9rem;
   opacity: 0;
   transition: 0.2s ease-in;
 }
-section#filters .favorites__menu .wrapper .categories .pick {
+section#filters .favorites__menu .wrapper .categories .categories-item .pick {
   font-size: 0.95rem;
   letter-spacing: 0.44px;
   color: #939393;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 0;
 }
-section#filters .favorites__menu .wrapper .categories .pick:hover svg {
+section#filters .favorites__menu .wrapper .categories .categories-item .pick:hover svg {
   opacity: 1;
 }
-section#filters .favorites__menu .wrapper .categories ul {
-  margin-top: 1.5rem;
-}
-section#filters .favorites__menu .wrapper .categories ul li {
+section#filters .favorites__menu .wrapper .categories .categories-item ul li {
   font-size: 0.85rem;
   letter-spacing: 0.44px;
   color: #505154;
   font-weight: 500;
-  margin-bottom: 1.5rem;
+  padding: 1rem 0;
 }
-section#filters .favorites__menu .wrapper .categories ul li span {
+section#filters .favorites__menu .wrapper .categories .categories-item ul li span {
   margin-left: 0.5rem;
   color: #DEDCD8;
 }
-section#filters .favorites__menu .wrapper .categories ul li a {
+section#filters .favorites__menu .wrapper .categories .categories-item ul li a {
   color: #303133;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
@@ -7518,13 +7723,16 @@ section#filters .favorites__menu .wrapper .categories ul li a {
   border-bottom: 1px solid transparent;
   transition: 0.2s ease-in;
 }
-section#filters .favorites__menu .wrapper .categories ul li a:hover {
+section#filters .favorites__menu .wrapper .categories .categories-item ul li a:hover {
   border-bottom: 1px solid black;
 }
-section#filters .favorites__menu .wrapper .categories ul li a.all {
+section#filters .favorites__menu .wrapper .categories .categories-item ul li a.all {
   border-bottom: 1px solid black;
 }
-section#filters .favorites__menu .wrapper .categories.active {
+section#filters .favorites__menu .wrapper .categories.active:last-child {
+  padding-bottom: 0;
+}
+section#filters .favorites__menu .wrapper .categories.active .categories-item {
   background-color: #F5F4F1;
   max-height: -webkit-fit-content;
   max-height: -moz-fit-content;
@@ -7532,12 +7740,12 @@ section#filters .favorites__menu .wrapper .categories.active {
   -webkit-animation: opacity 0.2s ease-in;
           animation: opacity 0.2s ease-in;
 }
-section#filters .favorites__menu .wrapper .categories.active svg {
+section#filters .favorites__menu .wrapper .categories.active .categories-item svg {
   opacity: 1;
   -webkit-animation: rotate 0.2s ease-in;
           animation: rotate 0.2s ease-in;
 }
-section#filters .favorites__menu .wrapper .categories.active #vertical {
+section#filters .favorites__menu .wrapper .categories.active .categories-item #vertical {
   opacity: 0;
 }
 section#filters .favorites__menu .title {
@@ -8977,6 +9185,11 @@ section#test .links a span {
     border-radius: 8px 0 0 8px;
     position: -webkit-sticky;
     position: sticky;
+    top: 10rem;
+    margin-left: auto;
+    height: 3.5rem;
+    bottom: 1rem;
+    right: 0;
   }
   .filter-mobile .filter-products .top svg {
     width: 0.9rem;
@@ -9004,13 +9217,19 @@ section#test .links a span {
   }
 
   .filter-mobile-menu {
-    display: block;
+    display: none;
+    position: fixed;
     z-index: 10;
     top: 5vh;
     left: 0;
     width: 100%;
-    min-height: 95vh;
+    height: 100%;
+    max-height: 95vh;
+    overflow-y: scroll;
     background-color: white;
+  }
+  .filter-mobile-menu::-webkit-scrollbar {
+    display: none;
   }
   .filter-mobile-menu .menu-header {
     font-size: 1rem;
@@ -9024,10 +9243,10 @@ section#test .links a span {
     position: relative;
   }
   .filter-mobile-menu .menu-header svg {
-    width: 1.4rem;
-    height: 1.3rem;
+    width: 1.2rem;
+    height: 1.2rem;
     position: absolute;
-    right: 1.5rem;
+    right: 2rem;
     top: 1.2rem;
   }
   .filter-mobile-menu .filter-mobile-list .filter-mobile-items {
@@ -9108,6 +9327,11 @@ section#test .links a span {
   }
   .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div {
     padding-left: 0.5rem;
+    display: flex;
+  }
+  .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div svg {
+    opacity: 0;
+    transition: 0.2s ease-in;
   }
   .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers div input[type=checkbox] {
     display: none;
@@ -9123,7 +9347,7 @@ section#test .links a span {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    padding: 1rem 1.5rem 1rem 2.5rem;
+    padding: 1rem 1.5rem 1rem 3rem;
     font-size: 1.2rem;
     font-weight: 400;
     color: #505154;
@@ -9140,7 +9364,7 @@ section#test .links a span {
     width: 0.6rem;
     height: 0.6rem;
     position: absolute;
-    left: 0rem;
+    left: 0.5rem;
     top: 1rem;
     background-color: white;
     border-radius: 50%;
@@ -9171,6 +9395,7 @@ section#test .links a span {
     height: 1.2rem;
     align-items: center;
     margin-right: 0.5rem;
+    opacity: 1;
   }
   .filter-mobile-menu .filter-mobile-list .filter-mobile-items .answers .active label {
     background-color: #F5F4F1;
@@ -9247,6 +9472,12 @@ section#test .links a span {
     width: 100%;
     height: initial;
     padding: 1.4rem 1.5rem 1.3rem;
+  }
+
+  .filter-mobile-menu.active {
+    display: block;
+    -webkit-animation: opacity 0.2s ease-in;
+            animation: opacity 0.2s ease-in;
   }
 }
 @keyframes opacity {
@@ -10815,6 +11046,19 @@ section#test .links a span {
 .remodal[data-remodal-id=cookie-change-location] .wrapper .select-box .option .radio {
   display: none;
 }
+@media only screen and (max-width: 1200px) {
+  .remodal[data-remodal-id=cookie-change-location] .wrapper .selected {
+    font-size: 1rem;
+  }
+  .remodal[data-remodal-id=cookie-change-location] .option {
+    font-size: 0.9rem;
+  }
+  .remodal[data-remodal-id=cookie-change-location] .option img {
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 0.8rem;
+  }
+}
 
 .remodal[data-remodal-id=cookie] {
   max-width: 29rem;
@@ -10893,6 +11137,7 @@ section#test .links a span {
   font-size: 0.9rem;
   letter-spacing: 0.44px;
   background-color: transparent;
+  font-family: "Inter";
 }
 .remodal[data-remodal-id=login] form fieldset button {
   background-color: #303133;
@@ -11097,6 +11342,12 @@ section#test .links a span {
   font-family: "Neonderthaw", cursive;
   font-weight: 700;
 }
+.remodal[data-remodal-id=login-email] form fieldset #font {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0.4px;
+}
 .remodal[data-remodal-id=login-email] form fieldset input[type=password] {
   letter-spacing: 4px;
 }
@@ -11124,17 +11375,6 @@ section#test .links a span {
 .remodal[data-remodal-id=login-email] form .main-btn {
   width: 100%;
   margin-bottom: 2.8rem;
-}
-.remodal[data-remodal-id=login-email] .forget-password p {
-  margin: 0 auto;
-  max-width: 25rem;
-  margin-bottom: 2.5rem;
-  line-height: 1.5rem;
-}
-.remodal[data-remodal-id=login-email] .forget-password svg {
-  width: 2.5rem;
-  height: 2.45rem;
-  margin-bottom: 2.7rem;
 }
 
 .remodal[data-remodal-id=login-phone] {
@@ -12671,6 +12911,173 @@ section#test .links a span {
   padding: 1.3rem 0 1.2rem;
   width: 100%;
   font-size: 1.1rem;
+}
+
+.remodal[data-remodal-id=forget-password] {
+  background-color: #F5F4F1;
+}
+.remodal[data-remodal-id=forget-password] h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.remodal[data-remodal-id=forget-password] form {
+  max-width: 23rem;
+  margin: 0 auto;
+}
+.remodal[data-remodal-id=forget-password] form fieldset {
+  border: 1px solid #505154;
+  background: transparent;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.8rem;
+  height: 3.6rem;
+}
+.remodal[data-remodal-id=forget-password] form fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 0.9rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+  text-align: left;
+}
+.remodal[data-remodal-id=forget-password] form fieldset input {
+  border: none;
+  min-width: 18rem;
+  outline: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Neonderthaw", cursive;
+  font-weight: 700;
+}
+.remodal[data-remodal-id=forget-password] form fieldset input[type=password] {
+  letter-spacing: 4px;
+}
+.remodal[data-remodal-id=forget-password] form fieldset input[type=password]::-moz-placeholder {
+  letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=forget-password] form fieldset input[type=password]:-ms-input-placeholder {
+  letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=forget-password] form fieldset input[type=password]::placeholder {
+  letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=forget-password] form .main-btn {
+  width: 100%;
+  margin-bottom: 2.8rem;
+}
+.remodal[data-remodal-id=forget-password] .forget-password p {
+  max-width: 25rem;
+  line-height: 1.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #939393;
+  margin: 0 auto 2.5rem;
+}
+.remodal[data-remodal-id=forget-password] .forget-password p span {
+  color: #303133;
+}
+.remodal[data-remodal-id=forget-password] .forget-password svg {
+  width: 2.5rem;
+  height: 2.45rem;
+  margin-bottom: 2.7rem;
+}
+
+.remodal[data-remodal-id=new-password] {
+  background-color: #F5F4F1;
+}
+.remodal[data-remodal-id=new-password] h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+.remodal[data-remodal-id=new-password] p {
+  font-size: 0.95rem;
+  letter-spacing: 0.7px;
+  color: #939393;
+  margin-bottom: 3rem;
+}
+.remodal[data-remodal-id=new-password] p span {
+  color: #303133;
+}
+.remodal[data-remodal-id=new-password] form {
+  max-width: 23rem;
+  margin: 0 auto;
+}
+.remodal[data-remodal-id=new-password] form fieldset {
+  border: 1px solid #505154;
+  background: transparent;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.8rem;
+  height: 3.6rem;
+}
+.remodal[data-remodal-id=new-password] form fieldset legend {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: 0.9rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+  color: #505150;
+  text-align: left;
+}
+.remodal[data-remodal-id=new-password] form fieldset input {
+  border: none;
+  min-width: 18rem;
+  outline: none;
+  border-radius: 8px;
+  padding: 0 1.5rem;
+  font-size: 1.1rem;
+  width: 100%;
+  background-color: transparent;
+  font-family: "Neonderthaw", cursive;
+  font-weight: 700;
+}
+.remodal[data-remodal-id=new-password] form fieldset input[type=password] {
+  letter-spacing: 4px;
+}
+.remodal[data-remodal-id=new-password] form fieldset input[type=password]::-moz-placeholder {
+  letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=new-password] form fieldset input[type=password]:-ms-input-placeholder {
+  letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=new-password] form fieldset input[type=password]::placeholder {
+  letter-spacing: 0;
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 0.95rem;
+  letter-spacing: 0.44px;
+}
+.remodal[data-remodal-id=new-password] form .main-btn {
+  width: 100%;
+  margin-bottom: 2.8rem;
 }
 
 /*modals*/

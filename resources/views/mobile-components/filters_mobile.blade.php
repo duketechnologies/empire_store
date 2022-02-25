@@ -196,19 +196,19 @@
       </div>
       <div class="answers">
         <div>
-          <input type="checkbox" id="material1" name="material[]" value="Серебро">
+          <input type="checkbox" id="material1" name="material[]" value="Серебро"/>
           <label for="material1">Серебро</label>
         </div>
         <div>
-          <input type="checkbox" id="material2" name="material[]" value="Золото">
+          <input type="checkbox" id="material2" name="material[]" value="Золото"/>
           <label for="material2">Золото</label>
         </div>
         <div>
-          <input type="checkbox" id="material3" name="material[]" value="Дерево">
+          <input type="checkbox" id="material3" name="material[]" value="Дерево"/>
           <label for="material3">Дерево</label>
         </div>
         <div>
-          <input type="checkbox" checked id="material4" name="material[]" value="Фарфор">
+          <input type="checkbox" checked id="material4" name="material[]" value="Фарфор"/>
           <label for="material4">Фарфор</label>
         </div>
       </div>
@@ -235,31 +235,31 @@
       </div>
       <div class="answers">
         <div class="color-1 active">
-          <input type="checkbox" id="material1" name="material[]" value="Серебро">
-          <label for="material1">Белый</label>
+          <input type="checkbox" id="color1" name="color[]" value="Серебро"/>
+          <label for="color1">Белый</label>
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
           </svg>
         </div>
         <div class="color-2 active">
-          <input type="checkbox" id="material2" name="material[]" value="Золото">
-          <label for="material2">Черный</label>
+          <input type="checkbox" id="color2" name="color[]" value="Золото"/>
+          <label for="color2">Черный</label>
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
           </svg>
 
         </div>
         <div class="color-3 active">
-          <input type="checkbox" id="material3" name="material[]" value="Дерево">
-          <label for="material3">Зеленый</label>
+          <input type="checkbox" id="color3" name="color[]" value="Дерево"/>
+          <label for="color3">Зеленый</label>
           <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 9L4.23309 11.4248C4.66178 11.7463 5.26772 11.6728 5.60705 11.2581L14 1" stroke="#939393" stroke-width="2" stroke-linecap="round"/>
           </svg>
 
         </div>
         <div class="color-4">
-          <input type="checkbox" id="material4" name="material[]" value="Фарфор">
-          <label for="material4">Желтый</label>
+          <input type="checkbox" id="color4" name="color[]" value="Фарфор"/>
+          <label for="color4">Желтый</label>
         </div>
       </div>
     </div>

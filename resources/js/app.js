@@ -42,6 +42,9 @@ $(document).ready(function () {
   const language = document.querySelector('.language')
   const headerPhone = document.querySelector('#header-phone')
   // Mobile
+  const filter_sort_open = document.querySelector('.filter-header')
+  const filter_sort_close = document.querySelector('.menu-header')
+  const filter_sort_menu = document.querySelector('.filter-mobile-menu')
   const faqs_mobile = document.querySelectorAll('.filter-mobile-items')
   const activeTrigger = document.querySelectorAll('#menu-trigger')
   const activeContent = document.querySelectorAll('.filter-mobile-items .answers')
@@ -54,20 +57,74 @@ $(document).ready(function () {
   const filterProducts = document.querySelector('.filter-products')
   const openBtn = document.querySelectorAll('#open-block .open')
   const openBlock = document.querySelectorAll('#open-block .open-content')
-  const filterOpenBlock = document.querySelector('.sort__title')
-  const filterCloseBlock = document.querySelector('.filter-title')
   const filterBlock = document.querySelector('#filter-block')
   const myElement = document.querySelector('#filter-string')
   const search_mobile_open = document.querySelector('.search-icon')
   const search_mobile_close = document.querySelector('.search-close-btn')
 
+  // mobile burger click
+  const menu_mobile = document.querySelector('.menu-mobile')
+  const menu_mobile_close = document.querySelectorAll('#anti-burger')
+  const menu_mobile_bg = document.querySelector('.menu-mobile-bg')
+  burger.addEventListener('click', () => {
+    menu_mobile.classList.add('active')
+    menu_mobile_bg.classList.add('active')
+  })
+  document.addEventListener('click', function(e) {
+    const target_mobile = e.target;
+    const its_menu_mobile = target_mobile == menu_mobile || menu_mobile.contains(target_mobile);
+    const its_btnMenu_mobile = target_mobile == burger;
+    const menu_mobile_is_active = menu_mobile.classList.contains('active');
+
+    if (!its_menu_mobile && !its_btnMenu_mobile && menu_mobile_is_active ) {
+      menu_mobile.classList.remove('active')
+      menu_mobile_bg.classList.remove('active')
+    }
+  });
+  menu_mobile_close ? menu_mobile_close.forEach(item => {
+    item.addEventListener('click', () => {
+      menu_mobile.classList.remove('active')
+      menu_mobile_bg.classList.remove('active')
+    })
+  }) : null
+  // mobile burger click
+
+  // переход на другие ссылки внутри мобильного меню
+  const main_items = document.querySelectorAll('#main-items li')
+  const mainBlock = document.querySelector('.menu-mobile--main')
+  const referenceBlock = document.querySelector('.menu-mobile--references')
+  const back_to_main_button = document.querySelector('.menu-back-button')
+  main_items.forEach((item,index) => {
+    item.addEventListener('click', () => {
+      mainBlock.classList.remove('active')
+      referenceBlock.classList.add('active')
+    })
+  })
+  back_to_main_button.addEventListener('click', () => {
+    referenceBlock.classList.remove('active')
+    mainBlock.classList.add('active')
+  })
+  // переход на другие ссылки внутри мобильного меню
+
+  // filter mobile sort menu , страница "каталог и фильтры
+  if (href.includes('/filters')) {
+    filter_sort_open.addEventListener('click', () => {
+    filter_sort_menu.classList.add('active')
+    })
+    filter_sort_close.addEventListener('click', () => {
+    filter_sort_menu.classList.remove('active')
+    })
+  }
+
+  // filter mobile sort menu , страница "каталог и фильтры
+
   // const myString = document.querySelector('#filter-string').innerHTML
 
-  // Mobile open search block
-    search_mobile_open.addEventListener('click', () => {
-      search_mobile_open.classList.add('active')
-      search_block.style.transform = "translateY(-.5rem)"
-    })
+  // Mobile open search block , header
+  search_mobile_open.addEventListener('click', () => {
+    search_mobile_open.classList.add('active')
+    search_block.style.transform = "translateY(-.5rem)"
+  })
   search_mobile_close.addEventListener('click', () => {
     search_mobile_open.classList.remove('active')
     search_block.style.transform = "translateY(-34rem)"
@@ -104,9 +161,7 @@ $(document).ready(function () {
       filterProducts.classList.remove('grid')
     })
     // FILTER PAGE
-    filterOpenBlock.addEventListener('click', () => {
-      filterBlock.classList.add('active')
-    })
+
     // FILTER PAGE
   }
   // Mobile filter page , handleChange display: flex to grid
@@ -218,13 +273,32 @@ $(document).ready(function () {
     }
   })
 
-  //
-  categories.forEach((item, index) => {
+  // Открывает сортировка товаров , страница "каталог и фильтры"
+  if (href.includes('/filters')) {
+    const sortClose = document.querySelector('.sort__title')
+    const sortBlock = document.querySelector('#filter-block')
+
+    sortClose.addEventListener('click', () => {
+      sortBlock.classList.toggle('active')
+    })
+  }
+  // Открывает сортировка товаров , страница "каталог и фильтры"
+
+  // Открывает подменюшки предметов , страница "каталог и фильтры"
+  const pick = document.querySelectorAll('.pick')
+
+  // categories.forEach((item, index) => {
+  //   item.addEventListener('click', () => {
+  //     categories[index].classList.add('active')
+  //     console.log(1)
+  //   })
+  // });
+
+  pick.forEach((item,index) => {
     item.addEventListener('click', () => {
       categories[index].classList.toggle('active')
     })
   })
-  //
 
   // Выделение блока другим цветом при активном "крафт-пакета" на странице "корзина"
   craftLabel.forEach((item, index) => {
@@ -419,14 +493,6 @@ $(document).ready(function () {
   }
 
   // Меню при клике на каталог
-  const close_menu = () => {
-    if(menu.classList.contains('active')){
-      document.addEventListener('click', () => {
-        menu.classList.remove('active')
-
-      })
-    }
-  }
   const openMenu = function(e) {
     menu.classList.add('active');
     document.querySelector('.menu-bg').classList.add('active')
@@ -435,10 +501,6 @@ $(document).ready(function () {
     e.preventDefault()
     openMenu()
   })
-  burger.addEventListener('click', (e) => {
-    menu.classList.add('active');
-    document.querySelector('.menu-bg').classList.add('active')
-  })
 
   document.addEventListener('click', function(e) {
     const target = e.target;
@@ -446,7 +508,8 @@ $(document).ready(function () {
     const its_btnMenu = target == catalog;
     const menu_is_active = menu.classList.contains('active');
 
-    if (!its_menu && !its_btnMenu && menu_is_active) {
+
+    if (!its_menu && !its_btnMenu && menu_is_active ) {
       menu.classList.remove('active')
       document.querySelector('.menu-bg').classList.remove('active')
     }
@@ -537,11 +600,7 @@ $(document).ready(function () {
   // Переход на следующий инпут при заполнений первого , модалка "код с телефона"
 
   // открытие блоков при клике , мобильная сортировка , страница "каталог и фильтры"
-  if (href.includes('filter')) {
-    document.querySelector('.sort').addEventListener('click', () => {
-      document.querySelector('.filter').classList.toggle('active')
-    })
-  }
+
   // MOBILE FILTER MENU
   if ( href.includes('/filters')) {
     activeTrigger.forEach((item,index) => {
