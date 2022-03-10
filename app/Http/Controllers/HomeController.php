@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\PriceListController;
 
 class HomeController extends Controller
 {
@@ -70,7 +73,11 @@ class HomeController extends Controller
     }
     public function filters()
     {
-        return view('pages.filters');
+        $products = ProductController::index();
+        $categories = CategoryController::index();
+        $pricelist = PriceListController::index();
+
+        return view('pages.filters', compact('products', 'categories', 'pricelist'));
     }
     public function ordering()
     {

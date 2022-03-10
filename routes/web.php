@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CityListController;
-use App\Http\Controllers\GoodsController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\AstrumDataController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,4 +41,5 @@ Route::get('/test', [HomeController::class, 'test']);
 Route::get('/image-test', [HomeController::class, 'imageTest']);
 
 Route::get('/cities', [CityListController::class, 'getCities']);
-Route::get('/goods', [GoodsController::class, 'getGoods']);
+Route::get('/products', [AstrumDataController::class, 'importProducts']);
+Route::get('/categories', [AstrumDataController::class, 'importCategories']);
