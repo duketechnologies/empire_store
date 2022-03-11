@@ -40,6 +40,5 @@ Route::get('/ordering', [HomeController::class, 'ordering']);
 Route::get('/test', [HomeController::class, 'test']);
 Route::get('/image-test', [HomeController::class, 'imageTest']);
 
-Route::get('/cities', [CityListController::class, 'getCities']);
 Route::get('/products', [AstrumDataController::class, 'importProducts']);
 Route::get('/categories', [AstrumDataController::class, 'importCategories']);

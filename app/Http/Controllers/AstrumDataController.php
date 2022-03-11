@@ -15,7 +15,11 @@ class AstrumDataController extends Controller
     {
         $import = new AstrumClient();
 
-        $response = $import->client->request('GET', '/shuttle.dll/AstrumService?action=goods&secret=477642ad448137234f2a9ef48857c40f');
+        $secretKey = config('services.astrum.secret');
+
+        $action = 'goods';
+
+        $response = $import->client->request('GET', '/shuttle.dll/AstrumService?action='.$action.'&secret='.$secretKey);
         $data = $response->getBody();
 
         $products = XmlToArray::convert($data);
@@ -33,7 +37,11 @@ class AstrumDataController extends Controller
     {
         $import = new AstrumClient();
 
-        $response = $import->client->request('GET', '/shuttle.dll/AstrumService?action=category_list&secret=477642ad448137234f2a9ef48857c40f');
+        $secretKey = config('services.astrum.secret');
+
+        $action = 'category_list';
+
+        $response = $import->client->request('GET', '/shuttle.dll/AstrumService?action='.$action.'&secret='.$secretKey);
         $data = $response->getBody();
 
         $categories = XmlToArray::convert($data);
