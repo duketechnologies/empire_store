@@ -15,6 +15,9 @@
       </a>
       <img src={{ url("/i/news/news_img.png") }} alt=""/>
     </div>
+    <div class="mobile-title">
+      Новости
+    </div>
     <div class="cards">
       <a href="/single_news" class="card">
         <img src={{ url("/i/news/card_img.png") }} alt=""/>

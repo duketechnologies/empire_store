@@ -183,20 +183,18 @@
       }
 
     }
-        .buttons {
-          display: flex;
-          align-items: center;
-          margin-top: 1rem;
-
-            .primary-btn {
-                width: 100%;
-            }
-        }
-      .main-btn {
-          width: 100%;
-          margin-bottom: 1rem;
+      .buttons {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+          .primary-btn {
+              width: 100%;
+          }
       }
-
+      .main-btn {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

@@ -1,0 +1,45 @@
+.remodal[data-remodal-id=vacancies-mobile-modal] {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  margin-bottom: 0;
+  border-radius: 0;
+  padding: 4.5rem 2rem !important;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: left;
+    margin-bottom: 6rem;
+    margin-top: 3.8rem;
+    li {
+      font-size: 1.5rem;
+      color: #505154;
+      font-weight: 300;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      svg {
+        opacity: 0;
+        transition: .2s ease-in;
+      }
+    }
+    li.selected {
+      color: #303133;
+      font-weight: 400;
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+  .main-btn {
+    height: initial;
+    padding: 1.3rem 0 1.2rem;
+    width: 100%;
+    font-size: 1.1rem;
+  }
+}

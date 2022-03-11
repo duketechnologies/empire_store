@@ -18,19 +18,20 @@ section#news {
         font-weight: 300;
         font-size: 1.6rem;
         &:first-child {
-            flex: 1;
-            display: flex;
-            align-items: center;
+          flex: 1;
+          display: flex;
+          align-items: center;
         }
         &:last-child {
           font-size: 1.25rem;
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 4.5rem;
-            align-items: center;
+          display: flex;
+          gap: 1rem;
+          margin-bottom: 4.5rem;
+          align-items: center;
           svg {
-              width: .6rem;
-              height: .9rem;
+            width: .6rem;
+            height: .9rem;
+            margin-top: 0.2rem;
           }
         }
       }
@@ -39,6 +40,9 @@ section#news {
       width: 100%;
       max-height: 30rem;
     }
+  }
+  .mobile-title {
+    display: none;
   }
   .cards {
     display: grid;
@@ -99,52 +103,106 @@ section#news {
       letter-spacing: 2px;
       position: relative;
         svg {
-            width: .75rem;
-            height: .45rem;
-            margin-right: .5rem;
-            transition: .2s ease-in;
-            >path {
-                transition: .2s ease-in;
-            }
+          width: .75rem;
+          height: .45rem;
+          margin-right: .5rem;
+          transition: .2s ease-in;
+          >path {
+              transition: .2s ease-in;
+          }
         }
         &:hover {
-            svg {
-                transition: .2s ease-in;
-                >path {
-                    fill: black;
-                }
+          svg {
+            transition: .2s ease-in;
+            >path {
+              fill: black;
             }
+          }
         }
     }
       .secondary-btn {
-          color: #505154;
-          transition: .2s ease-in;
-          &:hover {
-              color: black;
-          }
+        color: #505154;
+        transition: .2s ease-in;
+        &:hover {
+          color: black;
+        }
       }
     .pagination {
       display: flex;
       align-items: center;
       gap: 2rem;
         a {
-            font-size: .9rem;
-            color: #939393;
-            padding-bottom: .3rem;
-            transition: .2s ease-in;
-            &:hover {
-                color: black;
-            }
-            svg {
-                width: 2rem;
-                height: 1rem;
-            }
+          font-size: .9rem;
+          color: #939393;
+          padding-bottom: .3rem;
+          transition: .2s ease-in;
+          &:hover {
+            color: black;
+          }
+          svg {
+            width: 2rem;
+            height: 1rem;
+          }
         }
         .active {
-            border-bottom: 1px solid black;
-            padding-bottom: .3rem;
-            color: black;
+          border-bottom: 1px solid black;
+          padding-bottom: .3rem;
+          color: black;
         }
+    }
+  }
+  @include responsive {
+    .hero, .route {
+      display: none;
+    }
+    .mobile-title {
+      display: block;
+      font-size: 1.89rem;
+      font-family: 'Spectral';
+      padding: 3rem 2rem;
+      font-style: italic;
+      color: #303133;
+
+    }
+    .cards {
+      margin:0;
+      grid-template-columns: 1fr;
+      gap: 3rem 0;
+      .card {
+        padding:0;
+        border-radius: 0;
+        .title {
+          margin-left: 2rem;
+        }
+        .info {
+          margin:0;
+          padding:2rem;
+          font-size: 1.2rem;
+        }
+        .action {
+          margin-left: 2rem;
+          display: none;
+        }
+      }
+    }
+    .consultaion_block {
+      margin-top: 3rem;
+      .call {
+        width: 100%;
+        max-width: initial;
+        padding: 0 2rem;
+        h1 {
+          font-size: 1.5rem;
+        }
+        form {
+          input {
+            width: 65%;
+          }
+        }
+        p {
+          display: none;
+        }
+      }
     }
   }
 }

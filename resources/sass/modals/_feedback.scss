@@ -1,91 +1,117 @@
 .remodal[data-remodal-id=feedback] {
-    padding:0 !important;
-    max-width: 105rem;
-    .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        img {
-            width: 100%;
-        }
+  padding:0 !important;
+  max-width: 81%;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    img {
+      width: 100%;
     }
-    .consultaion {
+  }
+  .consultaion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 8.5rem 0;
+    .call {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 21rem;
+      h1 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin: 0;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: .9rem;
+        color: #505154;
+        margin-top: 1rem;
+        width: 30rem;
+        letter-spacing: .7px;
+        line-height: 1.3rem;
+        margin-bottom: 4rem;
+        a {
+          background-color: rgba(193, 146, 69, 0.1);
+          padding:.2rem;
+        }
+      }
+      form {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: white;
-        padding: 8.5rem 0;
-        .call {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 21rem;
-            h1 {
-                font-size: 1.3rem;
-                text-transform: uppercase;
-                margin: 0;
-                margin-bottom: 2rem;
-            }
-            p {
-                font-size: .9rem;
-                color: #505154;
-                margin-top: 1rem;
-                width: 30rem;
-                letter-spacing: .7px;
-                line-height: 1.3rem;
-                margin-bottom: 4rem;
-                a {
-                    background-color: rgba(193, 146, 69, 0.1);
-                    padding:.2rem;
-                }
-            }
-            form {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-                margin-top: 1.5rem;
-                width: 100%;
-                input {
-                    background-color: transparent;
-                    border: none;
-                    border-bottom: 1px solid #303133;
-                    text-align: center;
-                    padding:1rem;
-                    outline: none;
-                    width: 85%;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        width: 100%;
+        input {
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid #303133;
+          text-align: center;
+          padding:1rem;
+          outline: none;
+          width: 85%;
 
-                }
-                .main-btn {
-                    margin-top: 2rem;
-                    width: 100%;
-                    font-weight: 500;
-                }
-            }
-            .whatsapp-btn {
-                background-color: #27AE60;
-                text-transform: uppercase;
-                font-size: 0.95rem;
-                width: 100%;
-                height: 3.3rem;
-                color: white;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-weight: 600;
-                letter-spacing: 1px;
-                border: none;
-                outline: none;
-                cursor: pointer;
-                border-radius: 3px;
-                gap: 1rem;
-                margin-top: 1rem;
-                svg {
-                    width: 1rem;
-                    height: 1rem;
-                }
-            }
         }
+        .main-btn {
+          margin-top: 2rem;
+          width: 100%;
+          font-weight: 500;
+        }
+      }
+      .whatsapp-btn {
+        background-color: #27AE60;
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        width: 100%;
+        height: 3.3rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        border-radius: 3px;
+        gap: 1rem;
+        margin-top: 1rem;
+        svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
     }
+  }
+  @include responsive {
+    max-width: initial;
+    padding: 3rem !important;
+    .content {
+      display: block;
+      img {
+        display: none;
+      }
+    }
+    .consultaion {
+      .call {
+        max-width: initial;
+        width: 100%;
+        p {
+          display: none;
+        }
+        form {
+          input {
+            border: 1px solid #505154;
+            border-radius: 6px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
 }

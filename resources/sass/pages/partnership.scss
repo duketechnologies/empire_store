@@ -1,110 +1,151 @@
 section#partnership {
-    .route {
-        margin-bottom: 1.2rem;
-        font-size: .73rem;
+  .route {
+    margin-bottom: 1.2rem;
+    font-size: .73rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    &:hover {
+      svg {
+        transform: translateX(.3rem) translateY(-.3rem);
+      }
+    }
+    svg {
+      width: .6rem !important;
+      height: .6rem;
+      margin-bottom: .7rem;
+      transition: .2s ease-in;
+    }
+  }
+  h1 {
+    font-family: Spectral;
+    font-size: 2.6rem;
+    font-style: italic;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  p {
+    font-size: .9rem;
+    color: #505154;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    letter-spacing: .7px;
+    line-height: 1.3rem;
+  }
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 7rem;
+    svg {
+      width: 3.4rem;
+    }
+  }
+  .details {
+    background-image: url("/i/partnership_img.png");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EBEBEB;
+    padding: 8rem;
+    margin: 0 2.2rem;
+    border-radius: 1rem;
+  }
+  .cooperation {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.35rem;
+    padding: 10rem;
+    margin-top: 1rem;
+    h2 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: #505154;
+
+    }
+    .contacts {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      a {
+        font-size: 0.9rem;
         font-weight: 700;
+        border-bottom: 1px solid #DEDCD8;
+        transition: .2s ease-in-out;
+        padding-bottom: .3rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        position: relative;
         &:hover {
-            svg {
-                transform: translateX(.3rem) translateY(-.3rem);
-            }
+          border-bottom: 1px solid black;
         }
-        //&::after {
-        //    content: '';
-        //    background-image: url("/i/route_icon.png");
-        //    background-repeat: no-repeat;
-        //    background-position: top -20% right;
-        //    z-index: 10;
-        //    position: absolute;
-        //    width: 1rem;
-        //    height: 1rem;
-        //}
-        svg {
-            width: .6rem !important;
-            height: .6rem;
-            margin-bottom: .7rem;
-            transition: .2s ease-in;
-        }
+      }
     }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap:1rem;
+      justify-content: center;
+    }
+  }
+  @include responsive {
     h1 {
-        font-family: Spectral;
-        font-size: 2.6rem;
-        font-style: italic;
-        margin-top: 2rem;
-        text-align: center;
+      text-align: left;
     }
     p {
-        font-size: .9rem;
-        color: #505154;
-        text-align: center;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-        letter-spacing: .7px;
-        line-height: 1.3rem;
+      text-align: left;
+      font-size: 1.1rem;
+      margin-bottom: 6rem;
+    }
+    .route {
+      font-size: 1rem;
+      align-self: center;
     }
     .info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 4rem 7rem;
-        svg {
-            width: 3.4rem;
-        }
+      padding: 2.5rem 2rem 4rem;
+      align-items: flex-start;
+      #display {
+        display: none;
+      }
     }
     .details {
-        background-image: url("/i/partnership_img.png");
-        background-repeat: no-repeat;
-        background-position: left bottom;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        background-color: #EBEBEB;
-        padding: 8rem;
-        margin: 0 2.2rem;
-        border-radius: 1rem;
+      margin:0;
+      padding: 3rem 2rem 40rem;
+      align-items: flex-start;
+      background-position: bottom left 5%;
+      border-radius: 0;
     }
     .cooperation {
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      padding: 10rem 2rem;
+      margin-top: 0;
+      h2 {
+        text-align: center;
+        line-height: 2rem;
+        font-weight: 500;
+      }
+      .contacts {
         flex-direction: column;
-        gap: 2.35rem;
-        padding: 10rem;
-        margin-top: 1rem;
-        h2 {
-            font-size: 1.3rem;
-            text-transform: uppercase;
-            color: #505154;
-
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        a {
+          font-size: 1.1rem;
         }
-        .contacts {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-            a {
-                font-size: 0.9rem;
-                font-weight: 700;
-                border-bottom: 1px solid #DEDCD8;
-                transition: .2s ease-in-out;
-                padding-bottom: .3rem;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                &:hover {
-                    border-bottom: 1px solid black;
-                }
-            }
+      }
+      .buttons {
+        width: 100%;
+        .main-btn, .primary-btn {
+          width: 100%;
         }
-        .buttons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap:1rem;
-            justify-content: center;
-        }
+      }
     }
+  }
 }

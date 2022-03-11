@@ -1,111 +1,164 @@
 section#single_news {
-    .wrapper {
-        margin: 0 10.5rem;
+  .wrapper {
+    margin: 0 10.5rem;
+  }
+  .secondary-btn {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: fit-content;
+    text-transform: capitalize;
+    font-size: .95rem;
+    letter-spacing: .7px;
+    font-weight: 400;
+    padding:1rem;
+    margin-top: 2.3rem;
+  }
+  .main-img {
+    width: 100%;
+    margin-top: 2.3rem;
+    img {
+      width: 100%;
     }
-    .secondary-btn {
+  }
+  .title {
+    font-size: 2.35rem;
+    font-family: "Spectral";
+    font-style: italic;
+    margin-top: 4rem;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-start;
+      justify-content: space-between;
+    }
+    p {
+      font-size: .95rem;
+      line-height: 1.3rem;
+      letter-spacing: .7px;
+      color: #505154;
+      margin-top: 2.4rem;
+      margin-bottom: 5.6rem;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  h2 {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-family: "Spectral";
+    text-align: center;
+    margin: 4rem 0;
+  }
+  .secondary-img {
+    width: 100%;
+    img {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  }
+  .routes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-style: italic;
+    color: #505154;
+    font-family: "Spectral";
+    margin-bottom: 8rem;
+    margin-top: 6rem;
+    .prev {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      svg {
+        width: 5.2rem;
+        height: 5.2rem;
+      }
+    }
+    .next {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      div {
         display: flex;
-        align-self: center;
-        justify-content: center;
-        gap: 1rem;
-        max-width: fit-content;
-        text-transform: capitalize;
-        font-size: .95rem;
-        letter-spacing: .7px;
-        font-weight: 400;
-        padding:1rem;
-        margin-top: 2.3rem;
-    }
-    .main-img {
-        width: 100%;
-        margin-top: 2.3rem;
-        img {
-            width: 100%;
-        }
-    }
-    .title {
-        font-size: 2.35rem;
-        font-family: "Spectral";
-        font-style: italic;
-        margin-top: 4rem;
-    }
-    .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        div {
-            display: flex;
-            flex-direction: column;
-            align-self: flex-start;
-            justify-content: space-between;
-        }
-        p {
+        flex-direction: column;
+        gap: .7rem;
+        .name {
             font-size: .95rem;
-            line-height: 1.3rem;
             letter-spacing: .7px;
             color: #505154;
-            margin-top: 2.4rem;
-            margin-bottom: 5.6rem;
+            font-style: normal;
+            font-family: 'Inter';
+            align-self: flex-end;
         }
-        img {
-            width: 100%;
-        }
+      }
+      svg {
+        width: 5.2rem;
+        height: 5.2rem;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  @include responsive() {
+    .wrapper {
+      margin:0;
+    }
+    .secondary-btn {
+      display: none;
+    }
+    .main-img {
+      margin-top: 0;
+    }
+    .title {
+      margin:0;
+      padding: 4rem 2rem 0;
+    }
+    .content {
+      display: block;
+      p {
+        font-size: 1.05rem;
+        padding: 0 2rem;
+      }
+      img {
+        width: 97%;
+        margin:0 auto .5rem;
+      }
+    }
+    .mobile {
+      display: none;
     }
     h2 {
-        font-size: 1.6rem;
-        font-style: italic;
-        font-family: "Spectral";
-        text-align: center;
-        margin: 4rem 0;
-    }
-    .secondary-img {
-        width: 100%;
-        img {
-            width: 100%;
-            margin-bottom: 2rem;
-        }
+      display: none;
     }
     .routes {
-        display: flex;
-        align-items: center;
+      .prev {
+        display: none;
+      }
+      .next {
         justify-content: space-between;
-        font-size: 1.6rem;
-        font-style: italic;
-        color: #505154;
-        font-family: "Spectral";
-        margin-bottom: 8rem;
-        margin-top: 6rem;
-        .prev {
-            display: flex;
-            align-items: center;
-            gap: 2.4rem;
-            svg {
-                width: 5.2rem;
-                height: 5.2rem;
-            }
+        width: 100%;
+        padding: 0 2rem;
+        div {
+          p {
+            font-size: 1.8rem;
+          }
+          .name {
+            align-self: flex-start;
+            font-size: 1.1rem;
+          }
         }
-        .next {
-            display: flex;
-            align-items: center;
-            gap: 2.4rem;
-            div {
-                display: flex;
-                flex-direction: column;
-                gap: .7rem;
-                .name {
-                    font-size: .95rem;
-                    letter-spacing: .7px;
-                    color: #505154;
-                    font-style: normal;
-                    font-family: 'Inter';
-                    align-self: flex-end;
-                }
-
-            }
-            svg {
-                width: 5.2rem;
-                height: 5.2rem;
-                transform: rotate(180deg);
-            }
-        }
+      }
     }
+    .secondary-img {
+      display: none;
+    }
+  }
 }

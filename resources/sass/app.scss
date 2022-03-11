@@ -38,8 +38,18 @@
 @import "pages/filters.scss";
 @import "pages/ordering.scss";
 @import "pages/test.scss";
-@import "pages/image-test";
 /*pages*/
+
+/*mobile-components*/
+@import "mobile-components/tired_swiper";
+@import "mobile-components/preorder_swiper";
+@import "mobile-components/filters_mobile";
+@import "mobile-components/faq_block_mobile";
+@import "mobile-components/single_product_swiper";
+@import "mobile-components/basket-mobile";
+@import "mobile-components/excursion-mobile";
+@import "mobile-components/rules-franchise-mobile";
+/*mobile-components*/
 
 
 
@@ -51,7 +61,6 @@
 @import "modals/_feedback.scss";
 @import "modals/_comment.scss";
 @import "modals/_payment.scss";
-@import "modals/_menu.scss";
 @import "modals/_cookie-location";
 @import "modals/_cookie-change-location";
 @import "modals/_cookie";
@@ -66,4 +75,12 @@
 @import "modals/_edit-order";
 @import "modals/_access-order";
 @import "modals/_failed-order";
+@import "modals/_pickup-modal";
+@import "modals/_profile-order-mobile";
+@import "modals/_location-mobile";
+@import "modals/_edit-order-mobile";
+@import "modals/_vacancies-mobile";
+@import "modals/address-mobile-modal";
+@import "modals/forget-password";
+@import "modals/new-password";
 /*modals*/

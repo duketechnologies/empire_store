@@ -1,49 +1,82 @@
 .remodal[data-remodal-id=comment] {
-    padding: 6rem !important;
-    max-width: 800px;
-    .content {
-        h1 {
-            text-align: center;
-            font-size: 1.6rem;
-            color: #505154;
-            font-weight: 300;
-        }
-        p {
-            font-size: .9rem;
-            color: #505154;
-            margin-top: 1rem;
-            margin-bottom: 3rem;
-        }
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap:2.3rem;
-            input {
-                border:none;
-                border-bottom: 1px solid #303133;
-                padding-bottom: 1rem;
-                text-align: center;
-                width: 17rem;
-            }
-            textarea {
-                width: 42rem;
-                min-height: 17rem;
-                background-color: #F5F4F1;
-                padding-top: 1.6rem;
-                padding-left: 2.2rem;
-                border: none;
-                resize: none;
-                outline: none;
-                border-radius: .5rem;
-                &::placeholder {
-                    font-size: .9rem;
-                    color: #939393;
-                    font-family: Inter, sans-serif;
-                }
-            }
-        }
+  padding: 6rem !important;
+  max-width: 50%;
+  .content {
+    h1 {
+      text-align: center;
+      font-size: 1.6rem;
+      color: #505154;
+      font-weight: 300;
     }
-
+    p {
+      font-size: .9rem;
+      color: #505154;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+    form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap:2.3rem;
+      input {
+        border:none;
+        border-bottom: 1px solid #303133;
+        padding-bottom: 1rem;
+        text-align: center;
+        width: 17rem;
+      }
+      textarea {
+        width: 100%;
+        min-height: 17rem;
+        background-color: #F5F4F1;
+        padding-top: 1.6rem;
+        padding-left: 2.2rem;
+        border: none;
+        resize: none;
+        outline: none;
+        border-radius: .5rem;
+        &::placeholder {
+          font-size: .9rem;
+          color: #939393;
+          font-family: Inter, sans-serif;
+        }
+      }
+    }
+  }
+  @include responsive {
+    max-width: initial;
+    padding: 4rem 2rem !important;
+    .content {
+      h1 {
+        margin-bottom: 2rem;
+      }
+      p {
+        display: none;
+      }
+      form {
+        textarea {
+          min-height: 10rem;
+          padding: 1rem 2rem 0;
+          &::placeholder {
+            font-size: 1rem;
+          }
+        }
+        input {
+          border: 1px solid #505154;
+          width: 100%;
+          padding: .9rem;
+          border-radius: 6px;
+          text-align: left;
+          &::placeholder {
+            color: #303133;
+          }
+        }
+        .main-btn {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

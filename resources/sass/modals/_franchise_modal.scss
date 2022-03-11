@@ -40,7 +40,7 @@
       display: grid ;
       grid-template-columns: 1fr 1fr;
       margin-top: 6rem;
-      gap: 4rem;
+      gap: 3rem;
       width: 100%;
       h4 {
         font-weight: 700;
@@ -52,11 +52,12 @@
       }
       fieldset {
         border: 1px solid #DEDCD8;
-        border-style: solid;
-        width: 100%;
+        max-width: 20rem;
         background: white;
         border-radius: 8px;
-        margin-bottom: 2.4rem;
+        padding: .1rem;
+        position: relative;
+        margin-bottom: 2rem;
         legend {
           padding-left: .5rem;
           padding-right: .5rem;
@@ -64,45 +65,27 @@
           font-size: .9rem;
           letter-spacing: .7px;
           color: #505150;
-          text-align: left;
-        }
-        select {
-          width: 100%;
-          border:none;
-          padding:1rem;
-          border-radius: 8px;
-          outline: none;
-          position: relative;
-          option {
-            padding:1rem 0;
-          }
+          position: absolute;
+          top: -.55rem;
+          background-color: white;
+          opacity: 0;
+          transition: opacity .2s ease-in;
         }
         input {
           border:none;
-          padding:1rem;
-          padding-left: 1.5rem;
-          width: 100%;
+          padding: 1rem 1rem 1rem 1.5rem;
+          min-width: 18rem;
           outline: none;
           border-radius: 8px;
-          // padding-left: 1.5rem;
           font-size: .9rem;
           letter-spacing: .44px;
-        }
-        textarea {
-          width: 100%;
-          border:none;
-          border-radius: 8px;
-          resize: none;
-          outline: none;
-          min-height: 6rem;
-          padding:1rem;
         }
       }
       .checkboxes {
         display: flex;
         align-items: center;
         gap:4rem;
-        input[type=checkbox] {
+        input[type=radio] {
           display: none;
         }
         label {
@@ -136,19 +119,77 @@
             transition: .2s ease-in;
           }
         }
-        input[type=checkbox]:checked + label::before {
+        input[type=radio]:checked + label::before {
           background-color: black;
 
         }
-        input[type=checkbox]:hover + label::before {
+        input[type=radio]:hover + label::before {
           background-color: rgba(0,0,0, .2);
 
         }
       }
     }
-
     .main-btn {
       margin-top: 5.2rem;
     }
   }
+  @include responsive {
+    padding: 4.5rem 2rem !important;
+    .franchise {
+      h3 {
+        margin-bottom: 3.6rem;
+      }
+      .price {
+        display: none;
+      }
+    }
+    .franchise-form {
+      .wrapper {
+        margin-top: 0;
+        grid-template-columns: 1fr;
+        gap:0;
+        .person {
+          h4 {
+            display: none;
+          }
+        }
+        .location {
+          h4 {
+            display: none;
+          }
+        }
+        fieldset {
+          max-width: initial;
+          border: 1px solid #505154;
+          input {
+            width: 100%;
+            padding: 1.3rem 1rem 1.3rem 1.5rem;
+            font-size: 1.1rem;
+            font-family: 'Inter';
+            &::placeholder {
+              font-size: 1.1rem;
+              color: #303133;
+            }
+          }
+
+        }
+        .checkboxes {
+          input[type=radio]:hover + label::before {
+            background-color: black;
+          }
+        }
+        .place {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 2.5rem;
+        }
+      }
+      .main-btn {
+        width: 100%;
+      }
+    }
+  }
 }
+

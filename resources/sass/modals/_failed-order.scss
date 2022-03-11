@@ -1,50 +1,50 @@
 .remodal[data-remodal-id=failed-order] {
-    max-width: 106rem;
-    padding: 0 !important;
-    .content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        img {
-            width: 100%;
-        }
-        .question {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 22.5rem;
-            min-height: 80%;
-            margin: 0 auto;
-            svg {
-                height: 1.6rem;
-                width: 1.6rem;
-                display: block;
-            }
-            h3 {
-                font-size: 1.6rem;
-                font-weight: 300;
-                color: #303133;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-                margin-bottom: 2rem;
-            }
-            p {
-                font-size: .95rem;
-                letter-spacing: .7px;
-                line-height: 1.5rem;
-                color: #505154;
-                margin-bottom: 3rem;
-                a {
-                    padding:.3rem;
-                    background-color: rgba(193, 146, 69, 0.1);
-                }
-            }
-            .main-btn {
-                width: 100%;
-            }
-        }
+  max-width: 81%;
+  padding: 0 !important;
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    img {
+        width: 100%;
     }
+    .question {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 22.5rem;
+      min-height: 80%;
+      margin: 0 auto;
+      svg {
+        height: 1.6rem;
+        width: 1.6rem;
+        display: block;
+      }
+      h3 {
+        font-size: 1.6rem;
+        font-weight: 300;
+        color: #303133;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: .95rem;
+        letter-spacing: .7px;
+        line-height: 1.5rem;
+        color: #505154;
+        margin-bottom: 3rem;
+        a {
+            padding:.3rem;
+            background-color: rgba(193, 146, 69, 0.1);
+        }
+      }
+      .main-btn {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -1,5 +1,4 @@
 section#policy {
-
   h2 {
     font-size: 1.6rem;
     font-weight: 300;
@@ -14,44 +13,68 @@ section#policy {
     padding: 0 10.7rem;
     margin-bottom: 8rem;
     .links {
-
       li {
         color: #505154;
-          padding: .5rem;
+        padding: .5rem;
         font-size: .95rem;
         margin-bottom: .5rem;
-          cursor: pointer;
-          &:hover {
-              background-color: white;
-              max-width: fit-content;
-              padding: .5rem;
-              color: black;
-          }
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          max-width: fit-content;
+          padding: .5rem;
+          color: black;
+        }
       }
     }
     .rules {
-
+      p {
+        margin-bottom: 2rem;
+        color : #505154;
+      }
+      &__title {
+        background-color: white;
+        max-width: fit-content;
+        padding:.5rem;
+        font-size: .95rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+      }
+      &__info {
+        li {
+          font-size: .95rem;
+          color: #505154;
+          letter-spacing: .44px;
+          line-height: 1.3rem;
+          padding-left: .5rem;
+        }
+      }
+    }
+  }
+  @include responsive {
+    h2 {
+      margin:0;
+      padding: 2rem;
+    }
+    .content {
+      display: block;
+      margin-top: 0;
+      padding:0 2rem;
+      .links {
+        display: none;
+      }
+      .rules {
         p {
-            margin-bottom: 2rem;
-            color : #505154;
+          display: none;
         }
         &__title {
-            background-color: white;
-            max-width: fit-content;
-            padding:.5rem;
-            font-size: .95rem;
-            margin-bottom: 1rem;
-            margin-top: 1rem;
+          font-size: 1.15rem;
         }
-        &__info {
-            li {
-                font-size: .95rem;
-                color: #505154;
-                letter-spacing: .44px;
-                line-height: 1.3rem;
-                padding-left: .5rem;
-            }
+        &__info li{
+          font-size: 1.15rem;
+          padding-bottom: .5rem;
         }
+      }
     }
   }
 }

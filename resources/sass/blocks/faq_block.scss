@@ -1,43 +1,54 @@
-.faq_block {
-    margin: 7rem 10.5rem;
+.faq_block, .faq_block-mobile {
+  margin: 7rem 10.5rem;
+
+  .questions {
+    border-top: 1px solid #505154;
+    padding: 2.2rem 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      border-bottom: 1px solid transparent;
+      padding-bottom: .3rem;
+      transition: .2s ease-in-out;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+    svg {
+      width: 4rem;
+      height: 2rem;
+      >path {
+          transition: .2s ease-in;
+      }
+    }
+    &:hover {
+      p {
+          border-bottom: 1px solid black;
+          padding-bottom: 0.3rem;
+      }
+      svg>path {
+          stroke: #505154;
+      }
+    }
     &:last-child {
-        border-bottom: 1px solid #505154;
-        margin-bottom: 7rem;
-
+      border-bottom: 1px solid #505154;
     }
+  }
+}
+@include responsive() {
+  .faq_block {
+    margin: 5rem 2rem;
     .questions {
-        border-top: 1px solid #505154;
-        padding: 2.2rem 0;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        p {
-            border-bottom: 1px solid transparent;
-            padding-bottom: .3rem;
-            transition: .2s ease-in-out;
-            display: inline-block;
-            text-transform: uppercase;
+      font-size: 1.1rem;
+      padding: 2rem 0;
+      svg {
+        width: 2.4rem;
+        height: 1.5rem;
+        >path {
+          stroke: #939393;
         }
-        svg {
-            width: 4rem;
-            height: 2rem;
-            >path {
-                transition: .2s ease-in;
-            }
-
-        }
-        &:hover {
-            p {
-                border-bottom: 1px solid black;
-                padding-bottom: 0.3rem;
-            }
-            svg>path {
-                stroke: #505154;
-            }
-        }
-
+      }
     }
-
+  }
 }

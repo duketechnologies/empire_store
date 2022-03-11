@@ -1,5 +1,5 @@
 .remodal[data-remodal-id=quiz] {
-  max-width: 106rem;
+  max-width: 81%;
   padding: 0 !important;
   .content {
     display: grid;
@@ -41,5 +41,52 @@
         max-width: 12rem;
       }
     }
+  }
+  @include responsive {
+    width: 100%;
+    max-width: initial;
+    .content {
+      grid-template-columns: 1fr;
+      .question {
+        padding: 2rem 2rem 3rem;
+        h3 {
+          text-align: left;
+          line-height: 1.8rem;
+        }
+        .main-btn {
+          width: 100%;
+          max-width: initial;
+        }
+        ul {
+          margin: 3rem 0;
+          li {
+            font-size: 1.3rem;
+            margin: .75rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            svg {
+              display: none;
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+          }
+          li.active {
+            svg {
+              display: block;
+              animation: opacity .3s ease-in;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
